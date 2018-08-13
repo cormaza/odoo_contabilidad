@@ -62,7 +62,7 @@ class AccountInvoice(models.Model):
                                     store=True, readonly=True, compute='_compute_amount')
     residual_detraccion_soles = fields.Monetary(string="Cantidad a Pagar det.", readonly=True,
                                                 compute='_compute_residual')
-
+    #Moneda por defecto en soles para la detraccion
     currency_id_soles = fields.Many2one('res.currency',string="Moneda soles", domain=[('id', '=', 163)], default=163)
 
 
