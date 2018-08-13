@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo>
+    <data>
+        <record id="recibo_journal" model="account.journal">
+            <field name="name">Recibos por Honorarios</field>
+            <field name="code">RXH</field>
+            <field name="type">purchase</field>
+            <!--<field name="currency_id" ref="base.PEN"/>-->
+            <field name="default_credit_account_id" ref="l10n_pe.6327"/>
+            <field name="default_debit_account_id" ref="l10n_pe.6327"/>
+            <field name="update_posted" eval="True"/>
+            <field name="refund_sequence" eval="False"/>
+        </record>
+        <record id="activo_journal" model="account.journal">
+            <field name="name">Diaro de Activos</field>
+            <field name="code">ACT</field>
+            <field name="type">general</field>
+            <field name="default_credit_account_id" ref=""/>
+            <field name="default_debit_account_id" ref=""/>
+            <field name="update_posted" eval="True"/>
+            <field name="refund_sequence" eval="False"/>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+        <record id="sequence_reconcile_seq" model="ir.sequence">
+            <field name="name">Código Único de Operación</field>
+            <field name="code">biosis_cont.cuo</field>
+            <field eval="1" name="number_next"/>
+            <field eval="1" name="number_increment"/>
+            <field eval="False" name="company_id"/>
+        </record>
+        <!-- Secuencias para numeracion de e-doc -->
+        <record id="sequence_01" model="ir.sequence">
+            <field name="name">Secuencia Boleta</field>
+            <field name="code">sec_boleta</field>
+            <field eval="1" name="number_next"/>
+            <field eval="1" name="number_increment"/>
+            <field eval="False" name="company_id"/>
+            <field name="prefix">001-</field>
+        </record>
+        <record id="sequence_02" model="ir.sequence">
+            <field name="name">Secuencia Factura</field>
+            <field name="code">sec_factura</field>
+            <field eval="1" name="number_next"/>
+            <field eval="1" name="number_increment"/>
+            <field eval="False" name="company_id"/>
+            <field name="prefix">001-</field>
+        </record>
+        <record id="sequence_03" model="ir.sequence">
+            <field name="name">Secuencia Nota Credito Boleta</field>
+            <field name="code">sec_nota_c_boleta</field>
+            <field eval="1" name="number_next"/>
+            <field eval="1" name="number_increment"/>
+            <field eval="False" name="company_id"/>
+            <field name="prefix">001-</field>
+        </record>
+        <record id="sequence_04" model="ir.sequence">
+            <field name="name">Secuencia Nota Credito Factura</field>
+            <field name="code">sec_nota_c_factura</field>
+            <field eval="1" name="number_next"/>
+            <field eval="1" name="number_increment"/>
+            <field eval="False" name="company_id"/>
+            <field name="prefix">001-</field>
+        </record>
+        <record id="sequence_05" model="ir.sequence">
+            <field name="name">Secuencia Nota Débito Boleta</field>
+            <field name="code">sec_nota_d_boleta</field>
+            <field eval="1" name="number_next"/>
+            <field eval="1" name="number_increment"/>
+            <field eval="False" name="company_id"/>
+            <field name="prefix">001-</field>
+        </record>
+        <record id="sequence_06" model="ir.sequence">
+            <field name="name">Secuencia Nota Débito Factura</field>
+            <field name="code">sec_nota_d_factura</field>
+            <field eval="1" name="number_next"/>
+            <field eval="1" name="number_increment"/>
+            <field eval="False" name="company_id"/>
+            <field name="prefix">001-</field>
+        </record>
+        <!-- Numeraciones -->
+        <record id="numeracion_01" model="biosis.facturacion.numeracion">
+            <field ref="odoope_einvoice_base.e01_01" name="tipo_comprobante_id"/>
+            <field name="primera_letra">F</field>
+            <field ref="sequence_02" name="secuencia_id"/>
+            <field ref="sequence_04" name="secuencia_ncredito_id"/>
+            <field ref="sequence_06" name="secuencia_ndebito_id"/>
+            <field eval="1" name="vigente"/>
+        </record>
+        <record id="numeracion_02" model="biosis.facturacion.numeracion">
+            <field ref="odoope_einvoice_base.e01_03" name="tipo_comprobante_id"/>
+            <field name="primera_letra">B</field>
+            <field ref="sequence_01" name="secuencia_id"/>
+            <field ref="sequence_03" name="secuencia_ncredito_id"/>
+            <field ref="sequence_05" name="secuencia_ndebito_id"/>
+            <field eval="1" name="vigente"/>
+        </record>
+        <!--Data por default para gastos bancarios-->
+        <record id="gb_01" model="account.gastos_bancarios">
+            <field name="descripcion">ITF</field>
+            <field name="tipo_uso">B</field>
+            <field name="nombre">ITF</field>
+            <field name="id_cuenta">1271</field>
+            <field name="destino_cuenta">1726</field>
+        </record>
+        <record id="gb_02" model="account.gastos_bancarios">
+            <field name="descripcion">Mant.</field>
+            <field name="tipo_uso">B</field>
+            <field name="nombre">Mantenimiento</field>
+            <field name="id_cuenta">1271</field>
+            <field name="destino_cuenta">1726</field>
+        </record>
+        <!--Nueva data 30/10/2017-->
+
+        <!--Grupo de impuestos para percepcion-->
+        <record id="tax_group_taxes2" model="account.tax.group">
+            <field name="name">Impuestos Percepcion</field>
+            <field name="sequence">10</field>
+        </record>
+
+        <!--TAGS DE PERCEPCION-->
+        <record id="tax_tag_purchase_02" model="account.account.tag">
+            <field name="name">Percepcion2</field>
+            <field name="applicability">taxes</field>
+        </record>
+        <record id="tax_tag_purchase_01" model="account.account.tag">
+            <field name="name">Percepcion1</field>
+            <field name="applicability">taxes</field>
+        </record>
+        <record id="tax_tag_purchase_05" model="account.account.tag">
+            <field name="name">Percepcion05</field>
+            <field name="applicability">taxes</field>
+        </record>
+
+        <!--TAGS DE IMPUESTO A LA RENTA-->
+        <record id="tax_tag_sale_ir" model="account.account.tag">
+            <field name="name">impuestoRenta</field>
+            <field name="applicability">taxes</field>
+        </record>
+
+        <!--TAGS DE IMPUESTOS-->
+        <record id="tax_tag_sale_18" model="account.account.tag">
+            <field name="name">IGV 18% Venta</field>
+            <field name="applicability">taxes</field>
+        </record>
+
+
+        <!-- CAMPOS DE PERCEPCION-->
+        <record id="OTAX_02" model="account.tax">
+            <field name="amount_type">percent</field>
+            <field name="description">Percepción Venta interna</field>
+            <field name="name">Percepción IGV 2%</field>
+            <field name="tax_group_id" ref="tax_group_taxes2"/>
+            <field name="type_tax_use">sale</field>
+            <field name="analytic">FALSE</field>
+            <field name="amount">2</field>
+            <field name="refund_account_id" ref="l10n_pe.40111"/>
+            <field name="account_id" ref="l10n_pe.40111"/>
+            <field name="tag_ids" eval="[(6,0,[ref('tax_tag_purchase_02')])]"/>
+            <field name="codigo_percepcion">01</field>
+        </record>
+        <record id="OTAX_01" model="account.tax">
+            <field name="amount_type">percent</field>
+            <field name="description">Percepción a la Adquisición de Combustible</field>
+            <field name="name">Percepción IGV 1%</field>
+            <field name="tax_group_id" ref="tax_group_taxes2"/>
+            <field name="type_tax_use">sale</field>
+            <field name="analytic">FALSE</field>
+            <field name="amount">1</field>
+            <field name="refund_account_id" ref="l10n_pe.40111"/>
+            <field name="account_id" ref="l10n_pe.40111"/>
+            <field name="tag_ids" eval="[(6,0,[ref('tax_tag_purchase_01')])]"/>
+            <field name="codigo_percepcion">02</field>
+        </record>
+        <record id="OTAX_05" model="account.tax">
+            <field name="amount_type">percent</field>
+            <field name="description">Percepción realizada al agente de Percepción con tasa especial</field>
+            <field name="name">Percepción IGV 0.5%</field>
+            <field name="tax_group_id" ref="tax_group_taxes2"/>
+            <field name="type_tax_use">sale</field>
+            <field name="analytic">FALSE</field>
+            <field name="amount">0.5</field>
+            <field name="refund_account_id" ref="l10n_pe.40111"/>
+            <field name="account_id" ref="l10n_pe.40111"/>
+            <field name="tag_ids" eval="[(6,0,[ref('tax_tag_purchase_05')])]"/>
+            <field name="codigo_percepcion">03</field>
+        </record>
+
+        <!--Impuesto a la renta-->
+        <record id="ITAX_IMPUESTO_RENTA" model="account.tax">
+            <field name="amount_type">percent</field>
+            <field name="description">IMPUESTO A LA RENTA 1.5%</field>
+            <field name="name">Impuesto a la renta</field>
+            <field name="tax_group_id">1</field>
+            <field name="type_tax_use">sale</field>
+            <field name="analytic">FALSE</field>
+            <field name="amount">1.5</field>
+            <field name="refund_account_id" ref="l10n_pe.40111"/>
+            <field name="account_id" ref="l10n_pe.40111"/>
+            <field name="tag_ids" eval="[(6,0,[ref('tax_tag_sale_ir')])]"/>
+        </record>
+
+        <!--Impuestos a la venta IGV-ISC-OTROS-->
+        <record id="ITAX_18" model="account.tax">
+            <field name="amount_type">percent</field>
+            <field name="description">IGV Impuesto general a las ventas</field>
+            <field name="name">IGV Impuesto general a las ventas</field>
+            <field name="tax_group_id">1</field>
+            <field name="type_tax_use">sale</field>
+            <field name="analytic">FALSE</field>
+            <field name="amount">18</field>
+            <field name="refund_account_id" ref="l10n_pe.40111"/>
+            <field name="account_id" ref="l10n_pe.40111"/>
+            <field name="tag_ids" eval="[(6,0,[ref('tax_tag_sale_18')])]"/>
+            <field name="codigo_catalogo5">1000</field>
+            <field name="tax_type_catalogo5">VAT</field>
+        </record>
+         <record id="ITAX_ISC" model="account.tax">
+            <field name="amount_type">percent</field>
+            <field name="description">ISC - Impuesto Selectivo al Consumo</field>
+            <field name="name">ISC - Impuesto Selectivo al Consumo</field>
+            <field name="tax_group_id">1</field>
+            <field name="type_tax_use">sale</field>
+            <field name="analytic">FALSE</field>
+            <field name="amount">35</field>
+            <field name="refund_account_id" ref="l10n_pe.40111"/>
+            <field name="account_id" ref="l10n_pe.40111"/>
+            <field name="codigo_catalogo5">2000</field>
+            <field name="tax_type_catalogo5">EXC</field>
+        </record>
+         <record id="ITAX_OTRO" model="account.tax">
+            <field name="amount_type">percent</field>
+            <field name="description">OTROS CONCEPTOS DE PAGO</field>
+            <field name="name">OTROS CONCEPTOS DE PAGO</field>
+            <field name="tax_group_id">1</field>
+            <field name="type_tax_use">sale</field>
+            <field name="analytic">FALSE</field>
+            <field name="amount">0</field>
+            <field name="refund_account_id" ref="l10n_pe.40111"/>
+            <field name="account_id" ref="l10n_pe.40111"/>
+            <field name="codigo_catalogo5">9999</field>
+            <field name="tax_type_catalogo5">OTH</field>
+        </record>
+
+
+    </data>
+</odoo>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="biosis_cont_accountig_report_view" model="ir.ui.view">
+        <field name="name">Accounting Report</field>
+        <field name="model">account.balancecomprobacion</field>
+        <field name="inherit_id" ref="account.account_common_report_view"/>
+        <field name="arch" type="xml">
+            <field name="target_move" position="before">
+                <field name="account_report_id" domain="[('parent_id','=',False)]"/>
+            </field>
+            <field name="target_move" position="after">
+                <field name="enable_filter"/>
+                <field name="debit_credit" attrs="{'invisible': [('enable_filter','=',True)]}"/>
+            </field>
+            <field name="journal_ids" position="after">
+                <notebook tabpos="up" colspan="4">
+                    <page string="Comparación" name="comparison" attrs="{'invisible': [('enable_filter','=',False)]}">
+                        <group>
+                            <field name="label_filter" attrs="{'required': [('enable_filter', '=', True)]}"/>
+                            <field name="filter_cmp"/>
+                        </group>
+                        <group string="Dates" attrs="{'invisible':[('filter_cmp', '!=', 'filter_date')]}">
+                            <field name="date_from_cmp" attrs="{'required':[('filter_cmp', '=', 'filter_date')]}"/>
+                            <field name="date_to_cmp" attrs="{'required':[('filter_cmp', '=', 'filter_date')]}"/>
+                        </group>
+                    </page>
+                </notebook>
+            </field>
+            <field name="journal_ids" position="replace"/>
+            <xpath expr="//button[@name='check_report']" position="replace">
+                <button name="check_report" string="Print" type="object" default_focus="1" class="oe_highlight"/>
+                or
+                <button name="print_report_xls" string="Print XLS" type="object" class="oe_highlight"/>
+                or
+                <button string="Cancel" class="oe_link" special="cancel" />
+            </xpath>
+        </field>
+    </record>
+    <record id="action_account_report_bc" model="ir.actions.act_window">
+        <field name="name">Balance de Comprobación</field>
+        <field name="res_model">account.balancecomprobacion</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="biosis_cont_accountig_report_view"/>
+        <field name="target">new</field>
+    </record>
+
+    <!--<menuitem id="menu_account_report_bc" name="Balance de Comprobación" action="action_account_report_bc" parent="account.menu_finance_legal_statement"/>-->
+    <!--<menuitem id="menu_account_report_bc" name="Balance de Comprobación" action="action_account_report_bc" parent="biosis_cont_report.menu_reports_sunat_xls" sequence="4"/>-->
+</odoo>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="biosis_fact_puertoembarque_tree" model="ir.ui.view">
+        <field name="name">Puertos Embarque</field>
+        <field name="model">biosis.facturacion.puertoembarque</field>
+        <field name="arch" type="xml">
+            <tree string="Puertos Embarque">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="biosis_fact_puertodestino_tree" model="ir.ui.view">
+        <field name="name">Puertos Destino</field>
+        <field name="model">biosis.facturacion.puertodestino</field>
+        <field name="arch" type="xml">
+            <tree string="Puertos Embarque">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+    <record id="biosis_fact_puertoembarque_view" model="ir.ui.view">
+        <field name="name">Puertos Destino</field>
+        <field name="model">biosis.facturacion.puertoembarque</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="name"/>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <record id="biosis_fact_puertodestino_view" model="ir.ui.view">
+        <field name="name">Puertos Destino</field>
+        <field name="model">biosis.facturacion.puertodestino</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="name"/>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_puertoembarque" model="ir.actions.act_window">
+        <field name="name">Puerto Embarque</field>
+        <field name="res_model">biosis.facturacion.puertoembarque</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="biosis_fact_puertoembarque_tree"/>
+    </record>
+
+    <record id="action_puertodestino" model="ir.actions.act_window">
+        <field name="name">Puerto Destino</field>
+        <field name="res_model">biosis.facturacion.puertodestino</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="biosis_fact_puertodestino_tree"/>
+    </record>
+
+    <menuitem id="menu_puertos" name="Puertos" parent="odoope_einvoice_base.einvoice_configuration_menu" sequence="99"/>
+    <menuitem id="menu_puerto_destino" name="Puertos Destino" action="action_puertodestino" parent="menu_puertos" sequence="0"/>
+    <menuitem id="menu_puerto_embarque" name="Puertos Embarque" action="action_puertoembarque" parent="menu_puertos" sequence="1"/>
+</odoo>

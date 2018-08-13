@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_centro_costos_form" model="ir.ui.view">
+            <field name="name">centro.costos.form</field>
+            <field name="model">account.centro.costos</field>
+            <field name="arch" type="xml">
+                <form string="Centro de Costos">
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="nombre" class="oe_edit_only"/>
+                            <h1>
+                                <field name="nombre" class="oe_inline"/>
+                            </h1>
+                        </div>
+                        <notebook>
+                            <page string="Centro de costos">
+                                <group>
+                                    <group>
+                                        <field name="diario"/>
+                                        <field name="cuentas_control_ids" widget="many2many_tags"/>
+                                    </group>
+                                    <group>
+                                    </group>
+                                </group>
+                            </page>
+                            <page string="Configuración de Cuentas">
+
+                                <group string="Cuentas destinos para gastos">
+                                    <group name="cuentas">
+                                        <field name="account_92_id" groups="account.group_account_user"
+                                               domain="[('code', '=like', '92%')]"/>
+                                        <field name="account_94_id" groups="account.group_account_user"
+                                               domain="[('code', '=like', '94%')]"/>
+                                        <field name="account_95_id" groups="account.group_account_user"
+                                               domain="[('code', '=like', '95%')]"/>
+                                        <field name="account_97_id" groups="account.group_account_user"
+                                               domain="[('code', '=like', '97%')]"/>
+                                    </group>
+                                    <group name="porcentajes">
+                                        <field name="porcentaje_92"/>
+                                        <field name="porcentaje_94"/>
+                                        <field name="porcentaje_95"/>
+                                        <field name="porcentaje_97"/>
+                                    </group>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_centro_costos_tree" model="ir.ui.view">
+            <field name="name">centro.costos.tree</field>
+            <field name="model">account.centro.costos</field>
+            <field name="arch" type="xml">
+                <tree string="Centro Costos">
+                    <field name="nombre"/>
+                    <field name="diario"/>
+                    <field name="cuentas_control_ids"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="account_centro_costos_call" model="ir.actions.act_window">
+            <field name="name">Centro de Costos</field>
+            <field name="res_model">account.centro.costos</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,kanban,form,calendar,pivot,graph</field>
+            <field eval="False" name="view_id"/>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Click para registrar un Centro de Costos
+                </p>
+                <p>
+                    Cree un centro de costos para distribuir mejor los costos de la empresa
+                </p>
+            </field>
+        </record>
+        <record id="account_centro_costos_tree" model="ir.actions.act_window.view">
+            <field eval="1" name="sequence"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="view_centro_costos_tree"/>
+            <field name="act_window_id" ref="account_centro_costos_call"/>
+        </record>
+
+        <record id="account_centro_costos_form" model="ir.actions.act_window.view">
+            <field eval="2" name="sequence"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_centro_costos_form"/>
+            <field name="act_window_id" ref="account_centro_costos_call"/>
+        </record>
+        <menuitem
+                id="account_centro_costos"
+                name="Centro de Costos"
+                action="account_centro_costos_call"
+                parent="account.menu_finance"
+                sequence="7"/>
+    </data>
+
+</odoo>
+
+

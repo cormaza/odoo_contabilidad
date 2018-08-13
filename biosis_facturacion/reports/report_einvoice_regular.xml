@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <template id="einvoice_regular">
+            <div class="page">
+                <div class="row">
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                        <tbody>
+                            <tr>
+                                <td style="width:50%;                    color: #555555;                    font-family:sans-serif;                    font-size: 12px;">
+                                    <!-- <img src="https://dummyimage.com/80.png/dadada/000" alt=""/>-->
+                                    <br/>
+                                    <strong>
+                                        <span t-field="o.company_id.name">razon social</span>
+                                    </strong>
+                                    <br/>
+                                    <span t-field="o.company_id.partner_id.street">ubigeo</span>
+                                </td>
+                                <td style="width:25%"></td>
+                                <td style="width:30%;                                        border: 3px solid #666666;                    font-family:sans-serif;                     background: #dadada;                    color: #262626;                    text-align:center;                     vertical-align:middle;                    font-size: 18px;                    padding: 10px">
+                                    <strong>
+                                        <span>RUC:</span>&amp;nbsp;
+                                        <span t-field="o.company_id.vat"></span>
+                                        <br/>
+                                        <span t-if="o.tipo_comprobante_id.code == '01'">FACTURA ELECTRÓNICA
+                                        </span>
+                                        <span t-if="o.tipo_comprobante_id.code == '03'">BOLETA ELECTRÓNICA
+                                        </span>
+                                        <span t-if="o.tipo_comprobante_id.code == '07'">NOTA DE CRÉDITO
+                                            ELECTRÓNICA
+                                        </span>
+                                        <span t-if="o.tipo_comprobante_id.code == '08'">NOTA DE DÉBITO
+                                            ELECTRÓNICA
+                                        </span>
+                                        <br/>
+                                        <span t-field="o.numero_comprobante"></span>
+                                    </strong>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <br/>
+                <div class="row">
+                    <table width="100%" border="0" style="border-spacing: 10px;">
+                        <tbody>
+                            <tr>
+                                <td colspan="2"
+                                    style="width:50%;                                border: 1px solid #666666;                                font-family:sans-serif;                                vertical-align:top;                                padding: 5px;                                                                font-size: 11px;">
+                                    <strong>
+                                        <span>EMISOR:</span>
+                                    </strong> &amp;nbsp;
+                                    <span t-field="o.company_id.name">empresa</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"
+                                    style="width:50%;                            border: 1px solid #666666;                            font-family:sans-serif;                            vertical-align:top;                            padding: 5px;                                                        font-size: 11px;">
+                                    <strong>
+                                        <span>ADQUIRIENTE</span>
+                                    </strong> &amp;nbsp;
+                                    <span t-field="o.partner_id.name">TRANSFRUT EXPRESS LIMITED</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width:50%;                            vertical-align:top;                            border: 1px solid #666666;                            font-family:sans-serif;                             color: #000;                            font-size: 11px;                            padding: 5px">
+                                    <strong>
+                                        <span>RUC / DNI:</span>
+                                    </strong> &amp;nbsp;
+                                    <span t-field="o.partner_id.vat"></span>
+                                    <br/>
+                                    <strong>
+                                        <span>DIRECCIÓN:</span>
+                                    </strong>&amp;nbsp;
+                                    <span t-field="o.partner_id.street"></span>
+                                    <br/>
+                                    <strong>
+                                        <span>UBIGEO:</span>
+                                    </strong> &amp;nbsp;
+                                    <span t-field="o.partner_id.zip"></span>
+                                    <br/>
+                                    <strong>
+                                        <span></span>
+                                    </strong>
+                                    <span></span>
+                                    <br/>
+                                    <strong>
+                                        <span></span>
+                                    </strong>
+                                    <span></span>
+                                    <br/>
+                                </td>
+                                <td style="width:50%;                    vertical-align:top;                    border: 1px solid #666666;                    font-family:sans-serif;                     color: #000;                    font-size: 11px;                    padding: 5px">
+                                    <strong>
+                                        <span>FECHA EMISIÓN:</span>
+                                    </strong> &amp;nbsp;
+                                    <span t-field="o.date_invoice" t-field-options='{"format": "dd-MM-yyyy"}'>
+                                        12/12/2017
+                                    </span>
+                                    <br/>
+                                    <strong>
+                                        <span>PAÍS</span>
+                                    </strong> &amp;nbsp; PERÚ
+                                    <br/>
+                                    <strong>
+                                        <span>MONEDA</span>
+                                    </strong> &amp;nbsp;
+                                    <span t-if="o.currency_id.name == 'USD'">DOLARES AMERICANOS</span>
+                                    <span t-if="o.currency_id.name == 'PEN'">NUEVOS SOLES</span>
+                                    <br/>
+                                    <strong>
+                                        <span></span>
+                                    </strong>
+                                    <br/>
+                                    <strong>
+                                        <span></span>
+                                    </strong>
+                                    <span></span>
+                                    <br/>
+                                    <strong>
+                                        <span></span>
+                                    </strong>
+                                    <span></span>
+                                    <br/>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <br/>
+                <div class="row">
+                    <div class="col-xs-12" style="border:1px solid #666666">
+                        <table class="table table-striped"
+                               style="font-family:sans-serif; font-size: 11px;"
+                               width="100%" border="0">
+                            <thead>
+                                <tr>
+                                    <th>CÓDIGO</th>
+                                    <th>CANT.</th>
+                                    <th style="width:60%;">DESCRIPCIÓN</th>
+                                    <th>U.M.</th>
+                                    <th>P.U.</th>
+                                    <th>TOTAL</th>
+                                </tr>
+                            </thead>
+                            <tfoot>
+                                <tr>
+                                    <td style="border-width: 0px;"></td>
+                                    <td style="border-width: 0px;"></td>
+                                    <td style="border-width: 0px;"></td>
+                                    <td colspan="2" style="text-align:right;border-width: 0px;">
+                                        <strong>EXONERADA</strong>
+                                    </td>
+                                    <td>
+                                        <span t-field="o.total_operaciones_exoneradas"></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="border-width: 0px;"></td>
+                                    <td style="border-width: 0px;"></td>
+                                    <td style="border-width: 0px;"></td>
+                                    <td colspan="2" style="text-align:right;border-width: 0px;">
+                                        <strong>INAFECTAS</strong>
+                                    </td>
+                                    <td>
+                                        <span t-field="o.total_operaciones_inafectas"></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="border-width: 0px;"></td>
+                                    <td style="border-width: 0px;"></td>
+                                    <td style="border-width: 0px;"></td>
+                                    <td colspan="2" style="text-align:right;border-width: 0px;">
+                                        <strong>GRAVADA</strong>
+                                    </td>
+                                    <td>
+                                        <span t-field="o.amount_untaxed"></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="border-width: 0px;"></td>
+                                    <td style="border-width: 0px;"></td>
+                                    <td style="border-width: 0px;"></td>
+                                    <td colspan="2" style="text-align:right;border-width: 0px;">
+                                        <strong>IGV</strong>
+                                    </td>
+                                    <td>
+                                        <span t-field="o.amount_tax"></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="border-width: 0px;" colspan="3">
+                                        <span>
+                                            <strong>SON:</strong>
+                                        </span>&amp;nbsp;
+                                        <span t-field="o.total_cadena"></span>
+                                    </td>
+                                    <td colspan="2" style="text-align:right;border-width: 0px;">
+                                        <strong>TOTAL</strong>
+                                    </td>
+                                    <td>
+                                        <span t-field="o.amount_total"></span>
+                                    </td>
+                                </tr>
+                                <!--<tr>
+                                    <td colspan="3">
+                                        <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('QR', o.codigo_2d, 150, 150)"/>
+                                    </td>
+                                    <td colspan="3">
+                                        <span>
+                                            <strong>SON:</strong>
+                                        </span>&amp;nbsp;
+                                        <span></span>
+                                        <br/>
+                                        <span t-field="o.signature_info"></span>
+                                    </td>
+                                </tr>-->
+                            </tfoot>
+                            <tbody>
+                                <tr t-foreach="o.invoice_line_ids" t-as="detalle">
+                                    <td>
+                                        <span t-field="detalle.product_id.default_code"></span>
+                                    </td>
+                                    <td>
+                                        <span t-field="detalle.quantity"></span>
+                                    </td>
+                                    <td>
+                                        <span t-field="detalle.name"></span>
+                                    </td>
+                                    <td>
+                                        <span t-field="detalle.uom_id"></span>
+                                    </td>
+                                    <td>
+                                        <span t-field="detalle.price_unit"></span>
+                                    </td>
+                                    <td>
+                                        <span t-field="detalle.price_subtotal"></span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12" style="border:1px solid #666666">
+                        <table class="table table-striped"
+                               style="font-family:sans-serif; font-size: 11px;"
+                               width="100%" border="0">
+                            <tbody>
+                                <tr t-if="o.tipo_comprobante_id.code == '07'">
+                                    <td colspan="2" style="text-align:center;border-width: 0px;font-size: 20px;">
+                                        <strong>
+                                            <span>Nota de crédito de:&amp;nbsp;</span>
+                                            <span t-field="o.invoice_id.numero_comprobante"></span>
+                                        </strong>
+                                        <br/>
+                                        <strong>
+                                            <span>
+                                                <strong>Motivo:&amp;nbsp;</strong>
+                                            </span>
+                                            <span t-field="o.tipo_ncredito_id.code"></span>&amp;nbsp;<span>-</span>&amp;nbsp;
+                                            <span t-field="o.tipo_ncredito_id.name"></span>
+                                        </strong>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('QR', o.codigo_2d, 150, 150)"/>
+                                    </td>
+                                    <td style="min-width:85%;">
+                                        <span>
+                                            <strong>FIRMA:</strong>
+                                        </span>&amp;nbsp;
+                                        <span t-field="o.signature_info"></span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </template>
+
+        <template id="report_einvoice_regular">
+            <t t-call="report.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="biosis_facturacion.einvoice_regular" t-lang="o.partner_id.lang"/>
+                </t>
+            </t>
+        </template>
+        <record id="action_einvoice_regular" model="ir.actions.report.xml">
+            <field name="name">Comprobante electrónico</field>
+            <field name="model">account.invoice</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">biosis_facturacion.report_einvoice_regular</field>
+            <field name="attachment_use">False</field>
+            <field name="attachment">object.state in ('open','paid') and object.numero_comprobante+'.pdf' or 'BORRADOR.pdf'</field>
+            <field name="paperformat_id" ref="a4_invoice"/>
+        </record>
+    </data>
+</openerp>

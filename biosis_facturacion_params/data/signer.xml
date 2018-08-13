@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <record id="signer_url" model="ir.config_parameter">
+            <field name="key">einvoice.signer_url</field>
+            <field name="value">http://34.210.179.225:8080/api/firma</field>
+        </record>
+        <record id="sender_url" model="ir.config_parameter">
+            <field name="key">einvoice.sender_url</field>
+            <field name="value">http://34.210.179.225:8080/api/envio/comprobante</field>
+        </record>
+        <record id="firma_id" model="ir.config_parameter">
+            <field name="key">sunat.einvoice.firma_id</field>
+            <field name="value">Sign-20525804632</field>
+        </record>
+        <record id="sunat_sol_user" model="ir.config_parameter">
+            <field name="key">sunat.user</field>
+            <field name="value">20525804632BIOSIS16</field>
+        </record>
+        <record id="sunat_sol_password" model="ir.config_parameter">
+            <field name="key">sunat.password</field>
+            <field name="value">biosis16</field>
+        </record>
+        <record id="sunat_billservice_url" model="ir.config_parameter">
+            <field name="key">sunat.billservice_url</field>
+            <field name="value">produccion</field>
+        </record>
+        <record id="keystore_name" model="ir.config_parameter">
+            <field name="key">keystore.name</field>
+            <field name="value">20525804632.jks</field>
+        </record>
+        <record id="keystore_password" model="ir.config_parameter">
+            <field name="key">keystore.password</field>
+            <field name="value">r4zW5zUESvpUSkGx</field>
+        </record>
+        <record id="keystore_alias" model="ir.config_parameter">
+            <field name="key">keystore.alias</field>
+            <field name="value">(racer_pfvp_365_pe_sw_kpsc)_20525804632_03879811</field>
+        </record>
+        <record id="keystore_alias_password" model="ir.config_parameter">
+            <field name="key">keystore.alias.password</field>
+            <field name="value">r4zW5zUESvpUSkGx</field>
+        </record>
+    </data>
+</odoo>

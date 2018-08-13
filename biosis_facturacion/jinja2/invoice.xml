@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<Invoice
+        xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2"
+        xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+        xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+        xmlns:ccts="urn:un:unece:uncefact:documentation:2"
+        xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+        xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
+        xmlns:qdt="urn:oasis:names:specification:ubl:schema:xsd:QualifiedDatatypes-2"
+        xmlns:sac="urn:sunat:names:specification:ubl:peru:schema:xsd:SunatAggregateComponents-1"
+        xmlns:udt="urn:un:unece:uncefact:data:specification:UnqualifiedDataTypesSchemaModule:2">
+    <ext:UBLExtensions>
+        <ext:UBLExtension>
+            <ext:ExtensionContent>
+                <sac:AdditionalInformation>
+                    {% if invoice.total_descuentos > 0 %}
+                        <sac:AdditionalMonetaryTotal>
+                            <cbc:ID>2005</cbc:ID>
+                            <cbc:PayableAmount
+                                    currencyID="{{ invoice.currency_id.name }}">{{ '%0.2f' % invoice.total_descuentos }}</cbc:PayableAmount>
+                        </sac:AdditionalMonetaryTotal>
+                    {% endif %}
+{#                    {% if invoice.total_operaciones_exportacion > 0 %}#}
+{#                        <sac:AdditionalMonetaryTotal>#}
+{#                            <cbc:ID>1000</cbc:ID>#}
+{#                            <cbc:PayableAmount currencyID="{{ invoice.currency_id.name }}">{{ '%0.2f' % invoice.total_operaciones_exportacion }}</cbc:PayableAmount>#}
+{#                        </sac:AdditionalMonetaryTotal>#}
+{#                    {% endif %}#}
+{#                    {% if invoice.amount_untaxed > 0 %}#}
+                        <sac:AdditionalMonetaryTotal>
+                            <cbc:ID>1001</cbc:ID>
+                            <cbc:PayableAmount
+                                    currencyID="{{ invoice.currency_id.name }}">{{ '%0.2f' % invoice.amount_untaxed }}</cbc:PayableAmount>
+                        </sac:AdditionalMonetaryTotal>
+{#                    {% endif %}#}
+{#                    {% if invoice.total_operaciones_inafectas > 0 %}#}
+                        <sac:AdditionalMonetaryTotal>
+                            <cbc:ID>1002</cbc:ID>
+                            <cbc:PayableAmount
+                                    currencyID="{{ invoice.currency_id.name }}">{{ '%0.2f' % (invoice.total_operaciones_inafectas + invoice.total_operaciones_exportacion ) }}</cbc:PayableAmount>
+                        </sac:AdditionalMonetaryTotal>
+{#                    {% endif %}#}
+{#                    {% if invoice.total_operaciones_exoneradas %}#}
+                        <sac:AdditionalMonetaryTotal>
+                            <cbc:ID>1003</cbc:ID>
+                            <cbc:PayableAmount
+                                    currencyID="{{ invoice.currency_id.name }}">{{ '%0.2f' % invoice.total_operaciones_exoneradas }}</cbc:PayableAmount>
+                        </sac:AdditionalMonetaryTotal>
+{#                    {% endif %}#}
+
+                    {% if invoice.total_base_imponible_percepcion > 0 and invoice.total_percepcion > 0 and invoice.total_inc_percepcion > 0 %}
+                        <sac:AdditionalMonetaryTotal>
+                            <cbc:ID schemaID="{{ invoice.codigo_registro_percepcion }}">{{ invoice.codigo_percepcion }}</cbc:ID>
+                            <sac:ReferenceAmount
+                                    currencyID="{{ invoice.currency_id.name }}">{{ '%0.2f' % invoice.total_base_imponible_percepcion }}</sac:ReferenceAmount>
+                            <cbc:PayableAmount
+                                    currencyID="{{ invoice.currency_id.name }}">{{ '%0.2f' % invoice.total_percepcion }}</cbc:PayableAmount>
+                            <sac:TotalAmount
+                                    currencyID="{{ invoice.currency_id.name }}">{{ '%0.2f' % total_inc_percepcion }}</sac:TotalAmount>
+                        </sac:AdditionalMonetaryTotal>
+                    {% endif %}
+                    {% if invoice.total_operaciones_gratuitas > 0 %}
+                        <sac:AdditionalMonetaryTotal>
+                            <cbc:ID>1005</cbc:ID>
+                            <cbc:PayableAmount
+                                    currencyID="{{ invoice.currency_id.name }}">{{ '%0.2f' % invoice.total_operaciones_gratuitas }}</cbc:PayableAmount>
+                        </sac:AdditionalMonetaryTotal>
+                    {% endif %}
+                    <sac:AdditionalProperty>
+                        <cbc:ID>1000</cbc:ID>
+                        <cbc:Value>{{ invoice.total_cadena }}</cbc:Value>
+                    </sac:AdditionalProperty>
+                    <sac:SUNATTransaction>
+                        <cbc:ID>{{ '0%s' % invoice.tipo_operacion }}</cbc:ID>
+                    </sac:SUNATTransaction>
+                </sac:AdditionalInformation>
+            </ext:ExtensionContent>
+        </ext:UBLExtension>
+        <ext:UBLExtension>
+            <ext:ExtensionContent>
+
+            </ext:ExtensionContent>
+        </ext:UBLExtension>
+    </ext:UBLExtensions>
+    <cbc:UBLVersionID>2.0</cbc:UBLVersionID>
+    <cbc:CustomizationID>1.0</cbc:CustomizationID>
+    <cbc:ID>{{ invoice.numero_comprobante }}</cbc:ID>
+    <cbc:IssueDate>{{ invoice.date_invoice }}</cbc:IssueDate>
+    <cbc:InvoiceTypeCode>{{ invoice.tipo_comprobante_id.code }}</cbc:InvoiceTypeCode>
+    <cbc:DocumentCurrencyCode>{{ invoice.currency_id.name }}</cbc:DocumentCurrencyCode>
+    {#    <cac:OrderReference th:each="relacionado : ${factura.relacionadoList}" th:if="${relacionado.indicador eq '3'}">#}
+    {#        <cbc:ID th:text="${relacionado.numeroDocumento}">relacion.numero_documento</cbc:ID>#}
+    {#    </cac:OrderReference>#}
+    {#    <cac:DespatchDocumentReference th:each="relacionado : ${factura.relacionadoList}"#}
+    {#                                   th:if="${relacionado.indicador eq '1'}">#}
+    {#        <cbc:ID th:text="${relacionado.numeroDocumento}">relacion.numero_documento</cbc:ID>#}
+    {#        <cbc:DocumentTypeCode th:text="${relacionado.tipoDocumento}">relacion.tipo_documento</cbc:DocumentTypeCode>#}
+    {#    </cac:DespatchDocumentReference>#}
+    {#    <cac:AdditionalDocumentReference th:each="relacionado : ${factura.relacionadoList}"#}
+    {#                                     th:if="${relacionado.indicador eq '99'}">#}
+    {#        <cbc:ID th:text="${relacionado.numeroDocumento}">relacion.numero_documento</cbc:ID>#}
+    {#        <cbc:DocumentTypeCode th:text="${relacionado.tipoDocumento}">relacion.tipo_documento</cbc:DocumentTypeCode>#}
+    {#    </cac:AdditionalDocumentReference>#}
+    <cac:Signature>
+        <cbc:ID>{{ 'ID' + firmaId }}</cbc:ID>
+        <cac:SignatoryParty>
+            <cac:PartyIdentification>
+                <cbc:ID>{{ invoice.company_id.vat }}</cbc:ID>
+            </cac:PartyIdentification>
+            <cac:PartyName>
+                <cbc:Name>{{ invoice.company_id.name }}</cbc:Name>
+            </cac:PartyName>
+        </cac:SignatoryParty>
+        <cac:DigitalSignatureAttachment>
+            <cac:ExternalReference>
+                <cbc:URI>{{ '#' + firmaId }}</cbc:URI>
+            </cac:ExternalReference>
+        </cac:DigitalSignatureAttachment>
+    </cac:Signature>
+    <cac:AccountingSupplierParty>
+        <cbc:CustomerAssignedAccountID>{{ invoice.company_id.vat }}</cbc:CustomerAssignedAccountID>
+        <cbc:AdditionalAccountID>{{ invoice.company_id.partner_id.catalog_06_id.code }}</cbc:AdditionalAccountID>
+        <cac:Party>
+            <cac:PartyName>
+                <cbc:Name>{{ invoice.company_id.name }}</cbc:Name>
+            </cac:PartyName>
+
+            <cac:PostalAddress>
+                <cbc:ID>{{ invoice.company_id.partner_id.zip }}</cbc:ID>
+                <cbc:StreetName>{{ invoice.company_id.partner_id.street }}</cbc:StreetName>
+                <cac:Country>
+                    <cbc:IdentificationCode>PE</cbc:IdentificationCode>
+                </cac:Country>
+            </cac:PostalAddress>
+            <cac:PartyLegalEntity>
+                <cbc:RegistrationName>{{ invoice.company_id.partner_id.name }}</cbc:RegistrationName>
+            </cac:PartyLegalEntity>
+        </cac:Party>
+    </cac:AccountingSupplierParty>
+    <cac:AccountingCustomerParty>
+        <cbc:CustomerAssignedAccountID>{{ invoice.partner_id.catalog_06_id.code == '0' and invoice.codigo_cliente or invoice.partner_id.vat }}</cbc:CustomerAssignedAccountID>
+        <cbc:AdditionalAccountID>{{ invoice.partner_id.catalog_06_id.code }}</cbc:AdditionalAccountID>
+        <cac:Party>
+            <cac:PartyLegalEntity>
+                <cbc:RegistrationName>{{ invoice.partner_id.name }}</cbc:RegistrationName>
+            </cac:PartyLegalEntity>
+        </cac:Party>
+    </cac:AccountingCustomerParty>
+    {% if invoice.date_due %}
+        <cac:PaymentMeans>
+            <cbc:PaymentMeansCode>-</cbc:PaymentMeansCode>
+            <cbc:PaymentDueDate>{{ invoice.date_due }}</cbc:PaymentDueDate>
+        </cac:PaymentMeans>
+    {% endif %}
+    {% if invoice.total_isc > 0 %}
+        <cac:TaxTotal>
+            <cbc:TaxAmount currencyID="{{ invoice.currency_id.name }}">{{ '%0.2f' % invoice.total_isc }}</cbc:TaxAmount>
+            <cac:TaxSubtotal>
+                <cbc:TaxAmount
+                        currencyID="{{ invoice.currency_id.name }}">{{ '%0.2f' % invoice.total_isc }}</cbc:TaxAmount>
+                <cac:TaxCategory>
+                    <cac:TaxScheme>
+                        <cbc:ID>2000</cbc:ID>
+                        <cbc:Name>ISC</cbc:Name>
+                        <cbc:TaxTypeCode>EXC</cbc:TaxTypeCode>
+                    </cac:TaxScheme>
+                </cac:TaxCategory>
+            </cac:TaxSubtotal>
+        </cac:TaxTotal>
+    {% endif %}
+    {% if invoice.amount_tax > 0 %}
+        <cac:TaxTotal>
+            <cbc:TaxAmount
+                    currencyID="{{ invoice.currency_id.name }}">{{ '%0.2f' % invoice.amount_tax }}</cbc:TaxAmount>
+            <cac:TaxSubtotal>
+                <cbc:TaxAmount
+                        currencyID="{{ invoice.currency_id.name }}">{{ '%0.2f' % invoice.amount_tax }}</cbc:TaxAmount>
+                <cac:TaxCategory>
+                    <cac:TaxScheme>
+                        <cbc:ID>1000</cbc:ID>
+                        <cbc:Name>IGV</cbc:Name>
+                        <cbc:TaxTypeCode>VAT</cbc:TaxTypeCode>
+                    </cac:TaxScheme>
+                </cac:TaxCategory>
+            </cac:TaxSubtotal>
+        </cac:TaxTotal>
+    {% endif %}
+    <cac:LegalMonetaryTotal>
+        <cbc:AllowanceTotalAmount currencyID="{{ invoice.currency_id.name }}">0.00</cbc:AllowanceTotalAmount>
+        <cbc:ChargeTotalAmount currencyID="{{ invoice.currency_id.name }}">0.00</cbc:ChargeTotalAmount>
+        <cbc:PayableAmount
+                currencyID="{{ invoice.currency_id.name }}">{{ '%0.2f' % invoice.amount_total }}</cbc:PayableAmount>
+    </cac:LegalMonetaryTotal>
+    {% for detalle in invoice.invoice_line_ids %}
+        <cac:InvoiceLine>
+            <cbc:ID>{{ loop.index }}</cbc:ID>
+            <cbc:InvoicedQuantity
+                    unitCode="{{ detalle.uom_id.codigo_ubl }}">{{ '%0.2f' % detalle.quantity }}</cbc:InvoicedQuantity>
+            <cbc:LineExtensionAmount
+                    currencyID="{{ invoice.currency_id.name }}">{{ '%0.2f' % detalle.price_subtotal }}</cbc:LineExtensionAmount>
+            <cac:PricingReference>
+                <cac:AlternativeConditionPrice>
+                    <cbc:PriceAmount
+                            currencyID="{{ invoice.currency_id.name }}">{{ '%0.2f' % detalle.price_subtotal }}</cbc:PriceAmount>
+                    <cbc:PriceTypeCode>01</cbc:PriceTypeCode>
+                </cac:AlternativeConditionPrice>
+                {#                <cac:AlternativeConditionPrice th:if="${detalle.montoValorUnitarioGratuito ne null}">#}
+                {#                    <cbc:PriceAmount currencyID="{{ invoice.currency_id.name }}"#}
+                {#                                     th:text="${detalle.montoValorUnitarioGratuito}">#}
+                {#                        detalle.monto_valor_unitario_gratuito#}
+                {#                    </cbc:PriceAmount>#}
+                {#                    <cbc:PriceTypeCode>02</cbc:PriceTypeCode>#}
+                {#                </cac:AlternativeConditionPrice>#}
+            </cac:PricingReference>
+            <cac:AllowanceCharge>
+                <cbc:ChargeIndicator>false</cbc:ChargeIndicator>
+                <cbc:Amount currencyID="{{ invoice.currency_id.name }}">0.00</cbc:Amount>
+            </cac:AllowanceCharge>
+            {#            {% if detalle.total_igv > 0 %}#}
+            <cac:TaxTotal>
+                <cbc:TaxAmount
+                        currencyID="{{ invoice.currency_id.name }}">{{ '%0.2f' % detalle.total_igv }}</cbc:TaxAmount>
+                <cac:TaxSubtotal>
+                    <cbc:TaxableAmount
+                            currencyID="{{ invoice.currency_id.name }}">{{ detalle.tipo_igv_id.code == '10' and '%0.2f' % detalle.price_subtotal or '0.00' }}</cbc:TaxableAmount>
+                    <cbc:TaxAmount
+                            currencyID="{{ invoice.currency_id.name }}">{{ '%0.2f' % detalle.total_igv }}</cbc:TaxAmount>
+                    <cac:TaxCategory>
+                        <cbc:TaxExemptionReasonCode>{{ detalle.tipo_igv_id.code }}</cbc:TaxExemptionReasonCode>
+                        <cac:TaxScheme>
+                            <cbc:ID>1000</cbc:ID>
+                            <cbc:Name>IGV</cbc:Name>
+                            <cbc:TaxTypeCode>VAT</cbc:TaxTypeCode>
+                        </cac:TaxScheme>
+                    </cac:TaxCategory>
+                </cac:TaxSubtotal>
+            </cac:TaxTotal>
+            {#            {% endif %}#}
+            <cac:Item>
+                <cbc:Description>{{ detalle.name }}</cbc:Description>
+                {% if detalle.product_id.default_code %}
+                    <cac:SellersItemIdentification>
+                        <cbc:ID>{{ detalle.product_id.default_code }}</cbc:ID>
+                    </cac:SellersItemIdentification>
+                {% endif %}
+            </cac:Item>
+            <cac:Price>
+                <cbc:PriceAmount
+                        currencyID="{{ invoice.currency_id.name }}">{{ '%0.2f' % detalle.price_unit }}</cbc:PriceAmount>
+            </cac:Price>
+        </cac:InvoiceLine>
+    {% endfor %}
+</Invoice>

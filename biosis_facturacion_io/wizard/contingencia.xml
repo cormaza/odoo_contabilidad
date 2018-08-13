@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="einvoice_contingencia_wizard" model="ir.ui.view">
+            <field name="name">einvoice.contingencia.wizard</field>
+            <field name="model">einvoice.ie.contingencia</field>
+            <field name="arch" type="xml">
+                <form name="Generar fichero de contigencia SUNAT">
+                    <group>
+                        <group>
+                            <field name="fecha_inicio" string="Fecha"/>
+                            <!--<field name="fecha_fin" />-->
+                            <field name="motivo" />
+                            <field name="correlativo" />
+                        </group>
+                    </group>
+                    <footer>
+                        <button name="generar_fichero" string="Generar" type="object" default_focus="1"
+                                class="oe_highlight"/>
+                        <button string="Cancelar" class="oe_link" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_einvoice_contingencia_wizard" model="ir.actions.act_window">
+            <field name="name">Generar archivo de contingencia</field>
+            <field name="res_model">einvoice.ie.contingencia</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="einvoice_contingencia_wizard"/>
+            <field name="target">new</field>
+        </record>
+
+        <menuitem id="menu_einvoice_contingencia" action="action_einvoice_contingencia_wizard" sequence="1001" parent="account.menu_finance_receivables"/>
+    </data>
+</odoo>

@@ -1,0 +1,333 @@
+<odoo>
+    <data>
+        <!-- Serie de facturas -->
+        <record id="f001seq" model="ir.sequence">
+            <field name="name">F001SEQ</field>
+            <field name="use_date_range" eval="False"/>
+            <field name="number_next_actual">1</field>
+            <field name="number_increment">1</field>
+            <field name="padding">8</field>
+            <field name="code">einvoice.series.f001</field>
+        </record>
+
+
+        <record id="f002seq" model="ir.sequence">
+            <field name="name">F002SEQ</field>
+            <field name="use_date_range" eval="False"/>
+            <field name="number_next_actual">1</field>
+            <field name="number_increment">1</field>
+            <field name="padding">8</field>
+            <field name="code">einvoice.series.f002</field>
+        </record>
+
+
+        <record id="f003seq" model="ir.sequence">
+            <field name="name">F003SEQ</field>
+            <field name="use_date_range" eval="False"/>
+            <field name="number_next_actual">1</field>
+            <field name="number_increment">1</field>
+            <field name="padding">8</field>
+            <field name="code">einvoice.series.f003</field>
+        </record>
+
+
+        <record id="f004seq" model="ir.sequence">
+            <field name="name">F004SEQ</field>
+            <field name="use_date_range" eval="False"/>
+            <field name="number_next_actual">1</field>
+            <field name="number_increment">1</field>
+            <field name="padding">8</field>
+            <field name="code">einvoice.series.f004</field>
+        </record>
+
+
+        <record id="f005seq" model="ir.sequence">
+            <field name="name">F005SEQ</field>
+            <field name="use_date_range" eval="False"/>
+            <field name="number_next_actual">1</field>
+            <field name="number_increment">1</field>
+            <field name="padding">8</field>
+            <field name="code">einvoice.series.f005</field>
+        </record>
+
+        <record id="f001serie" model="biosis.facturacion.einvoice.serie">
+            <field name="alfanumerico">F001</field>
+            <field name="tipo_comprobante_id" ref="odoope_einvoice_base.e01_01"/>
+            <field name="correlativo_id" ref="f001seq"/>
+            <field name="activo" eval="True"/>
+        </record>
+
+
+        <record id="f002serie" model="biosis.facturacion.einvoice.serie">
+            <field name="alfanumerico">F002</field>
+            <field name="tipo_comprobante_id" ref="odoope_einvoice_base.e01_01"/>
+            <field name="correlativo_id" ref="f002seq"/>
+            <field name="activo" eval="True"/>
+        </record>
+
+
+        <record id="f003serie" model="biosis.facturacion.einvoice.serie">
+            <field name="alfanumerico">F003</field>
+            <field name="tipo_comprobante_id" ref="odoope_einvoice_base.e01_01"/>
+            <field name="correlativo_id" ref="f003seq"/>
+            <field name="activo" eval="True"/>
+        </record>
+
+
+        <record id="f004serie" model="biosis.facturacion.einvoice.serie">
+            <field name="alfanumerico">F004</field>
+            <field name="tipo_comprobante_id" ref="odoope_einvoice_base.e01_01"/>
+            <field name="correlativo_id" ref="f004seq"/>
+            <field name="activo" eval="True"/>
+        </record>
+
+
+        <record id="f005serie" model="biosis.facturacion.einvoice.serie">
+            <field name="alfanumerico">F005</field>
+            <field name="tipo_comprobante_id" ref="odoope_einvoice_base.e01_01"/>
+            <field name="correlativo_id" ref="f005seq"/>
+            <field name="activo" eval="True"/>
+        </record>
+
+
+        <!--Serie de boletas-->
+        <record id="b001seq" model="ir.sequence">
+            <field name="name">B001SEQ</field>
+            <field name="use_date_range" eval="False"/>
+            <field name="number_next_actual">1</field>
+            <field name="number_increment">1</field>
+            <field name="padding">8</field>
+            <field name="code">einvoice.series.b001</field>
+        </record>
+
+        <record id="b002seq" model="ir.sequence">
+            <field name="name">B002SEQ</field>
+            <field name="use_date_range" eval="False"/>
+            <field name="number_next_actual">1</field>
+            <field name="number_increment">1</field>
+            <field name="padding">8</field>
+            <field name="code">einvoice.series.b002</field>
+        </record>
+
+        <record id="b003seq" model="ir.sequence">
+            <field name="name">B003SEQ</field>
+            <field name="code">einvoice.series.b003</field>
+            <field name="use_date_range" eval="False"/>
+            <field name="number_next_actual">1</field>
+            <field name="number_increment">1</field>
+            <field name="padding">8</field>
+        </record>
+
+        <record id="b004seq" model="ir.sequence">
+            <field name="name">B004SEQ</field>
+            <field name="code">einvoice.series.b004</field>
+            <field name="use_date_range" eval="False"/>
+            <field name="number_next_actual">1</field>
+            <field name="number_increment">1</field>
+            <field name="padding">8</field>
+        </record>
+
+        <record id="b005seq" model="ir.sequence">
+            <field name="name">B005SEQ</field>
+            <field name="code">einvoice.series.b005</field>
+            <field name="use_date_range" eval="False"/>
+            <field name="number_next_actual">1</field>
+            <field name="number_increment">1</field>
+            <field name="padding">8</field>
+        </record>
+
+        <record id="b001serie" model="biosis.facturacion.einvoice.serie">
+            <field name="alfanumerico">B001</field>
+            <field name="tipo_comprobante_id" ref="odoope_einvoice_base.e01_03"/>
+            <field name="correlativo_id" ref="b001seq"/>
+            <field name="activo" eval="True"/>
+        </record>
+
+        <record id="b002serie" model="biosis.facturacion.einvoice.serie">
+            <field name="alfanumerico">B002</field>
+            <field name="correlativo_id" ref="b002seq"/>
+            <field name="tipo_comprobante_id" ref="odoope_einvoice_base.e01_03"/>
+            <field name="activo" eval="True"/>
+        </record>
+
+        <record id="b003serie" model="biosis.facturacion.einvoice.serie">
+            <field name="alfanumerico">B003</field>
+            <field name="correlativo_id" ref="b003seq"/>
+            <field name="tipo_comprobante_id" ref="odoope_einvoice_base.e01_03"/>
+            <field name="activo" eval="True"/>
+        </record>
+
+        <record id="b004serie" model="biosis.facturacion.einvoice.serie">
+            <field name="alfanumerico">B004</field>
+            <field name="correlativo_id" ref="b004seq"/>
+            <field name="tipo_comprobante_id" ref="odoope_einvoice_base.e01_03"/>
+            <field name="activo" eval="True"/>
+        </record>
+
+        <record id="b005serie" model="biosis.facturacion.einvoice.serie">
+            <field name="alfanumerico">B005</field>
+            <field name="correlativo_id" ref="b005seq"/>
+            <field name="tipo_comprobante_id" ref="odoope_einvoice_base.e01_03"/>
+            <field name="activo" eval="True"/>
+        </record>
+
+        <!-- Serie de Notas de credito Para facturas-->
+        <record id="fnc01seq" model="ir.sequence">
+            <field name="name">FNC01SEQ</field>
+            <field name="code">einvoice.series.fnc01</field>
+            <field name="use_date_range" eval="False"/>
+            <field name="number_next_actual">1</field>
+            <field name="number_increment">1</field>
+            <field name="padding">8</field>
+        </record>
+
+        <record id="fnc01serie" model="biosis.facturacion.einvoice.serie">
+            <field name="alfanumerico">FN01</field>
+            <field name="tipo_comprobante_id" ref="odoope_einvoice_base.e01_07"/>
+            <field name="correlativo_id" ref="fnc01seq"/>
+            <field name="activo" eval="True"/>
+        </record>
+
+        <record id="fnc02seq" model="ir.sequence">
+            <field name="name">FNC02SEQ</field>
+            <field name="code">einvoice.series.fnc02</field>
+            <field name="use_date_range" eval="False"/>
+            <field name="number_next_actual">1</field>
+            <field name="number_increment">1</field>
+            <field name="padding">8</field>
+        </record>
+
+        <record id="fnc02serie" model="biosis.facturacion.einvoice.serie">
+            <field name="alfanumerico">FN02</field>
+            <field name="tipo_comprobante_id" ref="odoope_einvoice_base.e01_07"/>
+            <field name="correlativo_id" ref="fnc02seq"/>
+            <field name="activo" eval="True"/>
+        </record>
+
+        <record id="fnc03seq" model="ir.sequence">
+            <field name="name">FNC03SEQ</field>
+            <field name="code">einvoice.series.fnc03</field>
+            <field name="use_date_range" eval="False"/>
+            <field name="number_next_actual">1</field>
+            <field name="number_increment">1</field>
+            <field name="padding">8</field>
+        </record>
+
+        <record id="fnc03serie" model="biosis.facturacion.einvoice.serie">
+            <field name="alfanumerico">FN03</field>
+            <field name="tipo_comprobante_id" ref="odoope_einvoice_base.e01_07"/>
+            <field name="correlativo_id" ref="fnc03seq"/>
+            <field name="activo" eval="True"/>
+        </record>
+
+        <record id="fnc04seq" model="ir.sequence">
+            <field name="name">FNC04SEQ</field>
+            <field name="code">einvoice.series.fnc04</field>
+            <field name="use_date_range" eval="False"/>
+            <field name="number_next_actual">1</field>
+            <field name="number_increment">1</field>
+            <field name="padding">8</field>
+        </record>
+
+        <record id="fnc04serie" model="biosis.facturacion.einvoice.serie">
+            <field name="alfanumerico">FN04</field>
+            <field name="tipo_comprobante_id" ref="odoope_einvoice_base.e01_07"/>
+            <field name="correlativo_id" ref="fnc04seq"/>
+            <field name="activo" eval="True"/>
+        </record>
+
+        <record id="fnc05seq" model="ir.sequence">
+            <field name="name">FNC05SEQ</field>
+            <field name="code">einvoice.series.fnc05</field>
+            <field name="use_date_range" eval="False"/>
+            <field name="number_next_actual">1</field>
+            <field name="number_increment">1</field>
+            <field name="padding">8</field>
+        </record>
+
+        <record id="fnc05serie" model="biosis.facturacion.einvoice.serie">
+            <field name="alfanumerico">FN05</field>
+            <field name="tipo_comprobante_id" ref="odoope_einvoice_base.e01_07"/>
+            <field name="correlativo_id" ref="fnc05seq"/>
+            <field name="activo" eval="True"/>
+        </record>
+
+        <!-- Serie de Notas de credito Para boletas-->
+        <record id="bnc01seq" model="ir.sequence">
+            <field name="name">BNC01SEQ</field>
+            <field name="code">einvoice.series.bnc01</field>
+            <field name="use_date_range" eval="False"/>
+            <field name="number_next_actual">1</field>
+            <field name="number_increment">1</field>
+            <field name="padding">8</field>
+        </record>
+
+        <record id="bnc01serie" model="biosis.facturacion.einvoice.serie">
+            <field name="alfanumerico">BN01</field>
+            <field name="tipo_comprobante_id" ref="odoope_einvoice_base.e01_07"/>
+            <field name="correlativo_id" ref="bnc01seq"/>
+            <field name="activo" eval="True"/>
+        </record>
+        <record id="bnc02seq" model="ir.sequence">
+            <field name="name">BNC02SEQ</field>
+            <field name="code">einvoice.series.bnc02</field>
+            <field name="use_date_range" eval="False"/>
+            <field name="number_next_actual">1</field>
+            <field name="number_increment">1</field>
+            <field name="padding">8</field>
+        </record>
+
+        <record id="bnc02serie" model="biosis.facturacion.einvoice.serie">
+            <field name="alfanumerico">BN02</field>
+            <field name="tipo_comprobante_id" ref="odoope_einvoice_base.e01_07"/>
+            <field name="correlativo_id" ref="bnc02seq"/>
+            <field name="activo" eval="True"/>
+        </record>
+        <record id="bnc03seq" model="ir.sequence">
+            <field name="name">BNC03SEQ</field>
+            <field name="code">einvoice.series.bnc03</field>
+            <field name="use_date_range" eval="False"/>
+            <field name="number_next_actual">1</field>
+            <field name="number_increment">1</field>
+            <field name="padding">8</field>
+        </record>
+
+        <record id="bnc03serie" model="biosis.facturacion.einvoice.serie">
+            <field name="alfanumerico">BN03</field>
+            <field name="tipo_comprobante_id" ref="odoope_einvoice_base.e01_07"/>
+            <field name="correlativo_id" ref="bnc03seq"/>
+            <field name="activo" eval="True"/>
+        </record>
+        <record id="bnc04seq" model="ir.sequence">
+            <field name="name">BNC04SEQ</field>
+            <field name="code">einvoice.series.bnc04</field>
+            <field name="use_date_range" eval="False"/>
+            <field name="number_next_actual">1</field>
+            <field name="number_increment">1</field>
+            <field name="padding">8</field>
+        </record>
+
+        <record id="bnc04serie" model="biosis.facturacion.einvoice.serie">
+            <field name="alfanumerico">BN04</field>
+            <field name="tipo_comprobante_id" ref="odoope_einvoice_base.e01_07"/>
+            <field name="correlativo_id" ref="bnc04seq"/>
+            <field name="activo" eval="True"/>
+        </record>
+        <record id="bnc05seq" model="ir.sequence">
+            <field name="name">BNC05SEQ</field>
+            <field name="code">einvoice.series.bnc05</field>
+            <field name="use_date_range" eval="False"/>
+            <field name="number_next_actual">1</field>
+            <field name="number_increment">1</field>
+            <field name="padding">8</field>
+        </record>
+
+        <record id="bnc05serie" model="biosis.facturacion.einvoice.serie">
+            <field name="alfanumerico">BN05</field>
+            <field name="tipo_comprobante_id" ref="odoope_einvoice_base.e01_07"/>
+            <field name="correlativo_id" ref="bnc05seq"/>
+            <field name="activo" eval="True"/>
+        </record>
+
+    </data>
+</odoo>

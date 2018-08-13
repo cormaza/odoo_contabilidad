@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-extend="PosTicket">
+        <t t-jquery="t[t-esc*='order.formatted_validation_date']" t-operation="replace">
+            <strong>BOLETA DE VENTA ELECTRONICA</strong><br/>
+            <strong> <span>NRO: </span> <t t-esc="order.numero_comprobante" /></strong>
+        </t>
+        <t t-jquery="t[t-esc*='order.name']" t-operation="replace">
+            <strong>Numero de orden</strong>
+        </t>
+        <t t-jquery=".receipt-user" t-operation="replace">
+        </t>
+        <t t-jquery="t[t-esc*='widget.pos.company.name']" t-operation="before">
+            <hr/>
+            <span>RUC: </span><t t-esc="widget.pos.company.vat"/><br/>
+        </t>
+
+    </t>
+</templates>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="biosis_cont_report_le_view" model="ir.ui.view">
+        <field name="name">Reporte Libro Electrónico</field>
+        <field name="model">biosis_cont_report.report.le</field>
+        <field name="arch" type="xml">
+            <form string="Opciones de reporte">
+                <group column="4">
+                    <field name="libro_electronico" domain="[('state','!=','disable')]"/>
+                    <field name="mes"/>
+                    <field name="year"/>
+                </group>
+                <group column="3">
+
+                </group>
+                <footer>
+                    <button name="get_ple_file" string="Imprimir TXT" type="object" default_focus="1" class="oe_highlight"/>
+                    o
+                    <button string="Cancelar" class="oe_link" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_le_report" model="ir.actions.act_window">
+        <field name="name">Informes LE</field>
+        <field name="res_model">biosis_cont_report.report.le</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="biosis_cont_report_le_view"/>
+        <field name="target">new</field>
+    </record>
+
+    <!--<menuitem id="menu_reports_le" name="Informes LE" parent="account.menu_finance_reports"/>
+
+    <menuitem id="menu_reports_le_all" name="Informes LE" parent="biosis_cont_report.menu_reports_le" action="biosis_cont_report.action_le_report"/>-->
+
+</odoo>

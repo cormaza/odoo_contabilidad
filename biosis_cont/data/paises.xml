@@ -1,0 +1,1097 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<openerp>
+  <data>
+    <record id="anexo3_tabla35_9001" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9001</field>
+      <field name="descripcion">BOUVET ISLAND</field>
+    </record>
+    <record id="anexo3_tabla35_9002" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9002</field>
+      <field name="descripcion">COTE D'IVOIRE</field>
+    </record>
+    <record id="anexo3_tabla35_9003" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9003</field>
+      <field name="descripcion">FALKLAND ISLANDS (MALVINAS)</field>
+    </record>
+    <record id="anexo3_tabla35_9004" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9004</field>
+      <field name="descripcion">FRANCE, METROPOLITAN</field>
+    </record>
+    <record id="anexo3_tabla35_9005" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9005</field>
+      <field name="descripcion">FRENCH SOUTHERN TERRITORIES</field>
+    </record>
+    <record id="anexo3_tabla35_9006" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9006</field>
+      <field name="descripcion">HEARD AND MC DONALD ISLANDS</field>
+    </record>
+    <record id="anexo3_tabla35_9007" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9007</field>
+      <field name="descripcion">MAYOTTE</field>
+    </record>
+    <record id="anexo3_tabla35_9008" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9008</field>
+      <field name="descripcion">SOUTH GEORGIA AND THE SOUTH SANDWICH ISLANDS</field>
+    </record>
+    <record id="anexo3_tabla35_9009" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9009</field>
+      <field name="descripcion">SVALBARD AND JAN MAYEN ISLANDS</field>
+    </record>
+    <record id="anexo3_tabla35_9010" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9010</field>
+      <field name="descripcion">UNITED STATES MINOR OUTLYING ISLANDS</field>
+    </record>
+    <record id="anexo3_tabla35_9011" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9011</field>
+      <field name="descripcion">OTROS PAISES O LUGARES</field>
+    </record>
+    <record id="anexo3_tabla35_9013" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9013</field>
+      <field name="descripcion">AFGANISTAN</field>
+    </record>
+    <record id="anexo3_tabla35_9017" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9017</field>
+      <field name="descripcion">ALBANIA</field>
+    </record>
+    <record id="anexo3_tabla35_9019" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9019</field>
+      <field name="descripcion">ALDERNEY</field>
+    </record>
+    <record id="anexo3_tabla35_9023" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9023</field>
+      <field name="descripcion">ALEMANIA</field>
+    </record>
+    <record id="anexo3_tabla35_9026" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9026</field>
+      <field name="descripcion">ARMENIA</field>
+    </record>
+    <record id="anexo3_tabla35_9027" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9027</field>
+      <field name="descripcion">ARUBA</field>
+    </record>
+    <record id="anexo3_tabla35_9028" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9028</field>
+      <field name="descripcion">ASCENCION</field>
+    </record>
+    <record id="anexo3_tabla35_9029" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9029</field>
+      <field name="descripcion">BOSNIA-HERZEGOVINA</field>
+    </record>
+    <record id="anexo3_tabla35_9031" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9031</field>
+      <field name="descripcion">BURKINA FASO</field>
+    </record>
+    <record id="anexo3_tabla35_9037" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9037</field>
+      <field name="descripcion">ANDORRA</field>
+    </record>
+    <record id="anexo3_tabla35_9040" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9040</field>
+      <field name="descripcion">ANGOLA</field>
+    </record>
+    <record id="anexo3_tabla35_9041" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9041</field>
+      <field name="descripcion">ANGUILLA</field>
+    </record>
+    <record id="anexo3_tabla35_9043" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9043</field>
+      <field name="descripcion">ANTIGUA Y BARBUDA</field>
+    </record>
+    <record id="anexo3_tabla35_9047" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9047</field>
+      <field name="descripcion">ANTILLAS HOLANDESAS</field>
+    </record>
+    <record id="anexo3_tabla35_9053" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9053</field>
+      <field name="descripcion">ARABIA SAUDITA</field>
+    </record>
+    <record id="anexo3_tabla35_9059" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9059</field>
+      <field name="descripcion">ARGELIA</field>
+    </record>
+    <record id="anexo3_tabla35_9063" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9063</field>
+      <field name="descripcion">ARGENTINA</field>
+    </record>
+    <record id="anexo3_tabla35_9069" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9069</field>
+      <field name="descripcion">AUSTRALIA</field>
+    </record>
+    <record id="anexo3_tabla35_9072" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9072</field>
+      <field name="descripcion">AUSTRIA</field>
+    </record>
+    <record id="anexo3_tabla35_9074" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9074</field>
+      <field name="descripcion">AZERBAIJAN</field>
+    </record>
+    <record id="anexo3_tabla35_9077" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9077</field>
+      <field name="descripcion">BAHAMAS</field>
+    </record>
+    <record id="anexo3_tabla35_9080" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9080</field>
+      <field name="descripcion">BAHREIN</field>
+    </record>
+    <record id="anexo3_tabla35_9081" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9081</field>
+      <field name="descripcion">BANGLADESH</field>
+    </record>
+    <record id="anexo3_tabla35_9083" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9083</field>
+      <field name="descripcion">BARBADOS</field>
+    </record>
+    <record id="anexo3_tabla35_9087" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9087</field>
+      <field name="descripcion">BELGICA</field>
+    </record>
+    <record id="anexo3_tabla35_9088" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9088</field>
+      <field name="descripcion">BELICE</field>
+    </record>
+    <record id="anexo3_tabla35_9090" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9090</field>
+      <field name="descripcion">BERMUDAS</field>
+    </record>
+    <record id="anexo3_tabla35_9091" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9091</field>
+      <field name="descripcion">BELARUS</field>
+    </record>
+    <record id="anexo3_tabla35_9093" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9093</field>
+      <field name="descripcion">MYANMAR</field>
+    </record>
+    <record id="anexo3_tabla35_9097" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9097</field>
+      <field name="descripcion">BOLIVIA</field>
+    </record>
+    <record id="anexo3_tabla35_9101" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9101</field>
+      <field name="descripcion">BOTSWANA</field>
+    </record>
+    <record id="anexo3_tabla35_9105" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9105</field>
+      <field name="descripcion">BRASIL</field>
+    </record>
+    <record id="anexo3_tabla35_9108" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9108</field>
+      <field name="descripcion">BRUNEI DARUSSALAM</field>
+    </record>
+    <record id="anexo3_tabla35_9111" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9111</field>
+      <field name="descripcion">BULGARIA</field>
+    </record>
+    <record id="anexo3_tabla35_9115" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9115</field>
+      <field name="descripcion">BURUNDI</field>
+    </record>
+    <record id="anexo3_tabla35_9119" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9119</field>
+      <field name="descripcion">BUTAN</field>
+    </record>
+    <record id="anexo3_tabla35_9127" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9127</field>
+      <field name="descripcion">CABO VERDE</field>
+    </record>
+    <record id="anexo3_tabla35_9137" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9137</field>
+      <field name="descripcion">CAIMAN,ISLAS</field>
+    </record>
+    <record id="anexo3_tabla35_9141" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9141</field>
+      <field name="descripcion">CAMBOYA</field>
+    </record>
+    <record id="anexo3_tabla35_9145" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9145</field>
+      <field name="descripcion">CAMERUN,REPUBLICA UNIDA DEL</field>
+    </record>
+    <record id="anexo3_tabla35_9147" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9147</field>
+      <field name="descripcion">CAMPIONE D?TALIA</field>
+    </record>
+    <record id="anexo3_tabla35_9149" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9149</field>
+      <field name="descripcion">CANADA</field>
+    </record>
+    <record id="anexo3_tabla35_9155" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9155</field>
+      <field name="descripcion">CANAL (NORMANDAS), ISLAS</field>
+    </record>
+    <record id="anexo3_tabla35_9157" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9157</field>
+      <field name="descripcion">CANTON Y ENDERBURRY</field>
+    </record>
+    <record id="anexo3_tabla35_9159" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9159</field>
+      <field name="descripcion">SANTA SEDE</field>
+    </record>
+    <record id="anexo3_tabla35_9165" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9165</field>
+      <field name="descripcion">COCOS (KEELING),ISLAS</field>
+    </record>
+    <record id="anexo3_tabla35_9169" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9169</field>
+      <field name="descripcion">COLOMBIA</field>
+    </record>
+    <record id="anexo3_tabla35_9173" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9173</field>
+      <field name="descripcion">COMORAS</field>
+    </record>
+    <record id="anexo3_tabla35_9177" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9177</field>
+      <field name="descripcion">CONGO</field>
+    </record>
+    <record id="anexo3_tabla35_9183" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9183</field>
+      <field name="descripcion">COOK, ISLAS</field>
+    </record>
+    <record id="anexo3_tabla35_9187" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9187</field>
+      <field name="descripcion">COREA (NORTE), REPUBLICA POPULAR DEMOCRATICA DE</field>
+    </record>
+    <record id="anexo3_tabla35_9190" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9190</field>
+      <field name="descripcion">COREA (SUR), REPUBLICA DE</field>
+    </record>
+    <record id="anexo3_tabla35_9193" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9193</field>
+      <field name="descripcion">COSTA DE MARFIL</field>
+    </record>
+    <record id="anexo3_tabla35_9196" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9196</field>
+      <field name="descripcion">COSTA RICA</field>
+    </record>
+    <record id="anexo3_tabla35_9198" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9198</field>
+      <field name="descripcion">CROACIA</field>
+    </record>
+    <record id="anexo3_tabla35_9199" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9199</field>
+      <field name="descripcion">CUBA</field>
+    </record>
+    <record id="anexo3_tabla35_9203" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9203</field>
+      <field name="descripcion">CHAD</field>
+    </record>
+    <record id="anexo3_tabla35_9207" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9207</field>
+      <field name="descripcion">CHECOSLOVAQUIA</field>
+    </record>
+    <record id="anexo3_tabla35_9211" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9211</field>
+      <field name="descripcion">CHILE</field>
+    </record>
+    <record id="anexo3_tabla35_9215" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9215</field>
+      <field name="descripcion">CHINA</field>
+    </record>
+    <record id="anexo3_tabla35_9218" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9218</field>
+      <field name="descripcion">TAIWAN (FORMOSA)</field>
+    </record>
+    <record id="anexo3_tabla35_9221" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9221</field>
+      <field name="descripcion">CHIPRE</field>
+    </record>
+    <record id="anexo3_tabla35_9229" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9229</field>
+      <field name="descripcion">BENIN</field>
+    </record>
+    <record id="anexo3_tabla35_9232" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9232</field>
+      <field name="descripcion">DINAMARCA</field>
+    </record>
+    <record id="anexo3_tabla35_9235" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9235</field>
+      <field name="descripcion">DOMINICA</field>
+    </record>
+    <record id="anexo3_tabla35_9239" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9239</field>
+      <field name="descripcion">ECUADOR</field>
+    </record>
+    <record id="anexo3_tabla35_9240" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9240</field>
+      <field name="descripcion">EGIPTO</field>
+    </record>
+    <record id="anexo3_tabla35_9242" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9242</field>
+      <field name="descripcion">EL SALVADOR</field>
+    </record>
+    <record id="anexo3_tabla35_9243" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9243</field>
+      <field name="descripcion">ERITREA</field>
+    </record>
+    <record id="anexo3_tabla35_9244" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9244</field>
+      <field name="descripcion">EMIRATOS ARABES UNIDOS</field>
+    </record>
+    <record id="anexo3_tabla35_9245" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9245</field>
+      <field name="descripcion">ESPA?A</field>
+    </record>
+    <record id="anexo3_tabla35_9246" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9246</field>
+      <field name="descripcion">ESLOVAQUIA</field>
+    </record>
+    <record id="anexo3_tabla35_9247" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9247</field>
+      <field name="descripcion">ESLOVENIA</field>
+    </record>
+    <record id="anexo3_tabla35_9249" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9249</field>
+      <field name="descripcion">ESTADOS UNIDOS</field>
+    </record>
+    <record id="anexo3_tabla35_9251" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9251</field>
+      <field name="descripcion">ESTONIA</field>
+    </record>
+    <record id="anexo3_tabla35_9253" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9253</field>
+      <field name="descripcion">ETIOPIA</field>
+    </record>
+    <record id="anexo3_tabla35_9259" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9259</field>
+      <field name="descripcion">FEROE, ISLAS</field>
+    </record>
+    <record id="anexo3_tabla35_9267" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9267</field>
+      <field name="descripcion">FILIPINAS</field>
+    </record>
+    <record id="anexo3_tabla35_9271" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9271</field>
+      <field name="descripcion">FINLANDIA</field>
+    </record>
+    <record id="anexo3_tabla35_9275" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9275</field>
+      <field name="descripcion">FRANCIA</field>
+    </record>
+    <record id="anexo3_tabla35_9281" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9281</field>
+      <field name="descripcion">GABON</field>
+    </record>
+    <record id="anexo3_tabla35_9285" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9285</field>
+      <field name="descripcion">GAMBIA</field>
+    </record>
+    <record id="anexo3_tabla35_9286" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9286</field>
+      <field name="descripcion">GAZA Y JERICO</field>
+    </record>
+    <record id="anexo3_tabla35_9287" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9287</field>
+      <field name="descripcion">GEORGIA</field>
+    </record>
+    <record id="anexo3_tabla35_9289" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9289</field>
+      <field name="descripcion">GHANA</field>
+    </record>
+    <record id="anexo3_tabla35_9293" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9293</field>
+      <field name="descripcion">GIBRALTAR</field>
+    </record>
+    <record id="anexo3_tabla35_9297" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9297</field>
+      <field name="descripcion">GRANADA</field>
+    </record>
+    <record id="anexo3_tabla35_9301" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9301</field>
+      <field name="descripcion">GRECIA</field>
+    </record>
+    <record id="anexo3_tabla35_9305" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9305</field>
+      <field name="descripcion">GROENLANDIA</field>
+    </record>
+    <record id="anexo3_tabla35_9309" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9309</field>
+      <field name="descripcion">GUADALUPE</field>
+    </record>
+    <record id="anexo3_tabla35_9313" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9313</field>
+      <field name="descripcion">GUAM</field>
+    </record>
+    <record id="anexo3_tabla35_9317" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9317</field>
+      <field name="descripcion">GUATEMALA</field>
+    </record>
+    <record id="anexo3_tabla35_9325" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9325</field>
+      <field name="descripcion">GUAYANA FRANCESA</field>
+    </record>
+    <record id="anexo3_tabla35_9327" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9327</field>
+      <field name="descripcion">GUERNSEY</field>
+    </record>
+    <record id="anexo3_tabla35_9329" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9329</field>
+      <field name="descripcion">GUINEA</field>
+    </record>
+    <record id="anexo3_tabla35_9331" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9331</field>
+      <field name="descripcion">GUINEA ECUATORIAL</field>
+    </record>
+    <record id="anexo3_tabla35_9334" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9334</field>
+      <field name="descripcion">GUINEA-BISSAU</field>
+    </record>
+    <record id="anexo3_tabla35_9337" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9337</field>
+      <field name="descripcion">GUYANA</field>
+    </record>
+    <record id="anexo3_tabla35_9341" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9341</field>
+      <field name="descripcion">HAITI</field>
+    </record>
+    <record id="anexo3_tabla35_9345" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9345</field>
+      <field name="descripcion">HONDURAS</field>
+    </record>
+    <record id="anexo3_tabla35_9348" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9348</field>
+      <field name="descripcion">HONDURAS BRITANICAS</field>
+    </record>
+    <record id="anexo3_tabla35_9351" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9351</field>
+      <field name="descripcion">HONG KONG</field>
+    </record>
+    <record id="anexo3_tabla35_9355" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9355</field>
+      <field name="descripcion">HUNGRIA</field>
+    </record>
+    <record id="anexo3_tabla35_9361" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9361</field>
+      <field name="descripcion">INDIA</field>
+    </record>
+    <record id="anexo3_tabla35_9365" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9365</field>
+      <field name="descripcion">INDONESIA</field>
+    </record>
+    <record id="anexo3_tabla35_9369" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9369</field>
+      <field name="descripcion">IRAK</field>
+    </record>
+    <record id="anexo3_tabla35_9372" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9372</field>
+      <field name="descripcion">IRAN, REPUBLICA ISLAMICA DEL</field>
+    </record>
+    <record id="anexo3_tabla35_9375" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9375</field>
+      <field name="descripcion">IRLANDA (EIRE)</field>
+    </record>
+    <record id="anexo3_tabla35_9377" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9377</field>
+      <field name="descripcion">ISLA AZORES</field>
+    </record>
+    <record id="anexo3_tabla35_9378" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9378</field>
+      <field name="descripcion">ISLA DEL MAN</field>
+    </record>
+    <record id="anexo3_tabla35_9379" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9379</field>
+      <field name="descripcion">ISLANDIA</field>
+    </record>
+    <record id="anexo3_tabla35_9380" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9380</field>
+      <field name="descripcion">ISLAS CANARIAS</field>
+    </record>
+    <record id="anexo3_tabla35_9381" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9381</field>
+      <field name="descripcion">ISLAS DE CHRISTMAS</field>
+    </record>
+    <record id="anexo3_tabla35_9382" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9382</field>
+      <field name="descripcion">ISLAS QESHM</field>
+    </record>
+    <record id="anexo3_tabla35_9383" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9383</field>
+      <field name="descripcion">ISRAEL</field>
+    </record>
+    <record id="anexo3_tabla35_9386" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9386</field>
+      <field name="descripcion">ITALIA</field>
+    </record>
+    <record id="anexo3_tabla35_9391" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9391</field>
+      <field name="descripcion">JAMAICA</field>
+    </record>
+    <record id="anexo3_tabla35_9395" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9395</field>
+      <field name="descripcion">JONSTON, ISLAS</field>
+    </record>
+    <record id="anexo3_tabla35_9399" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9399</field>
+      <field name="descripcion">JAPON</field>
+    </record>
+    <record id="anexo3_tabla35_9401" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9401</field>
+      <field name="descripcion">JERSEY</field>
+    </record>
+    <record id="anexo3_tabla35_9403" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9403</field>
+      <field name="descripcion">JORDANIA</field>
+    </record>
+    <record id="anexo3_tabla35_9406" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9406</field>
+      <field name="descripcion">KAZAJSTAN</field>
+    </record>
+    <record id="anexo3_tabla35_9410" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9410</field>
+      <field name="descripcion">KENIA</field>
+    </record>
+    <record id="anexo3_tabla35_9411" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9411</field>
+      <field name="descripcion">KIRIBATI</field>
+    </record>
+    <record id="anexo3_tabla35_9412" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9412</field>
+      <field name="descripcion">KIRGUIZISTAN</field>
+    </record>
+    <record id="anexo3_tabla35_9413" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9413</field>
+      <field name="descripcion">KUWAIT</field>
+    </record>
+    <record id="anexo3_tabla35_9418" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9418</field>
+      <field name="descripcion">LABUN</field>
+    </record>
+    <record id="anexo3_tabla35_9420" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9420</field>
+      <field name="descripcion">LAOS, REPUBLICA POPULAR DEMOCRATICA DE</field>
+    </record>
+    <record id="anexo3_tabla35_9426" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9426</field>
+      <field name="descripcion">LESOTHO</field>
+    </record>
+    <record id="anexo3_tabla35_9429" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9429</field>
+      <field name="descripcion">LETONIA</field>
+    </record>
+    <record id="anexo3_tabla35_9431" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9431</field>
+      <field name="descripcion">LIBANO</field>
+    </record>
+    <record id="anexo3_tabla35_9434" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9434</field>
+      <field name="descripcion">LIBERIA</field>
+    </record>
+    <record id="anexo3_tabla35_9438" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9438</field>
+      <field name="descripcion">LIBIA</field>
+    </record>
+    <record id="anexo3_tabla35_9440" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9440</field>
+      <field name="descripcion">LIECHTENSTEIN</field>
+    </record>
+    <record id="anexo3_tabla35_9443" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9443</field>
+      <field name="descripcion">LITUANIA</field>
+    </record>
+    <record id="anexo3_tabla35_9445" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9445</field>
+      <field name="descripcion">LUXEMBURGO</field>
+    </record>
+    <record id="anexo3_tabla35_9447" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9447</field>
+      <field name="descripcion">MACAO</field>
+    </record>
+    <record id="anexo3_tabla35_9448" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9448</field>
+      <field name="descripcion">MACEDONIA</field>
+    </record>
+    <record id="anexo3_tabla35_9450" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9450</field>
+      <field name="descripcion">MADAGASCAR</field>
+    </record>
+    <record id="anexo3_tabla35_9453" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9453</field>
+      <field name="descripcion">MADEIRA</field>
+    </record>
+    <record id="anexo3_tabla35_9455" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9455</field>
+      <field name="descripcion">MALAYSIA</field>
+    </record>
+    <record id="anexo3_tabla35_9458" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9458</field>
+      <field name="descripcion">MALAWI</field>
+    </record>
+    <record id="anexo3_tabla35_9461" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9461</field>
+      <field name="descripcion">MALDIVAS</field>
+    </record>
+    <record id="anexo3_tabla35_9464" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9464</field>
+      <field name="descripcion">MALI</field>
+    </record>
+    <record id="anexo3_tabla35_9467" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9467</field>
+      <field name="descripcion">MALTA</field>
+    </record>
+    <record id="anexo3_tabla35_9469" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9469</field>
+      <field name="descripcion">MARIANAS DEL NORTE, ISLAS</field>
+    </record>
+    <record id="anexo3_tabla35_9472" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9472</field>
+      <field name="descripcion">MARSHALL, ISLAS</field>
+    </record>
+    <record id="anexo3_tabla35_9474" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9474</field>
+      <field name="descripcion">MARRUECOS</field>
+    </record>
+    <record id="anexo3_tabla35_9477" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9477</field>
+      <field name="descripcion">MARTINICA</field>
+    </record>
+    <record id="anexo3_tabla35_9485" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9485</field>
+      <field name="descripcion">MAURICIO</field>
+    </record>
+    <record id="anexo3_tabla35_9488" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9488</field>
+      <field name="descripcion">MAURITANIA</field>
+    </record>
+    <record id="anexo3_tabla35_9493" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9493</field>
+      <field name="descripcion">MEXICO</field>
+    </record>
+    <record id="anexo3_tabla35_9494" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9494</field>
+      <field name="descripcion">MICRONESIA, ESTADOS FEDERADOS DE</field>
+    </record>
+    <record id="anexo3_tabla35_9495" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9495</field>
+      <field name="descripcion">MIDWAY ISLAS</field>
+    </record>
+    <record id="anexo3_tabla35_9496" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9496</field>
+      <field name="descripcion">MOLDAVIA</field>
+    </record>
+    <record id="anexo3_tabla35_9497" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9497</field>
+      <field name="descripcion">MONGOLIA</field>
+    </record>
+    <record id="anexo3_tabla35_9498" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9498</field>
+      <field name="descripcion">MONACO</field>
+    </record>
+    <record id="anexo3_tabla35_9501" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9501</field>
+      <field name="descripcion">MONTSERRAT, ISLA</field>
+    </record>
+    <record id="anexo3_tabla35_9505" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9505</field>
+      <field name="descripcion">MOZAMBIQUE</field>
+    </record>
+    <record id="anexo3_tabla35_9507" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9507</field>
+      <field name="descripcion">NAMIBIA</field>
+    </record>
+    <record id="anexo3_tabla35_9508" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9508</field>
+      <field name="descripcion">NAURU</field>
+    </record>
+    <record id="anexo3_tabla35_9511" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9511</field>
+      <field name="descripcion">NAVIDAD (CHRISTMAS), ISLA</field>
+    </record>
+    <record id="anexo3_tabla35_9517" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9517</field>
+      <field name="descripcion">NEPAL</field>
+    </record>
+    <record id="anexo3_tabla35_9521" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9521</field>
+      <field name="descripcion">NICARAGUA</field>
+    </record>
+    <record id="anexo3_tabla35_9525" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9525</field>
+      <field name="descripcion">NIGER</field>
+    </record>
+    <record id="anexo3_tabla35_9528" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9528</field>
+      <field name="descripcion">NIGERIA</field>
+    </record>
+    <record id="anexo3_tabla35_9531" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9531</field>
+      <field name="descripcion">NIUE, ISLA</field>
+    </record>
+    <record id="anexo3_tabla35_9535" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9535</field>
+      <field name="descripcion">NORFOLK, ISLA</field>
+    </record>
+    <record id="anexo3_tabla35_9538" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9538</field>
+      <field name="descripcion">NORUEGA</field>
+    </record>
+    <record id="anexo3_tabla35_9542" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9542</field>
+      <field name="descripcion">NUEVA CALEDONIA</field>
+    </record>
+    <record id="anexo3_tabla35_9545" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9545</field>
+      <field name="descripcion">PAPUASIA NUEVA GUINEA</field>
+    </record>
+    <record id="anexo3_tabla35_9548" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9548</field>
+      <field name="descripcion">NUEVA ZELANDA</field>
+    </record>
+    <record id="anexo3_tabla35_9551" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9551</field>
+      <field name="descripcion">VANUATU</field>
+    </record>
+    <record id="anexo3_tabla35_9556" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9556</field>
+      <field name="descripcion">OMAN</field>
+    </record>
+    <record id="anexo3_tabla35_9566" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9566</field>
+      <field name="descripcion">PACIFICO, ISLAS DEL</field>
+    </record>
+    <record id="anexo3_tabla35_9573" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9573</field>
+      <field name="descripcion">PAISES BAJOS</field>
+    </record>
+    <record id="anexo3_tabla35_9576" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9576</field>
+      <field name="descripcion">PAKISTAN</field>
+    </record>
+    <record id="anexo3_tabla35_9578" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9578</field>
+      <field name="descripcion">PALAU, ISLAS</field>
+    </record>
+    <record id="anexo3_tabla35_9579" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9579</field>
+      <field name="descripcion">TERRITORIO AUTONOMO DE PALESTINA.</field>
+    </record>
+    <record id="anexo3_tabla35_9580" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9580</field>
+      <field name="descripcion">PANAMA</field>
+    </record>
+    <record id="anexo3_tabla35_9586" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9586</field>
+      <field name="descripcion">PARAGUAY</field>
+    </record>
+    <record id="anexo3_tabla35_9589" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9589</field>
+      <field name="descripcion">PERU</field>
+    </record>
+    <record id="anexo3_tabla35_9593" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9593</field>
+      <field name="descripcion">PITCAIRN, ISLA</field>
+    </record>
+    <record id="anexo3_tabla35_9599" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9599</field>
+      <field name="descripcion">POLINESIA FRANCESA</field>
+    </record>
+    <record id="anexo3_tabla35_9603" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9603</field>
+      <field name="descripcion">POLONIA</field>
+    </record>
+    <record id="anexo3_tabla35_9607" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9607</field>
+      <field name="descripcion">PORTUGAL</field>
+    </record>
+    <record id="anexo3_tabla35_9611" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9611</field>
+      <field name="descripcion">PUERTO RICO</field>
+    </record>
+    <record id="anexo3_tabla35_9618" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9618</field>
+      <field name="descripcion">QATAR</field>
+    </record>
+    <record id="anexo3_tabla35_9628" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9628</field>
+      <field name="descripcion">REINO UNIDO</field>
+    </record>
+    <record id="anexo3_tabla35_9629" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9629</field>
+      <field name="descripcion">ESCOCIA</field>
+    </record>
+    <record id="anexo3_tabla35_9633" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9633</field>
+      <field name="descripcion">REPUBLICA ARABE UNIDA</field>
+    </record>
+    <record id="anexo3_tabla35_9640" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9640</field>
+      <field name="descripcion">REPUBLICA CENTROAFRICANA</field>
+    </record>
+    <record id="anexo3_tabla35_9644" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9644</field>
+      <field name="descripcion">REPUBLICA CHECA</field>
+    </record>
+    <record id="anexo3_tabla35_9645" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9645</field>
+      <field name="descripcion">REPUBLICA DE SWAZILANDIA</field>
+    </record>
+    <record id="anexo3_tabla35_9646" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9646</field>
+      <field name="descripcion">REPUBLICA DE TUNEZ</field>
+    </record>
+    <record id="anexo3_tabla35_9647" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9647</field>
+      <field name="descripcion">REPUBLICA DOMINICANA</field>
+    </record>
+    <record id="anexo3_tabla35_9660" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9660</field>
+      <field name="descripcion">REUNION</field>
+    </record>
+    <record id="anexo3_tabla35_9665" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9665</field>
+      <field name="descripcion">ZIMBABWE</field>
+    </record>
+    <record id="anexo3_tabla35_9670" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9670</field>
+      <field name="descripcion">RUMANIA</field>
+    </record>
+    <record id="anexo3_tabla35_9675" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9675</field>
+      <field name="descripcion">RUANDA</field>
+    </record>
+    <record id="anexo3_tabla35_9676" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9676</field>
+      <field name="descripcion">RUSIA</field>
+    </record>
+    <record id="anexo3_tabla35_9677" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9677</field>
+      <field name="descripcion">SALOMON, ISLAS</field>
+    </record>
+    <record id="anexo3_tabla35_9685" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9685</field>
+      <field name="descripcion">SAHARA OCCIDENTAL</field>
+    </record>
+    <record id="anexo3_tabla35_9687" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9687</field>
+      <field name="descripcion">SAMOA OCCIDENTAL</field>
+    </record>
+    <record id="anexo3_tabla35_9690" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9690</field>
+      <field name="descripcion">SAMOA NORTEAMERICANA</field>
+    </record>
+    <record id="anexo3_tabla35_9695" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9695</field>
+      <field name="descripcion">SAN CRISTOBAL Y NIEVES</field>
+    </record>
+    <record id="anexo3_tabla35_9697" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9697</field>
+      <field name="descripcion">SAN MARINO</field>
+    </record>
+    <record id="anexo3_tabla35_9700" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9700</field>
+      <field name="descripcion">SAN PEDRO Y MIQUELON</field>
+    </record>
+    <record id="anexo3_tabla35_9705" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9705</field>
+      <field name="descripcion">SAN VICENTE Y LAS GRANADINAS</field>
+    </record>
+    <record id="anexo3_tabla35_9710" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9710</field>
+      <field name="descripcion">SANTA ELENA</field>
+    </record>
+    <record id="anexo3_tabla35_9715" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9715</field>
+      <field name="descripcion">SANTA LUCIA</field>
+    </record>
+    <record id="anexo3_tabla35_9720" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9720</field>
+      <field name="descripcion">SANTO TOME Y PRINCIPE</field>
+    </record>
+    <record id="anexo3_tabla35_9728" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9728</field>
+      <field name="descripcion">SENEGAL</field>
+    </record>
+    <record id="anexo3_tabla35_9731" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9731</field>
+      <field name="descripcion">SEYCHELLES</field>
+    </record>
+    <record id="anexo3_tabla35_9735" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9735</field>
+      <field name="descripcion">SIERRA LEONA</field>
+    </record>
+    <record id="anexo3_tabla35_9741" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9741</field>
+      <field name="descripcion">SINGAPUR</field>
+    </record>
+    <record id="anexo3_tabla35_9744" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9744</field>
+      <field name="descripcion">SIRIA, REPUBLICA ARABE DE</field>
+    </record>
+    <record id="anexo3_tabla35_9748" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9748</field>
+      <field name="descripcion">SOMALIA</field>
+    </record>
+    <record id="anexo3_tabla35_9750" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9750</field>
+      <field name="descripcion">SRI LANKA</field>
+    </record>
+    <record id="anexo3_tabla35_9756" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9756</field>
+      <field name="descripcion">SUDAFRICA, REPUBLICA DE</field>
+    </record>
+    <record id="anexo3_tabla35_9759" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9759</field>
+      <field name="descripcion">SUDAN</field>
+    </record>
+    <record id="anexo3_tabla35_9764" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9764</field>
+      <field name="descripcion">SUECIA</field>
+    </record>
+    <record id="anexo3_tabla35_9767" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9767</field>
+      <field name="descripcion">SUIZA</field>
+    </record>
+    <record id="anexo3_tabla35_9770" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9770</field>
+      <field name="descripcion">SURINAM</field>
+    </record>
+    <record id="anexo3_tabla35_9773" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9773</field>
+      <field name="descripcion">SAWSILANDIA</field>
+    </record>
+    <record id="anexo3_tabla35_9774" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9774</field>
+      <field name="descripcion">TADJIKISTAN</field>
+    </record>
+    <record id="anexo3_tabla35_9776" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9776</field>
+      <field name="descripcion">TAILANDIA</field>
+    </record>
+    <record id="anexo3_tabla35_9780" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9780</field>
+      <field name="descripcion">TANZANIA, REPUBLICA UNIDA DE</field>
+    </record>
+    <record id="anexo3_tabla35_9783" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9783</field>
+      <field name="descripcion">DJIBOUTI</field>
+    </record>
+    <record id="anexo3_tabla35_9786" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9786</field>
+      <field name="descripcion">TERRITORIO ANTARTICO BRITANICO</field>
+    </record>
+    <record id="anexo3_tabla35_9787" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9787</field>
+      <field name="descripcion">TERRITORIO BRITANICO DEL OCEANO INDICO</field>
+    </record>
+    <record id="anexo3_tabla35_9788" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9788</field>
+      <field name="descripcion">TIMOR DEL ESTE</field>
+    </record>
+    <record id="anexo3_tabla35_9800" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9800</field>
+      <field name="descripcion">TOGO</field>
+    </record>
+    <record id="anexo3_tabla35_9805" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9805</field>
+      <field name="descripcion">TOKELAU</field>
+    </record>
+    <record id="anexo3_tabla35_9810" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9810</field>
+      <field name="descripcion">TONGA</field>
+    </record>
+    <record id="anexo3_tabla35_9815" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9815</field>
+      <field name="descripcion">TRINIDAD Y TOBAGO</field>
+    </record>
+    <record id="anexo3_tabla35_9816" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9816</field>
+      <field name="descripcion">TRISTAN DA CUNHA</field>
+    </record>
+    <record id="anexo3_tabla35_9820" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9820</field>
+      <field name="descripcion">TUNICIA</field>
+    </record>
+    <record id="anexo3_tabla35_9823" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9823</field>
+      <field name="descripcion">TURCAS Y CAICOS, ISLAS</field>
+    </record>
+    <record id="anexo3_tabla35_9825" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9825</field>
+      <field name="descripcion">TURKMENISTAN</field>
+    </record>
+    <record id="anexo3_tabla35_9827" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9827</field>
+      <field name="descripcion">TURQUIA</field>
+    </record>
+    <record id="anexo3_tabla35_9828" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9828</field>
+      <field name="descripcion">TUVALU</field>
+    </record>
+    <record id="anexo3_tabla35_9830" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9830</field>
+      <field name="descripcion">UCRANIA</field>
+    </record>
+    <record id="anexo3_tabla35_9833" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9833</field>
+      <field name="descripcion">UGANDA</field>
+    </record>
+    <record id="anexo3_tabla35_9840" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9840</field>
+      <field name="descripcion">URSS</field>
+    </record>
+    <record id="anexo3_tabla35_9845" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9845</field>
+      <field name="descripcion">URUGUAY</field>
+    </record>
+    <record id="anexo3_tabla35_9847" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9847</field>
+      <field name="descripcion">UZBEKISTAN</field>
+    </record>
+    <record id="anexo3_tabla35_9850" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9850</field>
+      <field name="descripcion">VENEZUELA</field>
+    </record>
+    <record id="anexo3_tabla35_9855" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9855</field>
+      <field name="descripcion">VIET NAM</field>
+    </record>
+    <record id="anexo3_tabla35_9858" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9858</field>
+      <field name="descripcion">VIETNAM (DEL NORTE)</field>
+    </record>
+    <record id="anexo3_tabla35_9863" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9863</field>
+      <field name="descripcion">VIRGENES, ISLAS (BRITANICAS)</field>
+    </record>
+    <record id="anexo3_tabla35_9866" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9866</field>
+      <field name="descripcion">VIRGENES, ISLAS (NORTEAMERICANAS)</field>
+    </record>
+    <record id="anexo3_tabla35_9870" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9870</field>
+      <field name="descripcion">FIJI</field>
+    </record>
+    <record id="anexo3_tabla35_9873" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9873</field>
+      <field name="descripcion">WAKE, ISLA</field>
+    </record>
+    <record id="anexo3_tabla35_9875" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9875</field>
+      <field name="descripcion">WALLIS Y FORTUNA, ISLAS</field>
+    </record>
+    <record id="anexo3_tabla35_9880" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9880</field>
+      <field name="descripcion">YEMEN</field>
+    </record>
+    <record id="anexo3_tabla35_9885" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9885</field>
+      <field name="descripcion">YUGOSLAVIA</field>
+    </record>
+    <record id="anexo3_tabla35_9888" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9888</field>
+      <field name="descripcion">ZAIRE</field>
+    </record>
+    <record id="anexo3_tabla35_9890" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9890</field>
+      <field name="descripcion">ZAMBIA</field>
+    </record>
+    <record id="anexo3_tabla35_9895" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9895</field>
+      <field name="descripcion">ZONA DEL CANAL DE PANAMA</field>
+    </record>
+    <record id="anexo3_tabla35_9896" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9896</field>
+      <field name="descripcion">ZONA LIBRE OSTRAVA</field>
+    </record>
+    <record id="anexo3_tabla35_9897" model="biosis.report.ple.anexo3.tabla35">
+      <field name="num_orden">9897</field>
+      <field name="descripcion">ZONA NEUTRAL (PALESTINA)</field>
+    </record>
+  </data>
+</openerp>

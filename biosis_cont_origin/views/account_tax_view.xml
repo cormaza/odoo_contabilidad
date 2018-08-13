@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="biosis_cont_account_tax_form" model="ir.ui.view">
+            <field name="inherit_id" ref="account.view_tax_form"/>
+            <field name="model">account.tax</field>
+            <field name="arch" type="xml">
+                <field name="refund_account_id" position="after">
+                    <field name="destiny_account_id" domain="[('code', '=like', '9%')]"/>
+                </field>
+                 <field name="tax_group_id" position="after">
+                    <!--<field name="codigo_percepcion" />-->
+                      <field name="codigo_percepcion" attrs="{'invisible':[('tax_group_id','!=',2)]}"  />
+                </field>
+                <field name="tax_group_id" position="after">
+                    <!--<field name="codigo_percepcion" />-->
+                      <field name="codigo_catalogo5" attrs="{'invisible':[('tax_group_id','!=',1)]}"  />
+                      <field name="tax_type_catalogo5" attrs="{'invisible':[('tax_group_id','!=',1)]}"  />
+                </field>
+
+            </field>
+        </record>
+    </data>
+</odoo>

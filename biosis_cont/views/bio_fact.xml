@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <act_window id="action_numeracion" name="Numeracion" res_model="biosis.facturacion.numeracion"
+                    view_mode="tree,form"
+                    limit="50"/>
+
+
+        <menuitem id="menu_facturacion_numeracion" parent="account.menu_finance_receivables" name="Numeración"
+                  sequence="2" action="action_numeracion"/>
+
+
+
+        <record id="account_invoice_form" model="ir.ui.view">
+            <field name="inherit_id" ref="account.invoice_form"/>
+            <field name="model">account.invoice</field>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='number']" position="replace">
+                    <field name="numero" readonly="1" class="oe_inline"
+                           attrs="{'invisible': [('state','in',('draft',))]}"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="numeracion_tree" model="ir.ui.view">
+            <field name="name">biosis.facturacion.numeracion.tree</field>
+            <field name="model">biosis.facturacion.numeracion</field>
+            <field name="arch" type="xml">
+                <tree string="Numeración">
+                    <field name="tipo_comprobante_id" widget="selection" string="Tipo de comprobante"/>
+                    <field name="primera_letra" string="Letra"/>
+                    <field name="secuencia_id" string="Secuencia"/>
+                    <field name="secuencia_ncredito_id" string="Secuencia N. crédito"/>
+                    <field name="secuencia_ndebito_id" string="Secuencia N. débito"/>
+                    <field name="vigente"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="numeracion_form" model="ir.ui.view">
+            <field name="name">biosis.facturacion.numeracion.form</field>
+            <field name="model">biosis.facturacion.numeracion</field>
+            <field name="arch" type="xml">
+                <form string="Numeración">
+                    <group>
+                        <field name="vigente"/>
+                    </group>
+                    <group string="Comprobante">
+                        <field name="tipo_comprobante_id" widget="selection" string="Tipo de comprobante"
+                               domain="[('code','in',['01','03'])]"/>
+                        <field name="primera_letra" string="Letra"/>
+                    </group>
+                    <group string="Correlativo">
+                        <field name="secuencia_id" string="Correlativo"/>
+                        <field name="secuencia_ncredito_id" string="Correlativo N. crédito"/>
+                        <field name="secuencia_ndebito_id" string="Correlativo N. débito"/>
+
+                    </group>
+                </form>
+            </field>
+        </record>
+
+    </data>
+</odoo>

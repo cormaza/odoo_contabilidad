@@ -1,0 +1,563 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <!--Reporte financiero-->
+        <record id="account_financial_report_balancecheck" model="account.financial.report">
+            <field name="name">Balance de Comprobación</field>
+            <field name="type">sum</field>
+            <field name="code">BC</field>
+        </record>
+        <record id="account_financial_report_all_accounts" model="account.financial.report">
+            <field name="name">Todas las cuentas</field>
+            <field name="parent_id" ref="account_financial_report_balancecheck"/>
+            <field name="display_detail">detail_with_hierarchy</field>
+            <field name="type">account_type</field>
+            <field name="account_type_ids" eval="[(4,ref('account.data_account_type_receivable')), (4,ref('account.data_account_type_payable')), (4,ref('account.data_account_type_liquidity')), (4,ref('account.data_account_type_current_assets')), (4,ref('account.data_account_type_non_current_assets')), (4,ref('account.data_account_type_prepayments')),(4,ref('account.data_account_type_fixed_assets')), (4,ref('account.data_account_type_current_liabilities')), (4,ref('account.data_account_type_non_current_liabilities')), (4,ref('account.data_account_type_non_current_liabilities')),(4,ref('account.data_account_type_equity')),(4,ref('account.data_unaffected_earnings')),(4,ref('account.data_account_type_other_income')),(4,ref('account.data_account_type_revenue')),(4,ref('account.data_account_type_depreciation')),(4,ref('account.data_account_type_expenses')),(4,ref('account.data_account_type_direct_costs')),(4,ref('l10n_pe.account_account_type_EGP_NA_080')),(4,ref('l10n_pe.account_account_type_EGP_NA_050')),(4,ref('l10n_pe.account_account_type_BG_ACN_70')),(4,ref('l10n_pe.account_account_type_EGP_NA_020')),(4,ref('l10n_pe.account_account_type_EGP_NA_060')),(4,ref('l10n_pe.account_account_type_BG_PTN_70')),(4,ref('l10n_pe.account_account_type_EGP_FU_150')),(4,ref('l10n_pe.account_account_type_ORD')),(4,ref('l10n_pe.account_account_type_EGP_NA_090')),(4,ref('l10n_pe.account_account_type_EGP_NA_040')),(4,ref('l10n_pe.account_account_type_EGP_NA_070')),(4,ref('l10n_pe.account_account_type_EGP_NA_130')),(4,ref('l10n_pe.account_account_type_EGP_NA_100')),(4,ref('l10n_pe.account_account_type_EGP_NA_150')),(4,ref('l10n_pe.account_account_type_EGP_NA_110')),(4,ref('l10n_pe.account_account_type_EGP_NA_140'))]"/>
+        </record>
+        <!--Grupos Libros electronicos-->
+        <record id="gle_01" model="biosis_cont_report.grupolibroelectronico">
+            <field name="name">Libro Caja y Bancos</field>
+            <field name="code">1</field>
+            <field name="type_time">MES</field>
+            <field name="quantity">3</field>
+        </record>
+        <record id="gle_02" model="biosis_cont_report.grupolibroelectronico">
+            <field name="name">Libro de Inventarios y Balances</field>
+            <field name="code">3</field>
+            <field name="type_time">MES</field>
+            <field name="quantity">3</field>
+        </record>
+        <record id="gle_03" model="biosis_cont_report.grupolibroelectronico">
+            <field name="name">Libro de Retenciones inciso e) y f) del Art. 34° de la LIR</field>
+            <field name="code">4</field>
+            <field name="type_time">DIA</field>
+            <field name="quantity">10</field>
+        </record>
+        <record id="gle_04" model="biosis_cont_report.grupolibroelectronico">
+            <field name="name">Libro Diario</field>
+            <field name="code">5</field>
+            <field name="type_time">MES</field>
+            <field name="quantity">3</field>
+        </record>
+        <record id="gle_05" model="biosis_cont_report.grupolibroelectronico">
+            <field name="name">Libro Diario de Formato Simplificado</field>
+            <field name="code">5A</field>
+            <field name="type_time">MES</field>
+            <field name="quantity">3</field>
+        </record>
+        <record id="gle_06" model="biosis_cont_report.grupolibroelectronico">
+            <field name="name">Libro Mayor</field>
+            <field name="code">6</field>
+            <field name="type_time">MES</field>
+            <field name="quantity">3</field>
+        </record>
+        <record id="gle_07" model="biosis_cont_report.grupolibroelectronico">
+            <field name="name">Registro de Activos Fijos</field>
+            <field name="code">7</field>
+            <field name="type_time">MES</field>
+            <field name="quantity">3</field>
+        </record>
+        <record id="gle_08" model="biosis_cont_report.grupolibroelectronico">
+            <field name="name">Registro de Compras</field>
+            <field name="code">8</field>
+            <field name="type_time">DIA</field>
+            <field name="quantity">10</field>
+        </record>
+        <record id="gle_09" model="biosis_cont_report.grupolibroelectronico">
+            <field name="name">Registro de Consignaciones</field>
+            <field name="code">9</field>
+            <field name="type_time">DIA</field>
+            <field name="quantity">10</field>
+        </record>
+        <record id="gle_10" model="biosis_cont_report.grupolibroelectronico">
+            <field name="name">Registro de Costos</field>
+            <field name="code">10</field>
+            <field name="type_time">MES</field>
+            <field name="quantity">3</field>
+        </record>
+        <record id="gle_11" model="biosis_cont_report.grupolibroelectronico">
+            <field name="name">Registro de Inventario Permanente en Unidades Físicas </field>
+            <field name="code">12</field>
+            <field name="type_time">MES</field>
+            <field name="quantity">1</field>
+        </record>
+        <record id="gle_12" model="biosis_cont_report.grupolibroelectronico">
+            <field name="name">Registro de Inventario Permanente Valorizado</field>
+            <field name="code">13</field>
+            <field name="type_time">MES</field>
+            <field name="quantity">1</field>
+        </record>
+        <record id="gle_13" model="biosis_cont_report.grupolibroelectronico">
+            <field name="name">Registro de Ventas e Ingresos</field>
+            <field name="code">14</field>
+            <field name="type_time">DIA</field>
+            <field name="quantity">10</field>
+        </record>
+        <!--Libros electronicos-->
+        <record id="lb_01" model="biosis_cont_report.libro.electronico">
+            <field name="name">LIBRO CAJA Y BANCOS - DETALLE DE LOS MOVIMIENTOS DEL EFECTIVO</field>
+            <field name="descripcion">1.1 LIBRO CAJA Y BANCOS - DETALLE DE LOS MOVIMIENTOS DEL EFECTIVO</field>
+            <field name="codigo_le">010100</field>
+            <field name="nro_orden">1.1</field>
+            <field name="state">enable</field>
+            <field name="grupo_libro_id" ref="gle_01"/>
+        </record>
+        <record id="lb_02" model="biosis_cont_report.libro.electronico">
+            <field name="name">LIBRO CAJA Y BANCOS - DETALLE DE LOS MOVIMIENTOS DE LA CUENTA CORRIENTE</field>
+            <field name="descripcion">1.2 LIBRO CAJA Y BANCOS - DETALLE DE LOS MOVIMIENTOS DE LA CUENTA CORRIENTE
+            </field>
+            <field name="codigo_le">010200</field>
+            <field name="nro_orden">1.2</field>
+            <field name="state">enable</field>
+            <field name="grupo_libro_id" ref="gle_01"/>
+        </record>
+        <record id="lb_03" model="biosis_cont_report.libro.electronico">
+            <field name="name">LIBRO DE INVENTARIOS Y BALANCES - ESTADO DE SITUACIÓN FINANCIERA</field>
+            <field name="descripcion">3.1 LIBRO DE INVENTARIOS Y BALANCES - ESTADO DE SITUACIÓN FINANCIERA</field>
+            <field name="codigo_le">030100</field>
+            <field name="nro_orden">3.1</field>
+            <field name="state">enable</field>
+            <field name="grupo_libro_id" ref="gle_02"/>
+        </record>
+        <record id="lb_04" model="biosis_cont_report.libro.electronico">
+            <field name="name">LIBRO DE INVENTARIOS Y BALANCES - DETALLE DEL SALDO DE LA CUENTA 10 EFECTIVO Y
+                EQUIVALENTES DE EFECTIVO
+            </field>
+            <field name="descripcion">3.2 LIBRO DE INVENTARIOS Y BALANCES - DETALLE DEL SALDO DE LA CUENTA 10 EFECTIVO Y
+                EQUIVALENTES DE EFECTIVO
+            </field>
+            <field name="codigo_le">030200</field>
+            <field name="nro_orden">3.2</field>
+            <field name="state">enable</field>
+            <field name="grupo_libro_id" ref="gle_02"/>
+        </record>
+        <record id="lb_05" model="biosis_cont_report.libro.electronico">
+            <field name="name">LIBRO DE INVENTARIOS Y BALANCES - DETALLE DEL SALDO DE LA CUENTA 12 CUENTAS POR COBRAR
+                COMERCIALES – TERCEROS Y 13 CUENTAS POR COBRAR COMERCIALES – RELACIONADAS
+            </field>
+            <field name="descripcion">3.3 LIBRO DE INVENTARIOS Y BALANCES - DETALLE DEL SALDO DE LA CUENTA 12 CUENTAS
+                POR COBRAR COMERCIALES – TERCEROS Y 13 CUENTAS POR COBRAR COMERCIALES – RELACIONADAS
+            </field>
+            <field name="codigo_le">030300</field>
+            <field name="nro_orden">3.3</field>
+            <field name="state">enable</field>
+            <field name="grupo_libro_id" ref="gle_02"/>
+        </record>
+        <record id="lb_06" model="biosis_cont_report.libro.electronico">
+            <field name="name">LIBRO DE INVENTARIOS Y BALANCES - DETALLE DEL SALDO DE LA CUENTA 14 CUENTAS POR COBRAR AL
+                PERSONAL, A LOS ACCIONISTAS (SOCIOS), DIRECTORES Y GERENTES
+            </field>
+            <field name="descripcion">3.4 LIBRO DE INVENTARIOS Y BALANCES - DETALLE DEL SALDO DE LA CUENTA 14 CUENTAS
+                POR COBRAR AL PERSONAL, A LOS ACCIONISTAS (SOCIOS), DIRECTORES Y GERENTES
+            </field>
+            <field name="codigo_le">030400</field>
+            <field name="nro_orden">3.4</field>
+            <field name="state">enable</field>
+            <field name="grupo_libro_id" ref="gle_02"/>
+        </record>
+        <record id="lb_07" model="biosis_cont_report.libro.electronico">
+            <field name="name">LIBRO DE INVENTARIOS Y BALANCES - DETALLE DEL SALDO DE LA CUENTA 16 CUENTAS POR COBRAR
+                DIVERSAS - TERCEROS O CUENTA 17 - CUENTAS POR COBRAR DIVERSAS - RELACIONADAS
+            </field>
+            <field name="descripcion">3.5 LIBRO DE INVENTARIOS Y BALANCES - DETALLE DEL SALDO DE LA CUENTA 16 CUENTAS
+                POR COBRAR DIVERSAS - TERCEROS O CUENTA 17 - CUENTAS POR COBRAR DIVERSAS - RELACIONADAS
+            </field>
+            <field name="codigo_le">030500</field>
+            <field name="nro_orden">3.5</field>
+            <field name="state">enable</field>
+            <field name="grupo_libro_id" ref="gle_02"/>
+        </record>
+        <record id="lb_08" model="biosis_cont_report.libro.electronico">
+            <field name="name">LIBRO DE INVENTARIOS Y BALANCES - DETALLE DEL SALDO DE LA CUENTA 19 ESTIMACIÓN DE CUENTAS
+                DE COBRANZA DUDOSA
+            </field>
+            <field name="descripcion">3.6 LIBRO DE INVENTARIOS Y BALANCES - DETALLE DEL SALDO DE LA CUENTA 19 ESTIMACIÓN
+                DE CUENTAS DE COBRANZA DUDOSA
+            </field>
+            <field name="codigo_le">030600</field>
+            <field name="nro_orden">3.6</field>
+            <field name="state">enable</field>
+            <field name="grupo_libro_id" ref="gle_02"/>
+        </record>
+        <record id="lb_09" model="biosis_cont_report.libro.electronico">
+            <field name="name">LIBRO DE INVENTARIOS Y BALANCES - DETALLE DEL SALDO DE LA CUENTA 20 - MERCADERIAS Y LA
+                CUENTA 21 - PRODUCTOS TERMINADOS
+            </field>
+            <field name="descripcion">3.7 LIBRO DE INVENTARIOS Y BALANCES - DETALLE DEL SALDO DE LA CUENTA 20 -
+                MERCADERIAS Y LA CUENTA 21 - PRODUCTOS TERMINADOS
+            </field>
+            <field name="codigo_le">030700</field>
+            <field name="nro_orden">3.7</field>
+            <field name="state">disable</field>
+            <field name="grupo_libro_id" ref="gle_02"/>
+        </record>
+        <record id="lb_10" model="biosis_cont_report.libro.electronico">
+            <field name="name">LIBRO DE INVENTARIOS Y BALANCES - DETALLE DEL SALDO DE LA CUENTA 30 INVERSIONES
+                MOBILIARIAS
+            </field>
+            <field name="descripcion">3.8 LIBRO DE INVENTARIOS Y BALANCES - DETALLE DEL SALDO DE LA CUENTA 30
+                INVERSIONES MOBILIARIAS
+            </field>
+            <field name="codigo_le">030800</field>
+            <field name="nro_orden">3.8</field>
+            <field name="state">enable</field>
+            <field name="grupo_libro_id" ref="gle_02"/>
+        </record>
+        <record id="lb_11" model="biosis_cont_report.libro.electronico">
+            <field name="name">LIBRO DE INVENTARIOS Y BALANCES - DETALLE DEL SALDO DE LA CUENTA 34 - INTANGIBLES</field>
+            <field name="descripcion">3.9 LIBRO DE INVENTARIOS Y BALANCES - DETALLE DEL SALDO DE LA CUENTA 34 -
+                INTANGIBLES
+            </field>
+            <field name="codigo_le">030900</field>
+            <field name="nro_orden">3.9</field>
+            <field name="state">enable</field>
+            <field name="grupo_libro_id" ref="gle_02"/>
+        </record>
+        <record id="lb_12" model="biosis_cont_report.libro.electronico">
+            <field name="name">LIBRO DE INVENTARIOS Y BALANCES - DETALLE DEL SALDO DE LA CUENTA 41 REMUNERACIONES Y
+                PARTICIPACIONES POR PAGAR
+            </field>
+            <field name="descripcion">3.11 LIBRO DE INVENTARIOS Y BALANCES - DETALLE DEL SALDO DE LA CUENTA 41
+                REMUNERACIONES Y PARTICIPACIONES POR PAGAR
+            </field>
+            <field name="codigo_le">031100</field>
+            <field name="nro_orden">3.11</field>
+            <field name="state">enable</field>
+            <field name="grupo_libro_id" ref="gle_02"/>
+        </record>
+        <record id="lb_13" model="biosis_cont_report.libro.electronico">
+            <field name="name">LIBRO DE INVENTARIOS Y BALANCES - DETALLE DEL SALDO DE LA CUENTA 42 CUENTAS POR PAGAR
+                COMERCIALES – TERCEROS Y LA CUENTA 43 CUENTAS POR PAGAR COMERCIALES – RELACIONADAS
+            </field>
+            <field name="descripcion">3.12 LIBRO DE INVENTARIOS Y BALANCES - DETALLE DEL SALDO DE LA CUENTA 42 CUENTAS
+                POR PAGAR COMERCIALES – TERCEROS Y LA CUENTA 43 CUENTAS POR PAGAR COMERCIALES – RELACIONADAS
+            </field>
+            <field name="codigo_le">031200</field>
+            <field name="nro_orden">3.12</field>
+            <field name="state">enable</field>
+            <field name="grupo_libro_id" ref="gle_02"/>
+        </record>
+        <record id="lb_14" model="biosis_cont_report.libro.electronico">
+            <field name="name">LIBRO DE INVENTARIOS Y BALANCES - DETALLE DEL SALDO DE LA CUENTA 46 CUENTAS POR PAGAR
+                DIVERSAS – TERCEROS Y DE LA CUENTA 47 CUENTAS POR PAGAR DIVERSAS – RELACIONADAS
+            </field>
+            <field name="descripcion">3.13 LIBRO DE INVENTARIOS Y BALANCES - DETALLE DEL SALDO DE LA CUENTA 46 CUENTAS
+                POR PAGAR DIVERSAS – TERCEROS Y DE LA CUENTA 47 CUENTAS POR PAGAR DIVERSAS – RELACIONADAS
+            </field>
+            <field name="codigo_le">031300</field>
+            <field name="nro_orden">3.13</field>
+            <field name="state">enable</field>
+            <field name="grupo_libro_id" ref="gle_02"/>
+        </record>
+        <record id="lb_15" model="biosis_cont_report.libro.electronico">
+            <field name="name">LIBRO DE INVENTARIOS Y BALANCES - DETALLE DEL SALDO DE LA CUENTA 47 - BENEFICIOS SOCIALES
+                DE LOS TRABAJADORES (PCGR) - NO APLICABLE PARA EL PCGE
+            </field>
+            <field name="descripcion">3.14 LIBRO DE INVENTARIOS Y BALANCES - DETALLE DEL SALDO DE LA CUENTA 47 -
+                BENEFICIOS SOCIALES DE LOS TRABAJADORES (PCGR) - NO APLICABLE PARA EL PCGE
+            </field>
+            <field name="codigo_le">031400</field>
+            <field name="nro_orden">3.14</field>
+            <field name="state">disable</field>
+            <field name="grupo_libro_id" ref="gle_02"/>
+        </record>
+        <record id="lb_16" model="biosis_cont_report.libro.electronico">
+            <field name="name">LIBRO DE INVENTARIOS Y BALANCES - DETALLE DEL SALDO DE LA CUENTA 37 ACTIVO DIFERIDO Y DE
+                LA CUENTA 49 PASIVO DIFERIDO
+            </field>
+            <field name="descripcion">3.15 LIBRO DE INVENTARIOS Y BALANCES - DETALLE DEL SALDO DE LA CUENTA 37 ACTIVO
+                DIFERIDO Y DE LA CUENTA 49 PASIVO DIFERIDO
+            </field>
+            <field name="codigo_le">031500</field>
+            <field name="nro_orden">3.15</field>
+            <field name="state">disable</field>
+            <field name="grupo_libro_id" ref="gle_02"/>
+        </record>
+        <record id="lb_17" model="biosis_cont_report.libro.electronico">
+            <field name="name">LIBRO DE INVENTARIOS Y BALANCES - DETALLE DEL SALDO DE LA CUENTA 50 - CAPITAL</field>
+            <field name="descripcion">3.16.1 LIBRO DE INVENTARIOS Y BALANCES -DETALLE DEL SALDO DE LA CUENTA 50 -
+                CAPITAL
+            </field>
+            <field name="codigo_le">031610</field>
+            <field name="nro_orden">3.16.1</field>
+            <field name="state">disable</field>
+            <field name="grupo_libro_id" ref="gle_02"/>
+        </record>
+        <record id="lb_18" model="biosis_cont_report.libro.electronico">
+            <field name="name">LIBRO DE INVENTARIOS Y BALANCES - ESTRUCTURA DE LA PARTICIPACIÓN ACCIONARIA O DE
+                PARTICIPACIONES SOCIALES
+            </field>
+            <field name="descripcion">3.16.2 LIBRO DE INVENTARIOS Y BALANCES - ESTRUCTURA DE LA PARTICIPACIÓN ACCIONARIA
+                O DE PARTICIPACIONES SOCIALES
+            </field>
+            <field name="codigo_le">031620</field>
+            <field name="nro_orden">3.16.2</field>
+            <field name="state">disable</field>
+            <field name="grupo_libro_id" ref="gle_02"/>
+        </record>
+        <record id="lb_19" model="biosis_cont_report.libro.electronico">
+            <field name="name">LIBRO DE INVENTARIOS Y BALANCES - BALANCE DE COMPROBACIÓN</field>
+            <field name="descripcion">3.17 LIBRO DE INVENTARIOS Y BALANCES - BALANCE DE COMPROBACIÓN</field>
+            <field name="codigo_le">031700</field>
+            <field name="nro_orden">3.17</field>
+            <field name="state">enable</field>
+            <field name="account_report_id" ref="account_financial_report_balancecheck"/>
+            <field name="grupo_libro_id" ref="gle_02"/>
+        </record>
+        <record id="lb_20" model="biosis_cont_report.libro.electronico">
+            <field name="name">LIBRO DE INVENTARIOS Y BALANCES - ESTADO DE FLUJOS DE EFECTIVO - MÉTODO DIRECTO</field>
+            <field name="descripcion">3.18 LIBRO DE INVENTARIOS Y BALANCES - ESTADO DE FLUJOS DE EFECTIVO - MÉTODO
+                DIRECTO
+            </field>
+            <field name="codigo_le">031800</field>
+            <field name="nro_orden">3.18</field>
+            <field name="state">disable</field>
+            <field name="grupo_libro_id" ref="gle_02"/>
+        </record>
+        <record id="lb_21" model="biosis_cont_report.libro.electronico">
+            <field name="name">LIBRO DE INVENTARIOS Y BALANCES - ESTADO DE CAMBIOS EN EL PATRIMONIO NETO</field>
+            <field name="descripcion">3.19 LIBRO DE INVENTARIOS Y BALANCES - ESTADO DE CAMBIOS EN EL PATRIMONIO NETO
+            </field>
+            <field name="codigo_le">031900</field>
+            <field name="nro_orden">3.19</field>
+            <field name="state">disable</field>
+            <field name="grupo_libro_id" ref="gle_02"/>
+        </record>
+        <record id="lb_22" model="biosis_cont_report.libro.electronico">
+            <field name="name">LIBRO DE INVENTARIOS Y BALANCES - ESTADO DE RESULTADOS</field>
+            <field name="descripcion">3.2 LIBRO DE INVENTARIOS Y BALANCES - ESTADO DE RESULTADOS</field>
+            <field name="codigo_le">032000</field>
+            <field name="nro_orden">3.2</field>
+            <field name="state">disable</field>
+            <field name="grupo_libro_id" ref="gle_02"/>
+        </record>
+        <record id="lb_23" model="biosis_cont_report.libro.electronico">
+            <field name="name">LIBRO DE INVENTARIOS Y BALANCES - NOTAS A LOS ESTADOS FINANCIEROS</field>
+            <field name="descripcion">3.23 LIBRO DE INVENTARIOS Y BALANCES - NOTAS A LOS ESTADOS FINANCIEROS</field>
+            <field name="codigo_le">032300</field>
+            <field name="nro_orden">3.23</field>
+            <field name="state">disable</field>
+            <field name="grupo_libro_id" ref="gle_02"/>
+        </record>
+        <record id="lb_24" model="biosis_cont_report.libro.electronico">
+            <field name="name">LIBRO DE INVENTARIOS Y BALANCES - ESTADO DE RESULTADOS INTEGRALES</field>
+            <field name="descripcion">3.24 LIBRO DE INVENTARIOS Y BALANCES - ESTADO DE RESULTADOS INTEGRALES</field>
+            <field name="codigo_le">032400</field>
+            <field name="nro_orden">3.24</field>
+            <field name="state">disable</field>
+            <field name="grupo_libro_id" ref="gle_02"/>
+        </record>
+        <record id="lb_25" model="biosis_cont_report.libro.electronico">
+            <field name="name">LIBRO DE INVENTARIOS Y BALANCES - ESTADO DE FLUJOS DE EFECTIVO - MÉTODO INDIRECTO</field>
+            <field name="descripcion">3.25 LIBRO DE INVENTARIOS Y BALANCES - ESTADO DE FLUJOS DE EFECTIVO - MÉTODO
+                INDIRECTO
+            </field>
+            <field name="codigo_le">032500</field>
+            <field name="nro_orden">3.25</field>
+            <field name="state">disable</field>
+            <field name="grupo_libro_id" ref="gle_02"/>
+        </record>
+        <record id="lb_26" model="biosis_cont_report.libro.electronico">
+            <field name="name">LIBRO DE RETENCIONES INCISO E) Y F) DEL ART. 34° DE LA LEY DEL IMPUESTO A LA RENTA
+            </field>
+            <field name="descripcion">4.1 LIBRO DE RETENCIONES INCISO E) Y F) DEL ART. 34° DE LA LEY DEL IMPUESTO A LA
+                RENTA
+            </field>
+            <field name="codigo_le">040100</field>
+            <field name="nro_orden">4.1</field>
+            <field name="state">disable</field>
+            <field name="grupo_libro_id" ref="gle_03"/>
+        </record>
+        <record id="lb_27" model="biosis_cont_report.libro.electronico">
+            <field name="name">LIBRO DIARIO</field>
+            <field name="descripcion">5.1 LIBRO DIARIO</field>
+            <field name="codigo_le">050100</field>
+            <field name="nro_orden">5.1</field>
+            <field name="state">enable</field>
+            <field name="grupo_libro_id" ref="gle_04"/>
+        </record>
+        <record id="lb_28" model="biosis_cont_report.libro.electronico">
+            <field name="name">LIBRO DIARIO - DETALLE DEL PLAN CONTABLE UTILIZADO</field>
+            <field name="descripcion">5.3 LIBRO DIARIO - DETALLE DEL PLAN CONTABLE UTILIZADO</field>
+            <field name="codigo_le">050300</field>
+            <field name="nro_orden">5.3</field>
+            <field name="state">enable</field>
+            <field name="grupo_libro_id" ref="gle_04"/>
+        </record>
+        <record id="lb_29" model="biosis_cont_report.libro.electronico">
+            <field name="name">LIBRO DIARIO DE FORMATO SIMPLIFICADO</field>
+            <field name="descripcion">5.2 LIBRO DIARIO DE FORMATO SIMPLIFICADO</field>
+            <field name="codigo_le">050200</field>
+            <field name="nro_orden">5.2</field>
+            <field name="state">disable</field>
+            <field name="grupo_libro_id" ref="gle_05"/>
+        </record>
+        <record id="lb_30" model="biosis_cont_report.libro.electronico">
+            <field name="name">LIBRO DIARIO DE FORMATO SIMPLIFICADO - DETALLE DEL PLAN CONTABLE UTILIZADO</field>
+            <field name="descripcion">5.4 LIBRO DIARIO DE FORMATO SIMPLIFICADO - DETALLE DEL PLAN CONTABLE UTILIZADO
+            </field>
+            <field name="codigo_le">050400</field>
+            <field name="nro_orden">5.4</field>
+            <field name="state">disable</field>
+            <field name="grupo_libro_id" ref="gle_05"/>
+        </record>
+        <record id="lb_31" model="biosis_cont_report.libro.electronico">
+            <field name="name">LIBRO MAYOR</field>
+            <field name="descripcion">6.1 LIBRO MAYOR</field>
+            <field name="codigo_le">060100</field>
+            <field name="nro_orden">6.1</field>
+            <field name="state">enable</field>
+            <field name="grupo_libro_id" ref="gle_06"/>
+        </record>
+        <record id="lb_32" model="biosis_cont_report.libro.electronico">
+            <field name="name">REGISTRO DE ACTIVOS FIJOS - DETALLE DE LOS ACTIVOS FIJOS REVALUADOS Y NO REVALUADOS
+            </field>
+            <field name="descripcion">7.1 REGISTRO DE ACTIVOS FIJOS - DETALLE DE LOS ACTIVOS FIJOS REVALUADOS Y NO
+                REVALUADOS
+            </field>
+            <field name="codigo_le">070100</field>
+            <field name="nro_orden">7.1</field>
+            <field name="state">disable</field>
+            <field name="grupo_libro_id" ref="gle_07"/>
+        </record>
+        <record id="lb_33" model="biosis_cont_report.libro.electronico">
+            <field name="name">REGISTRO DE ACTIVOS FIJOS - DETALLE DE LA DIFERENCIA DE CAMBIO</field>
+            <field name="descripcion">7.3 REGISTRO DE ACTIVOS FIJOS - DETALLE DE LA DIFERENCIA DE CAMBIO</field>
+            <field name="codigo_le">070300</field>
+            <field name="nro_orden">7.3</field>
+            <field name="state">disable</field>
+            <field name="grupo_libro_id" ref="gle_07"/>
+        </record>
+        <record id="lb_34" model="biosis_cont_report.libro.electronico">
+            <field name="name">REGISTRO DE ACTIVOS FIJOS - DETALLE DE LOS ACTIVOS FIJOS BAJO LA MODALIDAD DE
+                ARRENDAMIENTO FINANCIERO AL 31.12
+            </field>
+            <field name="descripcion">7.4 REGISTRO DE ACTIVOS FIJOS - DETALLE DE LOS ACTIVOS FIJOS BAJO LA MODALIDAD DE
+                ARRENDAMIENTO FINANCIERO AL 31.12
+            </field>
+            <field name="codigo_le">070400</field>
+            <field name="nro_orden">7.4</field>
+            <field name="state">disable</field>
+            <field name="grupo_libro_id" ref="gle_07"/>
+        </record>
+        <record id="lb_35" model="biosis_cont_report.libro.electronico">
+            <field name="name">REGISTRO DE COMPRAS</field>
+            <field name="descripcion">8.1 REGISTRO DE COMPRAS</field>
+            <field name="codigo_le">080100</field>
+            <field name="nro_orden">8.1</field>
+            <field name="state">enable</field>
+            <field name="grupo_libro_id" ref="gle_08"/>
+        </record>
+        <record id="lb_36" model="biosis_cont_report.libro.electronico">
+            <field name="name">REGISTRO DE COMPRAS - INFORMACIÓN DE OPERACIONES CON SUJETOS NO DOMICILIADOS</field>
+            <field name="descripcion">8.2 REGISTRO DE COMPRAS - INFORMACIÓN DE OPERACIONES CON SUJETOS NO DOMICILIADOS
+            </field>
+            <field name="codigo_le">080200</field>
+            <field name="nro_orden">8.2</field>
+            <field name="state">enable</field>
+            <field name="grupo_libro_id" ref="gle_08"/>
+        </record>
+        <record id="lb_37" model="biosis_cont_report.libro.electronico">
+            <field name="name">REGISTRO DE COMPRAS SIMPLIFICADO</field>
+            <field name="descripcion">8.3 REGISTRO DE COMPRAS SIMPLIFICADO</field>
+            <field name="codigo_le">080300</field>
+            <field name="nro_orden">8.3</field>
+            <field name="state">disable</field>
+            <field name="grupo_libro_id" ref="gle_08"/>
+        </record>
+        <record id="lb_38" model="biosis_cont_report.libro.electronico">
+            <field name="name">REGISTRO DE CONSIGNACIONES - PARA EL CONSIGNADOR - CONTROL DE BIENES ENTREGADOS EN
+                CONSIGNACIÓN
+            </field>
+            <field name="descripcion">9.1 REGISTRO DE CONSIGNACIONES - PARA EL CONSIGNADOR - CONTROL DE BIENES
+                ENTREGADOS EN CONSIGNACIÓN
+            </field>
+            <field name="codigo_le">090100</field>
+            <field name="nro_orden">9.1</field>
+            <field name="state">disable</field>
+            <field name="grupo_libro_id" ref="gle_09"/>
+        </record>
+        <record id="lb_39" model="biosis_cont_report.libro.electronico">
+            <field name="name">REGISTRO DE CONSIGNACIONES - PARA EL CONSIGNATARIO - CONTROL DE BIENES RECIBIDOS EN
+                CONSIGNACIÓN
+            </field>
+            <field name="descripcion">9.2 REGISTRO DE CONSIGNACIONES - PARA EL CONSIGNATARIO - CONTROL DE BIENES
+                RECIBIDOS EN CONSIGNACIÓN
+            </field>
+            <field name="codigo_le">090200</field>
+            <field name="nro_orden">9.2</field>
+            <field name="state">disable</field>
+            <field name="grupo_libro_id" ref="gle_09"/>
+        </record>
+        <record id="lb_40" model="biosis_cont_report.libro.electronico">
+            <field name="name">REGISTRO DE COSTOS - ESTADO DE COSTO DE VENTAS ANUAL</field>
+            <field name="descripcion">10.1 REGISTRO DE COSTOS - ESTADO DE COSTO DE VENTAS ANUAL</field>
+            <field name="codigo_le">100100</field>
+            <field name="nro_orden">10.1</field>
+            <field name="state">disable</field>
+            <field name="grupo_libro_id" ref="gle_10"/>
+        </record>
+        <record id="lb_41" model="biosis_cont_report.libro.electronico">
+            <field name="name">REGISTRO DE COSTOS - ELEMENTOS DEL COSTO MENSUAL</field>
+            <field name="descripcion">10.2 REGISTRO DE COSTOS - ELEMENTOS DEL COSTO MENSUAL</field>
+            <field name="codigo_le">100200</field>
+            <field name="nro_orden">10.2</field>
+            <field name="state">disable</field>
+            <field name="grupo_libro_id" ref="gle_10"/>
+        </record>
+        <record id="lb_42" model="biosis_cont_report.libro.electronico">
+            <field name="name">REGISTRO DE COSTOS - ESTADO DE COSTO DE PRODUCCION VALORIZADO ANUAL</field>
+            <field name="descripcion">10.3 REGISTRO DE COSTOS - ESTADO DE COSTO DE PRODUCCION VALORIZADO ANUAL</field>
+            <field name="codigo_le">100300</field>
+            <field name="nro_orden">10.3</field>
+            <field name="state">disable</field>
+            <field name="grupo_libro_id" ref="gle_10"/>
+        </record>
+        <record id="lb_43" model="biosis_cont_report.libro.electronico">
+            <field name="name">REGISTRO DE COSTOS - CENTRO DE COSTOS</field>
+            <field name="descripcion">10.4 REGISTRO DE COSTOS - CENTRO DE COSTOS</field>
+            <field name="codigo_le">100400</field>
+            <field name="nro_orden">10.4</field>
+            <field name="state">disable</field>
+            <field name="grupo_libro_id" ref="gle_10"/>
+        </record>
+        <record id="lb_44" model="biosis_cont_report.libro.electronico">
+            <field name="name">REGISTRO DEL INVENTARIO PERMANENTE EN UNIDADES FÍSICAS - DETALLE DEL INVENTARIO
+                PERMANENTE EN UNIDADES FÍSICAS
+            </field>
+            <field name="descripcion">12.1 REGISTRO DEL INVENTARIO PERMANENTE EN UNIDADES FÍSICAS - DETALLE DEL
+                INVENTARIO PERMANENTE EN UNIDADES FÍSICAS
+            </field>
+            <field name="codigo_le">120100</field>
+            <field name="nro_orden">12.1</field>
+            <field name="state">disable</field>
+            <field name="grupo_libro_id" ref="gle_11"/>
+        </record>
+        <record id="lb_45" model="biosis_cont_report.libro.electronico">
+            <field name="name">REGISTRO DEL INVENTARIO PERMANENTE VALORIZADO - DETALLE DEL INVENTARIO VALORIZADO</field>
+            <field name="descripcion">13.1 REGISTRO DEL INVENTARIO PERMANENTE VALORIZADO - DETALLE DEL INVENTARIO
+                VALORIZADO
+            </field>
+            <field name="codigo_le">130100</field>
+            <field name="nro_orden">13.1</field>
+            <field name="state">disable</field>
+            <field name="grupo_libro_id" ref="gle_12"/>
+        </record>
+        <record id="lb_46" model="biosis_cont_report.libro.electronico">
+            <field name="name">REGISTRO DE VENTAS E INGRESOS</field>
+            <field name="descripcion">14.1 REGISTRO DE VENTAS E INGRESOS</field>
+            <field name="codigo_le">140100</field>
+            <field name="nro_orden">14.1</field>
+            <field name="state">enable</field>
+            <field name="grupo_libro_id" ref="gle_13"/>
+        </record>
+        <record id="lb_47" model="biosis_cont_report.libro.electronico">
+            <field name="name">REGISTRO DE VENTAS E INGRESOS SIMPLIFICADO</field>
+            <field name="descripcion">14.2 REGISTRO DE VENTAS E INGRESOS SIMPLIFICADO</field>
+            <field name="codigo_le">140200</field>
+            <field name="nro_orden">14.2</field>
+            <field name="state">disable</field>
+            <field name="grupo_libro_id" ref="gle_13"/>
+        </record>
+    </data>
+</openerp>

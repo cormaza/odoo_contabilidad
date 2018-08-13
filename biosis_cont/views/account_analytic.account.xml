@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="biosis_cont_account_analytic_account_form" model="ir.ui.view">
+            <field name="inherit_id" ref="analytic.view_account_analytic_account_form"/>
+            <field name="model">account.analytic.account</field>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='code']" position="before">
+                    <field name="tipo"/>
+                </xpath>
+                 <xpath expr="//field[@name='code']" position="replace">
+                    <field name="code" string="Codigo" required="1"/>
+                </xpath>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="biosis_cont_account_analytic_account_tree">
+            <field name="model">account.analytic.account</field>
+            <field name="inherit_id" ref="analytic.view_account_analytic_account_list"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='partner_id']" position="before">
+                    <field name="tipo"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

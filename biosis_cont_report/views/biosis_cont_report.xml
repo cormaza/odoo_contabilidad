@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!--
+            id -> name para reconocer al reporte
+            model -> modelo usado para reporte
+            string -> titulo para el reporte
+            report_type -> qweb-pdf
+            name -> nombre del archivo que "dibuja" el reporte
+            file -> archivo del reporte
+        -->
+
+        <report
+            id="action_report_balance_comprobacion"
+            model="account.financial.report"
+            string="Reporte de balance de comprobación"
+            report_type="qweb-pdf"
+            name="biosis_cont_report.report_balance_comprobacion"
+            file="biosis_cont_report.report_balance_comprobacion"
+            />
+        <report
+            id="action_report_balance_comprobacion_xlsx"
+            model="account.financial.report"
+            string="Reporte de balance de comprobación"
+            report_type="xlsx"
+            name="biosis_cont_report.balance_comprobacion_xls.xlsx"
+            file="biosis_cont_report.balance_comprobacion_xls.xlsx"
+            attachment_use="False"
+        />
+        <report
+            id="action_report_cuentas_xlsx"
+            model="account.financial.report"
+            string="Reporte de balance de comprobación"
+            report_type="xlsx"
+            name="biosis_cont_report.report_cuentas_xls.xlsx"
+            file="biosis_cont_report.report_cuentas_xls.xlsx"
+            attachment_use="False"
+        />
+        <report
+            id="action_report_personalizado_xlsx"
+            model="account.financial.report"
+            string="Reporte de Diarios Personalizado"
+            report_type="xlsx"
+            name="biosis_cont_report.report_personalizado_xls.xlsx"
+            file="biosis_cont_report.report_personalizado_xls.xlsx"
+            attachment_use="False"
+        />
+        <report
+            id="action_report_sunat_xlsx"
+            model="account.financial.report"
+            string="Reportes Sunat"
+            report_type="xlsx"
+            name="biosis_cont_report.report_sunat_xls.xlsx"
+            file="biosis_cont_report.report_sunat_xls.xlsx"
+            attachment_use="False"
+        />
+        <menuitem id="menu_reports_sunat_xls" name="Informes Sunat" parent="account.menu_finance_reports" sequence="0"/>
+    </data>
+</odoo>

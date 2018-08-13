@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="bio_cont_sale_order_view" model="ir.ui.view">
+            <field name="name">bio_cont.sale.order.form</field>
+            <field name="model">sale.order</field>
+            <field name="priority">17</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+                <field name="partner_id" position="after">
+                    <field name="via"/>
+                    <field name="actividad"/>
+                    <field name="tipo"/>
+                </field>
+                <field name="payment_term_id" position="after">
+                    <field name="linea_id" colspan="2"/>
+                    <field name="valor_tipo_cambio"/>
+                    <field name="deposito_id"/>
+                    <field name="vacio_id"/>
+                    <field name="tipo_vacio_id" nolabel="1"/>
+                    <field name="agente_aduana_id"/>
+                    <field name="agente_portuario_id"/>
+                </field>
+            </field>
+        </record>
+    </data>
+</odoo>

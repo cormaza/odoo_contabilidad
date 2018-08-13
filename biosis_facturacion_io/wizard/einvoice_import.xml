@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="einvoice_import_wizard" model="ir.ui.view">
+            <field name="name">Importar boletas</field>
+            <field name="model">einvoice.ie.import</field>
+            <field name="arch" type="xml">
+                <form string="Importar boletas masivas">
+                    <group>
+                        <field name="fichero"/>
+                        <field name="validar" domain="[('code', '=', '03')]"/>
+                        <field name="fila_inicio"/>
+                        <field name="fila_fin"/>
+                    </group>
+                    <footer>
+                        <button name="importar" string="Importar" type="object" default_focus="1" class="oe_highlight"/>
+                        <button string="Cancelar" class="oe_link" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_einvoice_import" model="ir.actions.act_window">
+            <field name="name">Importar boletas</field>
+            <field name="res_model">einvoice.ie.import</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="einvoice_import_wizard"/>
+            <field name="target">new</field>
+        </record>
+
+        <menuitem id="menu_einvoice_import" name="Importar facturas" action="action_einvoice_import"
+                  parent="account.menu_finance_receivables" sequence="2"/>
+    </data>
+</odoo>

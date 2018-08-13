@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="einvoice_tree">
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='partner_id']" position="before">
+                    <field name="numero_comprobante" string="Numero"/>
+                    <field name="enviado" string="En SUNAT" />
+                </xpath>
+                <xpath expr="//field[@name='user_id']" position="replace">
+                </xpath>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="biosis_facturacion_einvoice_form">
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='number']" position="replace">
+
+                    <field name="numero_comprobante" readonly="1" class="oe_inline"
+                           attrs="{'invisible': [('state','in',('draft',))]}"/>
+                </xpath>
+                <xpath expr="//field[@name='partner_id']" position="before">
+                    <field name="tipo_comprobante_id" domain="['|',('code', '=', '01'),('code', '=', '03')]"
+                           required="1" string="Tipo de comprobante"/>
+                    <field name="serie_id" domain="['&amp;',('tipo_comprobante_id','=',tipo_comprobante_id),
+                    ('company_id','=', company_id)]"
+                           attrs="{'invisible': [('tipo_comprobante_id', '=', False)]}"/>
+                    <field name="invoice_id" string="Modifica a:" attrs="{'invisible': [('invoice_id','=',False)]}"/>
+                    <field name="tipo_operacion"/>
+                </xpath>
+                <!--
+                <xpath expr="//field[@name='partner_id']" position="after">
+                    <field name="codigo_cliente"/>
+                </xpath>
+                -->
+                <xpath expr="//button[@name='action_invoice_sent']" position="after">
+                    <field name="enviado" invisible="1"/>
+                    <button name="enviar_sunat" type="object" string="Enviar sunat"
+                            attrs="{'invisible':['|',('enviado','=',True), ('state', '!=', 'open')]}"
+                            class="oe_highlight" groups="base.group_user"/>
+                    <button name="regenerar_xml" type="object" string="XML"
+                            attrs="{'invisible':['|',('state', '!=', 'open'),('enviado','=',True)]}"
+                            class="oe_highlight"
+                            groups="base.group_user"/>
+                    <button name="obtener_xml" type="object" string="Descargar XML"
+                            attrs="{'invisible':[('state', '!=', 'open')]}"
+                            class="oe_highlight" groups="base.group_user"/>
+                    <button name="obtener_cdr" type="object" string="Descargar CDR"
+                            attrs="{'invisible':['|',('enviado','=',False), ('state', '!=', 'open')]}"
+                            class="oe_highlight" groups="base.group_user"/>
+                    <!--<button name="anular" type="object" string="Anular"-->
+                            <!--attrs="{'invisible':['|',('enviado','=',False), ('state', '!=', 'open')]}"-->
+                            <!--class="oe_highlight" groups="base.group_user"/>-->
+                    <button name="anular" type="object" string="Anular"
+                            attrs="{'invisible':['|', ('state', '!=', 'open')]}"
+                            class="oe_highlight" groups="base.group_user"/>
+                </xpath>
+                <!--
+                <xpath expr="//field[@name='user_id']" position="after">
+                    <field name="currency_id"/>
+                </xpath>
+
+                <xpath expr="//field[@name='currency_id']" position="replace">
+                </xpath>
+                <xpath expr="//field[@name='date_invoice']" position="after">
+                    <field name="total_peso_bruto"/>
+                    <field name="total_peso_neto"/>
+                </xpath>
+                <xpath expr="//group[1]/group[2]" position="after">
+                    <field name="certificado"/>
+                    <field name="first_sale"/>
+                </xpath>
+                <field name="date_invoice" position="after">
+                    <field name="puerto_embarque"/>
+                    <field name="puerto_destino"/>
+                    <field name="consignatario_id"/>
+                    <field name="forma_pago"/>
+                    <field name="medio_transporte"/>
+                    <field name="condicion_venta"/>
+                </field>
+                -->
+                <xpath expr="//field[@name='amount_untaxed']" position="before">
+                    <field name="total_operaciones_exportacion" string="Total Op. Exportación" readonly="1"/>
+                    <field name="total_operaciones_gratuitas" string="Total Op. Gratuitas" readonly="1"/>
+                    <field name="total_operaciones_exoneradas" string="Total Op. Exoneradas" readonly="1"/>
+                    <field name="total_operaciones_inafectas" string="Total Op. Inafectas" readonly="1"/>
+                    <field name="amount_untaxed" string="Total Op. Gravadas" readonly="1"/>
+                </xpath>
+                <xpath expr="//field[@name='amount_untaxed']" position="replace">
+                </xpath>
+                <!--<xpath expr="//field[@name='residual']" position="replace">-->
+                <!--</xpath>-->
+                <xpath expr="//field[@name='invoice_line_ids']/tree/field[@name='price_unit']" position="before">
+                    <field name="tipo_igv_id"/>
+                </xpath>
+                <xpath expr="//field[@name='invoice_line_ids']/tree/field[@name='uom_id']" position="replace">
+                    <field name="uom_id" groups="product.group_uom" domain="[('codigo_ubl','!=',False)]"/>
+                </xpath>
+                <xpath expr="//field[@name='invoice_line_ids']/tree/field[@name='account_id']" position="replace">
+                    <field name="account_id" invisible="1" groups="account.group_account_user"
+                           domain="[('company_id', '=', parent.company_id), ('internal_type', '=', 'other')]"/>
+                </xpath>
+                <xpath expr="//field[@name='user_id']" position="replace"></xpath>
+                <xpath expr="//page[2]" position="after">
+                    <page name="envios" string="Envíos" groups="base.group_no_one">
+                        <field name="envio_ids" readonly="1">
+                            <tree string="Envíos">
+                                <field name="timestamp"/>
+                                <field name="codigo"/>
+                                <field name="detalle"/>
+                                <field name="servidor"/>
+                            </tree>
+                        </field>
+                    </page>
+                    <page name="contingencia" string="Contingencia">
+                        <group>
+                            <field name="contingencia"/>
+                            <field name="serie_contingencia" attrs="{'invisible': [('contingencia','=',False)]}"/>
+                            <field name="correlativo_contingencia" attrs="{'invisible': [('contingencia','=',False)]}"/>
+                        </group>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

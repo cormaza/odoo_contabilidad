@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="facturacion_einvoice_serie_tree" model="ir.ui.view">
+            <field name="name">biosis.facturacion.einvoice.serie.tree</field>
+            <field name="model">biosis.facturacion.einvoice.serie</field>
+            <field name="arch" type="xml">
+                <tree string="Series de comprobantes">
+                    <field name="alfanumerico"/>
+                    <field name="correlativo_id" domain="[('company_id','=', company_id)]"/>
+                    <field name="company_id" options="{'no_create': True}" groups="base.group_multi_company"/>
+                </tree>
+            </field>
+        </record>
+
+        <act_window
+            id="action_serie"
+            name="Factura serie"
+            res_model="biosis.facturacion.einvoice.serie"
+            view_mode="tree,form"
+        />
+
+        <menuitem id="menu_einvoice_serie" action="action_serie" sequence="1000" parent="account.menu_finance_receivables"/>
+    </data>
+</odoo>

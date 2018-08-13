@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="einvoice_pos">
+            <div class="page">
+                <div style="width:100%;margin: 0 auto;font-size: 2.5mm; font-family: monospace;">
+                    <div style="text-align:center;font-size: 3.5mm;">
+                        <strong>
+                            <span t-field="o.invoice_id.company_id.name">razon social</span>
+                        </strong>
+                        <br/>
+                        <strong>
+                            <span>RUC:</span>&amp;nbsp;
+                            <span t-field="o.invoice_id.company_id.vat">000000000</span>
+                        </strong>
+                        <br/>
+                        <span t-field="o.invoice_id.company_id.partner_id.street">ubigeo</span>
+                        <hr/>
+                        <strong>
+                            <span t-if="o.invoice_id.tipo_comprobante_id.code == '01'">FACTURA ELECTRÓNICA</span>
+                            <span t-if="o.invoice_id.tipo_comprobante_id.code == '03'">BOLETA DE VENTA ELECTRÓNICA</span>
+                            <span t-if="o.invoice_id.tipo_comprobante_id.code == '07'">NOTA DE CRÉDITO ELECTRÓNICA</span>
+                            <span t-if="o.invoice_id.tipo_comprobante_id.code == '08'">NOTA DE DÉBITO ELECTRÓNICA</span>
+                        </strong>
+                        <br/>
+                        <strong>
+                            <span t-field="o.invoice_id.numero_comprobante"></span>
+                        </strong>
+                        <hr/>
+                    </div>
+                    <div>
+                        <table style="margin: 0 auto;width:100%">
+                            <thead>
+                                <tr>
+                                    <th style="text-align:right">Cant.</th>
+                                    <th style="text-align:right">Descripción</th>
+                                    <th style="text-align:right">P.U.</th>
+                                    <th style="text-align:right">Total</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr t-foreach="o.invoice_id.invoice_line_ids" t-as="detalle">
+                                    <td style="text-align:right">
+                                        <span t-field="detalle.quantity">0000000000.00</span>
+                                    </td>
+                                    <td style="text-align:right">
+                                        <span t-field="detalle.name">DESCRIPCIÓN DE UN PRODUCTO O SERVICIO OFRECIDO AL
+                                            CLIENTE
+                                        </span>
+                                    </td>
+                                    <td style="text-align:right">
+                                        <span t-field="detalle.price_unit">0000000000.00</span>
+                                    </td>
+                                    <td style="text-align:right">
+                                        <span t-field="detalle.price_subtotal">0000000000.00</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td colspan="3" style="text-align:right">
+                                        TOTAL OP. GRAVADAS
+                                    </td>
+                                    <td style="text-align:right">
+                                        <span t-field="o.invoice_id.amount_untaxed">0000000000.00</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3" style="text-align:right">
+                                        I.G.V.
+                                    </td>
+                                    <td style="text-align:right">
+                                        <span t-field="o.invoice_id.amount_tax">0000000000.00</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3" style="text-align:right">
+                                        IMPORTE TOTAL
+                                    </td>
+                                    <td style="text-align:right">
+                                        <span t-field="o.invoice_id.amount_total">0000000000.00</span>
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                    <hr/>
+                    <div style="margin: 0 auto;text-align: center">
+                        <span t-field="o.invoice_id.signature_info">Firma</span>
+                        <br/>
+                        <img style="max-width:40mm"
+                             t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('QR', o.invoice_id.codigo_2d, 150, 150)"/>
+                    </div>
+
+
+                </div>
+            </div>
+        </template>
+
+        <template id="report_einvoice_pos">
+            <t t-call="report.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="biosis_facturacion.einvoice_pos" t-lang="o.partner_id.lang"/>
+                </t>
+            </t>
+        </template>
+
+        <record id="point_of_sale.pos_invoice_report" model="ir.actions.report.xml">
+            <field name="name">Invoice</field>
+            <field name="model">pos.order</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">biosis_facturacion.report_einvoice_pos</field>
+            <field name="paperformat_id" ref="80mm_invoice"/>
+        </record>
+        <!--
+        <record id="action_einvoice_regular" model="ir.actions.report.xml">
+            <field name="name">Comprobante POS electrónico</field>
+            <field name="model">account.invoice</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">biosis_facturacion.report_einvoice_pos</field>
+            <field name="attachment_use">False</field>
+            <field name="attachment">object.state in ('open','paid') and object.numero_comprobante+'.pdf' or
+                'BORRADOR.pdf'
+            </field>
+            <field name="paperformat_id" ref="a4_invoice"/>
+        </record>-->
+    </data>
+</odoo>

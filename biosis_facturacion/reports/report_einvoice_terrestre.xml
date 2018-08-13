@@ -1,0 +1,333 @@
+<odoo>
+    <data>
+        <template id="einvoice_terrestre_report_document">
+            <!--<t t-call="report.external_layout" t-lang="es_PE">-->
+            <t t-set="o" t-value="o.with_context({'lang':o.partner_id.lang})"/>
+            <div class="page">
+                <div class="row">
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                        <tbody>
+                            <tr>
+                                <td style="width:50%;                    color: #555555;                    font-family:sans-serif;                    font-size: 12px;">
+                                    <!--<img src="https://dummyimage.com/80.png/dadada/000" alt=""/> -->
+                                    <br/>
+                                    <strong>
+                                        <span t-field="o.company_id.name">razon social</span>
+                                    </strong>
+                                    <br/>
+                                    <span t-field="o.company_id.partner_id.street">ubigeo</span>
+                                </td>
+                                <td style="width:25%"></td>
+                                <td style="width:30%;                                        border: 3px solid #666666;                    font-family:sans-serif;                     background: #dadada;                    color: #262626;                    text-align:center;                     vertical-align:middle;                    font-size: 18px;                    padding: 10px">
+                                    <strong>
+                                        <span>RUC:</span>&amp;nbsp;
+                                        <span t-field="o.company_id.vat"></span>
+                                        <br/>
+                                        <span t-if="o.tipo_comprobante_id.code == '01'">FACTURA EXPORTACIÓN</span>
+                                        <br t-if="o.tipo_comprobante_id.code == '01'"/>
+                                        <span t-if="o.tipo_comprobante_id.code == '01'">EXPORT INVOICE</span>
+                                        <span t-if="o.tipo_comprobante_id.code == '03'">BOLETA ELECTRÓNICA</span>
+                                        <span t-if="o.tipo_comprobante_id.code == '07'">NOTA DE CRÉDITO
+                                            ELECTRÓNICA
+                                        </span>
+                                        <span t-if="o.tipo_comprobante_id.code == '08'">NOTA DE DÉBITO ELECTRÓNICA
+                                        </span>
+                                        <br/>
+                                        <span t-field="o.numero_comprobante"></span>
+                                    </strong>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <br/>
+                <div class="row">
+                    <table width="100%" border="0" style="border-spacing: 10px;">
+                        <tbody>
+                            <tr>
+                                <td colspan="2"
+                                    style="width:50%;                            border: 1px solid #666666;                            font-family:sans-serif;                            vertical-align:top;                            padding: 5px;                                                        font-size: 11px;">
+                                    <strong>
+                                        <span>COMPRADOR / BUYER:</span>
+                                    </strong> &amp;nbsp;
+                                    <span t-field="o.partner_id.name">TRANSFRUT EXPRESS LIMITED</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"
+                                    style="width:50%;                                border: 1px solid #666666;                                font-family:sans-serif;                                vertical-align:top;                                padding: 5px;                                                                font-size: 11px;">
+                                    <strong>
+                                        <span>CONSIGNATARIO / CONSIGNEE:</span>
+                                    </strong> &amp;nbsp;
+                                    <span t-field="o.consignatario_id.name"></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width:50%;                            vertical-align:top;                            border: 1px solid #666666;                            font-family:sans-serif;                             color: #000;                            font-size: 11px;                            padding: 5px">
+                                    <strong>
+                                        <span>CÓDIGO CLIENTE / CUSTOMER CODE:</span>
+                                    </strong> &amp;nbsp;
+                                    <span t-field="o.codigo_cliente">codigo</span>
+                                    <!--<span t-field="o.partner_id.codigo_partner">codigo</span>-->
+                                    <br/>
+                                    <strong>
+                                        <span>CONDICIÓN DE VENTA / SALE TERMS:</span>
+                                    </strong> &amp;nbsp;
+                                    <span t-field="o.condicion_venta"></span>
+                                    <br/>
+                                    <strong>
+                                        <span>PESO Y/O MEDIDA / WEIGHT AND/OR MEASSURE:</span>
+                                    </strong> &amp;nbsp;
+                                   <span t-if="o.total_peso_bruto"><span t-field="o.total_peso_bruto"></span>&amp;nbsp;/&amp;nbsp;</span><span t-field="o.total_peso_neto"></span>
+                                    <br/>
+                                    <strong>
+                                        <span>PUERTO DE EMBARQUE / LOADING PORT:</span>
+                                    </strong> &amp;nbsp;
+                                    <span t-field="o.puerto_embarque"></span>
+                                    <br/>
+                                    <strong>
+                                        <span>FORMA DE PAGO / TERMS OF PAYMENT:</span>
+                                    </strong> &amp;nbsp;
+                                    <span t-field="o.forma_pago">PAGO CONTADO</span>
+                                    <br/>
+                                </td>
+                                <td style="width:50%;                    vertical-align:top;                    border: 1px solid #666666;                    font-family:sans-serif;                     color: #000;                    font-size: 11px;                    padding: 5px">
+                                    <strong>
+                                        <span>FECHA EMISIÓN:</span>
+                                    </strong> &amp;nbsp;
+                                    <span t-field="o.date_invoice" t-field-options='{"format": "dd-MM-yyyy"}'>
+                                        12/12/2017
+                                    </span>
+                                    <br/>
+                                    <strong>
+                                        <span>PAÍS DE ORIGEN / ORIGIN COUNTRY:</span>
+                                    </strong> &amp;nbsp; PERÚ
+                                    <br/>
+                                    <strong>
+                                        <span>MONEDA / CURRENCY:</span>
+                                    </strong> &amp;nbsp;
+                                    <span t-if="o.currency_id.name == 'USD'">DOLARES AMERICANOS</span>
+                                    <span t-if="o.currency_id.name == 'PEN'">NUEVOS SOLES</span>
+                                    <br/>
+                                    <strong>
+                                        <span>PARTIDA ARANCELARIA / CLASSIFICATION:</span>
+                                    </strong> &amp;nbsp;0803901100
+                                    <br/>
+                                    <strong>
+                                        <span>PUERTO DE DESTINO / DISCHARGE PORT:</span>
+                                    </strong> &amp;nbsp;
+                                    <span t-field="o.puerto_destino">SAN DIEGO, CA</span>
+                                    <br/>
+                                    <strong>
+                                        <span>MEDIO DE TRANSPORTE / TRANSPORT MODE:</span>
+                                    </strong> &amp;nbsp;
+                                    <span t-field="o.medio_transporte">MULTIMODAL</span>
+                                    <br/>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <br/>
+                <div class="row">
+                    <div class="col-xs-12" style="border:1px solid #666666">
+                        <table class="table table-striped"
+                               style="font-family:sans-serif; font-size: 11px; height:100mm;"
+                               width="100%" border="0">
+                            <thead>
+                                <tr>
+                                    <th>CÓDIGO</th>
+                                    <th>CANT.</th>
+                                    <th style="width:60%;">DESCRIPCIÓN</th>
+                                    <th>U.M.</th>
+                                    <th>P.U.</th>
+                                    <th>TOTAL</th>
+                                </tr>
+                            </thead>
+                            <tfoot>
+                                <tr t-if="o.total_operaciones_exportacion">
+                                    <td style="border-width: 0px;"></td>
+                                    <td style="border-width: 0px;"></td>
+                                    <td style="border-width: 0px;"></td>
+                                    <td colspan="2" style="text-align:right;border-width: 0px;">
+                                        <strong>EXPORTACIÓN</strong>
+                                    </td>
+                                    <td>
+                                        <span t-field="o.total_operaciones_exportacion"></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="border-width: 0px;"></td>
+                                    <td style="border-width: 0px;"></td>
+                                    <td style="border-width: 0px;"></td>
+                                    <td colspan="2" style="text-align:right;border-width: 0px;">
+                                        <strong>EXONERADA</strong>
+                                    </td>
+                                    <td>
+                                        <span t-field="o.total_operaciones_exoneradas"></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="border-width: 0px;"></td>
+                                    <td style="border-width: 0px;"></td>
+                                    <td style="border-width: 0px;"></td>
+                                    <td colspan="2" style="text-align:right;border-width: 0px;">
+                                        <strong>INAFECTAS</strong>
+                                    </td>
+                                    <td>
+                                        <span t-field="o.total_operaciones_inafectas"></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="border-width: 0px;"></td>
+                                    <td style="border-width: 0px;"></td>
+                                    <td style="border-width: 0px;"></td>
+                                    <td colspan="2" style="text-align:right;border-width: 0px;">
+                                        <strong>GRAVADA</strong>
+                                    </td>
+                                    <td>
+                                        <span t-field="o.amount_untaxed"></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="border-width: 0px;"></td>
+                                    <td style="border-width: 0px;"></td>
+                                    <td style="border-width: 0px;"></td>
+                                    <td colspan="2" style="text-align:right;border-width: 0px;">
+                                        <strong>IGV</strong>
+                                    </td>
+                                    <td>
+                                        <span t-field="o.amount_tax"></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="border-width: 0px;" colspan="3">
+                                        <span>
+                                            <strong>SON:</strong>
+                                        </span>&amp;nbsp;
+                                        <span t-field="o.total_cadena"></span>
+                                    </td>
+                                    <td colspan="2" style="text-align:right;border-width: 0px;">
+                                        <strong>TOTAL</strong>
+                                    </td>
+                                    <td>
+                                        <span t-field="o.amount_total"></span>
+                                    </td>
+                                </tr>
+                                <!-- <tr>
+                                    <td colspan="6" style="text-align:center;border-width: 0px;">
+                                        <span t-field="o.certificado"></span>
+                                        <br/>
+                                        <span t-field="o.first_sale"></span>
+                                        <br/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('QR', o.codigo_2d, 150, 150)"/>
+                                    </td>
+                                    <td colspan="4">
+                                        <span>
+                                            <strong>SON:</strong>
+                                        </span>&amp;nbsp;
+                                        <span t-field="o.total_cadena"></span>
+                                        <br/>
+                                        <span t-field="o.signature_info"></span>
+                                    </td>
+                                </tr>
+                                -->
+                            </tfoot>
+                            <tbody>
+                                <tr t-foreach="o.invoice_line_ids" t-as="detalle">
+                                    <td>
+                                        <span t-field="detalle.product_id.default_code"></span>
+                                    </td>
+                                    <td>
+                                        <span t-field="detalle.quantity"></span>
+                                    </td>
+                                    <td>
+                                        <span t-field="detalle.name"></span>
+                                    </td>
+                                    <td>
+                                        <span t-field="detalle.uom_id.codigo_ubl"></span>
+                                    </td>
+                                    <td>
+                                        <span t-field="detalle.price_unit"></span>
+                                    </td>
+                                    <td>
+                                        <span t-field="detalle.price_subtotal"></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="6" style="text-align:center;border-width: 0px;">
+                                        <span t-field="o.certificado"></span>
+                                        <br/>
+                                        <span t-field="o.first_sale"></span>
+                                        <br/>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12" style="border:1px solid #666666">
+                        <table class="table table-striped"
+                               style="font-family:sans-serif; font-size: 11px;"
+                               width="100%" border="0">
+                            <tbody>
+                                <!--
+                                <tr>
+                                    <td colspan="2" style="text-align:center;border-width: 0px;">
+                                        <span t-field="o.certificado"></span>
+                                        <br/>
+                                        <span t-field="o.first_sale"></span>
+                                        <br/>
+                                    </td>
+                                </tr>-->
+                                <tr>
+                                    <td>
+                                        <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('QR', o.codigo_2d, 150, 150)"/>
+                                    </td>
+                                    <td style="min-width:85%;">
+                                        <!--
+                                        <span>
+                                            <strong>SON:</strong>
+                                        </span>&amp;nbsp;
+                                        <span t-field="o.total_cadena"></span>
+                                        <br/>-->
+                                        <span>
+                                            <strong>FIRMA:</strong>
+                                        </span>&amp;nbsp;
+                                        <span t-field="o.signature_info"></span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!--</t>-->
+        </template>
+        <template id="einvoice_terrestre_report">
+            <t t-call="report.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="biosis_facturacion.einvoice_terrestre_report_document" t-lang="o.partner_id.lang"/>
+                </t>
+            </t>
+        </template>
+        <record id="action_einvoice_terrestre_report" model="ir.actions.report.xml">
+            <field name="name">Factura de exportación</field>
+            <field name="model">account.invoice</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">biosis_facturacion.einvoice_terrestre_report</field>
+            <field name="attachment_use">False</field>
+            <field name="attachment">object.state in ('open','paid') and object.numero_comprobante+'.pdf' or 'BORRADOR.pdf'</field>
+            <field name="paperformat_id" ref="a4_invoice"/>
+        </record>
+        <!--<report id="action_einvoice_terrestre_report" model="account.invoice" string="Factura exportación"
+                report_type="qweb-pdf" name="biosis_facturacion.einvoice_terrestre_report" attachment_use="False"
+                file="biosis_facturacion.einvoice_terrestre_report"/>-->
+    </data>
+</odoo>

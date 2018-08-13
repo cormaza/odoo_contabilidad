@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!--<record id="biosis_common_guia_remision_form_view" model="ir.ui.view" >
+            <field name="name">biosis.common.guiaremision.form</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_form"/>
+            <field name="mode">primary</field>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='tipo_operacion']" position="replace">
+                    <field name="motivo_traslado"/>
+                </xpath>
+                <xpath expr="//field[@name='user_id']" position="replace">
+                    <field name="proveedor"/>
+                    <field name="destinatario"/>
+                    <field name="tipo_transporte"/>
+                </xpath>
+                <xpath expr="//field[@name='team_id']" position="replace">
+                    <field name="direccion_partida"/>
+                    <field name="direccion_llegada"/>
+                </xpath>
+                <xpath expr="//page[2]" position="after">
+                    <page string="Observaciones">
+                        <group>
+                            <field name="observaciones"/>
+                        </group>
+                    </page>
+                </xpath>
+                <xpath expr="//page[2]" position="attributes">
+                    <attribute name="attrs">{'invisible':True}</attribute>
+                </xpath>
+                <xpath expr="//field[@name='payment_term_id']" position="attributes">
+                    <attribute name="string">Plazo de entrega</attribute>
+                </xpath>
+                <xpath expr="//field[@name='payment_term_id']" position="after">
+                    <field name="transporte_sub_contr"/>
+                    <field name="emp_transporte" attrs="{'invisible':[('transporte_sub_contr','=',False)]}"/>
+                </xpath>
+            </field>
+        </record>-->
+
+        <record id="biosis_common_guia_remision_form_view" model="ir.ui.view">
+            <field name="name"> biosis.common.guiaremision.form</field>
+            <field name="model">account.invoice</field>
+            <field name="arch" type="xml">
+                <form string="Invoice">
+                    <header>
+                        <button name="action_invoice_sent" type="object" string="Send by Email"
+                                attrs="{'invisible':['|',('sent','=',True), ('state', '!=', 'open')]}" class="oe_highlight"
+                                groups="base.group_user"/>
+                        <button name="invoice_print" string="Print" type="object"
+                                attrs="{'invisible':['|',('sent','=',True), ('state', '!=', 'open')]}" class="oe_highlight"
+                                groups="base.group_user"/>
+                        <button name="action_invoice_sent" type="object" string="Send by Email"
+                                attrs="{'invisible':['|',('sent','=',False), ('state', '!=', 'open')]}"
+                                groups="base.group_user"/>
+                        <button name="invoice_print" string="Print Invoice" type="object"
+                                attrs="{'invisible':['|',('sent','=',False), ('state', '!=', 'open')]}"
+                                groups="base.group_user"/>
+                        <button name="action_invoice_open" type="object" states="draft" string="Validate"
+                                class="oe_highlight" groups="account.group_account_invoice"/>
+                        <button name="action_invoice_open" type="object" states="proforma2" string="Validate"
+                                groups="account.group_account_invoice"/>
+                        <button name="action_invoice_proforma2" type="object" states="draft" string="PRO-FORMA"
+                                groups="account.group_proforma_invoices"/>
+                        <button name="action_invoice_cancel" type="object" states="draft,proforma2,open"
+                                string="Cancel Invoice" groups="base.group_no_one"/>
+                        <button name="action_invoice_draft" states="cancel" string="Reset to Draft" type="object"
+                                groups="account.group_account_invoice"/>
+                        <field name="state" widget="statusbar" nolabel="1" statusbar_visible="draft,open,paid"/>
+                    </header>
+                    <div class="alert alert-info" role="alert" style="margin-bottom:0px;"
+                         attrs="{'invisible': [('has_outstanding','=',False)]}">
+                        You have
+                        <bold>
+                            <a class="alert-link" href="#outstanding" role="button">outstanding payments</a>
+                        </bold>
+                        for this customer. You can allocate them to mark this invoice as paid.
+                    </div>
+                    <field name="has_outstanding" invisible="1"/>
+                    <sheet string="Invoice">
+                        <label string="Pro Forma Invoice"
+                               attrs="{'invisible': [('state','not in',('proforma','proforma2'))]}"/>
+                        <label string="Refund"
+                               attrs="{'invisible': ['|',('state','in',('draft','proforma','proforma2')), ('type','&lt;&gt;','out_refund')]}"/>
+                        <h1 class="mt0">
+                            <label string="Draft Invoice"
+                                   attrs="{'invisible': ['|',('state','not in',('draft',)), ('type','&lt;&gt;','out_invoice')]}"/>
+                            <label string="Draft Refund"
+                                   attrs="{'invisible': ['|',('state','not in',('draft',)), ('type','&lt;&gt;','out_refund')]}"/>
+                            <field name="number" readonly="1" class="oe_inline"
+                                   attrs="{'invisible': [('state','in',('draft',))]}"/>
+                            <!-- Campo common -->
+                            <field name="numero" readonly="1" class="oe_inline"
+                                   attrs="{'invisible': [('state','in',('draft',))]}"/>
+                        </h1>
+                        <field name="type" invisible="1"/>
+                        <group>
+                            <group>
+                                <!-- Einvoice -->
+                                <field name="tipo_documento" domain="['|',('code', '=', '09'),('code', '=', '31')]"
+                                       required="1"/>
+                                <field name="serie_id" attrs="{'invisible': [('state','in',('open',))]}"/>
+                                <field name="invoice_id" string="Modifica a:"
+                                       attrs="{'invisible': [('invoice_id','in',('open',))]}"/>
+                                <field name="motivo_traslado"/>
+                                <!-- Einvoice -->
+                                <field string="Customer" name="partner_id"
+                                       context="{'search_default_customer':1, 'show_address': 1}"
+                                       options='{"always_reload": True}'
+                                       domain="[('customer', '=', True)]"/>
+                                <field name="payment_term_id"/>
+                                <field name="transporte_sub_contr"/>
+                                <field name="emp_transporte" attrs="{'invisible':[('transporte_sub_contr','=',False)]}"/>
+                            </group>
+                            <group>
+                                <field name="date_invoice"/>
+                                <field name="move_name" invisible="1"/>
+                                <!-- Einvoice -->
+                                <field name="proveedor"/>
+                                <field name="destinatario"/>
+                                <field name="tipo_transporte"/>
+                                <field name="direccion_partida"/>
+                                <field name="direccion_llegada"/>
+                                <!-- Einvoice -->
+                                <label for="currency_id" groups="base.group_multi_currency"/>
+                                <div groups="base.group_multi_currency">
+                                    <field name="currency_id" options="{'no_create': True, 'no_open': True}"
+                                           class="oe_inline"/>
+                                    <field name="company_currency_id" invisible="1"/>
+                                </div>
+                            </group>
+                        </group>
+                        <field name="sent" invisible="1"/>
+                        <notebook colspan="4">
+                            <page string="Invoice Lines">
+                                <field name="invoice_line_ids" nolabel="1" widget="one2many_list" mode="tree,kanban"
+                                       context="{'type': type, 'default_invoice_id': id}"><!--aca iba jornada-->
+                                    <tree string="Invoice Lines" editable="bottom">
+                                        <field name="sequence" widget="handle"/>
+                                        <field name="product_id"/>
+                                        <field name="origin" invisible="1"/>
+                                        <field name="name"/>
+                                        <field name="company_id" invisible="1"/>
+                                        <field name="account_id" groups="account.group_account_user"
+                                               domain="[('company_id', '=', parent.company_id), ('internal_type', '=', 'other')]"/>
+                                        <field name="account_analytic_id" groups="analytic.group_analytic_accounting"
+                                               domain="[('company_id', '=', parent.company_id)]"/>
+                                        <field name="analytic_tag_ids" groups="analytic.group_analytic_accounting"
+                                               widget="many2many_tags"/>
+                                        <field name="quantity"/>
+                                        <field name="uom_id" groups="product.group_uom"/>
+                                        <field name="price_unit"/>
+                                        <field name="discount" groups="base.group_no_one"/>
+                                        <field name="invoice_line_tax_ids" widget="many2many_tags"
+                                               context="{'type':parent.type}"
+                                               domain="[('type_tax_use','=','sale'),('company_id', '=', parent.company_id)]"
+                                               options="{'no_create': True}"/>
+                                        <field name="price_subtotal"/>
+                                        <field name="currency_id" invisible="1"/>
+                                    </tree>
+                                    <kanban class="o_kanban_mobile">
+                                        <field name="product_id"/>
+                                        <field name="price_subtotal"/>
+                                        <field name="quantity"/>
+                                        <field name="uom_id" groups="product.group_uom"/>
+                                        <templates>
+                                            <t t-name="kanban-box">
+                                                <div t-attf-class="oe_kanban_card oe_kanban_global_click">
+                                                    <div class="row">
+                                                        <div class="col-xs-12">
+                                                            <strong>
+                                                                <span>
+                                                                    <t t-esc="record.product_id.value or 'None'"/>
+                                                                </span>
+                                                            </strong>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-xs-8 text-muted">
+                                                            <span>
+                                                                <t t-esc="record.quantity.value"/>
+                                                                <t t-esc="record.uom_id.value"/>
+                                                            </span>
+                                                        </div>
+                                                        <div class="col-xs-4 text-muted">
+                                                            <span class="text-right">
+                                                                <t t-esc="record.price_subtotal.value"/>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </t>
+                                        </templates>
+                                    </kanban>
+                                </field>
+                                <group class="oe_subtotal_footer oe_right">
+                                    <field name="amount_untaxed"/>
+                                    <field name="amount_tax"/>
+                                    <field name="amount_total" class="oe_subtotal_footer_separator"/>
+                                    <field name="payments_widget" colspan="2" nolabel="1" widget="payment"/>
+                                    <field name="residual" class="oe_subtotal_footer_separator"
+                                           attrs="{'invisible': [('state', '=', 'draft')]}"/>
+                                    <field name="reconciled" invisible="1"/>
+                                    <field name="outstanding_credits_debits_widget" colspan="2" nolabel="1" widget="payment"
+                                           attrs="{'invisible': [('state', 'not in', 'open')]}"/>
+                                </group>
+                                <field name="comment" placeholder="Terms and conditions..."/>
+                            </page>
+                            <page string="Observaciones">
+                                <group>
+                                    <field name="observaciones"/>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+
+        <record id="biosis_common_guia_remision_view_tree" model="ir.ui.view">
+            <field name="name">guia.remision.tree</field>
+                <field name="model">account.invoice</field>
+                <field name="arch" type="xml">
+                <tree decoration-info="state == 'draft'" decoration-muted="state == 'cancel'" string="Notas">
+                    <field name="partner_id" groups="base.group_user" string="Cliente/Proveedor"/>
+                    <field name="date_invoice" string="Fecha Comprobante"/>
+                    <field name="number" string="Número"/>
+                    <field name="name" invisible="1"/>
+                    <!--aca iba jornada-->
+                    <field name="tipo_documento" string="Comprobante"/>
+                    <field name="company_id" groups="base.group_multi_company" options="{'no_create': True}"/>
+                    <field name="invoice_id"/>
+                    <field name="company_currency_id" invisible="1"/>
+                    <field name="state"/>
+                    <field name="type" invisible="context.get('type',True)"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="biosis_common_guia_remision_tree2" model="ir.actions.act_window">
+            <field name="name">Guias Remision</field>
+            <field name="res_model">account.invoice</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,kanban,form,calendar,pivot,graph</field>
+            <field eval="False" name="view_id"/>
+            <field name="domain">['|',('tipo_documento.code', '=', '09'),('tipo_documento.code', '=', '31')]</field>
+            <!--<field name="domain">[('type','in',('in_invoice', 'in_refund'))]</field>-->
+            <field name="context">{'default_type': 'in_invoice', 'type': 'in_invoice', 'journal_type': 'purchase'}</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Click para registrar una nueva guia de remisión..
+                </p>
+            </field>
+        </record>
+
+        <record id="biosis_common_guia_remision_tree" model="ir.actions.act_window.view">
+            <field eval="1" name="sequence"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="biosis_common_guia_remision_view_tree"/>
+            <field name="act_window_id" ref="biosis_common_guia_remision_tree2"/>
+        </record>
+
+        <record id="biosis_common_guia_remision_form" model="ir.actions.act_window.view">
+            <field eval="2" name="sequence"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="biosis_common_guia_remision_form_view"/>
+            <field name="act_window_id" ref="biosis_common_guia_remision_tree2"/>
+        </record>
+
+        <menuitem
+            id="biosis_common_guia_remision_menu"
+            name="Guías de Remisión"
+            action="biosis_common_guia_remision_tree2"
+            parent="account.menu_finance"
+            sequence="6"
+        />
+
+    </data>
+</odoo>

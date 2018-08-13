@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="einvoice_pos_extend" name="einvoice_pos" inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+                <script type="text/javascript" src="/biosis_facturacion/static/src/js/models.js"></script>
+            </xpath>
+        </template>
+    </data>
+
+</odoo>

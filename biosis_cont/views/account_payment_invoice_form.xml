@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="biosis_cont_account_payment_invoice_form" model="ir.ui.view">
+            <field name="inherit_id" ref="account.view_account_payment_invoice_form"/>
+            <field name="model">account.payment</field>
+            <field name="arch" type="xml">
+                <sheet position="inside">
+                    <group >
+                        <field name="residual_detraccion" invisible="1" />
+                    <div class="alert alert-info" role="alert" style="margin-bottom:0px;"
+                         attrs="{'invisible': [('residual_detraccion','=',0)]}">
+                        Tienes que
+                        <bold>
+                            <a class="alert-link" href="#residual_detraccion"
+                               role="button">realizar el pago de detraccion
+                            </a>
+                        </bold>
+                        .
+                    </div>
+
+                </group>
+                </sheet>
+
+
+                <!--<xpath expr="//field[@name='journal_id']" position="after">-->
+                <!--<field name="aplica_detraccion" invisible="1"/>-->
+                <!--<field name="tipo_residual" attrs="{'invisible':[('aplica_detraccion','=',False)]}"/>-->
+                <!--</xpath>-->
+                <field name="communication" position="after">
+                    <field name="tipo_documento_pago_id"/>
+                    <field name="codigo_referencia_doc"/>
+                </field>
+            </field>
+        </record>
+    </data>
+</odoo>

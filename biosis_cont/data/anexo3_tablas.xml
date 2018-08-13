@@ -1,0 +1,3326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="anexo3_tabla1_001" model="biosis.report.ple.anexo3.tabla1">
+            <field name="num_order">001</field>
+            <field name="descripcion">DEPÓSITO EN CUENTA</field>
+        </record>
+        <record id="anexo3_tabla1_002" model="biosis.report.ple.anexo3.tabla1">
+            <field name="num_order">002</field>
+            <field name="descripcion">GIRO</field>
+        </record>
+        <record id="anexo3_tabla1_003" model="biosis.report.ple.anexo3.tabla1">
+            <field name="num_order">003</field>
+            <field name="descripcion">TRANSFERENCIA DE FONDOS</field>
+        </record>
+        <record id="anexo3_tabla1_004" model="biosis.report.ple.anexo3.tabla1">
+            <field name="num_order">004</field>
+            <field name="descripcion">ORDEN DE PAGO</field>
+        </record>
+        <record id="anexo3_tabla1_005" model="biosis.report.ple.anexo3.tabla1">
+            <field name="num_order">005</field>
+            <field name="descripcion">TARJETA DE DÉBITO</field>
+        </record>
+        <record id="anexo3_tabla1_006" model="biosis.report.ple.anexo3.tabla1">
+            <field name="num_order">006</field>
+            <field name="descripcion">TARJETA DE CRÉDITO EMITIDA EN EL PAÍS POR UNA EMPRESA DEL SISTEMA FINANCIERO
+            </field>
+        </record>
+        <record id="anexo3_tabla1_007" model="biosis.report.ple.anexo3.tabla1">
+            <field name="num_order">007</field>
+            <field name="descripcion">CHEQUES CON LA CLÁUSULA DE "NO NEGOCIABLE", "INTRANSFERIBLES", "NO A LA ORDEN" U
+                OTRA EQUIVALENTE, A QUE SE REFIERE EL INCISO G) DEL ARTICULO 5° DE LA LEY
+            </field>
+        </record>
+        <record id="anexo3_tabla1_008" model="biosis.report.ple.anexo3.tabla1">
+            <field name="num_order">008</field>
+            <field name="descripcion">EFECTIVO, POR OPERACIONES EN LAS QUE NO EXISTE OBLIGACIÓN DE UTILIZAR MEDIO DE
+                PAGO
+            </field>
+        </record>
+        <record id="anexo3_tabla1_009" model="biosis.report.ple.anexo3.tabla1">
+            <field name="num_order">009</field>
+            <field name="descripcion">EFECTIVO, EN LOS DEMÁS CASOS</field>
+        </record>
+        <record id="anexo3_tabla1_010" model="biosis.report.ple.anexo3.tabla1">
+            <field name="num_order">010</field>
+            <field name="descripcion">MEDIOS DE PAGO USADOS EN COMERCIO EXTERIOR</field>
+        </record>
+        <record id="anexo3_tabla1_011" model="biosis.report.ple.anexo3.tabla1">
+            <field name="num_order">011</field>
+            <field name="descripcion">DOCUMENTOS EMITIDOS POR LAS EDPYMES Y LAS COOPERATIVAS DE AHORRO Y CRÉDITO NO
+                AUTORIZADAS A CAPTAR DEPÓSITOS DEL PÚBLICO
+            </field>
+        </record>
+        <record id="anexo3_tabla1_012" model="biosis.report.ple.anexo3.tabla1">
+            <field name="num_order">012</field>
+            <field name="descripcion">TARJETA DE CRÉDITO EMITIDA EN EL PAÍS O EN EL EXTERIOR POR UNA EMPRESA NO
+                PERTENECIENTE AL SISTEMA FINANCIERO, CUYO OBJETO PRINCIPAL SEA LA EMISIÓN Y ADMINISTRACIÓN DE TARJETAS
+                DE CRÉDITO
+            </field>
+        </record>
+        <record id="anexo3_tabla1_013" model="biosis.report.ple.anexo3.tabla1">
+            <field name="num_order">013</field>
+            <field name="descripcion">TARJETAS DE CRÉDITO EMITIDAS EN EL EXTERIOR POR EMPRESAS BANCARIAS O FINANCIERAS
+                NO DOMICILIADAS
+            </field>
+        </record>
+        <record id="anexo3_tabla1_101" model="biosis.report.ple.anexo3.tabla1">
+            <field name="num_order">101</field>
+            <field name="descripcion">TRANSFERENCIAS - COMERCIO EXTERIOR</field>
+        </record>
+        <record id="anexo3_tabla1_102" model="biosis.report.ple.anexo3.tabla1">
+            <field name="num_order">102</field>
+            <field name="descripcion">CHEQUES BANCARIOS - COMERCIO EXTERIOR</field>
+        </record>
+        <record id="anexo3_tabla1_103" model="biosis.report.ple.anexo3.tabla1">
+            <field name="num_order">103</field>
+            <field name="descripcion">ORDEN DE PAGO SIMPLE - COMERCIO EXTERIOR</field>
+        </record>
+        <record id="anexo3_tabla1_104" model="biosis.report.ple.anexo3.tabla1">
+            <field name="num_order">104</field>
+            <field name="descripcion">ORDEN DE PAGO DOCUMENTARIO - COMERCIO EXTERIOR</field>
+        </record>
+        <record id="anexo3_tabla1_105" model="biosis.report.ple.anexo3.tabla1">
+            <field name="num_order">105</field>
+            <field name="descripcion">REMESA SIMPLE - COMERCIO EXTERIOR</field>
+        </record>
+        <record id="anexo3_tabla1_106" model="biosis.report.ple.anexo3.tabla1">
+            <field name="num_order">106</field>
+            <field name="descripcion">REMESA DOCUMENTARIA - COMERCIO EXTERIOR</field>
+        </record>
+        <record id="anexo3_tabla1_107" model="biosis.report.ple.anexo3.tabla1">
+            <field name="num_order">107</field>
+            <field name="descripcion">CARTA DE CRÉDITO SIMPLE - COMERCIO EXTERIOR</field>
+        </record>
+        <record id="anexo3_tabla1_108" model="biosis.report.ple.anexo3.tabla1">
+            <field name="num_order">108</field>
+            <field name="descripcion">CARTA DE CRÉDITO DOCUMENTARIO - COMERCIO EXTERIOR</field>
+        </record>
+        <record id="anexo3_tabla1_999" model="biosis.report.ple.anexo3.tabla1">
+            <field name="num_order">999</field>
+            <field name="descripcion">OTROS MEDIOS DE PAGO</field>
+        </record>
+        <record id="anexo3_tabla2_0" model="biosis.report.ple.anexo3.tabla2">
+            <field name="num_order">0</field>
+            <field name="descripcion">OTROS TIPOS DE DOCUMENTOS</field>
+        </record>
+        <record id="anexo3_tabla2_1" model="biosis.report.ple.anexo3.tabla2">
+            <field name="num_order">1</field>
+            <field name="descripcion">DOCUMENTO NACIONAL DE IDENTIDAD (DNI)</field>
+        </record>
+        <record id="anexo3_tabla2_4" model="biosis.report.ple.anexo3.tabla2">
+            <field name="num_order">4</field>
+            <field name="descripcion">CARNET DE EXTRANJERIA</field>
+        </record>
+        <record id="anexo3_tabla2_6" model="biosis.report.ple.anexo3.tabla2">
+            <field name="num_order">6</field>
+            <field name="descripcion">REGISTRO ÚNICO DE CONTRIBUYENTES</field>
+        </record>
+        <record id="anexo3_tabla2_7" model="biosis.report.ple.anexo3.tabla2">
+            <field name="num_order">7</field>
+            <field name="descripcion">PASAPORTE</field>
+        </record>
+        <record id="anexo3_tabla2_A" model="biosis.report.ple.anexo3.tabla2">
+            <field name="num_order">A</field>
+            <field name="descripcion">CÉDULA DIPLOMÁTICA DE IDENTIDAD</field>
+        </record>
+        <record id="anexo3_tabla3_01" model="biosis.report.ple.anexo3.tabla3">
+            <field name="num_order">01</field>
+            <field name="descripcion">CENTRAL RESERVA DEL PERU</field>
+        </record>
+        <record id="anexo3_tabla3_02" model="biosis.report.ple.anexo3.tabla3">
+            <field name="num_order">02</field>
+            <field name="descripcion">DE CREDITO DEL PERU</field>
+        </record>
+        <record id="anexo3_tabla3_03" model="biosis.report.ple.anexo3.tabla3">
+            <field name="num_order">03</field>
+            <field name="descripcion">INTERNACIONAL DEL PERU</field>
+        </record>
+        <record id="anexo3_tabla3_05" model="biosis.report.ple.anexo3.tabla3">
+            <field name="num_order">05</field>
+            <field name="descripcion">LATINO</field>
+        </record>
+        <record id="anexo3_tabla3_07" model="biosis.report.ple.anexo3.tabla3">
+            <field name="num_order">07</field>
+            <field name="descripcion">CITIBANK DEL PERU S.A.</field>
+        </record>
+        <record id="anexo3_tabla3_08" model="biosis.report.ple.anexo3.tabla3">
+            <field name="num_order">08</field>
+            <field name="descripcion">STANDARD CHARTERED</field>
+        </record>
+        <record id="anexo3_tabla3_09" model="biosis.report.ple.anexo3.tabla3">
+            <field name="num_order">09</field>
+            <field name="descripcion">SCOTIABANK PERU</field>
+        </record>
+        <record id="anexo3_tabla3_11" model="biosis.report.ple.anexo3.tabla3">
+            <field name="num_order">11</field>
+            <field name="descripcion">CONTINENTAL</field>
+        </record>
+        <record id="anexo3_tabla3_12" model="biosis.report.ple.anexo3.tabla3">
+            <field name="num_order">12</field>
+            <field name="descripcion">DE LIMA</field>
+        </record>
+        <record id="anexo3_tabla3_16" model="biosis.report.ple.anexo3.tabla3">
+            <field name="num_order">16</field>
+            <field name="descripcion">MERCANTIL</field>
+        </record>
+        <record id="anexo3_tabla3_18" model="biosis.report.ple.anexo3.tabla3">
+            <field name="num_order">18</field>
+            <field name="descripcion">NACION</field>
+        </record>
+        <record id="anexo3_tabla3_22" model="biosis.report.ple.anexo3.tabla3">
+            <field name="num_order">22</field>
+            <field name="descripcion">SANTANDER CENTRAL HISPANO</field>
+        </record>
+        <record id="anexo3_tabla3_23" model="biosis.report.ple.anexo3.tabla3">
+            <field name="num_order">23</field>
+            <field name="descripcion">DE COMERCIO</field>
+        </record>
+        <record id="anexo3_tabla3_25" model="biosis.report.ple.anexo3.tabla3">
+            <field name="num_order">25</field>
+            <field name="descripcion">REPUBLICA</field>
+        </record>
+        <record id="anexo3_tabla3_26" model="biosis.report.ple.anexo3.tabla3">
+            <field name="num_order">26</field>
+            <field name="descripcion">NBK BANK</field>
+        </record>
+        <record id="anexo3_tabla3_29" model="biosis.report.ple.anexo3.tabla3">
+            <field name="num_order">29</field>
+            <field name="descripcion">BANCOSUR</field>
+        </record>
+        <record id="anexo3_tabla3_35" model="biosis.report.ple.anexo3.tabla3">
+            <field name="num_order">35</field>
+            <field name="descripcion">FINANCIERO DEL PERU</field>
+        </record>
+        <record id="anexo3_tabla3_37" model="biosis.report.ple.anexo3.tabla3">
+            <field name="num_order">37</field>
+            <field name="descripcion">DEL PROGRESO</field>
+        </record>
+        <record id="anexo3_tabla3_38" model="biosis.report.ple.anexo3.tabla3">
+            <field name="num_order">38</field>
+            <field name="descripcion">INTERAMERICANO FINANZAS</field>
+        </record>
+        <record id="anexo3_tabla3_39" model="biosis.report.ple.anexo3.tabla3">
+            <field name="num_order">39</field>
+            <field name="descripcion">BANEX</field>
+        </record>
+        <record id="anexo3_tabla3_40" model="biosis.report.ple.anexo3.tabla3">
+            <field name="num_order">40</field>
+            <field name="descripcion">NUEVO MUNDO</field>
+        </record>
+        <record id="anexo3_tabla3_41" model="biosis.report.ple.anexo3.tabla3">
+            <field name="num_order">41</field>
+            <field name="descripcion">SUDAMERICANO</field>
+        </record>
+        <record id="anexo3_tabla3_42" model="biosis.report.ple.anexo3.tabla3">
+            <field name="num_order">42</field>
+            <field name="descripcion">DEL LIBERTADOR</field>
+        </record>
+        <record id="anexo3_tabla3_43" model="biosis.report.ple.anexo3.tabla3">
+            <field name="num_order">43</field>
+            <field name="descripcion">DEL TRABAJO</field>
+        </record>
+        <record id="anexo3_tabla3_44" model="biosis.report.ple.anexo3.tabla3">
+            <field name="num_order">44</field>
+            <field name="descripcion">SOLVENTA</field>
+        </record>
+        <record id="anexo3_tabla3_45" model="biosis.report.ple.anexo3.tabla3">
+            <field name="num_order">45</field>
+            <field name="descripcion">SERBANCO SA.</field>
+        </record>
+        <record id="anexo3_tabla3_46" model="biosis.report.ple.anexo3.tabla3">
+            <field name="num_order">46</field>
+            <field name="descripcion">BANK OF BOSTON</field>
+        </record>
+        <record id="anexo3_tabla3_47" model="biosis.report.ple.anexo3.tabla3">
+            <field name="num_order">47</field>
+            <field name="descripcion">ORION</field>
+        </record>
+        <record id="anexo3_tabla3_48" model="biosis.report.ple.anexo3.tabla3">
+            <field name="num_order">48</field>
+            <field name="descripcion">DEL PAIS</field>
+        </record>
+        <record id="anexo3_tabla3_49" model="biosis.report.ple.anexo3.tabla3">
+            <field name="num_order">49</field>
+            <field name="descripcion">MI BANCO</field>
+        </record>
+        <record id="anexo3_tabla3_50" model="biosis.report.ple.anexo3.tabla3">
+            <field name="num_order">50</field>
+            <field name="descripcion">BNP PARIBAS</field>
+        </record>
+        <record id="anexo3_tabla3_51" model="biosis.report.ple.anexo3.tabla3">
+            <field name="num_order">51</field>
+            <field name="descripcion">AGROBANCO</field>
+        </record>
+        <record id="anexo3_tabla3_53" model="biosis.report.ple.anexo3.tabla3">
+            <field name="num_order">53</field>
+            <field name="descripcion">HSBC BANK PERU S.A.</field>
+        </record>
+        <record id="anexo3_tabla3_54" model="biosis.report.ple.anexo3.tabla3">
+            <field name="num_order">54</field>
+            <field name="descripcion">BANCO FALABELLA S.A.</field>
+        </record>
+        <record id="anexo3_tabla3_55" model="biosis.report.ple.anexo3.tabla3">
+            <field name="num_order">55</field>
+            <field name="descripcion">BANCO RIPLEY</field>
+        </record>
+        <record id="anexo3_tabla3_56" model="biosis.report.ple.anexo3.tabla3">
+            <field name="num_order">56</field>
+            <field name="descripcion">BANCO SANTANDER PERU S.A.</field>
+        </record>
+        <record id="anexo3_tabla3_58" model="biosis.report.ple.anexo3.tabla3">
+            <field name="num_order">58</field>
+            <field name="descripcion">BANCO AZTECA DEL PERU</field>
+        </record>
+        <record id="anexo3_tabla3_99" model="biosis.report.ple.anexo3.tabla3">
+            <field name="num_order">99</field>
+            <field name="descripcion">OTROS</field>
+        </record>
+        <record id="anexo3_tabla4_AED" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">AED</field>
+            <field name="descripcion">UAE Dirham</field>
+            <field name="pais_zona">Emiratos Árabes Unidos</field>
+        </record>
+        <record id="anexo3_tabla4_AFN" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">AFN</field>
+            <field name="descripcion">Afghani</field>
+            <field name="pais_zona">Afganistán</field>
+        </record>
+        <record id="anexo3_tabla4_ALL" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">ALL</field>
+            <field name="descripcion">Lek</field>
+            <field name="pais_zona">Albania</field>
+        </record>
+        <record id="anexo3_tabla4_AMD" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">AMD</field>
+            <field name="descripcion">Armenian Dram</field>
+            <field name="pais_zona">Armenia</field>
+        </record>
+        <record id="anexo3_tabla4_ANG" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">ANG</field>
+            <field name="descripcion">Netherlands Antillian Guilder</field>
+            <field name="pais_zona">Antillas Holandesas</field>
+        </record>
+        <record id="anexo3_tabla4_AOA" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">AOA</field>
+            <field name="descripcion">Kwanza</field>
+            <field name="pais_zona">Angola</field>
+        </record>
+        <record id="anexo3_tabla4_ARS" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">ARS</field>
+            <field name="descripcion">Argentine Peso</field>
+            <field name="pais_zona">Argentina</field>
+        </record>
+        <record id="anexo3_tabla4_AUD" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">AUD</field>
+            <field name="descripcion">Australian Dollar</field>
+            <field name="pais_zona">Australia</field>
+        </record>
+        <record id="anexo3_tabla4_AWG" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">AWG</field>
+            <field name="descripcion">Aruban Guilder</field>
+            <field name="pais_zona">Aruba</field>
+        </record>
+        <record id="anexo3_tabla4_AZN" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">AZN</field>
+            <field name="descripcion">Azerbaijanian Manat</field>
+            <field name="pais_zona">Azerbaiyán</field>
+        </record>
+        <record id="anexo3_tabla4_BAM" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">BAM</field>
+            <field name="descripcion">Convertible Marks</field>
+            <field name="pais_zona">Bosnia y Herzegovina</field>
+        </record>
+        <record id="anexo3_tabla4_BBD" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">BBD</field>
+            <field name="descripcion">Barbados Dollar</field>
+            <field name="pais_zona">Barbados</field>
+        </record>
+        <record id="anexo3_tabla4_BDT" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">BDT</field>
+            <field name="descripcion">Taka</field>
+            <field name="pais_zona">Bangladesh</field>
+        </record>
+        <record id="anexo3_tabla4_BGN" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">BGN</field>
+            <field name="descripcion">Bulgarian Lev</field>
+            <field name="pais_zona">Bulgaria</field>
+        </record>
+        <record id="anexo3_tabla4_BHD" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">BHD</field>
+            <field name="descripcion">Bahraini Dinar</field>
+            <field name="pais_zona">Bahréin</field>
+        </record>
+        <record id="anexo3_tabla4_BIF" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">BIF</field>
+            <field name="descripcion">Burundi Franc</field>
+            <field name="pais_zona">Burundi</field>
+        </record>
+        <record id="anexo3_tabla4_BMD" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">BMD</field>
+            <field name="descripcion">Bermudian Dollar (customarily known as Bermuda Dollar)</field>
+            <field name="pais_zona">Bermudas</field>
+        </record>
+        <record id="anexo3_tabla4_BND" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">BND</field>
+            <field name="descripcion">Brunei Dollar</field>
+            <field name="pais_zona">Brunéi Darussalam</field>
+        </record>
+        <record id="anexo3_tabla4_BOB" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">BOB</field>
+            <field name="descripcion">Boliviano</field>
+            <field name="pais_zona">Bolivia</field>
+        </record>
+        <record id="anexo3_tabla4_BOV" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">BOV</field>
+            <field name="descripcion">Mvdol</field>
+            <field name="pais_zona">Bolivia</field>
+        </record>
+        <record id="anexo3_tabla4_BRL" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">BRL</field>
+            <field name="descripcion">Brazilian Real</field>
+            <field name="pais_zona">Brasil</field>
+        </record>
+        <record id="anexo3_tabla4_BSD" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">BSD</field>
+            <field name="descripcion">Bahamian Dollar</field>
+            <field name="pais_zona">Bahamas</field>
+        </record>
+        <record id="anexo3_tabla4_BTN" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">BTN</field>
+            <field name="descripcion">Ngultrum</field>
+            <field name="pais_zona">Bután</field>
+        </record>
+        <record id="anexo3_tabla4_BWP" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">BWP</field>
+            <field name="descripcion">Pula</field>
+            <field name="pais_zona">Botsuana</field>
+        </record>
+        <record id="anexo3_tabla4_BYR" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">BYR</field>
+            <field name="descripcion">Belarussian Ruble</field>
+            <field name="pais_zona">Bielorrusia</field>
+        </record>
+        <record id="anexo3_tabla4_BZD" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">BZD</field>
+            <field name="descripcion">Belize Dollar</field>
+            <field name="pais_zona">Belice</field>
+        </record>
+        <record id="anexo3_tabla4_CAD" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">CAD</field>
+            <field name="descripcion">Canadian Dollar</field>
+            <field name="pais_zona">Canadá</field>
+        </record>
+        <record id="anexo3_tabla4_CDF" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">CDF</field>
+            <field name="descripcion">Congolese Franc</field>
+            <field name="pais_zona">República Democrática del Congo</field>
+        </record>
+        <record id="anexo3_tabla4_CHE" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">CHE</field>
+            <field name="descripcion">WIR Euro</field>
+            <field name="pais_zona">Suiza</field>
+        </record>
+        <record id="anexo3_tabla4_CHF" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">CHF</field>
+            <field name="descripcion">Swiss Franc</field>
+            <field name="pais_zona">Suiza</field>
+        </record>
+        <record id="anexo3_tabla4_CHW" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">CHW</field>
+            <field name="descripcion">WIR Franc</field>
+            <field name="pais_zona">Suiza</field>
+        </record>
+        <record id="anexo3_tabla4_CLF" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">CLF</field>
+            <field name="descripcion">Unidades de fomento</field>
+            <field name="pais_zona">Chile</field>
+        </record>
+        <record id="anexo3_tabla4_CLP" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">CLP</field>
+            <field name="descripcion">Chilean Peso</field>
+            <field name="pais_zona">Chile</field>
+        </record>
+        <record id="anexo3_tabla4_CNY" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">CNY</field>
+            <field name="descripcion">Yuan Renminbi</field>
+            <field name="pais_zona">China (República Popular)</field>
+        </record>
+        <record id="anexo3_tabla4_COP" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">COP</field>
+            <field name="descripcion">Colombian Peso</field>
+            <field name="pais_zona">Colombia</field>
+        </record>
+        <record id="anexo3_tabla4_COU" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">COU</field>
+            <field name="descripcion">Unidad de Valor Real</field>
+            <field name="pais_zona">Colombia</field>
+        </record>
+        <record id="anexo3_tabla4_CRC" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">CRC</field>
+            <field name="descripcion">Costa Rican Colon</field>
+            <field name="pais_zona">Costa Rica</field>
+        </record>
+        <record id="anexo3_tabla4_CUC" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">CUC</field>
+            <field name="descripcion">Peso Convertible</field>
+            <field name="pais_zona">Cuba</field>
+        </record>
+        <record id="anexo3_tabla4_CUP" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">CUP</field>
+            <field name="descripcion">Cuban Peso</field>
+            <field name="pais_zona">Cuba</field>
+        </record>
+        <record id="anexo3_tabla4_CVE" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">CVE</field>
+            <field name="descripcion">Cape Verde Escudo</field>
+            <field name="pais_zona">Cabo Verde</field>
+        </record>
+        <record id="anexo3_tabla4_CZK" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">CZK</field>
+            <field name="descripcion">Czech Koruna</field>
+            <field name="pais_zona">República Checa</field>
+        </record>
+        <record id="anexo3_tabla4_DJF" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">DJF</field>
+            <field name="descripcion">Djibouti Franc</field>
+            <field name="pais_zona">Yibuti</field>
+        </record>
+        <record id="anexo3_tabla4_DKK" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">DKK</field>
+            <field name="descripcion">Danish Krone</field>
+            <field name="pais_zona">Dinamarca</field>
+        </record>
+        <record id="anexo3_tabla4_DOP" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">DOP</field>
+            <field name="descripcion">Dominican Peso</field>
+            <field name="pais_zona">República Dominicana</field>
+        </record>
+        <record id="anexo3_tabla4_DZD" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">DZD</field>
+            <field name="descripcion">Algerian Dinar</field>
+            <field name="pais_zona">Argelia</field>
+        </record>
+        <record id="anexo3_tabla4_EEK" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">EEK</field>
+            <field name="descripcion">Kroon</field>
+            <field name="pais_zona">Estonia</field>
+        </record>
+        <record id="anexo3_tabla4_EGP" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">EGP</field>
+            <field name="descripcion">Egyptian Pound</field>
+            <field name="pais_zona">Egipto</field>
+        </record>
+        <record id="anexo3_tabla4_ERN" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">ERN</field>
+            <field name="descripcion">Nakfa</field>
+            <field name="pais_zona">Eritrea</field>
+        </record>
+        <record id="anexo3_tabla4_ETB" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">ETB</field>
+            <field name="descripcion">Ethiopian Birr</field>
+            <field name="pais_zona">Etiopía</field>
+        </record>
+        <record id="anexo3_tabla4_EUR" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">EUR</field>
+            <field name="descripcion">Euro</field>
+            <field name="pais_zona">Unión Europea</field>
+        </record>
+        <record id="anexo3_tabla4_FJD" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">FJD</field>
+            <field name="descripcion">Fiji Dollar</field>
+            <field name="pais_zona">Fiyi</field>
+        </record>
+        <record id="anexo3_tabla4_FKP" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">FKP</field>
+            <field name="descripcion">Falkland Islands Pound</field>
+            <field name="pais_zona">Islas Malvinas</field>
+        </record>
+        <record id="anexo3_tabla4_GBP" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">GBP</field>
+            <field name="descripcion">Pound Sterling</field>
+            <field name="pais_zona">Reino Unido</field>
+        </record>
+        <record id="anexo3_tabla4_GEL" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">GEL</field>
+            <field name="descripcion">Lari</field>
+            <field name="pais_zona">Georgia</field>
+        </record>
+        <record id="anexo3_tabla4_GHS" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">GHS</field>
+            <field name="descripcion">Cedi</field>
+            <field name="pais_zona">Ghana</field>
+        </record>
+        <record id="anexo3_tabla4_GIP" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">GIP</field>
+            <field name="descripcion">Gibraltar Pound</field>
+            <field name="pais_zona">Gibraltar</field>
+        </record>
+        <record id="anexo3_tabla4_GMD" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">GMD</field>
+            <field name="descripcion">Dalasi</field>
+            <field name="pais_zona">Gambia</field>
+        </record>
+        <record id="anexo3_tabla4_GNF" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">GNF</field>
+            <field name="descripcion">Guinea Franc</field>
+            <field name="pais_zona">Guinea</field>
+        </record>
+        <record id="anexo3_tabla4_GTQ" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">GTQ</field>
+            <field name="descripcion">Quetzal</field>
+            <field name="pais_zona">Guatemala</field>
+        </record>
+        <record id="anexo3_tabla4_GYD" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">GYD</field>
+            <field name="descripcion">Guyana Dollar</field>
+            <field name="pais_zona">Guyana</field>
+        </record>
+        <record id="anexo3_tabla4_HKD" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">HKD</field>
+            <field name="descripcion">Hong Kong Dollar</field>
+            <field name="pais_zona">Hong Kong</field>
+        </record>
+        <record id="anexo3_tabla4_HNL" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">HNL</field>
+            <field name="descripcion">Lempira</field>
+            <field name="pais_zona">Honduras</field>
+        </record>
+        <record id="anexo3_tabla4_HRK" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">HRK</field>
+            <field name="descripcion">Croatian Kuna</field>
+            <field name="pais_zona">Croacia</field>
+        </record>
+        <record id="anexo3_tabla4_HTG" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">HTG</field>
+            <field name="descripcion">Gourde</field>
+            <field name="pais_zona">Haití</field>
+        </record>
+        <record id="anexo3_tabla4_HUF" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">HUF</field>
+            <field name="descripcion">Forint</field>
+            <field name="pais_zona">Hungría</field>
+        </record>
+        <record id="anexo3_tabla4_IDR" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">IDR</field>
+            <field name="descripcion">Rupiah</field>
+            <field name="pais_zona">Indonesia</field>
+        </record>
+        <record id="anexo3_tabla4_ILS" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">ILS</field>
+            <field name="descripcion">New Israeli Sheqel</field>
+            <field name="pais_zona">Israel</field>
+        </record>
+        <record id="anexo3_tabla4_INR" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">INR</field>
+            <field name="descripcion">Indian Rupee</field>
+            <field name="pais_zona">India</field>
+        </record>
+        <record id="anexo3_tabla4_IQD" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">IQD</field>
+            <field name="descripcion">Iraqi Dinar</field>
+            <field name="pais_zona">Iraq</field>
+        </record>
+        <record id="anexo3_tabla4_IRR" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">IRR</field>
+            <field name="descripcion">Iranian Rial</field>
+            <field name="pais_zona">Irán</field>
+        </record>
+        <record id="anexo3_tabla4_ISK" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">ISK</field>
+            <field name="descripcion">Iceland Krona</field>
+            <field name="pais_zona">Islandia</field>
+        </record>
+        <record id="anexo3_tabla4_JMD" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">JMD</field>
+            <field name="descripcion">Jamaican Dollar</field>
+            <field name="pais_zona">Jamaica</field>
+        </record>
+        <record id="anexo3_tabla4_JOD" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">JOD</field>
+            <field name="descripcion">Jordanian Dinar</field>
+            <field name="pais_zona">Jordania</field>
+        </record>
+        <record id="anexo3_tabla4_JPY" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">JPY</field>
+            <field name="descripcion">Yen</field>
+            <field name="pais_zona">Japón</field>
+        </record>
+        <record id="anexo3_tabla4_KES" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">KES</field>
+            <field name="descripcion">Kenyan Shilling</field>
+            <field name="pais_zona">Kenia</field>
+        </record>
+        <record id="anexo3_tabla4_KGS" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">KGS</field>
+            <field name="descripcion">Som</field>
+            <field name="pais_zona">Kirguistán</field>
+        </record>
+        <record id="anexo3_tabla4_KHR" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">KHR</field>
+            <field name="descripcion">Riel</field>
+            <field name="pais_zona">Camboya</field>
+        </record>
+        <record id="anexo3_tabla4_KMF" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">KMF</field>
+            <field name="descripcion">Comoro Franc</field>
+            <field name="pais_zona">Comoras</field>
+        </record>
+        <record id="anexo3_tabla4_KPW" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">KPW</field>
+            <field name="descripcion">North Korean Won</field>
+            <field name="pais_zona">Corea (del Norte)</field>
+        </record>
+        <record id="anexo3_tabla4_KRW" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">KRW</field>
+            <field name="descripcion">Won</field>
+            <field name="pais_zona">Corea (del Sur)</field>
+        </record>
+        <record id="anexo3_tabla4_KWD" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">KWD</field>
+            <field name="descripcion">Kuwaiti Dinar</field>
+            <field name="pais_zona">Kuwait</field>
+        </record>
+        <record id="anexo3_tabla4_KYD" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">KYD</field>
+            <field name="descripcion">Cayman Islands Dollar</field>
+            <field name="pais_zona">Islas Caimán</field>
+        </record>
+        <record id="anexo3_tabla4_KZT" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">KZT</field>
+            <field name="descripcion">Tenge</field>
+            <field name="pais_zona">Kazajistán</field>
+        </record>
+        <record id="anexo3_tabla4_LAK" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">LAK</field>
+            <field name="descripcion">Kip</field>
+            <field name="pais_zona">Laos</field>
+        </record>
+        <record id="anexo3_tabla4_LBP" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">LBP</field>
+            <field name="descripcion">Lebanese Pound</field>
+            <field name="pais_zona">Líbano</field>
+        </record>
+        <record id="anexo3_tabla4_LKR" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">LKR</field>
+            <field name="descripcion">Sri Lanka Rupee</field>
+            <field name="pais_zona">Sri Lanka</field>
+        </record>
+        <record id="anexo3_tabla4_LRD" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">LRD</field>
+            <field name="descripcion">Liberian Dollar</field>
+            <field name="pais_zona">Liberia</field>
+        </record>
+        <record id="anexo3_tabla4_LSL" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">LSL</field>
+            <field name="descripcion">Loti</field>
+            <field name="pais_zona">Lesoto</field>
+        </record>
+        <record id="anexo3_tabla4_LTL" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">LTL</field>
+            <field name="descripcion">Lithuanian Litas</field>
+            <field name="pais_zona">Lituania</field>
+        </record>
+        <record id="anexo3_tabla4_LVL" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">LVL</field>
+            <field name="descripcion">Latvian Lats</field>
+            <field name="pais_zona">Letonia</field>
+        </record>
+        <record id="anexo3_tabla4_LYD" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">LYD</field>
+            <field name="descripcion">Libyan Dinar</field>
+            <field name="pais_zona">Libia</field>
+        </record>
+        <record id="anexo3_tabla4_MAD" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">MAD</field>
+            <field name="descripcion">Moroccan Dirham</field>
+            <field name="pais_zona">Marruecos</field>
+        </record>
+        <record id="anexo3_tabla4_MDL" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">MDL</field>
+            <field name="descripcion">Moldovan Leu</field>
+            <field name="pais_zona">Moldavia</field>
+        </record>
+        <record id="anexo3_tabla4_MGA" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">MGA</field>
+            <field name="descripcion">Malagasy Ariary</field>
+            <field name="pais_zona">Madagascar</field>
+        </record>
+        <record id="anexo3_tabla4_MKD" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">MKD</field>
+            <field name="descripcion">Denar</field>
+            <field name="pais_zona">Macedonia</field>
+        </record>
+        <record id="anexo3_tabla4_MMK" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">MMK</field>
+            <field name="descripcion">Kyat</field>
+            <field name="pais_zona">Myanmar (Birmania)</field>
+        </record>
+        <record id="anexo3_tabla4_MNT" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">MNT</field>
+            <field name="descripcion">Tugrik</field>
+            <field name="pais_zona">Mongolia</field>
+        </record>
+        <record id="anexo3_tabla4_MOP" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">MOP</field>
+            <field name="descripcion">Pataca</field>
+            <field name="pais_zona">Macao</field>
+        </record>
+        <record id="anexo3_tabla4_MRO" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">MRO</field>
+            <field name="descripcion">Ouguiya</field>
+            <field name="pais_zona">Mauritania</field>
+        </record>
+        <record id="anexo3_tabla4_MUR" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">MUR</field>
+            <field name="descripcion">Mauritius Rupee</field>
+            <field name="pais_zona">Mauricio</field>
+        </record>
+        <record id="anexo3_tabla4_MVR" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">MVR</field>
+            <field name="descripcion">Rufiyaa</field>
+            <field name="pais_zona">Maldivas</field>
+        </record>
+        <record id="anexo3_tabla4_MWK" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">MWK</field>
+            <field name="descripcion">Kwacha</field>
+            <field name="pais_zona">Malaui</field>
+        </record>
+        <record id="anexo3_tabla4_MXN" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">MXN</field>
+            <field name="descripcion">Mexican Peso</field>
+            <field name="pais_zona">México</field>
+        </record>
+        <record id="anexo3_tabla4_MXV" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">MXV</field>
+            <field name="descripcion">Mexican Unidad de Inversion (UDI)</field>
+            <field name="pais_zona">México</field>
+        </record>
+        <record id="anexo3_tabla4_MYR" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">MYR</field>
+            <field name="descripcion">Malaysian Ringgit</field>
+            <field name="pais_zona">Malasia</field>
+        </record>
+        <record id="anexo3_tabla4_MZN" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">MZN</field>
+            <field name="descripcion">Metical</field>
+            <field name="pais_zona">Mozambique</field>
+        </record>
+        <record id="anexo3_tabla4_NAD" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">NAD</field>
+            <field name="descripcion">Namibia Dollar</field>
+            <field name="pais_zona">Namibia</field>
+        </record>
+        <record id="anexo3_tabla4_NGN" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">NGN</field>
+            <field name="descripcion">Naira</field>
+            <field name="pais_zona">Nigeria</field>
+        </record>
+        <record id="anexo3_tabla4_NIO" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">NIO</field>
+            <field name="descripcion">Cordoba Oro</field>
+            <field name="pais_zona">Nicaragua</field>
+        </record>
+        <record id="anexo3_tabla4_NOK" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">NOK</field>
+            <field name="descripcion">Norwegian Krone</field>
+            <field name="pais_zona">Noruega</field>
+        </record>
+        <record id="anexo3_tabla4_NPR" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">NPR</field>
+            <field name="descripcion">Nepalese Rupee</field>
+            <field name="pais_zona">Nepal</field>
+        </record>
+        <record id="anexo3_tabla4_NZD" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">NZD</field>
+            <field name="descripcion">New Zealand Dollar</field>
+            <field name="pais_zona">Nueva Zelanda</field>
+        </record>
+        <record id="anexo3_tabla4_OMR" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">OMR</field>
+            <field name="descripcion">Rial Omani</field>
+            <field name="pais_zona">Omán</field>
+        </record>
+        <record id="anexo3_tabla4_PAB" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">PAB</field>
+            <field name="descripcion">Balboa</field>
+            <field name="pais_zona">Panamá</field>
+        </record>
+        <record id="anexo3_tabla4_PEN" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">PEN</field>
+            <field name="descripcion">Nuevo Sol o Sol</field>
+            <field name="pais_zona">Perú</field>
+        </record>
+        <record id="anexo3_tabla4_PGK" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">PGK</field>
+            <field name="descripcion">Kina</field>
+            <field name="pais_zona">Papúa Nueva Guinea</field>
+        </record>
+        <record id="anexo3_tabla4_PHP" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">PHP</field>
+            <field name="descripcion">Philippine Peso</field>
+            <field name="pais_zona">Filipinas</field>
+        </record>
+        <record id="anexo3_tabla4_PKR" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">PKR</field>
+            <field name="descripcion">Pakistan Rupee</field>
+            <field name="pais_zona">Pakistán</field>
+        </record>
+        <record id="anexo3_tabla4_PLN" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">PLN</field>
+            <field name="descripcion">Zloty</field>
+            <field name="pais_zona">Polonia</field>
+        </record>
+        <record id="anexo3_tabla4_PYG" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">PYG</field>
+            <field name="descripcion">Guarani</field>
+            <field name="pais_zona">Paraguay</field>
+        </record>
+        <record id="anexo3_tabla4_QAR" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">QAR</field>
+            <field name="descripcion">Qatari Rial</field>
+            <field name="pais_zona">Qatar</field>
+        </record>
+        <record id="anexo3_tabla4_RON" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">RON</field>
+            <field name="descripcion">New Leu</field>
+            <field name="pais_zona">Rumania</field>
+        </record>
+        <record id="anexo3_tabla4_RSD" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">RSD</field>
+            <field name="descripcion">Serbian Dinar</field>
+            <field name="pais_zona">Serbia</field>
+        </record>
+        <record id="anexo3_tabla4_RUB" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">RUB</field>
+            <field name="descripcion">Russian Ruble</field>
+            <field name="pais_zona">Rusia</field>
+        </record>
+        <record id="anexo3_tabla4_RWF" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">RWF</field>
+            <field name="descripcion">Rwanda Franc</field>
+            <field name="pais_zona">Ruanda</field>
+        </record>
+        <record id="anexo3_tabla4_SAR" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">SAR</field>
+            <field name="descripcion">Saudi Riyal</field>
+            <field name="pais_zona">Arabia Saudita</field>
+        </record>
+        <record id="anexo3_tabla4_SBD" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">SBD</field>
+            <field name="descripcion">Solomon Islands Dollar</field>
+            <field name="pais_zona">Islas Salomón</field>
+        </record>
+        <record id="anexo3_tabla4_SCR" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">SCR</field>
+            <field name="descripcion">Seychelles Rupee</field>
+            <field name="pais_zona">Seychelles</field>
+        </record>
+        <record id="anexo3_tabla4_SDG" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">SDG</field>
+            <field name="descripcion">Sudanese Pound</field>
+            <field name="pais_zona">Sudán</field>
+        </record>
+        <record id="anexo3_tabla4_SEK" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">SEK</field>
+            <field name="descripcion">Swedish Krona</field>
+            <field name="pais_zona">Suecia</field>
+        </record>
+        <record id="anexo3_tabla4_SGD" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">SGD</field>
+            <field name="descripcion">Singapore Dollar</field>
+            <field name="pais_zona">Singapur</field>
+        </record>
+        <record id="anexo3_tabla4_SHP" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">SHP</field>
+            <field name="descripcion">Saint Helena Pound</field>
+            <field name="pais_zona">Santa Helena</field>
+        </record>
+        <record id="anexo3_tabla4_SLL" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">SLL</field>
+            <field name="descripcion">Leone</field>
+            <field name="pais_zona">Sierra Leona</field>
+        </record>
+        <record id="anexo3_tabla4_SOS" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">SOS</field>
+            <field name="descripcion">Somali Shilling</field>
+            <field name="pais_zona">Somalia</field>
+        </record>
+        <record id="anexo3_tabla4_SRD" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">SRD</field>
+            <field name="descripcion">Surinam Dollar</field>
+            <field name="pais_zona">Surinam</field>
+        </record>
+        <record id="anexo3_tabla4_STD" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">STD</field>
+            <field name="descripcion">Dobra</field>
+            <field name="pais_zona">Santo Tomé y Príncipe</field>
+        </record>
+        <record id="anexo3_tabla4_SVC" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">SVC</field>
+            <field name="descripcion">El Salvador Colon</field>
+            <field name="pais_zona">El Salvador</field>
+        </record>
+        <record id="anexo3_tabla4_SYP" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">SYP</field>
+            <field name="descripcion">Syrian Pound</field>
+            <field name="pais_zona">Siria</field>
+        </record>
+        <record id="anexo3_tabla4_SZL" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">SZL</field>
+            <field name="descripcion">Lilangeni</field>
+            <field name="pais_zona">Suazilandia</field>
+        </record>
+        <record id="anexo3_tabla4_THB" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">THB</field>
+            <field name="descripcion">Baht</field>
+            <field name="pais_zona">Tailandia</field>
+        </record>
+        <record id="anexo3_tabla4_TJS" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">TJS</field>
+            <field name="descripcion">Somoni</field>
+            <field name="pais_zona">Tayikistán</field>
+        </record>
+        <record id="anexo3_tabla4_TMT" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">TMT</field>
+            <field name="descripcion">Manat</field>
+            <field name="pais_zona">Turkmenistán</field>
+        </record>
+        <record id="anexo3_tabla4_TND" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">TND</field>
+            <field name="descripcion">Tunisian Dinar</field>
+            <field name="pais_zona">Túnez</field>
+        </record>
+        <record id="anexo3_tabla4_TOP" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">TOP</field>
+            <field name="descripcion">Pa'anga</field>
+            <field name="pais_zona">Tonga</field>
+        </record>
+        <record id="anexo3_tabla4_TRY" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">TRY</field>
+            <field name="descripcion">Turkish Lira</field>
+            <field name="pais_zona">Turquía</field>
+        </record>
+        <record id="anexo3_tabla4_TTD" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">TTD</field>
+            <field name="descripcion">Trinidad and Tobago Dollar</field>
+            <field name="pais_zona">Trinidad y Tobago</field>
+        </record>
+        <record id="anexo3_tabla4_TWD" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">TWD</field>
+            <field name="descripcion">New Taiwan Dollar</field>
+            <field name="pais_zona">Taiwán</field>
+        </record>
+        <record id="anexo3_tabla4_TZS" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">TZS</field>
+            <field name="descripcion">Tanzanian Shilling</field>
+            <field name="pais_zona">Tanzania</field>
+        </record>
+        <record id="anexo3_tabla4_UAH" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">UAH</field>
+            <field name="descripcion">Hryvnia</field>
+            <field name="pais_zona">Ucrania</field>
+        </record>
+        <record id="anexo3_tabla4_UGX" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">UGX</field>
+            <field name="descripcion">Uganda Shilling</field>
+            <field name="pais_zona">Uganda</field>
+        </record>
+        <record id="anexo3_tabla4_USD" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">USD</field>
+            <field name="descripcion">US Dollar</field>
+            <field name="pais_zona">Estados Unidos (EEUU)</field>
+        </record>
+        <record id="anexo3_tabla4_USN" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">USN</field>
+            <field name="descripcion">US Dollar (Next day)</field>
+            <field name="pais_zona">Estados Unidos (EEUU)</field>
+        </record>
+        <record id="anexo3_tabla4_USS" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">USS</field>
+            <field name="descripcion">US Dollar (Same day)</field>
+            <field name="pais_zona">Estados Unidos (EEUU)</field>
+        </record>
+        <record id="anexo3_tabla4_UYI" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">UYI</field>
+            <field name="descripcion">Uruguay Peso en Unidades Indexadas</field>
+            <field name="pais_zona">Uruguay</field>
+        </record>
+        <record id="anexo3_tabla4_UYU" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">UYU</field>
+            <field name="descripcion">Peso Uruguayo</field>
+            <field name="pais_zona">Uruguay</field>
+        </record>
+        <record id="anexo3_tabla4_UZS" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">UZS</field>
+            <field name="descripcion">Uzbekistan Sum</field>
+            <field name="pais_zona">Uzbekistán</field>
+        </record>
+        <record id="anexo3_tabla4_VEF" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">VEF</field>
+            <field name="descripcion">Bolivar Fuerte</field>
+            <field name="pais_zona">Venezuela</field>
+        </record>
+        <record id="anexo3_tabla4_VND" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">VND</field>
+            <field name="descripcion">Dong</field>
+            <field name="pais_zona">Vietnam</field>
+        </record>
+        <record id="anexo3_tabla4_VUV" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">VUV</field>
+            <field name="descripcion">Vatu</field>
+            <field name="pais_zona">Vanuatu</field>
+        </record>
+        <record id="anexo3_tabla4_WST" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">WST</field>
+            <field name="descripcion">Tala</field>
+            <field name="pais_zona">Samoa del Oeste</field>
+        </record>
+        <record id="anexo3_tabla4_XAF" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">XAF</field>
+            <field name="descripcion">CFA Franc BEAC ‡</field>
+            <field name="pais_zona">-</field>
+        </record>
+        <record id="anexo3_tabla4_XAG" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">XAG</field>
+            <field name="descripcion">Silver</field>
+            <field name="pais_zona">-</field>
+        </record>
+        <record id="anexo3_tabla4_XAU" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">XAU</field>
+            <field name="descripcion">Gold</field>
+            <field name="pais_zona">-</field>
+        </record>
+        <record id="anexo3_tabla4_XBA" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">XBA</field>
+            <field name="descripcion">Bond Markets Units European Composite Unit (EURCO)</field>
+            <field name="pais_zona">-</field>
+        </record>
+        <record id="anexo3_tabla4_XBB" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">XBB</field>
+            <field name="descripcion">European Monetary Unit (E.M.U.-6)</field>
+            <field name="pais_zona">-</field>
+        </record>
+        <record id="anexo3_tabla4_XBC" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">XBC</field>
+            <field name="descripcion">European Unit of Account 9(E.U.A.-9)</field>
+            <field name="pais_zona">-</field>
+        </record>
+        <record id="anexo3_tabla4_XBD" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">XBD</field>
+            <field name="descripcion">European Unit of Account 17(E.U.A.-17)</field>
+            <field name="pais_zona">-</field>
+        </record>
+        <record id="anexo3_tabla4_XCD" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">XCD</field>
+            <field name="descripcion">East Caribbean Dollar</field>
+            <field name="pais_zona">-</field>
+        </record>
+        <record id="anexo3_tabla4_XDR" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">XDR</field>
+            <field name="descripcion">SDR</field>
+            <field name="pais_zona">-</field>
+        </record>
+        <record id="anexo3_tabla4_XFU" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">XFU</field>
+            <field name="descripcion">UIC-Franc</field>
+            <field name="pais_zona">-</field>
+        </record>
+        <record id="anexo3_tabla4_XOF" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">XOF</field>
+            <field name="descripcion">CFA Franc BCEAO †</field>
+            <field name="pais_zona">-</field>
+        </record>
+        <record id="anexo3_tabla4_XPD" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">XPD</field>
+            <field name="descripcion">Palladium</field>
+            <field name="pais_zona">-</field>
+        </record>
+        <record id="anexo3_tabla4_XPF" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">XPF</field>
+            <field name="descripcion">CFP Franc</field>
+            <field name="pais_zona">-</field>
+        </record>
+        <record id="anexo3_tabla4_XPT" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">XPT</field>
+            <field name="descripcion">Platinum</field>
+            <field name="pais_zona">-</field>
+        </record>
+        <record id="anexo3_tabla4_YER" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">YER</field>
+            <field name="descripcion">Yemeni Rial</field>
+            <field name="pais_zona">Yemen</field>
+        </record>
+        <record id="anexo3_tabla4_ZAR" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">ZAR</field>
+            <field name="descripcion">Rand</field>
+            <field name="pais_zona">Sudáfrica</field>
+        </record>
+        <record id="anexo3_tabla4_ZMK" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">ZMK</field>
+            <field name="descripcion">Zambian Kwacha</field>
+            <field name="pais_zona">Zambia</field>
+        </record>
+        <record id="anexo3_tabla4_ZWL" model="biosis.report.ple.anexo3.tabla4">
+            <field name="cod">ZWL</field>
+            <field name="descripcion">Zimbabwe Dollar</field>
+            <field name="pais_zona">Zimbabue</field>
+        </record>
+
+        <record id="anexo3_tabla5_01" model="biosis.report.ple.anexo3.tabla5">
+            <field name="num_order">01</field>
+            <field name="descripcion">MERCADERÍAS</field>
+        </record>
+        <record id="anexo3_tabla5_02" model="biosis.report.ple.anexo3.tabla5">
+            <field name="num_order">02</field>
+            <field name="descripcion">PRODUCTOS TERMINADOS</field>
+        </record>
+        <record id="anexo3_tabla5_03" model="biosis.report.ple.anexo3.tabla5">
+            <field name="num_order">03</field>
+            <field name="descripcion">MATERIAS PRIMAS</field>
+        </record>
+        <record id="anexo3_tabla5_04" model="biosis.report.ple.anexo3.tabla5">
+            <field name="num_order">04</field>
+            <field name="descripcion">ENVASES</field>
+        </record>
+        <record id="anexo3_tabla5_05" model="biosis.report.ple.anexo3.tabla5">
+            <field name="num_order">05</field>
+            <field name="descripcion">MATERIALES AUXILIARES</field>
+        </record>
+        <record id="anexo3_tabla5_06" model="biosis.report.ple.anexo3.tabla5">
+            <field name="num_order">06</field>
+            <field name="descripcion">SUMINISTROS</field>
+        </record>
+        <record id="anexo3_tabla5_07" model="biosis.report.ple.anexo3.tabla5">
+            <field name="num_order">07</field>
+            <field name="descripcion">REPUESTOS</field>
+        </record>
+        <record id="anexo3_tabla5_08" model="biosis.report.ple.anexo3.tabla5">
+            <field name="num_order">08</field>
+            <field name="descripcion">EMBALAJES</field>
+        </record>
+        <record id="anexo3_tabla5_09" model="biosis.report.ple.anexo3.tabla5">
+            <field name="num_order">09</field>
+            <field name="descripcion">SUBPRODUCTOS</field>
+        </record>
+        <record id="anexo3_tabla5_10" model="biosis.report.ple.anexo3.tabla5">
+            <field name="num_order">10</field>
+            <field name="descripcion">DESECHOS Y DESPERDICIOS</field>
+        </record>
+        <record id="anexo3_tabla5_91" model="biosis.report.ple.anexo3.tabla5">
+            <field name="num_order">91</field>
+            <field name="descripcion">OTROS 1</field>
+        </record>
+        <record id="anexo3_tabla5_92" model="biosis.report.ple.anexo3.tabla5">
+            <field name="num_order">92</field>
+            <field name="descripcion">OTROS 2</field>
+        </record>
+        <record id="anexo3_tabla5_93" model="biosis.report.ple.anexo3.tabla5">
+            <field name="num_order">93</field>
+            <field name="descripcion">OTROS 3</field>
+        </record>
+        <record id="anexo3_tabla5_94" model="biosis.report.ple.anexo3.tabla5">
+            <field name="num_order">94</field>
+            <field name="descripcion">OTROS 4</field>
+        </record>
+        <record id="anexo3_tabla5_95" model="biosis.report.ple.anexo3.tabla5">
+            <field name="num_order">95</field>
+            <field name="descripcion">OTROS 5</field>
+        </record>
+        <record id="anexo3_tabla5_96" model="biosis.report.ple.anexo3.tabla5">
+            <field name="num_order">96</field>
+            <field name="descripcion">OTROS 6</field>
+        </record>
+        <record id="anexo3_tabla5_97" model="biosis.report.ple.anexo3.tabla5">
+            <field name="num_order">97</field>
+            <field name="descripcion">OTROS 7</field>
+        </record>
+        <record id="anexo3_tabla5_98" model="biosis.report.ple.anexo3.tabla5">
+            <field name="num_order">98</field>
+            <field name="descripcion">OTROS 8</field>
+        </record>
+        <record id="anexo3_tabla5_99" model="biosis.report.ple.anexo3.tabla5">
+            <field name="num_order">99</field>
+            <field name="descripcion">OTROS</field>
+        </record>
+
+        <record id="anexo3_tabla6_4A" model="biosis.report.ple.anexo3.tabla6">
+            <field name="num_order">4A</field>
+            <field name="descripcion">BOBINAS</field>
+        </record>
+        <record id="anexo3_tabla6_BJ" model="biosis.report.ple.anexo3.tabla6">
+            <field name="num_order">BJ</field>
+            <field name="descripcion">BALDE</field>
+        </record>
+        <record id="anexo3_tabla6_BLL" model="biosis.report.ple.anexo3.tabla6">
+            <field name="num_order">BLL</field>
+            <field name="descripcion">BARRILES</field>
+        </record>
+        <record id="anexo3_tabla6_BG" model="biosis.report.ple.anexo3.tabla6">
+            <field name="num_order">BG</field>
+            <field name="descripcion">BOLSA</field>
+        </record>
+        <record id="anexo3_tabla6_BO" model="biosis.report.ple.anexo3.tabla6">
+            <field name="num_order">BO</field>
+            <field name="descripcion">BOTELLAS</field>
+        </record>
+        <record id="anexo3_tabla6_BX" model="biosis.report.ple.anexo3.tabla6">
+            <field name="num_order">BX</field>
+            <field name="descripcion">CAJA</field>
+        </record>
+        <record id="anexo3_tabla6_CT" model="biosis.report.ple.anexo3.tabla6">
+            <field name="num_order">CT</field>
+            <field name="descripcion">CARTONES</field>
+        </record>
+        <record id="anexo3_tabla6_CMK" model="biosis.report.ple.anexo3.tabla6">
+            <field name="num_order">CMK</field>
+            <field name="descripcion">CENTIMETRO CUADRADO</field>
+        </record>
+        <record id="anexo3_tabla6_CMQ" model="biosis.report.ple.anexo3.tabla6">
+            <field name="num_order">CMQ</field>
+            <field name="descripcion">CENTIMETRO CUBICO</field>
+        </record>
+        <record id="anexo3_tabla6_CMT" model="biosis.report.ple.anexo3.tabla6">
+            <field name="num_order">CMT</field>
+            <field name="descripcion">CENTIMETRO LINEAL</field>
+        </record>
+        <record id="anexo3_tabla6_CEN" model="biosis.report.ple.anexo3.tabla6">
+            <field name="num_order">CEN</field>
+            <field name="descripcion">CIENTO DE UNIDADES</field>
+        </record>
+        <record id="anexo3_tabla6_CY" model="biosis.report.ple.anexo3.tabla6">
+            <field name="num_order">CY</field>
+            <field name="descripcion">CILINDRO</field>
+        </record>
+        <record id="anexo3_tabla6_CJ" model="biosis.report.ple.anexo3.tabla6">
+            <field name="num_order">CJ</field>
+            <field name="descripcion">CONOS</field>
+        </record>
+        <record id="anexo3_tabla6_DZN" model="biosis.report.ple.anexo3.tabla6">
+            <field name="num_order">DZN</field>
+            <field name="descripcion">DOCENA</field>
+        </record>
+        <record id="anexo3_tabla6_DZP" model="biosis.report.ple.anexo3.tabla6">
+            <field name="num_order">DZP</field>
+            <field name="descripcion">DOCENA POR 10**6</field>
+        </record>
+        <record id="anexo3_tabla6_BE" model="biosis.report.ple.anexo3.tabla6">
+            <field name="num_order">BE</field>
+            <field name="descripcion">FARDO</field>
+        </record>
+        <record id="anexo3_tabla6_GLI" model="biosis.report.ple.anexo3.tabla6">
+            <field name="num_order">GLI</field>
+            <field name="descripcion">GALON INGLES (4,545956L)</field>
+        </record>
+        <record id="anexo3_tabla6_GRM" model="biosis.report.ple.anexo3.tabla6">
+            <field name="num_order">GRM</field>
+            <field name="descripcion">GRAMO</field>
+        </record>
+        <record id="anexo3_tabla6_GRO" model="biosis.report.ple.anexo3.tabla6">
+            <field name="num_order">GRO</field>
+            <field name="descripcion">GRUESA</field>
+        </record>
+        <record id="anexo3_tabla6_HLT" model="biosis.report.ple.anexo3.tabla6">
+            <field name="num_order">HLT</field>
+            <field name="descripcion">HECTOLITRO</field>
+        </record>
+        <record id="anexo3_tabla6_LEF" model="biosis.report.ple.anexo3.tabla6">
+            <field name="num_order">LEF</field>
+            <field name="descripcion">HOJA</field>
+        </record>
+        <record id="anexo3_tabla6_SET" model="biosis.report.ple.anexo3.tabla6">
+            <field name="num_order">SET</field>
+            <field name="descripcion">JUEGO</field>
+        </record>
+        <record id="anexo3_tabla6_KGM" model="biosis.report.ple.anexo3.tabla6">
+            <field name="num_order">KGM</field>
+            <field name="descripcion">KILOGRAMO</field>
+        </record>
+        <record id="anexo3_tabla6_KTM" model="biosis.report.ple.anexo3.tabla6">
+            <field name="num_order">KTM</field>
+            <field name="descripcion">KILOMETRO</field>
+        </record>
+        <record id="anexo3_tabla6_KWH" model="biosis.report.ple.anexo3.tabla6">
+            <field name="num_order">KWH</field>
+            <field name="descripcion">KILOVATIO HORA</field>
+        </record>
+        <record id="anexo3_tabla6_KT" model="biosis.report.ple.anexo3.tabla6">
+            <field name="num_order">KT</field>
+            <field name="descripcion">KIT</field>
+        </record>
+        <record id="anexo3_tabla6_CA" model="biosis.report.ple.anexo3.tabla6">
+            <field name="num_order">CA</field>
+            <field name="descripcion">LATAS</field>
+        </record>
+        <record id="anexo3_tabla6_LBR" model="biosis.report.ple.anexo3.tabla6">
+            <field name="num_order">LBR</field>
+            <field name="descripcion">LIBRAS</field>
+        </record>
+        <record id="anexo3_tabla6_LTR" model="biosis.report.ple.anexo3.tabla6">
+            <field name="num_order">LTR</field>
+            <field name="descripcion">LITRO</field>
+        </record>
+        <record id="anexo3_tabla6_MWH" model="biosis.report.ple.anexo3.tabla6">
+            <field name="num_order">MWH</field>
+            <field name="descripcion">MEGAWATT HORA</field>
+        </record>
+        <record id="anexo3_tabla6_MTR" model="biosis.report.ple.anexo3.tabla6">
+            <field name="num_order">MTR</field>
+            <field name="descripcion">METRO</field>
+        </record>
+        <record id="anexo3_tabla6_MTK" model="biosis.report.ple.anexo3.tabla6">
+            <field name="num_order">MTK</field>
+            <field name="descripcion">METRO CUADRADO</field>
+        </record>
+        <record id="anexo3_tabla6_MTQ" model="biosis.report.ple.anexo3.tabla6">
+            <field name="num_order">MTQ</field>
+            <field name="descripcion">METRO CUBICO</field>
+        </record>
+        <record id="anexo3_tabla6_MGM" model="biosis.report.ple.anexo3.tabla6">
+            <field name="num_order">MGM</field>
+            <field name="descripcion">MILIGRAMOS</field>
+        </record>
+        <record id="anexo3_tabla6_MLT" model="biosis.report.ple.anexo3.tabla6">
+            <field name="num_order">MLT</field>
+            <field name="descripcion">MILILITRO</field>
+        </record>
+        <record id="anexo3_tabla6_MMT" model="biosis.report.ple.anexo3.tabla6">
+            <field name="num_order">MMT</field>
+            <field name="descripcion">MILIMETRO</field>
+        </record>
+        <record id="anexo3_tabla6_MMK" model="biosis.report.ple.anexo3.tabla6">
+            <field name="num_order">MMK</field>
+            <field name="descripcion">MILIMETRO CUADRADO</field>
+        </record>
+        <record id="anexo3_tabla6_MMQ" model="biosis.report.ple.anexo3.tabla6">
+            <field name="num_order">MMQ</field>
+            <field name="descripcion">MILIMETRO CUBICO</field>
+        </record>
+        <record id="anexo3_tabla6_MLL" model="biosis.report.ple.anexo3.tabla6">
+            <field name="num_order">MLL</field>
+            <field name="descripcion">MILLARES</field>
+        </record>
+        <record id="anexo3_tabla6_UM" model="biosis.report.ple.anexo3.tabla6">
+            <field name="num_order">UM</field>
+            <field name="descripcion">MILLON DE UNIDADES</field>
+        </record>
+        <record id="anexo3_tabla6_ONZ" model="biosis.report.ple.anexo3.tabla6">
+            <field name="num_order">ONZ</field>
+            <field name="descripcion">ONZAS</field>
+        </record>
+        <record id="anexo3_tabla6_PF" model="biosis.report.ple.anexo3.tabla6">
+            <field name="num_order">PF</field>
+            <field name="descripcion">PALETAS</field>
+        </record>
+        <record id="anexo3_tabla6_PK" model="biosis.report.ple.anexo3.tabla6">
+            <field name="num_order">PK</field>
+            <field name="descripcion">PAQUETE</field>
+        </record>
+        <record id="anexo3_tabla6_PR" model="biosis.report.ple.anexo3.tabla6">
+            <field name="num_order">PR</field>
+            <field name="descripcion">PAR</field>
+        </record>
+        <record id="anexo3_tabla6_FOT" model="biosis.report.ple.anexo3.tabla6">
+            <field name="num_order">FOT</field>
+            <field name="descripcion">PIES</field>
+        </record>
+        <record id="anexo3_tabla6_FTK" model="biosis.report.ple.anexo3.tabla6">
+            <field name="num_order">FTK</field>
+            <field name="descripcion">PIES CUADRADOS</field>
+        </record>
+        <record id="anexo3_tabla6_FTQ" model="biosis.report.ple.anexo3.tabla6">
+            <field name="num_order">FTQ</field>
+            <field name="descripcion">PIES CUBICOS</field>
+        </record>
+        <record id="anexo3_tabla6_C62" model="biosis.report.ple.anexo3.tabla6">
+            <field name="num_order">C62</field>
+            <field name="descripcion">PIEZAS</field>
+        </record>
+        <record id="anexo3_tabla6_PG" model="biosis.report.ple.anexo3.tabla6">
+            <field name="num_order">PG</field>
+            <field name="descripcion">PLACAS</field>
+        </record>
+        <record id="anexo3_tabla6_ST" model="biosis.report.ple.anexo3.tabla6">
+            <field name="num_order">ST</field>
+            <field name="descripcion">PLIEGO</field>
+        </record>
+        <record id="anexo3_tabla6_INH" model="biosis.report.ple.anexo3.tabla6">
+            <field name="num_order">INH</field>
+            <field name="descripcion">PULGADAS</field>
+        </record>
+        <record id="anexo3_tabla6_RM" model="biosis.report.ple.anexo3.tabla6">
+            <field name="num_order">RM</field>
+            <field name="descripcion">RESMA</field>
+        </record>
+        <record id="anexo3_tabla6_DR" model="biosis.report.ple.anexo3.tabla6">
+            <field name="num_order">DR</field>
+            <field name="descripcion">TAMBOR</field>
+        </record>
+        <record id="anexo3_tabla6_STN" model="biosis.report.ple.anexo3.tabla6">
+            <field name="num_order">STN</field>
+            <field name="descripcion">TONELADA CORTA</field>
+        </record>
+        <record id="anexo3_tabla6_LTN" model="biosis.report.ple.anexo3.tabla6">
+            <field name="num_order">LTN</field>
+            <field name="descripcion">TONELADA LARGA</field>
+        </record>
+        <record id="anexo3_tabla6_TNE" model="biosis.report.ple.anexo3.tabla6">
+            <field name="num_order">TNE</field>
+            <field name="descripcion">TONELADAS</field>
+        </record>
+        <record id="anexo3_tabla6_TU" model="biosis.report.ple.anexo3.tabla6">
+            <field name="num_order">TU</field>
+            <field name="descripcion">TUBOS</field>
+        </record>
+        <record id="anexo3_tabla6_NIU" model="biosis.report.ple.anexo3.tabla6">
+            <field name="num_order">NIU</field>
+            <field name="descripcion">UNIDAD (BIENES)</field>
+        </record>
+        <record id="anexo3_tabla6_ZZ" model="biosis.report.ple.anexo3.tabla6">
+            <field name="num_order">ZZ</field>
+            <field name="descripcion">UNIDAD (SERVICIOS)</field>
+        </record>
+        <record id="anexo3_tabla6_GLL" model="biosis.report.ple.anexo3.tabla6">
+            <field name="num_order">GLL</field>
+            <field name="descripcion">US GALON (3,7843 L)</field>
+        </record>
+        <record id="anexo3_tabla6_YRD" model="biosis.report.ple.anexo3.tabla6">
+            <field name="num_order">YRD</field>
+            <field name="descripcion">YARDA</field>
+        </record>
+        <record id="anexo3_tabla6_YDK" model="biosis.report.ple.anexo3.tabla6">
+            <field name="num_order">YDK</field>
+            <field name="descripcion">YARDA CUADRADA</field>
+        </record>
+
+        <record id="anexo3_tabla8_1" model="biosis.report.ple.anexo3.tabla8">
+            <field name="code">1</field>
+            <field name="descripcion">LIBRO CAJA Y BANCOS</field>
+        </record>
+        <record id="anexo3_tabla8_2" model="biosis.report.ple.anexo3.tabla8">
+            <field name="code">2</field>
+            <field name="descripcion">LIBRO DE INGRESOS Y GASTOS</field>
+        </record>
+        <record id="anexo3_tabla8_3" model="biosis.report.ple.anexo3.tabla8">
+            <field name="code">3</field>
+            <field name="descripcion">LIBRO DE INVENTARIOS Y BALANCES</field>
+        </record>
+        <record id="anexo3_tabla8_4" model="biosis.report.ple.anexo3.tabla8">
+            <field name="code">4</field>
+            <field name="descripcion">LIBRO DE RETENCIONES INCISOS E) Y F) DEL ARTICULO 34° DE LA LEY DEL IMPUESTO A LA
+                RENTA
+            </field>
+        </record>
+        <record id="anexo3_tabla8_5" model="biosis.report.ple.anexo3.tabla8">
+            <field name="code">5</field>
+            <field name="descripcion">LIBRO DIARIO</field>
+        </record>
+        <record id="anexo3_tabla8_6" model="biosis.report.ple.anexo3.tabla8">
+            <field name="code">6</field>
+            <field name="descripcion">LIBRO MAYOR</field>
+        </record>
+        <record id="anexo3_tabla8_7" model="biosis.report.ple.anexo3.tabla8">
+            <field name="code">7</field>
+            <field name="descripcion">REGISTRO DE ACTIVOS FIJOS</field>
+        </record>
+        <record id="anexo3_tabla8_8" model="biosis.report.ple.anexo3.tabla8">
+            <field name="code">8</field>
+            <field name="descripcion">REGISTRO DE COMPRAS</field>
+        </record>
+        <record id="anexo3_tabla8_9" model="biosis.report.ple.anexo3.tabla8">
+            <field name="code">9</field>
+            <field name="descripcion">REGISTRO DE CONSIGNACIONES</field>
+        </record>
+        <record id="anexo3_tabla8_10" model="biosis.report.ple.anexo3.tabla8">
+            <field name="code">10</field>
+            <field name="descripcion">REGISTRO DE COSTOS</field>
+        </record>
+        <record id="anexo3_tabla8_11" model="biosis.report.ple.anexo3.tabla8">
+            <field name="code">11</field>
+            <field name="descripcion">REGISTRO DE HUÉSPEDES</field>
+        </record>
+        <record id="anexo3_tabla8_12" model="biosis.report.ple.anexo3.tabla8">
+            <field name="code">12</field>
+            <field name="descripcion">REGISTRO DE INVENTARIO PERMANENTE EN UNIDADES FÍSICAS</field>
+        </record>
+        <record id="anexo3_tabla8_13" model="biosis.report.ple.anexo3.tabla8">
+            <field name="code">13</field>
+            <field name="descripcion">REGISTRO DE INVENTARIO PERMANENTE VALORIZADO</field>
+        </record>
+        <record id="anexo3_tabla8_14" model="biosis.report.ple.anexo3.tabla8">
+            <field name="code">14</field>
+            <field name="descripcion">REGISTRO DE VENTAS E INGRESOS</field>
+        </record>
+        <record id="anexo3_tabla8_15" model="biosis.report.ple.anexo3.tabla8">
+            <field name="code">15</field>
+            <field name="descripcion">REGISTRO DE VENTAS E INGRESOS - ARTÍCULO 23° RESOLUCIÓN DE SUPERINTENDENCIA N°
+                266-2004/SUNAT
+            </field>
+        </record>
+        <record id="anexo3_tabla8_16" model="biosis.report.ple.anexo3.tabla8">
+            <field name="code">16</field>
+            <field name="descripcion">REGISTRO DEL RÉGIMEN DE PERCEPCIONES</field>
+        </record>
+        <record id="anexo3_tabla8_17" model="biosis.report.ple.anexo3.tabla8">
+            <field name="code">17</field>
+            <field name="descripcion">REGISTRO DEL RÉGIMEN DE RETENCIONES</field>
+        </record>
+        <record id="anexo3_tabla8_18" model="biosis.report.ple.anexo3.tabla8">
+            <field name="code">18</field>
+            <field name="descripcion">REGISTRO IVAP</field>
+        </record>
+        <record id="anexo3_tabla8_19" model="biosis.report.ple.anexo3.tabla8">
+            <field name="code">19</field>
+            <field name="descripcion">REGISTRO(S) AUXILIAR(ES) DE ADQUISICIONES - ARTÍCULO 8° RESOLUCIÓN DE
+                SUPERINTENDENCIA N° 022-98/SUNAT
+            </field>
+        </record>
+        <record id="anexo3_tabla8_20" model="biosis.report.ple.anexo3.tabla8">
+            <field name="code">20</field>
+            <field name="descripcion">REGISTRO(S) AUXILIAR(ES) DE ADQUISICIONES - INCISO A) PRIMER PÁRRAFO ARTÍCULO 5°
+                RESOLUCIÓN DE SUPERINTENDENCIA N° 021-99/SUNAT
+            </field>
+        </record>
+        <record id="anexo3_tabla8_21" model="biosis.report.ple.anexo3.tabla8">
+            <field name="code">21</field>
+            <field name="descripcion">REGISTRO(S) AUXILIAR(ES) DE ADQUISICIONES - INCISO A) PRIMER PÁRRAFO ARTÍCULO 5°
+                RESOLUCIÓN DE SUPERINTENDENCIA N° 142-2001/SUNAT
+            </field>
+        </record>
+        <record id="anexo3_tabla8_22" model="biosis.report.ple.anexo3.tabla8">
+            <field name="code">22</field>
+            <field name="descripcion">REGISTRO(S) AUXILIAR(ES) DE ADQUISICIONES - INCISO C) PRIMER PÁRRAFO ARTÍCULO 5°
+                RESOLUCIÓN DE SUPERINTENDENCIA N° 256-2004/SUNAT
+            </field>
+        </record>
+        <record id="anexo3_tabla8_23" model="biosis.report.ple.anexo3.tabla8">
+            <field name="code">23</field>
+            <field name="descripcion">REGISTRO(S) AUXILIAR(ES) DE ADQUISICIONES - INCISO A) PRIMER PÁRRAFO ARTÍCULO 5°
+                RESOLUCIÓN DE SUPERINTENDENCIA N° 257-2004/SUNAT
+            </field>
+        </record>
+        <record id="anexo3_tabla8_24" model="biosis.report.ple.anexo3.tabla8">
+            <field name="code">24</field>
+            <field name="descripcion">REGISTRO(S) AUXILIAR(ES) DE ADQUISICIONES - INCISO C) PRIMER PÁRRAFO ARTÍCULO 5°
+                RESOLUCIÓN DE SUPERINTENDENCIA N° 258-2004/SUNAT
+            </field>
+        </record>
+        <record id="anexo3_tabla8_25" model="biosis.report.ple.anexo3.tabla8">
+            <field name="code">25</field>
+            <field name="descripcion">REGISTRO(S) AUXILIAR(ES) DE ADQUISICIONES - INCISO A) PRIMER PÁRRAFO ARTÍCULO 5°
+                RESOLUCIÓN DE SUPERINTENDENCIA N° 259-2004/SUNAT
+            </field>
+        </record>
+        <record id="anexo3_tabla8_26" model="biosis.report.ple.anexo3.tabla8">
+            <field name="code">26</field>
+            <field name="descripcion">REGISTRO DE RETENCIONES ARTÍCULO 77-A DE LA LEY DEL IMPUESTO A LA RENTA</field>
+        </record>
+        <record id="anexo3_tabla8_27" model="biosis.report.ple.anexo3.tabla8">
+            <field name="code">27</field>
+            <field name="descripcion">LIBRO DE ACTAS DE LA EMPRESA INDIVIDUAL DE RESPONSABILIDAD LIMITADA</field>
+        </record>
+        <record id="anexo3_tabla8_28" model="biosis.report.ple.anexo3.tabla8">
+            <field name="code">28</field>
+            <field name="descripcion">LIBRO DE ACTAS DE LA JUNTA GENERAL DE ACCIONISTAS</field>
+        </record>
+        <record id="anexo3_tabla8_29" model="biosis.report.ple.anexo3.tabla8">
+            <field name="code">29</field>
+            <field name="descripcion">LIBRO DE ACTAS DEL DIRECTORIO</field>
+        </record>
+        <record id="anexo3_tabla8_30" model="biosis.report.ple.anexo3.tabla8">
+            <field name="code">30</field>
+            <field name="descripcion">LIBRO DE MATRÍCULA DE ACCIONES</field>
+        </record>
+        <record id="anexo3_tabla8_31" model="biosis.report.ple.anexo3.tabla8">
+            <field name="code">31</field>
+            <field name="descripcion">LIBRO DE PLANILLAS</field>
+        </record>
+
+        <record id="anexo3_tabla10_00" model="biosis.report.ple.anexo3.tabla10">
+            <field name="num_order">00</field>
+            <field name="descripcion">Otros</field>
+        </record>
+        <record id="anexo3_tabla10_01" model="biosis.report.ple.anexo3.tabla10">
+            <field name="num_order">01</field>
+            <field name="descripcion">Factura</field>
+        </record>
+        <record id="anexo3_tabla10_02" model="biosis.report.ple.anexo3.tabla10">
+            <field name="num_order">02</field>
+            <field name="descripcion">Recibo por Honorarios</field>
+        </record>
+        <record id="anexo3_tabla10_03" model="biosis.report.ple.anexo3.tabla10">
+            <field name="num_order">03</field>
+            <field name="descripcion">Boleta de Venta</field>
+        </record>
+        <record id="anexo3_tabla10_04" model="biosis.report.ple.anexo3.tabla10">
+            <field name="num_order">04</field>
+            <field name="descripcion">Liquidación de compra</field>
+        </record>
+        <record id="anexo3_tabla10_05" model="biosis.report.ple.anexo3.tabla10">
+            <field name="num_order">05</field>
+            <field name="descripcion">Boletos de Transporte Aéreo que emiten las Compañías de Aviación Comercial por el
+                servicio de transporte aéreo regular de pasajeros, emitido de manera manual, mecanizada o por medios
+                electrónicos (BME)
+            </field>
+        </record>
+        <record id="anexo3_tabla10_06" model="biosis.report.ple.anexo3.tabla10">
+            <field name="num_order">06</field>
+            <field name="descripcion">Carta de porte aéreo por el servicio de transporte de carga aérea</field>
+        </record>
+        <record id="anexo3_tabla10_07" model="biosis.report.ple.anexo3.tabla10">
+            <field name="num_order">07</field>
+            <field name="descripcion">Nota de crédito</field>
+        </record>
+        <record id="anexo3_tabla10_08" model="biosis.report.ple.anexo3.tabla10">
+            <field name="num_order">08</field>
+            <field name="descripcion">Nota de débito</field>
+        </record>
+        <record id="anexo3_tabla10_09" model="biosis.report.ple.anexo3.tabla10">
+            <field name="num_order">09</field>
+            <field name="descripcion">Guía de remisión - Remitente</field>
+        </record>
+        <record id="anexo3_tabla10_10" model="biosis.report.ple.anexo3.tabla10">
+            <field name="num_order">10</field>
+            <field name="descripcion">Recibo por Arrendamiento</field>
+        </record>
+        <record id="anexo3_tabla10_11" model="biosis.report.ple.anexo3.tabla10">
+            <field name="num_order">11</field>
+            <field name="descripcion">Póliza emitida por las Bolsas de Valores, Bolsas de Productos o Agentes de
+                Intermediación por operaciones realizadas en las Bolsas de Valores o Productos o fuera de las mismas,
+                autorizadas por SMV
+            </field>
+        </record>
+        <record id="anexo3_tabla10_12" model="biosis.report.ple.anexo3.tabla10">
+            <field name="num_order">12</field>
+            <field name="descripcion">Ticket o cinta emitido por máquina registradora</field>
+        </record>
+        <record id="anexo3_tabla10_13" model="biosis.report.ple.anexo3.tabla10">
+            <field name="num_order">13</field>
+            <field name="descripcion">Documentos emitidos por las empresas del sistema financiero y de seguros, y por
+                las cooperativas de ahorro y crédito no autorizadas a captar recursos del público, que se encuentren
+                bajo el control de la Superintendencia de Banca, Seguros y AFP.
+            </field>
+        </record>
+        <record id="anexo3_tabla10_14" model="biosis.report.ple.anexo3.tabla10">
+            <field name="num_order">14</field>
+            <field name="descripcion">Recibo por servicios públicos de suministro de energía eléctrica, agua, teléfono,
+                telex y telegráficos y otros servicios complementarios que se incluyan en el recibo de servicio público
+            </field>
+        </record>
+        <record id="anexo3_tabla10_15" model="biosis.report.ple.anexo3.tabla10">
+            <field name="num_order">15</field>
+            <field name="descripcion">Boletos emitidos por el servicio de transporte terrestre regular urbano de
+                pasajeros y el ferroviario público de pasajeros prestado en vía férrea local.
+            </field>
+        </record>
+        <record id="anexo3_tabla10_16" model="biosis.report.ple.anexo3.tabla10">
+            <field name="num_order">16</field>
+            <field name="descripcion">Boletos de viaje emitidos por las empresas de transporte nacional de pasajeros,
+                siempre que cuenten con la autorización de la autoridad competente, en las rutas autorizadas. Vía
+                terrestre o ferroviario público no emitido por medios electrónicos (BVME)
+            </field>
+        </record>
+        <record id="anexo3_tabla10_17" model="biosis.report.ple.anexo3.tabla10">
+            <field name="num_order">17</field>
+            <field name="descripcion">Documento emitido por la Iglesia Católica por el arrendamiento de bienes
+                inmuebles
+            </field>
+        </record>
+        <record id="anexo3_tabla10_18" model="biosis.report.ple.anexo3.tabla10">
+            <field name="num_order">18</field>
+            <field name="descripcion">Documento emitido por las Administradoras Privadas de Fondo de Pensiones que se
+                encuentran bajo la supervisión de la Superintendencia de Banca, Seguros y AFP
+            </field>
+        </record>
+        <record id="anexo3_tabla10_19" model="biosis.report.ple.anexo3.tabla10">
+            <field name="num_order">19</field>
+            <field name="descripcion">Boleto o entrada por atracciones y espectáculos públicos</field>
+        </record>
+        <record id="anexo3_tabla10_20" model="biosis.report.ple.anexo3.tabla10">
+            <field name="num_order">20</field>
+            <field name="descripcion">Comprobante de Retención</field>
+        </record>
+        <record id="anexo3_tabla10_21" model="biosis.report.ple.anexo3.tabla10">
+            <field name="num_order">21</field>
+            <field name="descripcion">Conocimiento de embarque por el servicio de transporte de carga marítima</field>
+        </record>
+        <record id="anexo3_tabla10_22" model="biosis.report.ple.anexo3.tabla10">
+            <field name="num_order">22</field>
+            <field name="descripcion">Comprobante por Operaciones No Habituales</field>
+        </record>
+        <record id="anexo3_tabla10_23" model="biosis.report.ple.anexo3.tabla10">
+            <field name="num_order">23</field>
+            <field name="descripcion">Pólizas de Adjudicación emitidas con ocasión del remate o adjudicación de bienes
+                por venta forzada, por los martilleros o las entidades que rematen o subasten bienes por cuenta de
+                terceros
+            </field>
+        </record>
+        <record id="anexo3_tabla10_24" model="biosis.report.ple.anexo3.tabla10">
+            <field name="num_order">24</field>
+            <field name="descripcion">Certificado de pago de regalías emitidas por PERUPETRO S.A</field>
+        </record>
+        <record id="anexo3_tabla10_25" model="biosis.report.ple.anexo3.tabla10">
+            <field name="num_order">25</field>
+            <field name="descripcion">Documento de Atribución (Ley del Impuesto General a las Ventas e Impuesto
+                Selectivo al Consumo, Art. 19º, último párrafo, R.S. N° 022-98-SUNAT).
+            </field>
+        </record>
+        <record id="anexo3_tabla10_26" model="biosis.report.ple.anexo3.tabla10">
+            <field name="num_order">26</field>
+            <field name="descripcion">Recibo por el Pago de la Tarifa por Uso de Agua Superficial con fines agrarios y
+                por el pago de la Cuota para la ejecución de una determinada obra o actividad acordada por la Asamblea
+                General de la Comisión de Regantes o Resolución expedida por el Jefe de la Unidad de Aguas y de Riego
+                (Decreto Supremo N° 003-90-AG, Arts. 28 y 48)
+            </field>
+        </record>
+        <record id="anexo3_tabla10_27" model="biosis.report.ple.anexo3.tabla10">
+            <field name="num_order">27</field>
+            <field name="descripcion">Seguro Complementario de Trabajo de Riesgo</field>
+        </record>
+        <record id="anexo3_tabla10_28" model="biosis.report.ple.anexo3.tabla10">
+            <field name="num_order">28</field>
+            <field name="descripcion">Documentos emitidos por los servicios aeroportuarios prestados a favor de los
+                pasajeros, mediante mecanismo de etiquetas autoadhesivas.
+            </field>
+        </record>
+        <record id="anexo3_tabla10_29" model="biosis.report.ple.anexo3.tabla10">
+            <field name="num_order">29</field>
+            <field name="descripcion">Documentos emitidos por la COFOPRI en calidad de oferta de venta de terrenos, los
+                correspondientes a las subastas públicas y a la retribución de los servicios que presta
+            </field>
+        </record>
+        <record id="anexo3_tabla10_30" model="biosis.report.ple.anexo3.tabla10">
+            <field name="num_order">30</field>
+            <field name="descripcion">Documentos emitidos por las empresas que desempeñan el rol adquirente en los
+                sistemas de pago mediante tarjetas de crédito y débito, emitidas por bancos e instituciones financieras
+                o crediticias, domiciliados o no en el país.
+            </field>
+        </record>
+        <record id="anexo3_tabla10_31" model="biosis.report.ple.anexo3.tabla10">
+            <field name="num_order">31</field>
+            <field name="descripcion">Guía de Remisión - Transportista</field>
+        </record>
+        <record id="anexo3_tabla10_32" model="biosis.report.ple.anexo3.tabla10">
+            <field name="num_order">32</field>
+            <field name="descripcion">Documentos emitidos por las empresas recaudadoras de la denominada Garantía de Red
+                Principal a la que hace referencia el numeral 7.6 del artículo 7° de la Ley N° 27133 – Ley de Promoción
+                del Desarrollo de la Industria del Gas Natural
+            </field>
+        </record>
+        <record id="anexo3_tabla10_33" model="biosis.report.ple.anexo3.tabla10">
+            <field name="num_order">33</field>
+            <field name="descripcion">Manifiesto de Pasajeros</field>
+        </record>
+        <record id="anexo3_tabla10_34" model="biosis.report.ple.anexo3.tabla10">
+            <field name="num_order">34</field>
+            <field name="descripcion">Documento del Operador</field>
+        </record>
+        <record id="anexo3_tabla10_35" model="biosis.report.ple.anexo3.tabla10">
+            <field name="num_order">35</field>
+            <field name="descripcion">Documento del Partícipe</field>
+        </record>
+        <record id="anexo3_tabla10_36" model="biosis.report.ple.anexo3.tabla10">
+            <field name="num_order">36</field>
+            <field name="descripcion">Recibo de Distribución de Gas Natural</field>
+        </record>
+        <record id="anexo3_tabla10_37" model="biosis.report.ple.anexo3.tabla10">
+            <field name="num_order">37</field>
+            <field name="descripcion">Documentos que emitan los concesionarios del servicio de revisiones técnicas
+                vehiculares, por la prestación de dicho servicio
+            </field>
+        </record>
+        <record id="anexo3_tabla10_40" model="biosis.report.ple.anexo3.tabla10">
+            <field name="num_order">40</field>
+            <field name="descripcion">Comprobante de Percepción</field>
+        </record>
+        <record id="anexo3_tabla10_41" model="biosis.report.ple.anexo3.tabla10">
+            <field name="num_order">41</field>
+            <field name="descripcion">Comprobante de Percepción - Venta interna</field>
+        </record>
+        <record id="anexo3_tabla10_42" model="biosis.report.ple.anexo3.tabla10">
+            <field name="num_order">42</field>
+            <field name="descripcion">Documentos emitidos por las empresas que desempeñan el rol adquiriente en los
+                sistemas de pago mediante tarjetas de crédito emitidas por ellas mismas
+            </field>
+        </record>
+        <record id="anexo3_tabla10_43" model="biosis.report.ple.anexo3.tabla10">
+            <field name="num_order">43</field>
+            <field name="descripcion">Boletos emitidos por las Compañías de Aviación Comercial que prestan servicios de
+                transporte aéreo no regular de pasajeros y transporte aéreo especial de pasajeros.
+            </field>
+        </record>
+        <record id="anexo3_tabla10_44" model="biosis.report.ple.anexo3.tabla10">
+            <field name="num_order">44</field>
+            <field name="descripcion">Billetes de lotería, rifas y apuestas.</field>
+        </record>
+        <record id="anexo3_tabla10_45" model="biosis.report.ple.anexo3.tabla10">
+            <field name="num_order">45</field>
+            <field name="descripcion">Documentos emitidos por centros educativos y culturales, universidades,
+                asociaciones y fundaciones, en lo referente a actividades no gravadas con tributos administrados por la
+                SUNAT.
+            </field>
+        </record>
+        <record id="anexo3_tabla10_46" model="biosis.report.ple.anexo3.tabla10">
+            <field name="num_order">46</field>
+            <field name="descripcion">Formulario de Declaración - pago o Boleta de pago de tributos Internos</field>
+        </record>
+        <record id="anexo3_tabla10_48" model="biosis.report.ple.anexo3.tabla10">
+            <field name="num_order">48</field>
+            <field name="descripcion">Comprobante de Operaciones - Ley N° 29972</field>
+        </record>
+        <record id="anexo3_tabla10_49" model="biosis.report.ple.anexo3.tabla10">
+            <field name="num_order">49</field>
+            <field name="descripcion">Constancia de Depósito - IVAP (Ley 28211)</field>
+        </record>
+        <record id="anexo3_tabla10_50" model="biosis.report.ple.anexo3.tabla10">
+            <field name="num_order">50</field>
+            <field name="descripcion">Declaración Única de Aduanas - Importación definitiva</field>
+        </record>
+        <record id="anexo3_tabla10_51" model="biosis.report.ple.anexo3.tabla10">
+            <field name="num_order">51</field>
+            <field name="descripcion">Póliza o DUI Fraccionada</field>
+        </record>
+        <record id="anexo3_tabla10_52" model="biosis.report.ple.anexo3.tabla10">
+            <field name="num_order">52</field>
+            <field name="descripcion">Despacho Simplificado - Importación Simplificada</field>
+        </record>
+        <record id="anexo3_tabla10_53" model="biosis.report.ple.anexo3.tabla10">
+            <field name="num_order">53</field>
+            <field name="descripcion">Declaración de Mensajería o Courier</field>
+        </record>
+        <record id="anexo3_tabla10_54" model="biosis.report.ple.anexo3.tabla10">
+            <field name="num_order">54</field>
+            <field name="descripcion">Liquidación de Cobranza</field>
+        </record>
+        <record id="anexo3_tabla10_55" model="biosis.report.ple.anexo3.tabla10">
+            <field name="num_order">55</field>
+            <field name="descripcion">BVME para transporte ferroviario de pasajeros</field>
+        </record>
+        <record id="anexo3_tabla10_56" model="biosis.report.ple.anexo3.tabla10">
+            <field name="num_order">56</field>
+            <field name="descripcion">Comprobante de pago SEAE</field>
+        </record>
+        <record id="anexo3_tabla10_87" model="biosis.report.ple.anexo3.tabla10">
+            <field name="num_order">87</field>
+            <field name="descripcion">Nota de Crédito Especial</field>
+        </record>
+        <record id="anexo3_tabla10_88" model="biosis.report.ple.anexo3.tabla10">
+            <field name="num_order">88</field>
+            <field name="descripcion">Nota de Débito Especial</field>
+        </record>
+        <record id="anexo3_tabla10_89" model="biosis.report.ple.anexo3.tabla10">
+            <field name="num_order">89</field>
+            <field name="descripcion">Nota de Ajuste de Operaciones - Ley N° 29972</field>
+        </record>
+        <record id="anexo3_tabla10_91" model="biosis.report.ple.anexo3.tabla10">
+            <field name="num_order">91</field>
+            <field name="descripcion">Comprobante de No Domiciliado</field>
+        </record>
+        <record id="anexo3_tabla10_96" model="biosis.report.ple.anexo3.tabla10">
+            <field name="num_order">96</field>
+            <field name="descripcion">Exceso de crédito fiscal por retiro de bienes</field>
+        </record>
+        <record id="anexo3_tabla10_97" model="biosis.report.ple.anexo3.tabla10">
+            <field name="num_order">97</field>
+            <field name="descripcion">Nota de Crédito - No Domiciliado</field>
+        </record>
+        <record id="anexo3_tabla10_98" model="biosis.report.ple.anexo3.tabla10">
+            <field name="num_order">98</field>
+            <field name="descripcion">Nota de Débito - No Domiciliado</field>
+        </record>
+
+        <record id="anexo3_tabla11_019" model="biosis.report.ple.anexo3.tabla11">
+            <field name="num_order">019</field>
+            <field name="descripcion">TUMBES</field>
+        </record>
+        <record id="anexo3_tabla11_028" model="biosis.report.ple.anexo3.tabla11">
+            <field name="num_order">028</field>
+            <field name="descripcion">TALARA</field>
+        </record>
+        <record id="anexo3_tabla11_046" model="biosis.report.ple.anexo3.tabla11">
+            <field name="num_order">046</field>
+            <field name="descripcion">PAITA</field>
+        </record>
+        <record id="anexo3_tabla11_055" model="biosis.report.ple.anexo3.tabla11">
+            <field name="num_order">055</field>
+            <field name="descripcion">CHICLAYO</field>
+        </record>
+        <record id="anexo3_tabla11_082" model="biosis.report.ple.anexo3.tabla11">
+            <field name="num_order">082</field>
+            <field name="descripcion">SALAVERRY</field>
+        </record>
+        <record id="anexo3_tabla11_091" model="biosis.report.ple.anexo3.tabla11">
+            <field name="num_order">091</field>
+            <field name="descripcion">CHIMBOTE</field>
+        </record>
+        <record id="anexo3_tabla11_118" model="biosis.report.ple.anexo3.tabla11">
+            <field name="num_order">118</field>
+            <field name="descripcion">MARÍTIMA DEL CALLAO</field>
+        </record>
+        <record id="anexo3_tabla11_127" model="biosis.report.ple.anexo3.tabla11">
+            <field name="num_order">127</field>
+            <field name="descripcion">PISCO</field>
+        </record>
+        <record id="anexo3_tabla11_145" model="biosis.report.ple.anexo3.tabla11">
+            <field name="num_order">145</field>
+            <field name="descripcion">MOLLENDO MATARANI</field>
+        </record>
+        <record id="anexo3_tabla11_154" model="biosis.report.ple.anexo3.tabla11">
+            <field name="num_order">154</field>
+            <field name="descripcion">AREQUIPA</field>
+        </record>
+        <record id="anexo3_tabla11_163" model="biosis.report.ple.anexo3.tabla11">
+            <field name="num_order">163</field>
+            <field name="descripcion">ILO</field>
+        </record>
+        <record id="anexo3_tabla11_172" model="biosis.report.ple.anexo3.tabla11">
+            <field name="num_order">172</field>
+            <field name="descripcion">TACNA</field>
+        </record>
+        <record id="anexo3_tabla11_181" model="biosis.report.ple.anexo3.tabla11">
+            <field name="num_order">181</field>
+            <field name="descripcion">PUNO</field>
+        </record>
+        <record id="anexo3_tabla11_190" model="biosis.report.ple.anexo3.tabla11">
+            <field name="num_order">190</field>
+            <field name="descripcion">CUZCO</field>
+        </record>
+        <record id="anexo3_tabla11_217" model="biosis.report.ple.anexo3.tabla11">
+            <field name="num_order">217</field>
+            <field name="descripcion">PUCALLPA</field>
+        </record>
+        <record id="anexo3_tabla11_226" model="biosis.report.ple.anexo3.tabla11">
+            <field name="num_order">226</field>
+            <field name="descripcion">IQUITOS</field>
+        </record>
+        <record id="anexo3_tabla11_235" model="biosis.report.ple.anexo3.tabla11">
+            <field name="num_order">235</field>
+            <field name="descripcion">AÉREA DEL CALLAO</field>
+        </record>
+        <record id="anexo3_tabla11_244" model="biosis.report.ple.anexo3.tabla11">
+            <field name="num_order">244</field>
+            <field name="descripcion">POSTAL DE LIMA</field>
+        </record>
+        <record id="anexo3_tabla11_262" model="biosis.report.ple.anexo3.tabla11">
+            <field name="num_order">262</field>
+            <field name="descripcion">DESAGUADERO</field>
+        </record>
+        <record id="anexo3_tabla11_271" model="biosis.report.ple.anexo3.tabla11">
+            <field name="num_order">271</field>
+            <field name="descripcion">TARAPOTO</field>
+        </record>
+        <record id="anexo3_tabla11_280" model="biosis.report.ple.anexo3.tabla11">
+            <field name="num_order">280</field>
+            <field name="descripcion">PUERTO MALDONADO</field>
+        </record>
+        <record id="anexo3_tabla11_299" model="biosis.report.ple.anexo3.tabla11">
+            <field name="num_order">299</field>
+            <field name="descripcion">LA TINA</field>
+        </record>
+        <record id="anexo3_tabla11_884" model="biosis.report.ple.anexo3.tabla11">
+            <field name="num_order">884</field>
+            <field name="descripcion">DEPENDENCIA FERROVIARIA TACNA</field>
+        </record>
+        <record id="anexo3_tabla11_893" model="biosis.report.ple.anexo3.tabla11">
+            <field name="num_order">893</field>
+            <field name="descripcion">DEPENDENCIA POSTAL TACNA</field>
+        </record>
+        <record id="anexo3_tabla11_910" model="biosis.report.ple.anexo3.tabla11">
+            <field name="num_order">910</field>
+            <field name="descripcion">DEPENDENCIA POSTAL AREQUIPA</field>
+        </record>
+        <record id="anexo3_tabla11_929" model="biosis.report.ple.anexo3.tabla11">
+            <field name="num_order">929</field>
+            <field name="descripcion">COMPLEJO FRONTERIZO STA ROSA TACNA</field>
+        </record>
+        <record id="anexo3_tabla11_938" model="biosis.report.ple.anexo3.tabla11">
+            <field name="num_order">938</field>
+            <field name="descripcion">TERMINAL TERRESTRE TACNA</field>
+        </record>
+        <record id="anexo3_tabla11_947" model="biosis.report.ple.anexo3.tabla11">
+            <field name="num_order">947</field>
+            <field name="descripcion">AEROPUERTO TACNA</field>
+        </record>
+        <record id="anexo3_tabla11_956" model="biosis.report.ple.anexo3.tabla11">
+            <field name="num_order">956</field>
+            <field name="descripcion">CETICOS TACNA</field>
+        </record>
+        <record id="anexo3_tabla11_965" model="biosis.report.ple.anexo3.tabla11">
+            <field name="num_order">965</field>
+            <field name="descripcion">DEPENDENCIA POSTAL DE SALAVERRY</field>
+        </record>
+
+        <record id="anexo3_tabla12_01" model="biosis.report.ple.anexo3.tabla12">
+            <field name="num_order">01</field>
+            <field name="descripcion">VENTA NACIONAL</field>
+        </record>
+        <record id="anexo3_tabla12_02" model="biosis.report.ple.anexo3.tabla12">
+            <field name="num_order">02</field>
+            <field name="descripcion">COMPRA NACIONAL</field>
+        </record>
+        <record id="anexo3_tabla12_03" model="biosis.report.ple.anexo3.tabla12">
+            <field name="num_order">03</field>
+            <field name="descripcion">CONSIGNACIÓN RECIBIDA</field>
+        </record>
+        <record id="anexo3_tabla12_04" model="biosis.report.ple.anexo3.tabla12">
+            <field name="num_order">04</field>
+            <field name="descripcion">CONSIGNACIÓN ENTREGADA</field>
+        </record>
+        <record id="anexo3_tabla12_05" model="biosis.report.ple.anexo3.tabla12">
+            <field name="num_order">05</field>
+            <field name="descripcion">DEVOLUCIÓN RECIBIDA</field>
+        </record>
+        <record id="anexo3_tabla12_06" model="biosis.report.ple.anexo3.tabla12">
+            <field name="num_order">06</field>
+            <field name="descripcion">DEVOLUCIÓN ENTREGADA</field>
+        </record>
+        <record id="anexo3_tabla12_07" model="biosis.report.ple.anexo3.tabla12">
+            <field name="num_order">07</field>
+            <field name="descripcion">BONIFICACIÓN</field>
+        </record>
+        <record id="anexo3_tabla12_08" model="biosis.report.ple.anexo3.tabla12">
+            <field name="num_order">08</field>
+            <field name="descripcion">PREMIO</field>
+        </record>
+        <record id="anexo3_tabla12_09" model="biosis.report.ple.anexo3.tabla12">
+            <field name="num_order">09</field>
+            <field name="descripcion">DONACIÓN</field>
+        </record>
+        <record id="anexo3_tabla12_10" model="biosis.report.ple.anexo3.tabla12">
+            <field name="num_order">10</field>
+            <field name="descripcion">SALIDA A PRODUCCIÓN</field>
+        </record>
+        <record id="anexo3_tabla12_11" model="biosis.report.ple.anexo3.tabla12">
+            <field name="num_order">11</field>
+            <field name="descripcion">SALIDA POR TRANSFERENCIA ENTRE ALMACENES</field>
+        </record>
+        <record id="anexo3_tabla12_12" model="biosis.report.ple.anexo3.tabla12">
+            <field name="num_order">12</field>
+            <field name="descripcion">RETIRO</field>
+        </record>
+        <record id="anexo3_tabla12_13" model="biosis.report.ple.anexo3.tabla12">
+            <field name="num_order">13</field>
+            <field name="descripcion">MERMAS</field>
+        </record>
+        <record id="anexo3_tabla12_14" model="biosis.report.ple.anexo3.tabla12">
+            <field name="num_order">14</field>
+            <field name="descripcion">DESMEDROS</field>
+        </record>
+        <record id="anexo3_tabla12_15" model="biosis.report.ple.anexo3.tabla12">
+            <field name="num_order">15</field>
+            <field name="descripcion">DESTRUCCIÓN</field>
+        </record>
+        <record id="anexo3_tabla12_16" model="biosis.report.ple.anexo3.tabla12">
+            <field name="num_order">16</field>
+            <field name="descripcion">SALDO INICIAL</field>
+        </record>
+        <record id="anexo3_tabla12_17" model="biosis.report.ple.anexo3.tabla12">
+            <field name="num_order">17</field>
+            <field name="descripcion">EXPORTACIÓN</field>
+        </record>
+        <record id="anexo3_tabla12_18" model="biosis.report.ple.anexo3.tabla12">
+            <field name="num_order">18</field>
+            <field name="descripcion">IMPORTACIÓN</field>
+        </record>
+        <record id="anexo3_tabla12_19" model="biosis.report.ple.anexo3.tabla12">
+            <field name="num_order">19</field>
+            <field name="descripcion">ENTRADA DE PRODUCCIÓN</field>
+        </record>
+        <record id="anexo3_tabla12_20" model="biosis.report.ple.anexo3.tabla12">
+            <field name="num_order">20</field>
+            <field name="descripcion">ENTRADA POR DEVOLUCIÓN DE PRODUCCIÓN</field>
+        </record>
+        <record id="anexo3_tabla12_21" model="biosis.report.ple.anexo3.tabla12">
+            <field name="num_order">21</field>
+            <field name="descripcion">ENTRADA POR TRANSFERENCIA ENTRE ALMACENES</field>
+        </record>
+        <record id="anexo3_tabla12_22" model="biosis.report.ple.anexo3.tabla12">
+            <field name="num_order">22</field>
+            <field name="descripcion">ENTRADA POR IDENTIFICACIÓN ERRONEA</field>
+        </record>
+        <record id="anexo3_tabla12_23" model="biosis.report.ple.anexo3.tabla12">
+            <field name="num_order">23</field>
+            <field name="descripcion">SALIDA POR IDENTIFICACIÓN ERRONEA</field>
+        </record>
+        <record id="anexo3_tabla12_24" model="biosis.report.ple.anexo3.tabla12">
+            <field name="num_order">24</field>
+            <field name="descripcion">ENTRADA POR DEVOLUCIÓN DEL CLIENTE</field>
+        </record>
+        <record id="anexo3_tabla12_25" model="biosis.report.ple.anexo3.tabla12">
+            <field name="num_order">25</field>
+            <field name="descripcion">SALIDA POR DEVOLUCIÓN AL PROVEEDOR</field>
+        </record>
+        <record id="anexo3_tabla12_26" model="biosis.report.ple.anexo3.tabla12">
+            <field name="num_order">26</field>
+            <field name="descripcion">ENTRADA PARA SERVICIO DE PRODUCCIÓN</field>
+        </record>
+        <record id="anexo3_tabla12_27" model="biosis.report.ple.anexo3.tabla12">
+            <field name="num_order">27</field>
+            <field name="descripcion">SALIDA POR SERVICIO DE PRODUCCIÓN</field>
+        </record>
+        <record id="anexo3_tabla12_28" model="biosis.report.ple.anexo3.tabla12">
+            <field name="num_order">28</field>
+            <field name="descripcion">AJUSTE POR DIFERENCIA DE INVENTARIO</field>
+        </record>
+        <record id="anexo3_tabla12_29" model="biosis.report.ple.anexo3.tabla12">
+            <field name="num_order">29</field>
+            <field name="descripcion">ENTRADA DE BIENES EN PRÉSTAMO</field>
+        </record>
+        <record id="anexo3_tabla12_30" model="biosis.report.ple.anexo3.tabla12">
+            <field name="num_order">30</field>
+            <field name="descripcion">SALIDA DE BIENES EN PRÉSTAMO</field>
+        </record>
+        <record id="anexo3_tabla12_31" model="biosis.report.ple.anexo3.tabla12">
+            <field name="num_order">31</field>
+            <field name="descripcion">ENTRADA DE BIENES EN CUSTODIA</field>
+        </record>
+        <record id="anexo3_tabla12_32" model="biosis.report.ple.anexo3.tabla12">
+            <field name="num_order">32</field>
+            <field name="descripcion">SALIDA DE BIENES EN CUSTODIA</field>
+        </record>
+        <record id="anexo3_tabla12_33" model="biosis.report.ple.anexo3.tabla12">
+            <field name="num_order">33</field>
+            <field name="descripcion">MUESTRAS MÉDICAS</field>
+        </record>
+        <record id="anexo3_tabla12_34" model="biosis.report.ple.anexo3.tabla12">
+            <field name="num_order">34</field>
+            <field name="descripcion">PUBLICIDAD</field>
+        </record>
+        <record id="anexo3_tabla12_35" model="biosis.report.ple.anexo3.tabla12">
+            <field name="num_order">35</field>
+            <field name="descripcion">GASTOS DE REPRESENTACIÓN</field>
+        </record>
+        <record id="anexo3_tabla12_36" model="biosis.report.ple.anexo3.tabla12">
+            <field name="num_order">36</field>
+            <field name="descripcion">RETIRO PARA ENTREGA A TRABAJADORES</field>
+        </record>
+        <record id="anexo3_tabla12_37" model="biosis.report.ple.anexo3.tabla12">
+            <field name="num_order">37</field>
+            <field name="descripcion">RETIRO POR CONVENIO COLECTIVO</field>
+        </record>
+        <record id="anexo3_tabla12_38" model="biosis.report.ple.anexo3.tabla12">
+            <field name="num_order">38</field>
+            <field name="descripcion">RETIRO POR SUSTITUCIÓN DE BIEN SINIESTRADO</field>
+        </record>
+        <record id="anexo3_tabla12_91" model="biosis.report.ple.anexo3.tabla12">
+            <field name="num_order">91</field>
+            <field name="descripcion">OTROS 1</field>
+        </record>
+        <record id="anexo3_tabla12_92" model="biosis.report.ple.anexo3.tabla12">
+            <field name="num_order">92</field>
+            <field name="descripcion">OTROS 2</field>
+        </record>
+        <record id="anexo3_tabla12_93" model="biosis.report.ple.anexo3.tabla12">
+            <field name="num_order">93</field>
+            <field name="descripcion">OTROS 3</field>
+        </record>
+        <record id="anexo3_tabla12_94" model="biosis.report.ple.anexo3.tabla12">
+            <field name="num_order">94</field>
+            <field name="descripcion">OTROS 4</field>
+        </record>
+        <record id="anexo3_tabla12_95" model="biosis.report.ple.anexo3.tabla12">
+            <field name="num_order">95</field>
+            <field name="descripcion">OTROS 5</field>
+        </record>
+        <record id="anexo3_tabla12_96" model="biosis.report.ple.anexo3.tabla12">
+            <field name="num_order">96</field>
+            <field name="descripcion">OTROS 6</field>
+        </record>
+        <record id="anexo3_tabla12_97" model="biosis.report.ple.anexo3.tabla12">
+            <field name="num_order">97</field>
+            <field name="descripcion">OTROS 7</field>
+        </record>
+        <record id="anexo3_tabla12_98" model="biosis.report.ple.anexo3.tabla12">
+            <field name="num_order">98</field>
+            <field name="descripcion">OTROS 8</field>
+        </record>
+        <record id="anexo3_tabla12_99" model="biosis.report.ple.anexo3.tabla12">
+            <field name="num_order">99</field>
+            <field name="descripcion">OTROS</field>
+        </record>
+
+        <record id="anexo3_tabla13_1" model="biosis.report.ple.anexo3.tabla13">
+            <field name="num_order">1</field>
+            <field name="descripcion">NACIONES UNIDAS</field>
+        </record>
+        <record id="anexo3_tabla13_3" model="biosis.report.ple.anexo3.tabla13">
+            <field name="num_order">3</field>
+            <field name="descripcion">GS1 (EAN-UCC)</field>
+        </record>
+        <record id="anexo3_tabla13_9" model="biosis.report.ple.anexo3.tabla13">
+            <field name="num_order">9</field>
+            <field name="descripcion">OTROS</field>
+        </record>
+
+        <record id="anexo3_tabla14_01" model="biosis.report.ple.anexo3.tabla14">
+            <field name="num_order">1</field>
+            <field name="descripcion">PROMEDIO PONDERADO</field>
+        </record>
+        <record id="anexo3_tabla14_02" model="biosis.report.ple.anexo3.tabla14">
+            <field name="num_order">2</field>
+            <field name="descripcion">PRIMERAS ENTRADAS, PRIMERAS SALIDAS</field>
+        </record>
+        <record id="anexo3_tabla14_03" model="biosis.report.ple.anexo3.tabla14">
+            <field name="num_order">3</field>
+            <field name="descripcion">EXISTENCIAS BÁSICAS</field>
+        </record>
+        <record id="anexo3_tabla14_04" model="biosis.report.ple.anexo3.tabla14">
+            <field name="num_order">4</field>
+            <field name="descripcion">DETALLISTA</field>
+        </record>
+        <record id="anexo3_tabla14_05" model="biosis.report.ple.anexo3.tabla14">
+            <field name="num_order">5</field>
+            <field name="descripcion">IDENTIFICACIÓN ESPECÍFICA</field>
+        </record>
+        <record id="anexo3_tabla14_09" model="biosis.report.ple.anexo3.tabla14">
+            <field name="num_order">9</field>
+            <field name="descripcion">OTROS</field>
+        </record>
+
+
+        <record id="anexo3_tabla15_01" model="biosis.report.ple.anexo3.tabla15">
+            <field name="num_order">01</field>
+            <field name="descripcion">VALORES EMITIDOS O GARANTIZADOS POR EL ESTADO</field>
+        </record>
+        <record id="anexo3_tabla15_02" model="biosis.report.ple.anexo3.tabla15">
+            <field name="num_order">02</field>
+            <field name="descripcion">VALORES EMITIDOS O GARANTIZADOS POR EL SISTEMA FINANCIERO</field>
+        </record>
+        <record id="anexo3_tabla15_03" model="biosis.report.ple.anexo3.tabla15">
+            <field name="num_order">03</field>
+            <field name="descripcion">VALORES EMITIDOS POR LA EMPRESA</field>
+        </record>
+        <record id="anexo3_tabla15_04" model="biosis.report.ple.anexo3.tabla15">
+            <field name="num_order">04</field>
+            <field name="descripcion">OTROS INSTRUMENTOS FINANCIEROS REPRESENTATIVOS DE DEUDA</field>
+        </record>
+        <record id="anexo3_tabla15_05" model="biosis.report.ple.anexo3.tabla15">
+            <field name="num_order">05</field>
+            <field name="descripcion">CERTIFICADOS DE SUSCRIPCIÓN PREFERENTE</field>
+        </record>
+        <record id="anexo3_tabla15_06" model="biosis.report.ple.anexo3.tabla15">
+            <field name="num_order">06</field>
+            <field name="descripcion">ACCIONES REPRESENTATIVAS DE CAPITAL SOCIAL</field>
+        </record>
+        <record id="anexo3_tabla15_07" model="biosis.report.ple.anexo3.tabla15">
+            <field name="num_order">07</field>
+            <field name="descripcion">ACCIONES DE INVERSIÓN</field>
+        </record>
+        <record id="anexo3_tabla15_08" model="biosis.report.ple.anexo3.tabla15">
+            <field name="num_order">08</field>
+            <field name="descripcion">CERTIFICADO DE PARTICIPACIÓN DE FONDOS</field>
+        </record>
+        <record id="anexo3_tabla15_09" model="biosis.report.ple.anexo3.tabla15">
+            <field name="num_order">09</field>
+            <field name="descripcion">ASOCIACIONES EN PARTICIPACIÓN Y CONSORCIOS</field>
+        </record>
+        <record id="anexo3_tabla15_10" model="biosis.report.ple.anexo3.tabla15">
+            <field name="num_order">10</field>
+            <field name="descripcion">OTROS INSTRUMENTOS FINANCIEROS REPRESENTATIVOS DE DERECHO PATRIMONIAL</field>
+        </record>
+        <record id="anexo3_tabla15_99" model="biosis.report.ple.anexo3.tabla15">
+            <field name="num_order">99</field>
+            <field name="descripcion">OTROS TÍTULOS</field>
+        </record>
+
+
+        <record id="anexo3_tabla16_01" model="biosis.report.ple.anexo3.tabla16">
+            <field name="num_order">01</field>
+            <field name="descripcion">ACCIONES CON DERECHO A VOTO</field>
+        </record>
+        <record id="anexo3_tabla16_02" model="biosis.report.ple.anexo3.tabla16">
+            <field name="num_order">02</field>
+            <field name="descripcion">ACCIONES SIN DERECHO A VOTO</field>
+        </record>
+        <record id="anexo3_tabla16_03" model="biosis.report.ple.anexo3.tabla16">
+            <field name="num_order">03</field>
+            <field name="descripcion">PARTICIPACIONES</field>
+        </record>
+        <record id="anexo3_tabla16_04" model="biosis.report.ple.anexo3.tabla16">
+            <field name="num_order">04</field>
+            <field name="descripcion">OTROS</field>
+        </record>
+
+
+        <record id="anexo3_tabla17_01" model="biosis.report.ple.anexo3.tabla17">
+            <field name="num_order">01</field>
+            <field name="descripcion">PLAN CONTABLE GENERAL EMPRESARIAL</field>
+        </record>
+        <record id="anexo3_tabla17_02" model="biosis.report.ple.anexo3.tabla17">
+            <field name="num_order">02</field>
+            <field name="descripcion">PLAN CONTABLE GENERAL REVISADO</field>
+        </record>
+        <record id="anexo3_tabla17_03" model="biosis.report.ple.anexo3.tabla17">
+            <field name="num_order">03</field>
+            <field name="descripcion">PLAN DE CUENTAS PARA EMPRESAS DEL SISTEMA FINANCIERO, SUPERVISADAS POR SBS</field>
+        </record>
+        <record id="anexo3_tabla17_04" model="biosis.report.ple.anexo3.tabla17">
+            <field name="num_order">04</field>
+            <field name="descripcion">PLAN DE CUENTAS PARA ENTIDADES PRESTADORAS DE SALUD, SUPERVISADAS POR SBS</field>
+        </record>
+        <record id="anexo3_tabla17_05" model="biosis.report.ple.anexo3.tabla17">
+            <field name="num_order">05</field>
+            <field name="descripcion">PLAN DE CUENTAS PARA EMPRESAS DEL SISTEMA ASEGURADOR, SUPERVISADAS POR SBS</field>
+        </record>
+        <record id="anexo3_tabla17_06" model="biosis.report.ple.anexo3.tabla17">
+            <field name="num_order">06</field>
+            <field name="descripcion">PLAN DE CUENTAS DE LAS ADMINISTRADORAS PRIVADAS DE FONDOS DE PENSIONES,
+                SUPERVISADAS POR SBS
+            </field>
+        </record>
+        <record id="anexo3_tabla17_07" model="biosis.report.ple.anexo3.tabla17">
+            <field name="num_order">07</field>
+            <field name="descripcion">PLAN CONTABLE GUBERNAMENTAL</field>
+        </record>
+        <record id="anexo3_tabla17_99" model="biosis.report.ple.anexo3.tabla17">
+            <field name="num_order">99</field>
+            <field name="descripcion">OTROS</field>
+        </record>
+
+
+        <record id="anexo3_tabla18_01" model="biosis.report.ple.anexo3.tabla18">
+            <field name="num_order">1</field>
+            <field name="descripcion">NO REVALUADO O REVALUADO SIN EFECTO TRIBUTARIO</field>
+        </record>
+        <record id="anexo3_tabla18_02" model="biosis.report.ple.anexo3.tabla18">
+            <field name="num_order">2</field>
+            <field name="descripcion">REVALUADO CON EFECTO TRIBUTARIO</field>
+        </record>
+
+
+        <record id="anexo3_tabla19_01" model="biosis.report.ple.anexo3.tabla19">
+            <field name="num_order">1</field>
+            <field name="descripcion">ACTIVOS EN DESUSO</field>
+        </record>
+        <record id="anexo3_tabla19_02" model="biosis.report.ple.anexo3.tabla19">
+            <field name="num_order">2</field>
+            <field name="descripcion">ACTIVOS OBSOLETOS</field>
+        </record>
+        <record id="anexo3_tabla19_09" model="biosis.report.ple.anexo3.tabla19">
+            <field name="num_order">9</field>
+            <field name="descripcion">RESTO DE ACTIVOS</field>
+        </record>
+
+
+        <record id="anexo3_tabla20_01" model="biosis.report.ple.anexo3.tabla20">
+            <field name="num_order">1</field>
+            <field name="descripcion">LINEA RECTA</field>
+        </record>
+        <record id="anexo3_tabla20_02" model="biosis.report.ple.anexo3.tabla20">
+            <field name="num_order">2</field>
+            <field name="descripcion">UNIDADES PRODUCIDAS</field>
+        </record>
+        <record id="anexo3_tabla20_09" model="biosis.report.ple.anexo3.tabla20">
+            <field name="num_order">9</field>
+            <field name="descripcion">OTROS</field>
+        </record>
+
+
+        <record id="anexo3_tabla21_01" model="biosis.report.ple.anexo3.tabla21">
+            <field name="num_order">1</field>
+            <field name="descripcion">PROCESO PRODUCTIVO</field>
+        </record>
+        <record id="anexo3_tabla21_02" model="biosis.report.ple.anexo3.tabla21">
+            <field name="num_order">2</field>
+            <field name="descripcion">LÍNEA DE PRODUCCIÓN</field>
+        </record>
+        <record id="anexo3_tabla21_03" model="biosis.report.ple.anexo3.tabla21">
+            <field name="num_order">3</field>
+            <field name="descripcion">PRODUCTO</field>
+        </record>
+        <record id="anexo3_tabla21_04" model="biosis.report.ple.anexo3.tabla21">
+            <field name="num_order">4</field>
+            <field name="descripcion">PROYECTO</field>
+        </record>
+        <record id="anexo3_tabla21_09" model="biosis.report.ple.anexo3.tabla21">
+            <field name="num_order">9</field>
+            <field name="descripcion">OTROS</field>
+        </record>
+
+
+        <record id="anexo3_tabla22_01" model="biosis.report.ple.anexo3.tabla22">
+            <field name="num_order">01</field>
+            <field name="descripcion">SUPERINTENDENCIA DEL MERCADO DE VALORES - SECTOR DIVERSAS - INDIVIDUAL</field>
+        </record>
+        <record id="anexo3_tabla22_02" model="biosis.report.ple.anexo3.tabla22">
+            <field name="num_order">02</field>
+            <field name="descripcion">SUPERINTENDENCIA DEL MERCADO DE VALORES - SECTOR SEGUROS - INDIVIDUAL</field>
+        </record>
+        <record id="anexo3_tabla22_03" model="biosis.report.ple.anexo3.tabla22">
+            <field name="num_order">03</field>
+            <field name="descripcion">SUPERINTENDENCIA DEL MERCADO DE VALORES - SECTOR BANCOS Y FINANCIERAS -
+                INDIVIDUAL
+            </field>
+        </record>
+        <record id="anexo3_tabla22_04" model="biosis.report.ple.anexo3.tabla22">
+            <field name="num_order">04</field>
+            <field name="descripcion">SUPERINTENDENCIA DEL MERCADO DE VALORES - ADMINISTRADORAS DE FONDOS DE PENSIONES
+                (AFP)
+            </field>
+        </record>
+        <record id="anexo3_tabla22_05" model="biosis.report.ple.anexo3.tabla22">
+            <field name="num_order">05</field>
+            <field name="descripcion">SUPERINTENDENCIA DEL MERCADO DE VALORES - AGENTES DE INTERMEDIACIÓN</field>
+        </record>
+        <record id="anexo3_tabla22_06" model="biosis.report.ple.anexo3.tabla22">
+            <field name="num_order">06</field>
+            <field name="descripcion">SUPERINTENDENCIA DEL MERCADO DE VALORES - FONDOS DE INVERSIÓN</field>
+        </record>
+        <record id="anexo3_tabla22_07" model="biosis.report.ple.anexo3.tabla22">
+            <field name="num_order">07</field>
+            <field name="descripcion">SUPERINTENDENCIA DEL MERCADO DE VALORES - PATRIMONIO EN FIDEICOMISOS</field>
+        </record>
+        <record id="anexo3_tabla22_08" model="biosis.report.ple.anexo3.tabla22">
+            <field name="num_order">08</field>
+            <field name="descripcion">SUPERINTENDENCIA DEL MERCADO DE VALORES - ICLV</field>
+        </record>
+        <record id="anexo3_tabla22_09" model="biosis.report.ple.anexo3.tabla22">
+            <field name="num_order">09</field>
+            <field name="descripcion">OTROS NO CONSIDERADOS EN LOS ANTERIORES</field>
+        </record>
+
+
+        <record id="anexo3_tabla25_00" model="biosis.report.ple.anexo3.tabla25">
+            <field name="num_order">00</field>
+            <field name="descripcion">NINGUNO</field>
+        </record>
+        <record id="anexo3_tabla25_01" model="biosis.report.ple.anexo3.tabla25">
+            <field name="num_order">01</field>
+            <field name="descripcion">CANADA</field>
+        </record>
+        <record id="anexo3_tabla25_02" model="biosis.report.ple.anexo3.tabla25">
+            <field name="num_order">02</field>
+            <field name="descripcion">CHILE</field>
+        </record>
+        <record id="anexo3_tabla25_03" model="biosis.report.ple.anexo3.tabla25">
+            <field name="num_order">03</field>
+            <field name="descripcion">COMUNIDAD ANDINA DE NACIONES (CAN)</field>
+        </record>
+        <record id="anexo3_tabla25_04" model="biosis.report.ple.anexo3.tabla25">
+            <field name="num_order">04</field>
+            <field name="descripcion">BRASIL</field>
+        </record>
+        <record id="anexo3_tabla25_05" model="biosis.report.ple.anexo3.tabla25">
+            <field name="num_order">05</field>
+            <field name="descripcion">ESTADOS UNIDOS MEXICANOS</field>
+        </record>
+        <record id="anexo3_tabla25_06" model="biosis.report.ple.anexo3.tabla25">
+            <field name="num_order">06</field>
+            <field name="descripcion">REPUBLICA DE COREA</field>
+        </record>
+        <record id="anexo3_tabla25_07" model="biosis.report.ple.anexo3.tabla25">
+            <field name="num_order">07</field>
+            <field name="descripcion">CONFEDERACIÓN SUIZA</field>
+        </record>
+        <record id="anexo3_tabla25_08" model="biosis.report.ple.anexo3.tabla25">
+            <field name="num_order">08</field>
+            <field name="descripcion">PORTUGAL</field>
+        </record>
+        <record id="anexo3_tabla25_09" model="biosis.report.ple.anexo3.tabla25">
+            <field name="num_order">09</field>
+            <field name="descripcion">OTROS</field>
+        </record>
+
+        <!--Nueva data-->
+        <record id="anexo3_tabla27_00" model="biosis.report.ple.anexo3.tabla27">
+            <field name="num_order">00</field>
+            <field name="descripcion">Sin vinculación</field>
+            <field name="reglamento_ley"></field>
+        </record>
+        <record id="anexo3_tabla27_01" model="biosis.report.ple.anexo3.tabla27">
+            <field name="num_order">01</field>
+            <field name="descripcion">Una persona natural o jurídica posea más de treinta por ciento (30%) del capital
+                de otra persona jurídica, directamente o por intermedio de un tercero
+            </field>
+            <field name="reglamento_ley">Articulo 24° numeral 1</field>
+        </record>
+        <record id="anexo3_tabla27_02" model="biosis.report.ple.anexo3.tabla27">
+            <field name="num_order">02</field>
+            <field name="descripcion">Más del treinta por ciento (30%) del capital de dos (2) o más personas jurídicas
+                pertenezca a una misma persona natural o jurídica, directamente o por intermedio de un tercero
+            </field>
+            <field name="reglamento_ley">Articulo 24° numeral 2</field>
+        </record>
+        <record id="anexo3_tabla27_03" model="biosis.report.ple.anexo3.tabla27">
+            <field name="num_order">03</field>
+            <field name="descripcion">En cualesquiera de los casos anteriores, cuando la indicada proporción del capital
+                pertenezca a cónyuges entre sí o a personas naturales vinculadas hasta el segundo grado de
+                consanguinidad o afinidad
+            </field>
+            <field name="reglamento_ley">Articulo 24° numeral 3</field>
+        </record>
+        <record id="anexo3_tabla27_04" model="biosis.report.ple.anexo3.tabla27">
+            <field name="num_order">04</field>
+            <field name="descripcion">El capital de dos (2) o más personas jurídicas pertenezca en más del treinta por
+                ciento (30%) a socios comunes a éstas
+            </field>
+            <field name="reglamento_ley">Articulo 24° numeral 4</field>
+        </record>
+        <record id="anexo3_tabla27_05" model="biosis.report.ple.anexo3.tabla27">
+            <field name="num_order">05</field>
+            <field name="descripcion">Las personas jurídicas o entidades cuenten con una o más directores, gerentes,
+                administradores u otros directivos comunes, que tengan poder de decisión en los acuerdos financieros,
+                operativos y/o comerciales que se adopten
+            </field>
+            <field name="reglamento_ley">Articulo 24° numeral 5</field>
+        </record>
+        <record id="anexo3_tabla27_06" model="biosis.report.ple.anexo3.tabla27">
+            <field name="num_order">06</field>
+            <field name="descripcion">Dos o más personas naturales o jurídicas consoliden Estados Financieros</field>
+            <field name="reglamento_ley">Articulo 24° numeral 6</field>
+        </record>
+        <record id="anexo3_tabla27_07" model="biosis.report.ple.anexo3.tabla27">
+            <field name="num_order">07</field>
+            <field name="descripcion">Exista un contrato de colaboración empresarial con contabilidad independiente, en
+                cuyo caso el contrato se considerará vinculado con aquellas partes contratantes que participen,
+                directamente o por intermedio de un tercero, en mas del treinta por ciento (30%) en el patrimonio del
+                contrato o cuando alguna de las partes contratantes tengan poder de decisión en los acuerdos
+                financieros, comerciales u operativos que se adopten para el desarrollo del contrato, caso en el cual la
+                parte contratante que ejerza el poder de decisión se encontrará vinculado con el contrato
+            </field>
+            <field name="reglamento_ley">Articulo 24° numeral 7</field>
+        </record>
+        <record id="anexo3_tabla27_08" model="biosis.report.ple.anexo3.tabla27">
+            <field name="num_order">08</field>
+            <field name="descripcion">En el caso de un contrato de colaboración empresarial sin contabilidad
+                independiente, la vinculación entre cada una de las partes integrantes del contrato y la contraparte
+                deberá verificarse individualmente, aplicando algunos de los criterios de vinculación establecidos en
+                este artículo (articulo 24° del reglamento del Impuesto a la Renta). Se entiende por contraparte a la
+                persona natural o jurídica con las que las partes integrantes celebren alguna operación con el fin de
+                alcanzar el objeto del contrato
+            </field>
+            <field name="reglamento_ley">Articulo 24° numeral 8</field>
+        </record>
+        <record id="anexo3_tabla27_09" model="biosis.report.ple.anexo3.tabla27">
+            <field name="num_order">09</field>
+            <field name="descripcion">Exista un contrato de asociación en participación, en el que alguno de los
+                asociados, directa o indirectamente, participe en mas del treinta por ciento (30%) en los resultados o
+                en las utilidades de uno o varios negocios del asociante, en cuyo caso se considerará que existe
+                vinculación entre el asociante y cada uno de sus asociados. También se considerará que existe
+                vinculación cuando alguno de los asociados tenga poder de decisión en los aspectos financieros,
+                comerciales u operativos en uno o varios negocios del asociante
+            </field>
+            <field name="reglamento_ley">Articulo 24° numeral 9</field>
+        </record>
+        <record id="anexo3_tabla27_10" model="biosis.report.ple.anexo3.tabla27">
+            <field name="num_order">10</field>
+            <field name="descripcion">Una empresa no domiciliada tenga uno o mas establecimientos permanentes en el
+                país, en cuyo caso existirá vinculación entre la empresa no domiciliada y cada uno de sus
+                establecimientos permanentes y entre todos ellos entre si
+            </field>
+            <field name="reglamento_ley">Articulo 24° numeral 10</field>
+        </record>
+        <record id="anexo3_tabla27_11" model="biosis.report.ple.anexo3.tabla27">
+            <field name="num_order">11</field>
+            <field name="descripcion">Una empresa domiciliada en territorio peruano tenga uno o mas establecimientos
+                permanentes en el extranjero, en cuyo caso existirá vinculación entre la empresa domiciliada y cada uno
+                de sus establecimientos permanentes
+            </field>
+            <field name="reglamento_ley">Articulo 24° numeral 11</field>
+        </record>
+        <record id="anexo3_tabla27_12" model="biosis.report.ple.anexo3.tabla27">
+            <field name="num_order">12</field>
+            <field name="descripcion">Una persona natural o jurídica ejerza influencia dominante en las decisiones de
+                los órganos de administración de una o mas personas jurídicas o entidades. En tal situación, se
+                considerará que las personas jurídicas o entidades influidas están vinculadas entre si y con la persona
+                natural o jurídica que ejerce dicha influencia. Se entiende que una persona natural o jurídica ejerce
+                influencia  dominante cuando, en la adopción del acuerdo, ejerce o controla la mayoría absoluta de votos
+                para la toma de decisiones en los órganos de administración de la persona jurídica o entidad. En el caso
+                de decisiones relacionadas con los asuntos mencionados en el artículo 126° de la Ley General de
+                Sociedades, existirá influencia dominante de la persona natural o jurídica que, participando en la
+                adopción del acuerdo, por si misma o con la intervención de votos de terceros, tiene en el acto de
+                votación el mayor número de acciones suscritas con derecho a voto, siempre y cuando cuente con, al
+                menos, el diez por ciento (10%) de las acciones suscritas con derecho a voto. También se otorgará el
+                tratamiento de partes vinculadas cuando una persona, empresa o entidad domiciliada en el país realice,
+                en el ejercicio gravable anterior, el ochenta por ciento (80%) o mas de sus ventas de bienes, prestación
+                de servicios u otro tipo de operaciones, con una persona, empresa o entidad domiciliada en el país o con
+                personas, empresas o entidades vinculadas entre si, domiciliadas en el país, siempre que tales
+                operaciones, a su vez, representen por lo menos el treinta por ciento (30%) de las compras o
+                adquisiciones de la otra parte en el mismo período. Tratándose de empresas que tengan actividades por
+                períodos mayores a tres ejercicios gravables, tales porcentajes se calcularán teniendo en cuenta el
+                porcentaje promedio de ventas o compras, según sea el caso, realizadas en los tres ejercicios gravables
+                inmediatos anteriores. Lo dispuesto en este párrafo no será de aplicación a las operaciones que realicen
+                las empresas que conforman la Actividad Empresarial del Estado, en las cuales la participación del
+                Estado sea mayor al cincuenta por ciento (50%) del capital. La vinculación, de acuerdo a alguno de los
+                criterios establecidos en este artículo, también operará cuando la transacción sea realizada utilizando
+                personas o entidades interpuestas, domiciliadas o no en el país con el propósito de encubrir una
+                transacción entre partes vinculadas
+            </field>
+            <field name="reglamento_ley">Articulo 24° numeral 12</field>
+        </record>
+
+        <record id="anexo3_tabla34_1D0109" model="biosis.report.ple.anexo3.tabla34">
+            <field name="codigo">1D0109</field>
+            <field name="descripcion">Efectivo y Equivalentes al Efectivo</field>
+            <field name="estado_financiero_id" ref="anexo3_tabla22_01"/>
+            <field name="cuentas">10</field>
+            <field name="excepciones"></field>
+            <field name="tipo">cuenta</field>
+            <field name="padre">1D0118</field>
+            <field name="codigo_le">030100</field>
+        </record>
+        <record id="anexo3_tabla34_1D0114" model="biosis.report.ple.anexo3.tabla34">
+            <field name="codigo">1D0114</field>
+            <field name="descripcion">Otros Activos Financieros</field>
+            <field name="estado_financiero_id" ref="anexo3_tabla22_01"/>
+            <field name="cuentas">11</field>
+            <field name="excepciones"></field>
+            <field name="tipo">cuenta</field>
+            <field name="padre">1D0118</field>
+            <field name="codigo_le">030100</field>
+        </record>
+        <record id="anexo3_tabla34_1D0121" model="biosis.report.ple.anexo3.tabla34">
+            <field name="codigo">1D0121</field>
+            <field name="descripcion">Cuentas por cobrar comerciales y otras cuentas por cobrar</field>
+            <field name="estado_financiero_id" ref="anexo3_tabla22_01"/>
+            <field name="cuentas"></field>
+            <field name="excepciones"></field>
+            <field name="tipo">suma</field>
+            <field name="padre">1D0118</field>
+            <field name="codigo_le">030100</field>
+        </record>
+        <record id="anexo3_tabla34_1D0103" model="biosis.report.ple.anexo3.tabla34">
+            <field name="codigo">1D0103</field>
+            <field name="descripcion">Cuentas por Cobrar Comerciales (neto)</field>
+            <field name="estado_financiero_id" ref="anexo3_tabla22_01"/>
+            <field name="cuentas">12</field>
+            <field name="excepciones"></field>
+            <field name="tipo">cuenta</field>
+            <field name="padre">1D0121</field>
+            <field name="codigo_le">030100</field>
+        </record>
+        <record id="anexo3_tabla34_1D0105" model="biosis.report.ple.anexo3.tabla34">
+            <field name="codigo">1D0105</field>
+            <field name="descripcion">Otras Cuentas por Cobrar (neto)</field>
+            <field name="estado_financiero_id" ref="anexo3_tabla22_01"/>
+            <field name="cuentas">14|16|17</field>
+            <field name="excepciones"></field>
+            <field name="tipo">cuenta</field>
+            <field name="padre">1D0121</field>
+            <field name="codigo_le">030100</field>
+        </record>
+        <record id="anexo3_tabla34_1D0104" model="biosis.report.ple.anexo3.tabla34">
+            <field name="codigo">1D0104</field>
+            <field name="descripcion">Cuentas por Cobrar a Entidades Relacionadas</field>
+            <field name="estado_financiero_id" ref="anexo3_tabla22_01"/>
+            <field name="cuentas">13</field>
+            <field name="excepciones"></field>
+            <field name="tipo">cuenta</field>
+            <field name="padre">1D0121</field>
+            <field name="codigo_le">030100</field>
+        </record>
+        <record id="anexo3_tabla34_1D0107" model="biosis.report.ple.anexo3.tabla34">
+            <field name="codigo">1D0107</field>
+            <field name="descripcion">Anticipos</field>
+            <field name="estado_financiero_id" ref="anexo3_tabla22_01"/>
+            <field name="cuentas">18</field>
+            <field name="excepciones"></field>
+            <field name="tipo">cuenta</field>
+            <field name="padre">1D0121</field>
+            <field name="codigo_le">030100</field>
+        </record>
+        <record id="anexo3_tabla34_1D0106" model="biosis.report.ple.anexo3.tabla34">
+            <field name="codigo">1D0106</field>
+            <field name="descripcion">Inventarios</field>
+            <field name="estado_financiero_id" ref="anexo3_tabla22_01"/>
+            <field name="cuentas">2</field>
+            <field name="excepciones">27</field>
+            <field name="tipo">cuenta</field>
+            <field name="padre">1D0118</field>
+            <field name="codigo_le">030100</field>
+        </record>
+        <record id="anexo3_tabla34_1D0112" model="biosis.report.ple.anexo3.tabla34">
+            <field name="codigo">1D0112</field>
+            <field name="descripcion">Activos Biológicos</field>
+            <field name="estado_financiero_id" ref="anexo3_tabla22_01"/>
+            <field name="cuentas">35</field>
+            <field name="excepciones"></field>
+            <field name="tipo">cuenta</field>
+            <field name="padre">1D0118</field>
+            <field name="codigo_le">030100</field>
+        </record>
+        <record id="anexo3_tabla34_1D0117" model="biosis.report.ple.anexo3.tabla34">
+            <field name="codigo">1D0117</field>
+            <field name="descripcion">Activos por Impuestos a las Ganancias</field>
+            <field name="estado_financiero_id" ref="anexo3_tabla22_01"/>
+            <field name="cuentas">37</field>
+            <field name="excepciones"></field>
+            <field name="tipo">cuenta</field>
+            <field name="padre">1D0118</field>
+            <field name="codigo_le">030100</field>
+        </record>
+        <record id="anexo3_tabla34_1D0113" model="biosis.report.ple.anexo3.tabla34">
+            <field name="codigo">1D0113</field>
+            <field name="descripcion">Otros Activos no financieros</field>
+            <field name="estado_financiero_id" ref="anexo3_tabla22_01"/>
+            <field name="cuentas">38</field>
+            <field name="excepciones"></field>
+            <field name="tipo">cuenta</field>
+            <field name="padre">1D0118</field>
+            <field name="codigo_le">030100</field>
+        </record>
+        <record id="anexo3_tabla34_1D0118" model="biosis.report.ple.anexo3.tabla34">
+            <field name="codigo">1D0118</field>
+            <field name="descripcion">Total Activos Corrientes Distintos de los Activos o Grupos de Activos para su
+                Disposición Clasificados como Mantenidos para la Venta o para Distribuir a los Propietarios
+            </field>
+            <field name="estado_financiero_id" ref="anexo3_tabla22_01"/>
+            <field name="cuentas"></field>
+            <field name="excepciones"></field>
+            <field name="tipo">suma</field>
+            <field name="padre">1D01ST</field>
+            <field name="codigo_le">030100</field>
+        </record>
+        <record id="anexo3_tabla34_1D0119" model="biosis.report.ple.anexo3.tabla34">
+            <field name="codigo">1D0119</field>
+            <field name="descripcion">Activos no Corrientes o Grupos de Activos para su Disposición Clasificados como
+                Mantenidos para la Venta
+            </field>
+            <field name="estado_financiero_id" ref="anexo3_tabla22_01"/>
+            <field name="cuentas">27</field>
+            <field name="excepciones"></field>
+            <field name="tipo">cuenta</field>
+            <field name="padre">1D0115</field>
+            <field name="codigo_le">030100</field>
+        </record>
+        <record id="anexo3_tabla34_1D0120" model="biosis.report.ple.anexo3.tabla34">
+            <field name="codigo">1D0120</field>
+            <field name="descripcion">Activos no Corrientes o Grupos de Activos para su Disposición Clasificados como
+                Mantenidos para Distribuir a los Propietarios
+            </field>
+            <field name="estado_financiero_id" ref="anexo3_tabla22_01"/>
+            <field name="cuentas">27</field>
+            <field name="excepciones"></field>
+            <field name="tipo">cuenta</field>
+            <field name="padre">1D0115</field>
+            <field name="codigo_le">030100</field>
+        </record>
+        <record id="anexo3_tabla34_1D0115" model="biosis.report.ple.anexo3.tabla34">
+            <field name="codigo">1D0115</field>
+            <field name="descripcion">Activos no Corrientes o Grupos de Activos para su Disposición Clasificados como
+                Mantenidos para la Venta o como Mantenidos para Distribuir a los Propietarios
+            </field>
+            <field name="estado_financiero_id" ref="anexo3_tabla22_01"/>
+            <field name="cuentas"></field>
+            <field name="excepciones"></field>
+            <field name="tipo">suma</field>
+            <field name="padre">1D01ST</field>
+            <field name="codigo_le">030100</field>
+        </record>
+        <record id="anexo3_tabla34_1D01ST" model="biosis.report.ple.anexo3.tabla34">
+            <field name="codigo">1D01ST</field>
+            <field name="descripcion">Total Activos Corrientes</field>
+            <field name="estado_financiero_id" ref="anexo3_tabla22_01"/>
+            <field name="cuentas"></field>
+            <field name="excepciones"></field>
+            <field name="tipo">suma</field>
+            <field name="padre">1D020T</field>
+            <field name="codigo_le">030100</field>
+        </record>
+        <record id="anexo3_tabla34_1D0217" model="biosis.report.ple.anexo3.tabla34">
+            <field name="codigo">1D0217</field>
+            <field name="descripcion">Otros Activos Financieros</field>
+            <field name="estado_financiero_id" ref="anexo3_tabla22_01"/>
+            <field name="cuentas">104|11</field>
+            <field name="excepciones"></field>
+            <field name="tipo">cuenta</field>
+            <field name="padre">1D02ST</field>
+            <field name="codigo_le">030100</field>
+        </record>
+        <record id="anexo3_tabla34_1D0221" model="biosis.report.ple.anexo3.tabla34">
+            <field name="codigo">1D0221</field>
+            <field name="descripcion">Inversiones en subsidiarias, negocios conjuntos y asociadas</field>
+            <field name="estado_financiero_id" ref="anexo3_tabla22_01"/>
+            <field name="cuentas"></field>
+            <field name="excepciones"></field>
+            <field name="tipo">cuenta</field>
+            <field name="padre">1D02ST</field>
+            <field name="codigo_le">030100</field>
+        </record>
+        <record id="anexo3_tabla34_1D0219" model="biosis.report.ple.anexo3.tabla34">
+            <field name="codigo">1D0219</field>
+            <field name="descripcion">Cuentas por cobrar comerciales y otras cuentas por cobrar</field>
+            <field name="estado_financiero_id" ref="anexo3_tabla22_01"/>
+            <field name="cuentas"></field>
+            <field name="excepciones"></field>
+            <field name="tipo">suma</field>
+            <field name="padre">1D02ST</field>
+            <field name="codigo_le">030100</field>
+        </record>
+        <record id="anexo3_tabla34_1D0201" model="biosis.report.ple.anexo3.tabla34">
+            <field name="codigo">1D0201</field>
+            <field name="descripcion">Cuentas por Cobrar Comerciales</field>
+            <field name="estado_financiero_id" ref="anexo3_tabla22_01"/>
+            <field name="cuentas">12</field>
+            <field name="excepciones"></field>
+            <field name="tipo">cuenta</field>
+            <field name="padre">1D0219</field>
+            <field name="codigo_le">030100</field>
+        </record>
+        <record id="anexo3_tabla34_1D0203" model="biosis.report.ple.anexo3.tabla34">
+            <field name="codigo">1D0203</field>
+            <field name="descripcion">Otras Cuentas por Cobrar</field>
+            <field name="estado_financiero_id" ref="anexo3_tabla22_01"/>
+            <field name="cuentas">14|16|17</field>
+            <field name="excepciones"></field>
+            <field name="tipo">cuenta</field>
+            <field name="padre">1D0219</field>
+            <field name="codigo_le">030100</field>
+        </record>
+        <record id="anexo3_tabla34_1D0202" model="biosis.report.ple.anexo3.tabla34">
+            <field name="codigo">1D0202</field>
+            <field name="descripcion">Cuentas por Cobrar a Entidades Relacionadas</field>
+            <field name="estado_financiero_id" ref="anexo3_tabla22_01"/>
+            <field name="cuentas">13</field>
+            <field name="excepciones"></field>
+            <field name="tipo">cuenta</field>
+            <field name="padre">1D0219</field>
+            <field name="codigo_le">030100</field>
+        </record>
+        <record id="anexo3_tabla34_1D0220" model="biosis.report.ple.anexo3.tabla34">
+            <field name="codigo">1D0220</field>
+            <field name="descripcion">Anticipos</field>
+            <field name="estado_financiero_id" ref="anexo3_tabla22_01"/>
+            <field name="cuentas">18</field>
+            <field name="excepciones"></field>
+            <field name="tipo">cuenta</field>
+            <field name="padre">1D0219</field>
+            <field name="codigo_le">030100</field>
+        </record>
+        <record id="anexo3_tabla34_1D0216" model="biosis.report.ple.anexo3.tabla34">
+            <field name="codigo">1D0216</field>
+            <field name="descripcion">Activos Biológicos</field>
+            <field name="estado_financiero_id" ref="anexo3_tabla22_01"/>
+            <field name="cuentas">35</field>
+            <field name="excepciones"></field>
+            <field name="tipo">cuenta</field>
+            <field name="padre">1D02ST</field>
+            <field name="codigo_le">030100</field>
+        </record>
+        <record id="anexo3_tabla34_1D0211" model="biosis.report.ple.anexo3.tabla34">
+            <field name="codigo">1D0211</field>
+            <field name="descripcion">Propiedades de Inversión</field>
+            <field name="estado_financiero_id" ref="anexo3_tabla22_01"/>
+            <field name="cuentas">30|31</field>
+            <field name="excepciones"></field>
+            <field name="tipo">cuenta</field>
+            <field name="padre">1D02ST</field>
+            <field name="codigo_le">030100</field>
+        </record>
+        <record id="anexo3_tabla34_1D0205" model="biosis.report.ple.anexo3.tabla34">
+            <field name="codigo">1D0205</field>
+            <field name="descripcion">Propiedades, Planta y Equipo (neto)</field>
+            <field name="estado_financiero_id" ref="anexo3_tabla22_01"/>
+            <field name="cuentas">32|33</field>
+            <field name="excepciones"></field>
+            <field name="tipo">cuenta</field>
+            <field name="padre">1D02ST</field>
+            <field name="codigo_le">030100</field>
+        </record>
+        <record id="anexo3_tabla34_1D0206" model="biosis.report.ple.anexo3.tabla34">
+            <field name="codigo">1D0206</field>
+            <field name="descripcion">Activos intangibles distintos de la plusvalia</field>
+            <field name="estado_financiero_id" ref="anexo3_tabla22_01"/>
+            <field name="cuentas">34</field>
+            <field name="excepciones">347</field>
+            <field name="tipo">cuenta</field>
+            <field name="padre">1D02ST</field>
+            <field name="codigo_le">030100</field>
+        </record>
+        <record id="anexo3_tabla34_1D0207" model="biosis.report.ple.anexo3.tabla34">
+            <field name="codigo">1D0207</field>
+            <field name="descripcion">Activos por impuestos diferidos</field>
+            <field name="estado_financiero_id" ref="anexo3_tabla22_01"/>
+            <field name="cuentas">37</field>
+            <field name="excepciones"></field>
+            <field name="tipo">cuenta</field>
+            <field name="padre">1D02ST</field>
+            <field name="codigo_le">030100</field>
+        </record>
+        <record id="anexo3_tabla34_1D0212" model="biosis.report.ple.anexo3.tabla34">
+            <field name="codigo">1D0212</field>
+            <field name="descripcion">Plusvalía</field>
+            <field name="estado_financiero_id" ref="anexo3_tabla22_01"/>
+            <field name="cuentas">347</field>
+            <field name="excepciones"></field>
+            <field name="tipo">cuenta</field>
+            <field name="padre">1D02ST</field>
+            <field name="codigo_le">030100</field>
+        </record>
+        <record id="anexo3_tabla34_1D0208" model="biosis.report.ple.anexo3.tabla34">
+            <field name="codigo">1D0208</field>
+            <field name="descripcion">Otros Activos no financieros</field>
+            <field name="estado_financiero_id" ref="anexo3_tabla22_01"/>
+            <field name="cuentas">38</field>
+            <field name="excepciones"></field>
+            <field name="tipo">cuenta</field>
+            <field name="padre">1D02ST</field>
+            <field name="codigo_le">030100</field>
+        </record>
+        <record id="anexo3_tabla34_1D02ST" model="biosis.report.ple.anexo3.tabla34">
+            <field name="codigo">1D02ST</field>
+            <field name="descripcion">Total Activos No Corrientes</field>
+            <field name="estado_financiero_id" ref="anexo3_tabla22_01"/>
+            <field name="cuentas"></field>
+            <field name="excepciones"></field>
+            <field name="tipo">suma</field>
+            <field name="padre">1D020T</field>
+            <field name="codigo_le">030100</field>
+        </record>
+        <record id="anexo3_tabla34_1D020T" model="biosis.report.ple.anexo3.tabla34">
+            <field name="codigo">1D020T</field>
+            <field name="descripcion">TOTAL DE ACTIVOS</field>
+            <field name="estado_financiero_id" ref="anexo3_tabla22_01"/>
+            <field name="cuentas"></field>
+            <field name="excepciones"></field>
+            <field name="tipo">suma</field>
+            <field name="padre"></field>
+            <field name="codigo_le">030100</field>
+        </record>
+        <record id="anexo3_tabla34_1D0309" model="biosis.report.ple.anexo3.tabla34">
+            <field name="codigo">1D0309</field>
+            <field name="descripcion">Otros Pasivos Financieros</field>
+            <field name="estado_financiero_id" ref="anexo3_tabla22_01"/>
+            <field name="cuentas">45</field>
+            <field name="excepciones"></field>
+            <field name="tipo">cuenta</field>
+            <field name="padre">1D0315</field>
+            <field name="codigo_le">030100</field>
+        </record>
+        <record id="anexo3_tabla34_1D0316" model="biosis.report.ple.anexo3.tabla34">
+            <field name="codigo">1D0316</field>
+            <field name="descripcion">Cuentas por pagar comerciales y otras cuentas por pagar</field>
+            <field name="estado_financiero_id" ref="anexo3_tabla22_01"/>
+            <field name="cuentas"></field>
+            <field name="excepciones"></field>
+            <field name="tipo">cuenta</field>
+            <field name="padre">1D0315</field>
+            <field name="codigo_le">030100</field>
+        </record>
+        <record id="anexo3_tabla34_1D0302" model="biosis.report.ple.anexo3.tabla34">
+            <field name="codigo">1D0302</field>
+            <field name="descripcion">Cuentas por Pagar Comerciales</field>
+            <field name="estado_financiero_id" ref="anexo3_tabla22_01"/>
+            <field name="cuentas">42</field>
+            <field name="excepciones"></field>
+            <field name="tipo">cuenta</field>
+            <field name="padre">1D0316</field>
+            <field name="codigo_le">030100</field>
+        </record>
+        <record id="anexo3_tabla34_1D0304" model="biosis.report.ple.anexo3.tabla34">
+            <field name="codigo">1D0304</field>
+            <field name="descripcion">Otras Cuentas por Pagar</field>
+            <field name="estado_financiero_id" ref="anexo3_tabla22_01"/>
+            <field name="cuentas">44|46</field>
+            <field name="excepciones"></field>
+            <field name="tipo">cuenta</field>
+            <field name="padre">1D0316</field>
+            <field name="codigo_le">030100</field>
+        </record>
+        <record id="anexo3_tabla34_1D0303" model="biosis.report.ple.anexo3.tabla34">
+            <field name="codigo">1D0303</field>
+            <field name="descripcion">Cuentas por Pagar a Entidades Relacionadas</field>
+            <field name="estado_financiero_id" ref="anexo3_tabla22_01"/>
+            <field name="cuentas">43</field>
+            <field name="excepciones"></field>
+            <field name="tipo">cuenta</field>
+            <field name="padre">1D0316</field>
+            <field name="codigo_le">030100</field>
+        </record>
+        <record id="anexo3_tabla34_1D0317" model="biosis.report.ple.anexo3.tabla34">
+            <field name="codigo">1D0317</field>
+            <field name="descripcion">Ingresos diferidos</field>
+            <field name="estado_financiero_id" ref="anexo3_tabla22_01"/>
+            <field name="cuentas">496</field>
+            <field name="excepciones"></field>
+            <field name="tipo">cuenta</field>
+            <field name="padre">1D0316</field>
+            <field name="codigo_le">030100</field>
+        </record>
+        <record id="anexo3_tabla34_1D0313" model="biosis.report.ple.anexo3.tabla34">
+            <field name="codigo">1D0313</field>
+            <field name="descripcion">Provisión por Beneficios a los Empleados</field>
+            <field name="estado_financiero_id" ref="anexo3_tabla22_01"/>
+            <field name="cuentas">41</field>
+            <field name="excepciones"></field>
+            <field name="tipo">cuenta</field>
+            <field name="padre">1D0315</field>
+            <field name="codigo_le">030100</field>
+        </record>
+        <record id="anexo3_tabla34_1D0310" model="biosis.report.ple.anexo3.tabla34">
+            <field name="codigo">1D0310</field>
+            <field name="descripcion">Otras provisiones</field>
+            <field name="estado_financiero_id" ref="anexo3_tabla22_01"/>
+            <field name="cuentas">48</field>
+            <field name="excepciones"></field>
+            <field name="tipo">cuenta</field>
+            <field name="padre">1D0315</field>
+            <field name="codigo_le">030100</field>
+        </record>
+        <record id="anexo3_tabla34_1D0311" model="biosis.report.ple.anexo3.tabla34">
+            <field name="codigo">1D0311</field>
+            <field name="descripcion">Pasivos por Impuestos a las Ganancias</field>
+            <field name="estado_financiero_id" ref="anexo3_tabla22_01"/>
+            <field name="cuentas">49</field>
+            <field name="excepciones">496</field>
+            <field name="tipo">cuenta</field>
+            <field name="padre">1D0315</field>
+            <field name="codigo_le">030100</field>
+        </record>
+        <record id="anexo3_tabla34_1D0314" model="biosis.report.ple.anexo3.tabla34">
+            <field name="codigo">1D0314</field>
+            <field name="descripcion">Otros Pasivos no financieros</field>
+            <field name="estado_financiero_id" ref="anexo3_tabla22_01"/>
+            <field name="cuentas">40</field>
+            <field name="excepciones"></field>
+            <field name="tipo">cuenta</field>
+            <field name="padre">1D0315</field>
+            <field name="codigo_le">030100</field>
+        </record>
+        <record id="anexo3_tabla34_1D0315" model="biosis.report.ple.anexo3.tabla34">
+            <field name="codigo">1D0315</field>
+            <field name="descripcion">Total de Pasivos Corrientes distintos de Pasivos incluidos en Grupos de Activos
+                para su Disposición Clasificados como Mantenidos para la Venta
+            </field>
+            <field name="estado_financiero_id" ref="anexo3_tabla22_01"/>
+            <field name="cuentas"></field>
+            <field name="excepciones"></field>
+            <field name="tipo">suma</field>
+            <field name="padre">1D03ST</field>
+            <field name="codigo_le">030100</field>
+        </record>
+        <record id="anexo3_tabla34_1D0312" model="biosis.report.ple.anexo3.tabla34">
+            <field name="codigo">1D0312</field>
+            <field name="descripcion">Pasivos incluidos en Grupos de Activos para su Disposición Clasificados como
+                Mantenidos para la Venta
+            </field>
+            <field name="estado_financiero_id" ref="anexo3_tabla22_01"/>
+            <field name="cuentas">27</field>
+            <field name="excepciones"></field>
+            <field name="tipo">cuenta</field>
+            <field name="padre">1D03ST</field>
+            <field name="codigo_le">030100</field>
+        </record>
+        <record id="anexo3_tabla34_1D03ST" model="biosis.report.ple.anexo3.tabla34">
+            <field name="codigo">1D03ST</field>
+            <field name="descripcion">Total Pasivos Corrientes</field>
+            <field name="estado_financiero_id" ref="anexo3_tabla22_01"/>
+            <field name="cuentas"></field>
+            <field name="excepciones"></field>
+            <field name="tipo">suma</field>
+            <field name="padre">1D040T</field>
+            <field name="codigo_le">030100</field>
+        </record>
+        <record id="anexo3_tabla34_1D0401" model="biosis.report.ple.anexo3.tabla34">
+            <field name="codigo">1D0401</field>
+            <field name="descripcion">Otros Pasivos Financieros</field>
+            <field name="estado_financiero_id" ref="anexo3_tabla22_01"/>
+            <field name="cuentas">47</field>
+            <field name="excepciones"></field>
+            <field name="tipo">cuenta</field>
+            <field name="padre">1D04ST</field>
+            <field name="codigo_le">030100</field>
+        </record>
+        <record id="anexo3_tabla34_1D0411" model="biosis.report.ple.anexo3.tabla34">
+            <field name="codigo">1D0411</field>
+            <field name="descripcion">Cuentas por pagar comerciales y otras cuentas por pagar</field>
+            <field name="estado_financiero_id" ref="anexo3_tabla22_01"/>
+            <field name="cuentas"></field>
+            <field name="excepciones"></field>
+            <field name="tipo">suma</field>
+            <field name="padre">1D04ST</field>
+            <field name="codigo_le">030100</field>
+        </record>
+        <record id="anexo3_tabla34_1D0407" model="biosis.report.ple.anexo3.tabla34">
+            <field name="codigo">1D0407</field>
+            <field name="descripcion">Cuentas por Pagar Comerciales</field>
+            <field name="estado_financiero_id" ref="anexo3_tabla22_01"/>
+            <field name="cuentas">42</field>
+            <field name="excepciones"></field>
+            <field name="tipo">cuenta</field>
+            <field name="padre">1D0411</field>
+            <field name="codigo_le">030100</field>
+        </record>
+        <record id="anexo3_tabla34_1D0408" model="biosis.report.ple.anexo3.tabla34">
+            <field name="codigo">1D0408</field>
+            <field name="descripcion">Otras Cuentas por Pagar</field>
+            <field name="estado_financiero_id" ref="anexo3_tabla22_01"/>
+            <field name="cuentas">44|46</field>
+            <field name="excepciones"></field>
+            <field name="tipo">cuenta</field>
+            <field name="padre">1D0411</field>
+            <field name="codigo_le">030100</field>
+        </record>
+        <record id="anexo3_tabla34_1D0402" model="biosis.report.ple.anexo3.tabla34">
+            <field name="codigo">1D0402</field>
+            <field name="descripcion">Cuentas por Pagar a Entidades Relacionadas</field>
+            <field name="estado_financiero_id" ref="anexo3_tabla22_01"/>
+            <field name="cuentas">43</field>
+            <field name="excepciones"></field>
+            <field name="tipo">cuenta</field>
+            <field name="padre">1D0411</field>
+            <field name="codigo_le">030100</field>
+        </record>
+        <record id="anexo3_tabla34_1D0403" model="biosis.report.ple.anexo3.tabla34">
+            <field name="codigo">1D0403</field>
+            <field name="descripcion">Ingresos Diferidos</field>
+            <field name="estado_financiero_id" ref="anexo3_tabla22_01"/>
+            <field name="cuentas">496</field>
+            <field name="excepciones"></field>
+            <field name="tipo">cuenta</field>
+            <field name="padre">1D0411</field>
+            <field name="codigo_le">030100</field>
+        </record>
+        <record id="anexo3_tabla34_1D0409" model="biosis.report.ple.anexo3.tabla34">
+            <field name="codigo">1D0409</field>
+            <field name="descripcion">Provisión por Beneficios a los Empleados</field>
+            <field name="estado_financiero_id" ref="anexo3_tabla22_01"/>
+            <field name="cuentas">41</field>
+            <field name="excepciones"></field>
+            <field name="tipo">cuenta</field>
+            <field name="padre">1D04ST</field>
+            <field name="codigo_le">030100</field>
+        </record>
+        <record id="anexo3_tabla34_1D0406" model="biosis.report.ple.anexo3.tabla34">
+            <field name="codigo">1D0406</field>
+            <field name="descripcion">Otras provisiones</field>
+            <field name="estado_financiero_id" ref="anexo3_tabla22_01"/>
+            <field name="cuentas">48</field>
+            <field name="excepciones"></field>
+            <field name="tipo">cuenta</field>
+            <field name="padre">1D04ST</field>
+            <field name="codigo_le">030100</field>
+        </record>
+        <record id="anexo3_tabla34_1D0404" model="biosis.report.ple.anexo3.tabla34">
+            <field name="codigo">1D0404</field>
+            <field name="descripcion">Pasivos por impuestos diferidos</field>
+            <field name="estado_financiero_id" ref="anexo3_tabla22_01"/>
+            <field name="cuentas">491</field>
+            <field name="excepciones"></field>
+            <field name="tipo">cuenta</field>
+            <field name="padre">1D04ST</field>
+            <field name="codigo_le">030100</field>
+        </record>
+        <record id="anexo3_tabla34_1D0410" model="biosis.report.ple.anexo3.tabla34">
+            <field name="codigo">1D0410</field>
+            <field name="descripcion">Otros pasivos no financieros</field>
+            <field name="estado_financiero_id" ref="anexo3_tabla22_01"/>
+            <field name="cuentas">49</field>
+            <field name="excepciones">496|491</field>
+            <field name="tipo">cuenta</field>
+            <field name="padre">1D04ST</field>
+            <field name="codigo_le">030100</field>
+        </record>
+        <record id="anexo3_tabla34_1D04ST" model="biosis.report.ple.anexo3.tabla34">
+            <field name="codigo">1D04ST</field>
+            <field name="descripcion">Total Pasivos No Corrientes</field>
+            <field name="estado_financiero_id" ref="anexo3_tabla22_01"/>
+            <field name="cuentas"></field>
+            <field name="excepciones"></field>
+            <field name="tipo">suma</field>
+            <field name="padre">1D040T</field>
+            <field name="codigo_le">030100</field>
+        </record>
+        <record id="anexo3_tabla34_1D040T" model="biosis.report.ple.anexo3.tabla34">
+            <field name="codigo">1D040T</field>
+            <field name="descripcion">Total Pasivos</field>
+            <field name="estado_financiero_id" ref="anexo3_tabla22_01"/>
+            <field name="cuentas"></field>
+            <field name="excepciones"></field>
+            <field name="tipo">suma</field>
+            <field name="padre">1D070T</field>
+            <field name="codigo_le">030100</field>
+        </record>
+        <record id="anexo3_tabla34_1D0701" model="biosis.report.ple.anexo3.tabla34">
+            <field name="codigo">1D0701</field>
+            <field name="descripcion">Capital Emitido</field>
+            <field name="estado_financiero_id" ref="anexo3_tabla22_01"/>
+            <field name="cuentas">50</field>
+            <field name="excepciones"></field>
+            <field name="tipo">cuenta</field>
+            <field name="padre">1D07ST</field>
+            <field name="codigo_le">030100</field>
+        </record>
+        <record id="anexo3_tabla34_1D0702" model="biosis.report.ple.anexo3.tabla34">
+            <field name="codigo">1D0702</field>
+            <field name="descripcion">Primas de Emisión</field>
+            <field name="estado_financiero_id" ref="anexo3_tabla22_01"/>
+            <field name="cuentas">52</field>
+            <field name="excepciones"></field>
+            <field name="tipo">cuenta</field>
+            <field name="padre">1D07ST</field>
+            <field name="codigo_le">030100</field>
+        </record>
+        <record id="anexo3_tabla34_1D0703" model="biosis.report.ple.anexo3.tabla34">
+            <field name="codigo">1D0703</field>
+            <field name="descripcion">Acciones de Inversión</field>
+            <field name="estado_financiero_id" ref="anexo3_tabla22_01"/>
+            <field name="cuentas">51</field>
+            <field name="excepciones">512</field>
+            <field name="tipo">cuenta</field>
+            <field name="padre">1D07ST</field>
+            <field name="codigo_le">030100</field>
+        </record>
+        <record id="anexo3_tabla34_1D0711" model="biosis.report.ple.anexo3.tabla34">
+            <field name="codigo">1D0711</field>
+            <field name="descripcion">Acciones Propias en Cartera</field>
+            <field name="estado_financiero_id" ref="anexo3_tabla22_01"/>
+            <field name="cuentas">512</field>
+            <field name="excepciones"></field>
+            <field name="tipo">cuenta</field>
+            <field name="padre">1D07ST</field>
+            <field name="codigo_le">030100</field>
+        </record>
+        <record id="anexo3_tabla34_1D0712" model="biosis.report.ple.anexo3.tabla34">
+            <field name="codigo">1D0712</field>
+            <field name="descripcion">Otras Reservas de Capital</field>
+            <field name="estado_financiero_id" ref="anexo3_tabla22_01"/>
+            <field name="cuentas">58</field>
+            <field name="excepciones">589</field>
+            <field name="tipo">cuenta</field>
+            <field name="padre">1D07ST</field>
+            <field name="codigo_le">030100</field>
+        </record>
+        <record id="anexo3_tabla34_1D0707" model="biosis.report.ple.anexo3.tabla34">
+            <field name="codigo">1D0707</field>
+            <field name="descripcion">Resultados Acumulados</field>
+            <field name="estado_financiero_id" ref="anexo3_tabla22_01"/>
+            <field name="cuentas">59</field>
+            <field name="excepciones"></field>
+            <field name="tipo">cuenta</field>
+            <field name="padre">1D07ST</field>
+            <field name="codigo_le">030100</field>
+        </record>
+        <record id="anexo3_tabla34_1D0708" model="biosis.report.ple.anexo3.tabla34">
+            <field name="codigo">1D0708</field>
+            <field name="descripcion">Otras Reservas de Patrimonio</field>
+            <field name="estado_financiero_id" ref="anexo3_tabla22_01"/>
+            <field name="cuentas">589</field>
+            <field name="excepciones"></field>
+            <field name="tipo">cuenta</field>
+            <field name="padre">1D07ST</field>
+            <field name="codigo_le">030100</field>
+        </record>
+        <record id="anexo3_tabla34_1D07ST" model="biosis.report.ple.anexo3.tabla34">
+            <field name="codigo">1D07ST</field>
+            <field name="descripcion">Total Patrimonio</field>
+            <field name="estado_financiero_id" ref="anexo3_tabla22_01"/>
+            <field name="cuentas"></field>
+            <field name="excepciones"></field>
+            <field name="tipo">suma</field>
+            <field name="padre">1D070T</field>
+            <field name="codigo_le">030100</field>
+        </record>
+        <record id="anexo3_tabla34_1D070T" model="biosis.report.ple.anexo3.tabla34">
+            <field name="codigo">1D070T</field>
+            <field name="descripcion">TOTAL PASIVO Y PATRIMONIO</field>
+            <field name="estado_financiero_id" ref="anexo3_tabla22_01"/>
+            <field name="cuentas"></field>
+            <field name="excepciones"></field>
+            <field name="tipo">suma</field>
+            <field name="padre"></field>
+            <field name="codigo_le">030100</field>
+        </record>
+    </data>
+</odoo>

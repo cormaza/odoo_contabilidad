@@ -1,0 +1,67 @@
+<odoo>
+  <data>
+    <record id="biosis_cont_report_fechas_atraso_form" model="ir.ui.view">
+        <field name="name">Fechas Máximas de Atraso Compras y Ventas PLE</field>
+        <field name="model">biosis_cont_report.fechasatraso</field>
+        <field name="arch" type="xml">
+            <form string="Datos:">
+                <group col="6">
+                    <field name="year" colspan="6"/>
+                    <group col="2">
+                        <field name="january" colspan="2"/>
+                        <field name="february" colspan="2"/>
+                        <field name="march" colspan="2"/>
+                        <field name="april" colspan="2"/>
+                    </group>
+                    <group col="2">
+                        <field name="may" colspan="2"/>
+                        <field name="june" colspan="2"/>
+                        <field name="july" colspan="2"/>
+                        <field name="august" colspan="2"/>
+                    </group>
+                    <group col="2">
+                        <field name="september" colspan="2"/>
+                        <field name="october" colspan="2"/>
+                        <field name="november" colspan="2"/>
+                        <field name="december" colspan="2"/>
+                    </group>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <record id="biosis_cont_report_fechas_atraso_tree" model="ir.ui.view">
+        <field name="name">Fechas Máximas de Atraso Compras y Ventas PLE</field>
+        <field name="model">biosis_cont_report.fechasatraso</field>
+        <field name="arch" type="xml">
+            <tree string="Fechas Maximas de Atraso Compras y Ventas PLE">
+                <field name="year" colspan="4"/>
+                <field name="january" colspan="4"/>
+                <field name="february" colspan="4"/>
+                <field name="march" colspan="4"/>
+                <field name="april" colspan="4"/>
+                <field name="may" colspan="4"/>
+                <field name="june" colspan="4"/>
+                <field name="july" colspan="4"/>
+                <field name="august" colspan="4"/>
+                <field name="september" colspan="4"/>
+                <field name="october" colspan="4"/>
+                <field name="november" colspan="4"/>
+                <field name="december" colspan="4"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_fechas_atraso_form" model="ir.actions.act_window">
+        <field name="name">Fechas Máximas de Atraso Compras y Ventas PLE</field>
+        <field name="res_model">biosis_cont_report.fechasatraso</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain" eval="False"/>
+        <field name="view_id" ref="biosis_cont_report_fechas_atraso_tree"/>
+    </record>
+
+    <menuitem name="Libros Electrónicos" id="biosis_cont_report_configuration_menu" parent="account.menu_finance_configuration" sequence="22"/>
+    <menuitem action="action_fechas_atraso_form" id="menu_action_fechas_atraso_form" parent="biosis_cont_report_configuration_menu" sequence="2"/>
+  </data>
+</odoo>

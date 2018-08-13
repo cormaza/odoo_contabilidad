@@ -1,0 +1,32 @@
+<odoo>
+    <data>
+        <template id="einvoice_terrestre_report_document">
+            <t t-call="report.external_layout" t-lang="es_PE">
+                <div class="page">
+                    <div class="row">
+                        <h3>Title</h3>
+                    </div>
+                </div>
+            </t>
+        </template>
+
+        <template id="einvoice_terrestre_report">
+            <t t-call="report.html_container">
+                <t t-foreach="docs" t-as="doc">
+                    <t t-call="bananas_pijama.einvoice_terrestre_report_document" />
+                </t>
+            </t>
+        </template>
+
+
+        <report
+                id="action_einvoice_terrestre_report"
+                model="account.invoice"
+                string="Factura (envío terrestre)"
+                report_type="qweb-pdf"
+                name="biosis_project.einvoice_terrestre_report"
+                attachment_use="False"
+                file="biosis_project.einvoice_terrestre_report"
+        />
+    </data>
+</odoo>
