@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data >
+        <record id="detraccion_001" model="bienes.servicios.detraccion">
+            <field name="codigo">001</field>
+            <field name="descripcion">Azúcar</field>
+            <field name="monto_minimo">2075</field>
+            <field name="porcentaje">10</field>
+            <field name="comentario">El monto mínimo equivale a 1/2 UIT, tendiendo en cuenta que el valor
+                de la unidad impositiva tributaria (UIT) es de S/. 4 150 nuevos soles.
+            </field>
+            <field name="vigente">True</field>
+        </record>
+        <record id="detraccion_003" model="bienes.servicios.detraccion">
+            <field name="codigo">003</field>
+            <field name="descripcion">Alcohol etílico</field>
+            <field name="monto_minimo">2075</field>
+            <field name="porcentaje">10</field>
+            <field name="comentario">El monto mínimo equivale a 1/2 UIT, tendiendo en cuenta que el valor
+                de la unidad impositiva tributaria (UIT) es de S/. 4 150 nuevos soles.
+            </field>
+            <field name="vigente">True</field>
+        </record>
+        <record id="detraccion_004" model="bienes.servicios.detraccion">
+            <field name="codigo">004</field>
+            <field name="descripcion">Recursos hidrobiológicos</field>
+            <field name="monto_minimo">700</field>
+            <field name="porcentaje">4</field>
+            <field name="comentario">Ninguno</field>
+            <field name="vigente">True</field>
+        </record>
+        <record id="detraccion_005" model="bienes.servicios.detraccion">
+            <field name="codigo">005</field>
+            <field name="descripcion">Maíz amarillo duro</field>
+            <field name="monto_minimo">700</field>
+            <field name="porcentaje">4</field>
+            <field name="comentario">Ninguno</field>
+            <field name="vigente">True</field>
+        </record>
+        <record id="detraccion_006" model="bienes.servicios.detraccion">
+            <field name="codigo">006</field>
+            <field name="descripcion">Algodón</field>
+            <field name="monto_minimo">0</field>
+            <field name="porcentaje">0</field>
+            <field name="comentario">Derogado</field>
+            <field name="vigente">False</field>
+        </record>
+        <record id="detraccion_007" model="bienes.servicios.detraccion">
+            <field name="codigo">007</field>
+            <field name="descripcion">Caña de Azúcar</field>
+            <field name="monto_minimo">0</field>
+            <field name="porcentaje">0</field>
+            <field name="comentario">Derogado</field>
+            <field name="vigente">False</field>
+        </record>
+        <record id="detraccion_008" model="bienes.servicios.detraccion">
+            <field name="codigo">008</field>
+            <field name="descripcion">Madera</field>
+            <field name="monto_minimo">700</field>
+            <field name="porcentaje">4</field>
+            <field name="comentario">Ninguno</field>
+            <field name="vigente">True</field>
+        </record>
+        <record id="detraccion_009" model="bienes.servicios.detraccion">
+            <field name="codigo">009</field>
+            <field name="descripcion">Arena y piedra</field>
+            <field name="monto_minimo">700</field>
+            <field name="porcentaje">10</field>
+            <field name="comentario">Ninguno</field>
+            <field name="vigente">True</field>
+        </record>
+        <record id="detraccion_010" model="bienes.servicios.detraccion">
+            <field name="codigo">010</field>
+            <field name="descripcion">Residuos, subproductos, desechos, recortes y desperdicios</field>
+            <field name="monto_minimo">700</field>
+            <field name="porcentaje">10</field>
+            <field name="comentario">Ninguno</field>
+            <field name="vigente">True</field>
+        </record>
+        <record id="detraccion_011" model="bienes.servicios.detraccion">
+            <field name="codigo">011</field>
+            <field name="descripcion">Bienes del inciso A) del Apéndice I de la Ley del IGV
+                (Bienes gravados con el IGV por renuncia de exoneración)
+            </field>
+            <field name="monto_minimo">0</field>
+            <field name="porcentaje">0</field>
+            <field name="comentario">Derogado</field>
+            <field name="vigente">False</field>
+        </record>
+        <record id="detraccion_012" model="bienes.servicios.detraccion">
+            <field name="codigo">012</field>
+            <field name="descripcion">Intermediación laboral y tercerización</field>
+            <field name="monto_minimo">700</field>
+            <field name="porcentaje">12</field>
+            <field name="comentario">Ninguno</field>
+            <field name="vigente">True</field>
+        </record>
+        <record id="detraccion_013" model="bienes.servicios.detraccion">
+            <field name="codigo">013</field>
+            <field name="descripcion">Animales vivos</field>
+            <field name="monto_minimo">0</field>
+            <field name="porcentaje">0</field>
+            <field name="comentario">Derogado</field>
+            <field name="vigente">False</field>
+        </record>
+        <record id="detraccion_014" model="bienes.servicios.detraccion">
+            <field name="codigo">014</field>
+            <field name="descripcion">Carnes y despojos comestibles</field>
+            <field name="monto_minimo">700</field>
+            <field name="porcentaje">4</field>
+            <field name="comentario">Ninguno</field>
+            <field name="vigente">True</field>
+        </record>
+        <record id="detraccion_015" model="bienes.servicios.detraccion">
+            <field name="codigo">015</field>
+            <field name="descripcion">Abonos, cueros y pieles de origen animal</field>
+            <field name="monto_minimo">0</field>
+            <field name="porcentaje">0</field>
+            <field name="comentario">Derogado</field>
+            <field name="vigente">False</field>
+        </record>
+        <record id="detraccion_016" model="bienes.servicios.detraccion">
+            <field name="codigo">016</field>
+            <field name="descripcion">Aceite de pescado</field>
+            <field name="monto_minimo">0</field>
+            <field name="porcentaje">0</field>
+            <field name="comentario">Derogado</field>
+            <field name="vigente">False</field>
+        </record>
+        <record id="detraccion_017" model="bienes.servicios.detraccion">
+            <field name="codigo">017</field>
+            <field name="descripcion">Harina, polvo y “pellets” de pescado, crustáceos, moluscos y demás invertebrados
+                acuáticos
+            </field>
+            <field name="monto_minimo">700</field>
+            <field name="porcentaje">4</field>
+            <field name="comentario">Ninguno</field>
+            <field name="vigente">True</field>
+        </record>
+        <record id="detraccion_018" model="bienes.servicios.detraccion">
+            <field name="codigo">018</field>
+            <field name="descripcion">Embarcaciones pesqueras</field>
+            <field name="monto_minimo">0</field>
+            <field name="porcentaje">0</field>
+            <field name="comentario">Derogado</field>
+            <field name="vigente">False</field>
+        </record>
+        <record id="detraccion_019" model="bienes.servicios.detraccion">
+            <field name="codigo">019</field>
+            <field name="descripcion">Arrendamiento de bienes muebles</field>
+            <field name="monto_minimo">700</field>
+            <field name="porcentaje">10</field>
+            <field name="comentario"></field>
+            <field name="vigente">True</field>
+        </record>
+        <record id="detraccion_020" model="bienes.servicios.detraccion">
+            <field name="codigo">020</field>
+            <field name="descripcion">Mantenimiento y reparación de bienes muebles</field>
+            <field name="monto_minimo">700</field>
+            <field name="porcentaje">12</field>
+            <field name="comentario">Ninguno</field>
+            <field name="vigente">True</field>
+        </record>
+        <record id="detraccion_021" model="bienes.servicios.detraccion">
+            <field name="codigo">021</field>
+            <field name="descripcion">Movimiento de carga</field>
+            <field name="monto_minimo">700</field>
+            <field name="porcentaje">10</field>
+            <field name="comentario">Ninguno</field>
+            <field name="vigente">True</field>
+        </record>
+        <record id="detraccion_022" model="bienes.servicios.detraccion">
+            <field name="codigo">022</field>
+            <field name="descripcion">Otros servicios empresariales</field>
+            <field name="monto_minimo">700</field>
+            <field name="porcentaje">12</field>
+            <field name="comentario">Ninguno</field>
+            <field name="vigente">True</field>
+        </record>
+        <record id="detraccion_023" model="bienes.servicios.detraccion">
+            <field name="codigo">023</field>
+            <field name="descripcion">Leche</field>
+            <field name="monto_minimo">0</field>
+            <field name="porcentaje">0</field>
+            <field name="comentario">Derogado</field>
+            <field name="vigente">False</field>
+        </record>
+        <record id="detraccion_024" model="bienes.servicios.detraccion">
+            <field name="codigo">024</field>
+            <field name="descripcion">Comisión mercantil</field>
+            <field name="monto_minimo">700</field>
+            <field name="porcentaje">10</field>
+            <field name="comentario">Ninguno</field>
+            <field name="vigente">True</field>
+        </record>
+        <record id="detraccion_025" model="bienes.servicios.detraccion">
+            <field name="codigo">025</field>
+            <field name="descripcion">Fabricación de bienes por encargo</field>
+            <field name="monto_minimo">700</field>
+            <field name="porcentaje">10</field>
+            <field name="comentario">Ninguno</field>
+            <field name="vigente">True</field>
+        </record>
+        <record id="detraccion_026" model="bienes.servicios.detraccion">
+            <field name="codigo">026</field>
+            <field name="descripcion">Servicio de transporte de personas</field>
+            <field name="monto_minimo">700</field>
+            <field name="porcentaje">10</field>
+            <field name="comentario">Ninguno</field>
+            <field name="vigente">True</field>
+        </record>
+        <record id="detraccion_029" model="bienes.servicios.detraccion">
+            <field name="codigo">029</field>
+            <field name="descripcion">Algodón en rama sin desmontar</field>
+            <field name="monto_minimo">0</field>
+            <field name="porcentaje">0</field>
+            <field name="comentario">Derogado</field>
+            <field name="vigente">False</field>
+        </record>
+        <record id="detraccion_030" model="bienes.servicios.detraccion">
+            <field name="codigo">030</field>
+            <field name="descripcion">Contratos de construcción</field>
+            <field name="monto_minimo">700</field>
+            <field name="porcentaje">4</field>
+            <field name="comentario">Ninguno</field>
+            <field name="vigente">True</field>
+        </record>
+        <record id="detraccion_031" model="bienes.servicios.detraccion">
+            <field name="codigo">031</field>
+            <field name="descripcion">Oro gravado con el IGV</field>
+            <field name="monto_minimo">0</field>
+            <field name="porcentaje">10</field>
+            <field name="comentario">No importa el monto</field>
+            <field name="vigente">True</field>
+        </record>
+        <record id="detraccion_032" model="bienes.servicios.detraccion">
+            <field name="codigo">032</field>
+            <field name="descripcion">Páprika y otros frutos de los géneros capsicum o pimienta</field>
+            <field name="monto_minimo">0</field>
+            <field name="porcentaje">0</field>
+            <field name="comentario">Derogado</field>
+            <field name="vigente">False</field>
+        </record>
+        <record id="detraccion_033" model="bienes.servicios.detraccion">
+            <field name="codigo">033</field>
+            <field name="descripcion">Espárragos</field>
+            <field name="monto_minimo">0</field>
+            <field name="porcentaje">0</field>
+            <field name="comentario">Derogado</field>
+            <field name="vigente">False</field>
+        </record>
+        <record id="detraccion_034" model="bienes.servicios.detraccion">
+            <field name="codigo">034</field>
+            <field name="descripcion">Minerales metálicos no auríferos</field>
+            <field name="monto_minimo">0</field>
+            <field name="porcentaje">10</field>
+            <field name="comentario">No importa el monto</field>
+            <field name="vigente">True</field>
+        </record>
+        <record id="detraccion_034" model="bienes.servicios.detraccion">
+            <field name="codigo">034</field>
+            <field name="descripcion">Minerales metálicos no auríferos</field>
+            <field name="monto_minimo">0</field>
+            <field name="porcentaje">10</field>
+            <field name="comentario">No importa el monto</field>
+            <field name="vigente">True</field>
+        </record>
+        <record id="detraccion_035" model="bienes.servicios.detraccion">
+            <field name="codigo">035</field>
+            <field name="descripcion">Bienes exonerados del IGV</field>
+            <field name="monto_minimo">700</field>
+            <field name="porcentaje">1.5</field>
+            <field name="comentario">Ninguno</field>
+            <field name="vigente">True</field>
+        </record>
+        <record id="detraccion_036" model="bienes.servicios.detraccion">
+            <field name="codigo">036</field>
+            <field name="descripcion">Oro y demás minerales metálicos exonerados del IGV</field>
+            <field name="monto_minimo">0</field>
+            <field name="porcentaje">1.5</field>
+            <field name="comentario">No importa el monto</field>
+            <field name="vigente">True</field>
+        </record>
+        <record id="detraccion_037" model="bienes.servicios.detraccion">
+            <field name="codigo">037</field>
+            <field name="descripcion">Demás servicios gravados con el IGV</field>
+            <field name="monto_minimo">700</field>
+            <field name="porcentaje">12</field>
+            <field name="comentario">Ninguno</field>
+            <field name="vigente">True</field>
+        </record>
+        <record id="detraccion_039" model="bienes.servicios.detraccion">
+            <field name="codigo">039</field>
+            <field name="descripcion">Minerales no metálicos</field>
+            <field name="monto_minimo">700</field>
+            <field name="porcentaje">10</field>
+            <field name="comentario">Ninguno</field>
+            <field name="vigente">True</field>
+        </record>
+        <record id="detraccion_040" model="bienes.servicios.detraccion">
+            <field name="codigo">040</field>
+            <field name="descripcion">Bien inmueble gravado con IGV</field>
+            <field name="monto_minimo">0</field>
+            <field name="porcentaje">4</field>
+            <field name="comentario">No importa el monto</field>
+            <field name="vigente">True</field>
+        </record>
+    </data>
+</odoo>

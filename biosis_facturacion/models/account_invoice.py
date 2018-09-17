@@ -373,7 +373,8 @@ class EInvoice(models.Model):
         for invoice in self:
             serie_ori, correlativo_ori = invoice.numero_comprobante.split('-')
             serie = '%sN%s' % (serie_ori[0:1], serie_ori[2:])
-            serie_id = self.env['biosis.facturacion.einvoice.serie'].search([('alfanumerico', '=', serie)]).id
+            serie_id = self.env['biosis.facturacion.einvoice.serie'].search([('alfanumerico', '=', serie),
+                                                                             ('company_id','=',invoice.company_id.id)]).id
             tipo_comprobante_id = self.env['einvoice.catalog.01'].search([('code', '=', '07')]).id
             credit_note_vals = {
                 'invoice_id': invoice.id,
@@ -391,16 +392,12 @@ class EInvoice(models.Model):
             credit_note = self.env['account.invoice'].create(credit_note_vals)
 
             if credit_note.tipo_ncredito_id.code in ('01', '02'):
-                invoice.write({'anulada': True})
+                invoice.write({'anulada': True,'state':'anulada'})
 
             # Copiar lineas de factura.
             for line in invoice.invoice_line_ids:
                 line2 = line.copy()
                 line2.write({'invoice_id': credit_note.id})
-
-            for linea in invoice.tax_line_ids:
-                linea2 = linea.copy()
-                linea2.write({'invoice_id': credit_note.id})
 
             conteo += 1
         if conteo == 1:
@@ -509,8 +506,8 @@ class EInvoice(models.Model):
             line.price_subtotal for line in self.invoice_line_ids if line.tipo_igv_id.code in op_exportacion))
         # tax = round_curr(sum(line.total_igv for line in self.invoice_line_ids))
 
-        if self.tipo_comprobante_id.code == '02':  # Se aplica para recibo por honorario
-            self.calculo_monto_recibo(self, round_curr)
+        if self.tipo_comprobante_id.id == 3:  # Se aplica para recibo por honorario
+            self.calculo_monto_recibo(round_curr)
 
         else:
             if self.type == 'in_invoice':
@@ -541,14 +538,21 @@ class EInvoice(models.Model):
                 self.amount_total * (line.product_id.porcentaje_detraccion / 100) for line in self.invoice_line_ids
                 if self.amount_total_company_signed > line.product_id.monto_minimo_detraccion
                 )
-            self.monto_detraccion = val_detraccion
+            if self.amount_tax > 0:
+                self.monto_detraccion = round(val_detraccion,1)
+            else:
+                val_detraccion = 0.0
+
             self.monto_factura = self.amount_total - val_detraccion
 
+            if self.currency_id:
+                self.moneda = self.currency_id.name
             if self.currency_id and self.company_id and self.currency_id != self.company_id.currency_id:
                 currency_id = self.currency_id.with_context(date=self.date_invoice)
                 val_detraccion = currency_id.compute(val_detraccion, self.company_id.currency_id)
             self.monto_detraccion_soles = val_detraccion
             self.residual_detraccion_soles = val_detraccion
+            a=1
 
 
     @api.model
@@ -1041,10 +1045,7 @@ class EInvoiceLine(models.Model):
     def _get_analytic_line(self):
         ref = self.invoice_id.number
         for inv in self.invoice_id:
-            if inv.cbo_tipo_cambio == 'C' or inv.cbo_tipo_cambio == 'V':
-                amount = self.price_subtotal_signed * inv.valor_tipo_cambio
-            else:
-                amount = self.price_subtotal_signed
+            amount = self.price_subtotal_signed
 
         return {
             'name': self.name,

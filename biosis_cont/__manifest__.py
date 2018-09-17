@@ -26,6 +26,7 @@
         'data/journal.xml',
         'data/account_data.xml',
         'data/anexo3_tablas.xml',
+        'data/anexo4_detraccion.xml',
         'views/biosis_cont.xml',
         'views/views.xml',
         'views/templates.xml',
@@ -43,8 +44,13 @@
         'views/account_payment_invoice_form.xml',
         'views/account_analytic.account.xml',
         'views/recibos_honorarios.xml',
+        'views/account_bank_statement.xml',
+        'views/res_currency_rate_view.xml',
+        'views/account_move_view.xml',
+        'views/account_anexo4_detraccion.xml',
+        'views/pago_masivo_detraccion_view.xml',
 
-
+        #'views/account_invoice_import_txt.xml',
         #'views/hr_expense_view.xml',
         #'views/sale_order_view.xml',
     ],

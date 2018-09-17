@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_currency_form" model="ir.ui.view">
+            <field name="inherit_id" ref="base.view_currency_rate_form"/>
+            <field name="model">res.currency.rate</field>
+            <field name="arch" type="xml">
+                <field name="rate" position="before">
+                    <field name="venta"/>
+                    <field name="compra"/>
+                </field>
+            </field>
+        </record>
+        <record id="view_currency_tree" model="ir.ui.view">
+            <field name="inherit_id" ref="base.view_currency_rate_tree"/>
+            <field name="model">res.currency.rate</field>
+            <field name="arch" type="xml">
+                <field name="rate" position="before">
+                    <field name="venta"/>
+                    <field name="compra"/>
+                </field>
+            </field>
+        </record>
+        <!--ITEM VISTA PARA TIPO DE CAMBIO-->
+        <record id="biosis_cont_res_currency_rate" model="ir.actions.act_window">
+            <field name="name">Tipo de Cambio</field>
+            <field name="res_model">res.currency.rate</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field eval="False" name="view_id"/>
+            <field name="domain">[('currency_id.name','=', 'USD')]</field>
+            <field name="context">{'currency_id.name': 'USD'}</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Tipo de Cambio
+                </p>
+
+            </field>
+        </record>
+        <record id="account_currency_rate_tree" model="ir.actions.act_window.view">
+            <field eval="1" name="sequence"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="base.view_currency_rate_tree"/>
+            <field name="act_window_id" ref="biosis_cont_res_currency_rate"/>
+        </record>
+
+        <menuitem id="menu_action_base_view_currency_rate_tree" name="Tipo Cambio"
+                  parent="menu_banco_caja" action="biosis_cont_res_currency_rate"/>
+
+    </data>
+</odoo>

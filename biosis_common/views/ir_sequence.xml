@@ -1,0 +1,15 @@
+<odoo>
+    <data>
+        <record id="ir_sequence" model="ir.ui.view">
+            <field name="name">ir.sequence.form</field>
+            <field name="model">ir.sequence</field>
+            <field name="priority">17</field>
+            <field name="inherit_id" ref="base.sequence_view"/>
+            <field name="arch" type="xml">
+                <field name="number_next_actual" position="after">
+                    <field name="ciclo" />
+                </field>
+            </field>
+        </record>
+    </data>
+</odoo>

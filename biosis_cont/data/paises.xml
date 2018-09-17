@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <openerp>
-  <data>
+  <data noupdate="1">
     <record id="anexo3_tabla35_9001" model="biosis.report.ple.anexo3.tabla35">
       <field name="num_orden">9001</field>
       <field name="descripcion">BOUVET ISLAND</field>

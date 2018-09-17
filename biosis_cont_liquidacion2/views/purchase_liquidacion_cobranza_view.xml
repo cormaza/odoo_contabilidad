@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="purchase_order_liquidacion_form" model="ir.ui.view">
+            <field name="name">purchase.order.liquidacion.form</field>
+            <field name="model">purchase.order</field>
+            <field name="arch" type="xml">
+                <form string="Liquidación de cobranza">
+                    <header>
+                        <button name="button_confirm" type="object" states="draft" string="Confirm Order"
+                                id="draft_confirm"/>
+                        <button name="button_confirm" type="object" states="sent" string="Confirm Order"
+                                class="oe_highlight" id="bid_confirm"/>
+                        <button name="button_approve" type="object" states='to approve' string="Approve Order"
+                                class="oe_highlight" groups="purchase.group_purchase_manager"/>
+                        <button name="button_draft" states="cancel" string="Set to Draft" type="object"/>
+                        <button name="button_cancel" states="draft,to approve,sent,purchase" string="Cancel"
+                                type="object"/>
+                        <field name="state" widget="statusbar" statusbar_visible="purchase" readonly="1"/>
+                    </header>
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <button type="object" name="action_view_invoice"
+                                    class="oe_stat_button"
+                                    icon="fa-pencil-square-o"
+                                    attrs="{'invisible':[('state', 'in', ('draft','sent','to approve')),('invoice_ids','=',[])]}">
+                                <field name="invoice_count" widget="statinfo" string="Fact. Proveedor"/>
+                                <field name='invoice_ids' invisible="1"/>
+                            </button>
+                        </div>
+                        <div class="oe_title">
+                            <label string="Request for Quotation "
+                                   attrs="{'invisible': [('state','not in',('draft','sent','bid'))]}"/>
+                            <label string="Purchase Order "
+                                   attrs="{'invisible': [('state','in',('draft','sent','bid'))]}"/>
+                            <h1>
+                                <field name="name" readonly="1"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="partner_id"
+                                       context="{'search_default_supplier':1, 'default_supplier':1, 'default_customer':0}"
+                                       domain="[('supplier','=',True)]"/>
+                                <field name="partner_ref"/>
+                                <field name="currency_id" groups="base.group_multi_currency"/>
+                                <field name="is_shipped" invisible="1"/>
+                                <field name="servicio_id" required="1"/>
+                                <field name="name_liquidacion"/>
+                            </group>
+                            <group>
+                                <field name="date_order" string="Fecha Liquidación"/>
+                                <field name="origin" attrs="{'invisible': [('origin','=',False)]}"/>
+                                <field name="company_id" groups="base.group_multi_company"
+                                       options="{'no_create': True}"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Detalle ">
+                                <field name="order_line" attrs="{'readonly': [('state', 'in', ('done', 'cancel'))]}">
+                                    <tree string="Purchase Order Lines" editable="bottom">
+                                        <field name="currency_id" invisible="1"/>
+                                        <field name="sequence" widget="handle"/>
+                                        <field name="name" string="Factura Relacionada"/>
+                                        <field name="company_id" groups="base.group_multi_company"
+                                               options="{'no_create': True}" invisible="1"/>
+                                        <field name="product_qty" eval="1"/>
+                                        <field name="price_unit" string="Importe"/>
+                                        <field name="price_subtotal" widget="monetary"/>
+                                    </tree>
+                                    <form string="Purchase Order Line">
+                                        <sheet>
+                                            <group>
+                                                <group>
+                                                    <field name="product_id"
+                                                           context="{'partner_id': parent.partner_id}"/>
+                                                    <label for="product_qty"/>
+                                                    <div>
+                                                        <field name="product_qty" class="oe_inline"/>
+                                                        <span class="oe_inline">&#160;</span>
+                                                        <field name="product_uom" groups="product.group_uom"
+                                                               class="oe_inline"/>
+                                                    </div>
+                                                    <field name="price_unit"/>
+                                                </group>
+                                                <group>
+                                                    <field name="taxes_id" widget="many2many_tags"
+                                                           domain="[('type_tax_use', '=', 'purchase')]"/>
+                                                    <field name="date_planned" widget="date"/>
+                                                    <field name="account_analytic_id" colspan="2"
+                                                           groups="purchase.group_analytic_accounting"/>
+                                                    <field name="company_id" groups="base.group_multi_company"
+                                                           options="{'no_create': True}"/>
+                                                </group>
+                                            </group>
+                                            <notebook>
+                                                <page string="Notes">
+                                                    <field name="name"/>
+                                                </page>
+                                                <page string="Invoices and Incoming Shipments">
+                                                    <field name="invoice_lines"/>
+                                                    <field name="move_ids"/>
+                                                </page>
+                                            </notebook>
+                                        </sheet>
+                                    </form>
+                                </field>
+                                <group class="oe_subtotal_footer oe_right">
+                                    <field name="amount_untaxed" widget="monetary"
+                                           options="{'currency_field': 'currency_id'}"/>
+                                    <field name="amount_tax" widget="monetary"
+                                           options="{'currency_field': 'currency_id'}"/>
+                                    <div class="oe_subtotal_footer_separator oe_inline">
+                                        <label for="amount_total"/>
+                                    </div>
+                                    <field name="amount_total" nolabel="1" class="oe_subtotal_footer_separator"
+                                           widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                                </group>
+                                <field name="notes" class="oe_inline"
+                                       placeholder="An administrator can set up default Terms and conditions in your Company settings."/>
+                                <div class="oe_clear"/>
+                            </page>
+                            <page string="Deliveries &amp; Invoices">
+                                <group>
+                                    <group>
+                                        <label for="date_planned"/>
+                                        <div>
+                                            <field name="date_planned" required="1"
+                                                   attrs="{'readonly': [('state', 'not in', ('draft', 'sent'))]}"/>
+                                            <button name="action_set_date_planned" type="object"
+                                                    states="draft,sent"
+                                                    string="Set date to all order lines"
+                                                    help="This changes the scheduled date of all order lines to the given date"
+                                                    class="fa fa-calendar o_icon_button oe_edit_only"/>
+                                        </div>
+                                        <field name="picking_type_id" domain="[('code','=','incoming')]"
+                                               options="{'no_create': True}"
+                                               groups="stock.group_stock_multi_locations"/>
+                                        <field name="dest_address_id" groups="stock.group_stock_multi_locations"
+                                               attrs="{'invisible': [('default_location_dest_id_usage', '!=', 'customer')], 'required': [('default_location_dest_id_usage', '=', 'customer')]}"/>
+                                        <field name="default_location_dest_id_usage" invisible="1"/>
+                                        <field name="incoterm_id"/>
+                                    </group>
+                                    <group>
+                                        <field name="invoice_status"/>
+                                        <field name="payment_term_id" options="{'no_open': True, 'no_create': True}"
+                                               attrs="{'readonly': ['|', ('invoice_status','=', 'invoiced'), ('state', '=', 'done')]}"/>
+                                        <field name="fiscal_position_id"
+                                               attrs="{'readonly': ['|', ('invoice_status','=', 'invoiced'), ('state', '=', 'done')]}"/>
+                                        <field name="date_approve" groups="base.group_no_one"/>
+                                    </group>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="purchase_order_liquidacion_tree" model="ir.ui.view">
+            <field name="name">purchase.order.liquidacion.tree</field>
+            <field name="model">account.invoice</field>
+            <field name="arch" type="xml">
+                <tree string="Liquidaciones">
+                </tree>
+            </field>
+        </record>
+
+        <record id="purchase_order_liquidacion_tree2" model="ir.actions.act_window">
+            <field name="name">Liquidacion de compras</field>
+            <field name="res_model">purchase.order</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,kanban,form,calendar,pivot,graph</field>
+            <field eval="False" name="view_id"/>
+            <field name="domain">[('is_liquidacion','=',True )]</field>
+            <field name="context">{'default_is_liquidacion': True,'default_type': 'in_invoice', 'type': 'in_invoice',
+                'journal_type': 'purchase'}
+            </field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Click para registrar la Liquidación de Compra
+                </p>
+                <p>
+                    Puede crear un recibo de Liquidación de Compra...
+                </p>
+            </field>
+        </record>
+
+        <record id="purchase_order_tree_action" model="ir.actions.act_window.view">
+            <field eval="1" name="sequence"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="purchase_order_liquidacion_tree"/>
+            <field name="act_window_id" ref="purchase_order_liquidacion_tree2"/>
+        </record>
+
+        <record id="purchase_order_form_action" model="ir.actions.act_window.view">
+            <field eval="2" name="sequence"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="purchase_order_liquidacion_form"/>
+            <field name="act_window_id" ref="purchase_order_liquidacion_tree2"/>
+        </record>
+
+        <menuitem
+                id="purchase_liquidaciones"
+                name="Liquidaciones"
+                action="purchase_order_liquidacion_tree2"
+                parent="biosis_cont.menu_otros"/>
+
+
+        <!--<record id="account.action_invoice_tree2" model="ir.actions.act_window">-->
+            <!--<field name="domain">['&amp;',('type','in',('in_invoice', 'in_refund')),-->
+                <!--('is_recibo','!=',True),('is_liquidacion','!=',True)]-->
+            <!--</field>-->
+        <!--</record>-->
+
+    </data>
+</odoo>

@@ -1,0 +1,2 @@
+"id","name","code","iso_code","direction","grouping","decimal_point","thousands_sep","date_format","time_format","translatable"
+"base.lang_es_PE","Spanish (PE) / Español (PE)","es_PE","es_PE","Left-to-Right","[3,0]",".",,"%d/%m/%Y","%H:%M:%S","True"

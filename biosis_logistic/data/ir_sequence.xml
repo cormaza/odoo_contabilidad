@@ -1,0 +1,27 @@
+<odoo>
+    <data noupdate="1">
+        <record id="ole_sequence" model="ir.sequence">
+            <field name="name">SBC referencia de ventas - exportación</field>
+            <field name="code">sbc.referencia.exportacion</field>
+            <field name="active" eval="True" />
+            <field name="implementation">standard</field>
+            <field name="prefix">OLE-%(year)s/</field>
+            <field name="number_increment">1</field>
+            <field name="padding">6</field>
+            <field name="number_next_actual">1</field>
+            <field name="ciclo">anio</field>
+        </record>
+
+        <record id="oli_sequence" model="ir.sequence">
+            <field name="name">SBC referencia de ventas - importación</field>
+            <field name="code">sbc.referencia.importacion</field>
+            <field name="active" eval="True" />
+            <field name="implementation">standard</field>
+            <field name="prefix">OLI-%(year)s/</field>
+            <field name="number_increment">1</field>
+            <field name="padding">6</field>
+            <field name="number_next_actual">1</field>
+            <field name="ciclo">anio</field>
+        </record>
+    </data>
+</odoo>

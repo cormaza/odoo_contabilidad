@@ -78,11 +78,15 @@ class BiosisContReportPLE(models.AbstractModel):
         if tipo_r == TIPO_REPORTE_SUNAT['010100']:
             nombre_ple = u'LE' + company_name + year + ('0' + mes if len(mes) == 1 else mes) + u'00' + u'010100' + u'00' + u'1111'
             nombre_ple_v = False
-            return nombre_ple, nombre_ple_v, self.env['account.ple.detalle.movimiento.efectivo'].get_ple(company_id, fecha_reporte, fecha_inicio,fecha_fin)
+            return nombre_ple, nombre_ple_v, self.env['account.ple.1.1'].get_ple(company_id, fecha_reporte, fecha_inicio,fecha_fin)
         elif tipo_r == TIPO_REPORTE_SUNAT['010200']:
             nombre_ple = u'LE' + company_name + year + ('0' + mes if len(mes) == 1 else mes) + u'00' + u'010200' + u'00' + u'1111'
             nombre_ple_v = False
-            return nombre_ple, nombre_ple_v, self.env['account.ple.detalle.movimiento.corriente'].get_ple(company_id, fecha_reporte, fecha_inicio,fecha_fin)
+            return nombre_ple, nombre_ple_v, self.env['account.ple.1.2'].get_ple(company_id, fecha_reporte, fecha_inicio,fecha_fin)
+        elif tipo_r == TIPO_REPORTE_SUNAT['030100']:
+            nombre_ple = u'LE' + company_name + year + u'12' + u'31' + u'030100' + u'01' + u'1111'
+            nombre_ple_v = False
+            return nombre_ple, nombre_ple_v, self.env['account.ple.3.1'].get_ple(company_id, fecha_reporte, fecha_inicio,fecha_fin)
         elif tipo_r == TIPO_REPORTE_SUNAT['030200']:
             nombre_ple = u'LE' + company_name + year + u'12' + u'31' + u'030200' + u'01' + u'1111'
             nombre_ple_v = False
@@ -117,21 +121,21 @@ class BiosisContReportPLE(models.AbstractModel):
             return nombre_ple, nombre_ple_v, self.env['account.ple.3.9'].get_ple(company_id, fecha_reporte, fecha_inicio, fecha_fin)
         elif tipo_r == TIPO_REPORTE_SUNAT['080100']:
             nombre_ple = u'LE' + company_name + year + ('0'+mes if len(mes)==1 else mes) + u'00' + u'080100' + u'00' + u'1111'
-            nombre_ple_v = u'LE' + company_name + year + ('0'+mes if len(mes)==1 else mes) + u'00' + u'080200' + u'00' + u'1011'
-            #return nombre_ple, nombre_ple_v, self.get_ple_compras(fecha_reporte,fecha_inicio,fecha_fin)
-            return nombre_ple, nombre_ple_v, self.env['account.ple.compras'].get_ple_compras(company_id, fecha_reporte, fecha_inicio, fecha_fin)
+            nombre_ple_v = False
+            return nombre_ple, nombre_ple_v, self.env['account.ple.8.1'].get_ple(company_id, fecha_reporte, fecha_inicio, fecha_fin)
         elif tipo_r == TIPO_REPORTE_SUNAT['080200']:
             nombre_ple = u'LE' + company_name + year + ('0'+mes if len(mes)==1 else mes) + u'00' + u'080200' + u'00' + u'1111'
             nombre_ple_v = False
             return nombre_ple, nombre_ple_v, self.env['account.ple.8.2'].get_ple(company_id, fecha_reporte, fecha_inicio, fecha_fin)
+        elif tipo_r == TIPO_REPORTE_SUNAT['080300']:
+            nombre_ple = u'LE' + company_name + year + ('0'+mes if len(mes)==1 else mes) + u'00' + u'080300' + u'00' + u'1111'
+            nombre_ple_v = False
+            return nombre_ple, nombre_ple_v, self.env['account.ple.8.3'].get_ple(company_id, fecha_reporte, fecha_inicio, fecha_fin)
         elif tipo_r == TIPO_REPORTE_SUNAT['140100']:
             nombre_ple = u'LE' + company_name + year + ('0'+mes if len(mes)==1 else mes) + u'00' + u'140100' + u'00' + u'1111'
             nombre_ple_v = False
-            return nombre_ple, nombre_ple_v, self.env['account.ple.ventas'].get_ple_ventas(company_id, fecha_reporte,fecha_inicio,fecha_fin)
-        elif tipo_r == TIPO_REPORTE_SUNAT['030100']:
-            nombre_ple = u'LE' + company_name + year + u'12' + u'31' + u'030100' + u'01' + u'1111'
-            nombre_ple_v = False
-            return nombre_ple, nombre_ple_v, self.env['account.ple.estado.situacion.finaciera'].get_ple(company_id, fecha_reporte, fecha_inicio,fecha_fin)
+            return nombre_ple, nombre_ple_v, self.env['account.ple.14.1'].get_ple(company_id, fecha_reporte,fecha_inicio,fecha_fin)
+
         elif tipo_r == TIPO_REPORTE_SUNAT['031100']:
             nombre_ple = u'LE' + company_name + year + u'12' + u'31' + u'031100' + u'01' + u'1111'
             nombre_ple_v = False
@@ -145,19 +149,18 @@ class BiosisContReportPLE(models.AbstractModel):
             nombre_ple_v = False
             return nombre_ple, nombre_ple_v, self.env['account.ple.3.13'].get_ple(company_id, fecha_reporte, fecha_inicio, fecha_fin)
         elif tipo_r == TIPO_REPORTE_SUNAT['031700']:
-            #nombre_ple = u'LE' + company_name + year + ('0'+mes if len(mes)==1 else mes) + u'00' + u'031700' + u'01' + u'1111'
             nombre_ple = u'LE' + company_name + year + u'12' + u'31' + u'031700' + u'01' + u'1111'
             nombre_ple_v = False
-            return nombre_ple, nombre_ple_v, self.env['account.ple.balancecomprobacion'].get_ple_bc(company_id, fecha_reporte, fecha_inicio, fecha_fin)
+            return nombre_ple, nombre_ple_v, self.env['account.ple.3.17'].get_ple(company_id, fecha_reporte, fecha_inicio, fecha_fin)
         elif tipo_r == TIPO_REPORTE_SUNAT['050100']:
             nombre_ple = u'LE' + company_name + year + ('0'+mes if len(mes)==1 else mes) + u'00' + u'050100' + u'00' + u'1111'
             nombre_ple_v = False
-            return nombre_ple, nombre_ple_v, self.env['account.ple.diario'].get_ple_diario(company_id, fecha_reporte, fecha_inicio, fecha_fin)
+            return nombre_ple, nombre_ple_v, self.env['account.ple.5.1'].get_ple(company_id, fecha_reporte, fecha_inicio, fecha_fin)
         elif tipo_r == TIPO_REPORTE_SUNAT['050300']:
             nombre_ple = u'LE' + company_name + year + ('0' + mes if len(mes) == 1 else mes) + u'00' + u'050300' + u'00' + u'1111'
             nombre_ple_v = False
-            return nombre_ple, nombre_ple_v, self.env['account.ple.diario.detalle'].get_ple_diario_detalle(fecha_reporte, fecha_inicio, fecha_fin)
+            return nombre_ple, nombre_ple_v, self.env['account.ple.5.3'].get_ple(company_id, fecha_reporte, fecha_inicio, fecha_fin)
         elif tipo_r == TIPO_REPORTE_SUNAT['060100']:
-            nombre_ple = u'LE' + company_name + year + ('0'+mes if len(mes)==1 else mes) + u'00' + u'060100' + u'00' + u'1111'
+            nombre_ple = u'LE' + company_name + year + ('0'+mes if len(mes) == 1 else mes) + u'00' + u'060100' + u'00' + u'1111'
             nombre_ple_v = False
-            return nombre_ple, nombre_ple_v, self.env['account.ple.mayor'].get_ple_mayor(company_id, fecha_reporte, fecha_inicio, fecha_fin)
+            return nombre_ple, nombre_ple_v, self.env['account.ple.6.1'].get_ple(company_id, fecha_reporte, fecha_inicio, fecha_fin)

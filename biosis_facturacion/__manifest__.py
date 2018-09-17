@@ -24,7 +24,7 @@
 
     # any module necessary for this one to work correctly
     'depends': ['base', 'account', 'contacts', 'mail', 'odoope_ruc_validation', 'odoope_einvoice_base',
-                'odoope_toponyms', 'report', 'product', 'sale', 'point_of_sale'],
+                'odoope_toponyms', 'report', 'product', 'sale', 'point_of_sale', 'biosis_cont'],
 
     # always loaded
     'data': [
@@ -44,6 +44,10 @@
         'data/product_uom.xml',
         'data/einvoice_series.xml',
         'views/point_of_sale.xml',
+        #Vistas para poblete
+        #'views/invoice_boletas_moras_import.xml',
+        #'views/invoice_boletas_moras.xml',
+
         # 'wizard/contingencia.xml',
         # 'wizard/einvoice_import.xml'
     ],

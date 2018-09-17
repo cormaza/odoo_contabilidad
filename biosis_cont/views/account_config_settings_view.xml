@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
-        <record id="biosis_cont_account_config_settings_form"  model="ir.ui.view">
+        <record id="biosis_cont_account_config_settings_form" model="ir.ui.view">
             <field name="inherit_id" ref="account.view_account_config_settings"/>
             <field name="model">account.config.settings</field>
             <field name="arch" type="xml">
@@ -14,14 +14,22 @@
                         </div>
                     </div>
                 </xpath>
+                <xpath expr="//group[@name='bank_cash']/label[last()]" position="before">
+                    <label for="id" string="Detraccion"/>
+                    <div>
+                        <div name="detraccion">
+                            <field name="detraccion" class="oe_inline" widget="radio"
+                                   domain="[('company_id', '=', company_id)]"/>
+                            <!--<label for="detraccion"/>-->
+                        </div>
+                        <div name="diario_detraccion" attrs="{'invisible':[('detraccion','=','DM')]}">
+                            <label for="diario_detraccion"/>
+                            <field name="diario_detraccion"
+                                   class="oe_inline"/>
+                        </div>
+                    </div>
+                </xpath>
 
-                <!--<xpath expr="//group[@name='analytic_account_purchase']" position="before">-->
-                    <!--<label for="id" string="Liquidacion"/>-->
-                    <!--<div>-->
-                        <!--<field name="liquidacion" class="oe_inline"/>-->
-                        <!--<label for="liquidacion"/>-->
-                    <!--</div>-->
-                <!--</xpath>-->
             </field>
         </record>
     </data>

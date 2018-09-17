@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_anexo4_detraccion_tree" model="ir.ui.view">
+        <field name="name">account.anexo4_detraccion.tree</field>
+        <field name="model">bienes.servicios.detraccion</field>
+        <field name="arch" type="xml">
+            <tree string="Bienes y Servicios sujetos a detracción">
+                <field name="codigo" />
+                <field name="descripcion"/>
+                <field name="monto_minimo"/>
+                <field name="porcentaje" />
+                <field name="vigente" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_anexo4_detraccion_form" model="ir.ui.view">
+        <field name="name">account.anexo4_detraccion.form</field>
+        <field name="model">bienes.servicios.detraccion</field>
+        <field name="arch" type="xml">
+            <form string="Bienes y Servicios sujetos a detracción">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="descripcion"/>
+                        </group>
+                        <group>
+                            <field name="codigo"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Información">
+                            <group>
+                                <group>
+                                    <field name="monto_minimo"/>
+                                    <field name="porcentaje"/>
+                                    <field name="vigente"/>
+                                </group>
+                                <group>
+                                    <field name="comentario" />
+                                </group>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+    <record id="action_anexo4_detraccion_form" model="ir.actions.act_window">
+        <field name="name">Bienes y Servicios sujetos a detracción</field>
+        <field name="res_model">bienes.servicios.detraccion</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain" eval="False"/>
+        <field name="view_id" ref="view_anexo4_detraccion_tree"/>
+    </record>
+    <menuitem action="action_anexo4_detraccion_form" id="menu_action_anexo4_detraccion_form"
+              parent="account.account_account_menu" sequence="3"/>
+
+</odoo>

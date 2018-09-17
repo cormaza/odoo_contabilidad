@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="sequence_move_month" model="ir.sequence">
+            <field name="name">Código Único de Operación Mensual</field>
+            <field name="code">cuo.month</field>
+            <field name="prefix">%(range_year)s-%(month)s-</field>
+            <field eval="2" name="padding"/>
+            <field eval="1" name="number_next"/>
+            <field eval="1" name="number_increment"/>
+            <field eval="False" name="company_id"/>
+        </record>
+     </data>
+</odoo>

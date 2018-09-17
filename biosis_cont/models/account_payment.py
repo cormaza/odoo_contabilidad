@@ -40,6 +40,11 @@ class AccountPayment(models.Model):
 
     residual_detraccion = fields.Monetary(related='invoice_ids.residual_detraccion_soles',
                                           string='Residual detraccion')
+    pago_detraccion = fields.Boolean(string=u'Pago detracción', readonly=True)
+
+    control_detraccion = fields.Float(string='control det.')
+
+
     #payment_type = fields.Selection(selection_add=[('impuestos', 'Entrada de Impuestos')])
 
     #amount_detraccion = fields.Monetary(string='Cantidad a pagar Detracción')
@@ -491,40 +496,47 @@ class AccountPayment(models.Model):
             rec['partner_id'] = invoice['partner_id'][0]
             rec['amount'] = invoice['residual']
             rec['residual_detraccion'] = invoice['residual_detraccion_soles']
-            #rec['amount'] = invoice['residual_factura']
-            #rec['amount_detraccion'] = invoice['monto_detraccion']
+            if invoice['pagina_detraccion'] == True:
+                if invoice['residual_detraccion_soles'] == 0:
+                    rec['pago_detraccion'] = True
+                    rec['contro_detraccion'] = 0
+
+        config_det = self.env['account.config.settings'].search(
+            [('company_id', '=', self.company_id.id)], order='id desc', limit=1)
+        if config_det.detraccion == 'DO':  # Una sola cuenta detraccion
+            rec['journal_id'] = config_det.diario_detraccion
+
 
         factura = self.env['account.invoice'].search([('id', '=',id_factura)], limit=1)
         bandera = 0
         if factura.invoice_line_ids:
             for line in factura.invoice_line_ids:
-                if line.product_id.cuenta_detraccion_venta.id != False or line.product_id.cuenta_detraccion_compra.id != False:
+                if line.product_id.detraccion == True:
                     bandera = 1
 
 
         if bandera == 1:
             rec['aplica_detraccion'] = True
 
+
         return rec
 
-    # @api.one
-    # @api.depends('invoice_ids', 'amount', 'payment_date', 'currency_id')
-    # def _compute_payment_difference(self):
-    #     if len(self.invoice_ids) == 0:
-    #         return
-    #     if self.invoice_ids[0].type in ['in_invoice', 'out_refund']:
-    #         valor = self._compute_total_invoices_amount()
-    #         if valor >= self.amount:
-    #             self.payment_difference = abs(self.amount - valor)
-    #         else:
-    #             warning = {
-    #                 'title': _('Alerta!'),
-    #                 'message': _('El monto ingresado no debe ser mayor al monto por pagar!'),
-    #             }
-    #             return {'warning': warning}
-    #     else:
-    #         valor = self._compute_total_invoices_amount()
-    #         self.payment_difference = valor - self.amount
+    @api.one
+    @api.depends('invoice_ids', 'amount', 'payment_date', 'currency_id')
+    def _compute_payment_difference(self):
+        if len(self.invoice_ids) == 0:
+            return
+        if self.invoice_ids[0].type in ['in_invoice', 'out_refund']:
+            self.payment_difference = self.amount - self._compute_total_invoices_amount()
+        else:
+            self.payment_difference = self._compute_total_invoices_amount() - self.amount
+
+        if self.pago_detraccion==True:
+            value = self.invoice_ids.monto_detraccion_soles
+            self.control_detraccion = value - self.amount
+            #if value!=0
+
+
 
     # @api.one
     # @api.depends('invoice_ids', 'amount_detraccion', 'payment_date', 'currency_id')
@@ -676,30 +688,32 @@ class AccountPayment(models.Model):
         if self.payment_type == 'transfer':
             name = _('Transfer to %s') % self.destination_journal_id.name
 
-        if self.invoice_ids.residual_detraccion_soles > 0 :
-            self.invoice_ids.residual_detraccion_soles = self.invoice_id.residual_detraccion_soles - amount
-            if self.invoice_ids.type == 'in_invoice':
-                account = self.invoice_ids.invoice_line_ids.product_id.cuenta_detraccion_compra.id
-            else:
-                account = self.invoice_ids.invoice_line_ids.product_id.cuenta_detraccion_venta.id
+        monto = self.invoice_ids.monto_detraccion_soles - amount
 
-            vals = {
-                'name': name,
-                'account_id': account,
-                'payment_id': self.id,
-                'journal_id': self.journal_id.id,
-                'currency_id': self.currency_id != self.company_id.currency_id and self.currency_id.id or False,
-            }
-        else:
-            vals = {
-                'name': name,
-                'account_id': self.payment_type in ('outbound',
-                                                    'transfer') and self.journal_id.default_debit_account_id.id or self.journal_id.default_credit_account_id.id,
-            # segundo asiento contable
-                'payment_id': self.id,
-                'journal_id': self.journal_id.id,
-                'currency_id': self.currency_id != self.company_id.currency_id and self.currency_id.id or False,
-            }
+        # if self.invoice_ids.monto_detraccion_soles > 0:
+        #     self.invoice_ids.residual_detraccion_soles = self.invoice_id.residual_detraccion_soles - amount
+        #     if self.invoice_ids.type == 'in_invoice':
+        #         account = self.invoice_ids.invoice_line_ids.product_id.cuenta_detraccion_compra.id
+        #     else:
+        #         account = self.invoice_ids.invoice_line_ids.product_id.cuenta_detraccion_venta.id
+        #
+        #     vals = {
+        #         'name': name,
+        #         'account_id': account,
+        #         'payment_id': self.id,
+        #         'journal_id': self.journal_id.id,
+        #         'currency_id': self.currency_id != self.company_id.currency_id and self.currency_id.id or False,
+        #     }
+        # else:
+        vals = {
+            'name': name,
+            'account_id': self.payment_type in ('outbound',
+                                                'transfer') and self.journal_id.default_debit_account_id.id or self.journal_id.default_credit_account_id.id,
+        # segundo asiento contable
+            'payment_id': self.id,
+            'journal_id': self.journal_id.id,
+            'currency_id': self.currency_id != self.company_id.currency_id and self.currency_id.id or False,
+        }
 
         # If the journal has a currency specified, the journal item need to be expressed in this currency
         if self.journal_id.currency_id and self.currency_id != self.journal_id.currency_id:

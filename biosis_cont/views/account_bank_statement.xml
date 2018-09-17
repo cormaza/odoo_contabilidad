@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!--BANCO Y CAJA CHICA-->
+        <menuitem id="menu_banco_caja" name="Caja y Bancos"
+                  parent="account.menu_finance" />
+        <menuitem id="menu_action_bank_statement_tree_it" name="Extracto Bancario"
+                  parent="menu_banco_caja"
+                  action="account.action_bank_statement_tree"/>
+        <menuitem id="menu_action_view_bank_statement_tree_it" name="Caja Chica"
+                  parent="menu_banco_caja"
+                  action="account.action_view_bank_statement_tree"/>
+    </data>
+</odoo>

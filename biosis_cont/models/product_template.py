@@ -20,10 +20,23 @@ class ProductTemplate(models.Model):
 
     #Detracción
     detraccion = fields.Boolean(string=u'Detracción')
-    monto_minimo_detraccion = fields.Float(string=u'Monto mínimo para Aplicar Detracción S/.', digits=(5, 5),default=0.0)
-    porcentaje_detraccion = fields.Float(string=u'Porcentaje detracción', digits=(3, 4), default=0.0)
+    bien_servicio = fields.Many2one('bienes.servicios.detraccion', string=u'Bien/Servicio')
+    monto_minimo_detraccion = fields.Float(related='bien_servicio.monto_minimo', readonly=True,string=u'Aplicar > a', digits=(5, 2), default=0.0)
+    porcentaje_detraccion = fields.Float(related='bien_servicio.porcentaje',readonly=True,string=u'Porcentaje ', digits=(3, 2), default=0.0)
     cuenta_detraccion_compra = fields.Many2one('account.account', string=u'Cuenta Detracción Compra')
     cuenta_detraccion_venta = fields.Many2one('account.account', string=u'Cuenta Detracción Venta')
+
+    @api.multi
+    @api.onchange('detraccion')
+    def onchange_detraccion(self):
+        self.bien_servicio = []
+        self.monto_minimo_detraccion = 0
+        self.porcentaje_detraccion = 0
+        self.cuenta_detraccion_compra = []
+        self.cuenta_detraccion_venta = []
+
+
+
 
     # centro_costos = fields.Many2one('account.centro.costos', string=u'Centro de Costos')
     #Campos auxiliares

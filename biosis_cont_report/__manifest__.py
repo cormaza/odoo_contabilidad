@@ -31,12 +31,11 @@
         #'views/account_move_view.xml',
         'views/templates.xml',
         'views/biosis_cont_report.xml',
+        'views/anexo3_ple.xml',
         #'wizard/account_b_c_report_view.xml',
-        #'wizard/account_ple_report_view.xml',
         #'wizard/account_cuentas_report_view.xml',
         #'wizard/account_cuenta_c_p_report_view.xml',
         #'wizard/account_personalizado_report_view.xml',
-        #'wizard/report_le_view.xml',
         'wizard/account_sunat_report_view.xml',
     ],
     # only loaded in demonstration mode

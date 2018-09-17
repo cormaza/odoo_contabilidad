@@ -8,6 +8,7 @@ class AccountMove(models.Model):
     _inherit = 'account.move'
 
     cuo = fields.Char(String=u"CUO")
+    cuo_month = fields.Char(String=u"CUO")
     ple_generado = fields.Boolean(string=u'Ple Generado', default=False)
     #Agreagado para manejar los tipos de asiento
     type_move = fields.Selection(selection=[('A','apertura'),('M','Movimiento'),('C','Cierre')],
@@ -22,11 +23,17 @@ class AccountMove(models.Model):
                 move.write({'cuo': secuencia.next_by_id()})
 
         for move in self:
+            if move.journal_id.type == 'apertura':
+                move.type_move = 'A'
+            elif move.journal_id.type == 'cierre':
+                move.type_move = 'C'
+
             i=1
             for line in move.line_ids.sorted(key=lambda line: line.id):
                 line.write({'numero_asiento':move.type_move+str(i)})
                 i+= 1
         return self
+
 
 
 

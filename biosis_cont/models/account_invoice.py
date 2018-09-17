@@ -47,8 +47,8 @@ class AccountInvoice(models.Model):
     # Campo solo usado cuando se guarden notas de credito/debito
     guardado = fields.Boolean(string=u'Guardado', store=True, default=False)
 
-    # Campos para agregar la constacia de la detraccion si es que el producto estuviese afecta a la misma
-    pagina_detraccion = fields.Boolean(string='Constancia Depósito Detraccioón', default=False,
+    # CAMPOS PARA DETRACCIÓN
+    pagina_detraccion = fields.Boolean(string='Constancia Depósito Detraccioón', default=False, store=True,
                                        states={'draft': [('readonly', False)]})
     numero_detraccion = fields.Char(string=u'Número', index=True,
                                     help='Ingrese el numero de referencia del comprobante de detraccion')
@@ -57,14 +57,18 @@ class AccountInvoice(models.Model):
     monto_detraccion = fields.Monetary(string='Total Detraccion',
         store=True, readonly=True, compute='_compute_amount')
     monto_detraccion_soles = fields.Monetary(string='(Total Detraccion soles)',
-                                       store=True, readonly=True, compute='_compute_amount')
+                                       store=True, compute='_compute_amount')
     monto_factura = fields.Monetary(string='Total factura',
                                     store=True, readonly=True, compute='_compute_amount')
-    residual_detraccion_soles = fields.Monetary(string="Cantidad a Pagar det.", readonly=True,
+    residual_detraccion_soles = fields.Monetary(string="Cantidad a Pagar det.", readonly=True,store=True,
                                                 compute='_compute_residual')
-    #Moneda por defecto en soles para la detraccion
-    currency_id_soles = fields.Many2one('res.currency',string="Moneda soles", domain=[('id', '=', 163)], default=163)
+    cuenta_detraccion = fields.Char(string=u'Cuenta Det.')
 
+    #Moneda por defecto en soles para la detraccion compras/ventas
+    currency_id_soles = fields.Many2one('res.currency',string="Moneda soles", domain=[('id', '=', 163)], default=163)
+    moneda = fields.Char(string='Moneda')
+
+    state = fields.Selection(selection_add=[('anulada','Anulada')])
 
 
     # monto_factura_soles = fields.Monetary(string='Total factura soles',
@@ -96,10 +100,10 @@ class AccountInvoice(models.Model):
     monto_operaciones_gratuitas = fields.Monetary(string=u'Monto operaciones Gratuitas')
 
     @api.multi
-    @api.onchange('tipo_comprobante_id')
+    @api.onchange('tipo_comprobante_id','company_id')
     def onchange_tipo_comprobante_id(self):
         if self.tipo_comprobante_id.id == 3:
-            diario = self.env['account.journal'].search([('code', '=', 'RXH')], limit=1)
+            diario = self.env['account.journal'].search([('code', '=', 'RXH'),('company_id','=',self.company_id.id)], limit=1)
             self.journal_id = {}
             self.journal_id = diario
 
@@ -260,68 +264,68 @@ class AccountInvoice(models.Model):
         return res
 
 
-    @api.multi
-    @api.depends('invoice_line_ids.price_unit', 'tax_line_ids.amount', 'currency_id', 'company_id', 'date_invoice',
-                 'type','invoice_line_ids.quantity')
-    def _compute_monto_factura(self):
-        val_detraccion = 0.0
-        val_factura = 0.0
-        impuesto=0.0
-        total = 0.0
-        base = 0.0
-        #round_curr = self.currency_id.round
-        for invoice in self:
-            if invoice.anulada == False:
-                if invoice.amount_total_company_signed >= invoice.invoice_line_ids.product_id.monto_minimo_detraccion:
-                    for line in invoice.invoice_line_ids:
-                        if line.product_id.porcentaje_detraccion > 0:
-                            base = round(line.price_unit * line.quantity, 2)
-                            for tax in line.invoice_line_tax_ids:
-                                if len(tax.ids) > 0:
-                                    if tax.price_include == True:
-                                        impuesto = 0.0
-                                    else:  # Siempre y cuando el impuesto no este incluido en el precio
-                                        impuesto += base * (tax.amount / 100)
-
-                            total += (base + impuesto)
-                            val_detraccion = total * (line.product_id.porcentaje_detraccion / 100)
-                            val_factura = total - val_detraccion
-
-                        else:
-                            if invoice.tipo_comprobante_id.id == 3:
-                                val_factura = invoice.amount_total
-                            else:
-                                base += round(line.price_unit * line.quantity, 2)
-                                for tax in line.invoice_line_tax_ids:
-                                    if len(tax.ids) > 0:
-                                        if tax.price_include == True:
-                                            impuesto = 0.0
-                                        else:  # Siempre y cuando el impuesto no este incluido en el precio
-                                            impuesto += base * (tax.amount / 100)
-
-                                val_factura = (base + impuesto)
-                                impuesto=0.0
-                else:
-                    for line in self.invoice_line_ids:
-                        base += round(line.price_unit * line.quantity, 2)
-                        for tax in line.invoice_line_tax_ids:
-                            if len(tax.ids) > 0:
-                                if tax.price_include == True:
-                                    impuesto = 0.0
-                                else:  # Siempre y cuando el impuesto no este incluido en el precio
-                                    impuesto += base * (tax.amount / 100)
-
-                        val_factura = (base + impuesto)
-                        impuesto = 0.0
-
-                invoice.monto_detraccion = val_detraccion
-                invoice.monto_factura = val_factura
-                if self.currency_id and self.company_id and self.currency_id != self.company_id.currency_id:
-                    currency_id = self.currency_id.with_context(date=self.date_invoice)
-                    val_detraccion = currency_id.compute(val_detraccion, self.company_id.currency_id)
-                    val_factura = currency_id.compute(val_factura, self.company_id.currency_id)
-                invoice.monto_detraccion_soles = val_detraccion
-                invoice.monto_factura_soles = val_factura
+    # @api.multi
+    # @api.depends('invoice_line_ids.price_unit', 'tax_line_ids.amount', 'currency_id', 'company_id', 'date_invoice',
+    #              'type','invoice_line_ids.quantity')
+    # def _compute_monto_factura(self):
+    #     val_detraccion = 0.0
+    #     val_factura = 0.0
+    #     impuesto=0.0
+    #     total = 0.0
+    #     base = 0.0
+    #     #round_curr = self.currency_id.round
+    #     for invoice in self:
+    #         if invoice.anulada == False:
+    #             if invoice.amount_total_company_signed >= invoice.invoice_line_ids.product_id.monto_minimo_detraccion:
+    #                 for line in invoice.invoice_line_ids:
+    #                     if line.product_id.porcentaje_detraccion > 0:
+    #                         base = round(line.price_unit * line.quantity, 2)
+    #                         for tax in line.invoice_line_tax_ids:
+    #                             if len(tax.ids) > 0:
+    #                                 if tax.price_include == True:
+    #                                     impuesto = 0.0
+    #                                 else:  # Siempre y cuando el impuesto no este incluido en el precio
+    #                                     impuesto += base * (tax.amount / 100)
+    #
+    #                         total += (base + impuesto)
+    #                         val_detraccion = total * (line.product_id.porcentaje_detraccion / 100)
+    #                         val_factura = total - val_detraccion
+    #
+    #                     else:
+    #                         if invoice.tipo_comprobante_id.id == 3:
+    #                             val_factura = invoice.amount_total
+    #                         else:
+    #                             base += round(line.price_unit * line.quantity, 2)
+    #                             for tax in line.invoice_line_tax_ids:
+    #                                 if len(tax.ids) > 0:
+    #                                     if tax.price_include == True:
+    #                                         impuesto = 0.0
+    #                                     else:  # Siempre y cuando el impuesto no este incluido en el precio
+    #                                         impuesto += base * (tax.amount / 100)
+    #
+    #                             val_factura = (base + impuesto)
+    #                             impuesto=0.0
+    #             else:
+    #                 for line in self.invoice_line_ids:
+    #                     base += round(line.price_unit * line.quantity, 2)
+    #                     for tax in line.invoice_line_tax_ids:
+    #                         if len(tax.ids) > 0:
+    #                             if tax.price_include == True:
+    #                                 impuesto = 0.0
+    #                             else:  # Siempre y cuando el impuesto no este incluido en el precio
+    #                                 impuesto += base * (tax.amount / 100)
+    #
+    #                     val_factura = (base + impuesto)
+    #                     impuesto = 0.0
+    #
+    #             invoice.monto_detraccion = val_detraccion
+    #             invoice.monto_factura = val_factura
+    #             if self.currency_id and self.company_id and self.currency_id != self.company_id.currency_id:
+    #                 currency_id = self.currency_id.with_context(date=self.date_invoice)
+    #                 val_detraccion = currency_id.compute(val_detraccion, self.company_id.currency_id)
+    #                 val_factura = currency_id.compute(val_factura, self.company_id.currency_id)
+    #             invoice.monto_detraccion_soles = val_detraccion
+    #             invoice.monto_factura_soles = val_factura
 
     # @api.multi
     # @api.onchange('impuesto_renta')
@@ -486,16 +490,28 @@ class AccountInvoice(models.Model):
         tax_grouped = {}
         total_impuesto = 0
         for line in self.invoice_line_ids:
+            # price_unit = line.price_unit * (1 - (line.discount or 0.0) / 100.0)
+            # taxes = line.invoice_line_tax_ids.compute_all(price_unit, self.currency_id, line.quantity, line.product_id,
+            #                                               self.partner_id)['taxes']
+            # igv_compras = self.env['account.tax'].search([('id', '=', '2')], limit=1)
+            # if len(taxes) == 2:
+            #     taxes[0]['amount'] = (taxes[0]['base'] + (taxes[1]['base'] * (igv_compras.amount / 100))) * (
+            #     self.invoice_line_ids.product_id.tipo_percepcion.amount / 100)
+            #     taxes[1]['amount'] = taxes[1]['base'] * (igv_compras.amount / 100)
+            #     monto_percepcion = taxes[0]['amount']
+            #
+            # for tax in taxes:
+            #     val = self._prepare_tax_line_vals(line, tax)
+            #     key = self.env['account.tax'].browse(tax['id']).get_grouping_key(val)
+            #
+            #     if key not in tax_grouped:
+            #         tax_grouped[key] = val
+            #     else:
+            #         tax_grouped[key]['amount'] += round(val['amount'], 2)
+            #         tax_grouped[key]['base'] += round(val['base'], 2)
             price_unit = line.price_unit * (1 - (line.discount or 0.0) / 100.0)
             taxes = line.invoice_line_tax_ids.compute_all(price_unit, self.currency_id, line.quantity, line.product_id,
                                                           self.partner_id)['taxes']
-            igv_compras = self.env['account.tax'].search([('id', '=', '2')], limit=1)
-            if len(taxes) == 2:
-                taxes[0]['amount'] = (taxes[0]['base'] + (taxes[1]['base'] * (igv_compras.amount / 100))) * (
-                self.invoice_line_ids.product_id.tipo_percepcion.amount / 100)
-                taxes[1]['amount'] = taxes[1]['base'] * (igv_compras.amount / 100)
-                monto_percepcion = taxes[0]['amount']
-
             for tax in taxes:
                 val = self._prepare_tax_line_vals(line, tax)
                 key = self.env['account.tax'].browse(tax['id']).get_grouping_key(val)
@@ -503,8 +519,8 @@ class AccountInvoice(models.Model):
                 if key not in tax_grouped:
                     tax_grouped[key] = val
                 else:
-                    tax_grouped[key]['amount'] += round(val['amount'], 2)
-                    tax_grouped[key]['base'] += round(val['base'], 2)
+                    tax_grouped[key]['amount'] += val['amount']
+                    tax_grouped[key]['base'] += val['base']
 
             for impuesto in taxes:
                 total_impuesto += round(impuesto['amount'], 2)
@@ -518,14 +534,24 @@ class AccountInvoice(models.Model):
                 monto_detraccion = line.product_id.monto_minimo_detraccion
                 if monto_detraccion != False:
                     if monto_detraccion > 0:
-                        if total > monto_detraccion:
+                        if self.amount_total_company_signed > monto_detraccion:
                             self.pagina_detraccion = True
+                            self.cuenta_bancaria_detraccion()
                         else:
                             self.pagina_detraccion = False
 
         return tax_grouped
 
 
+    def cuenta_bancaria_detraccion(self):
+        if self.company_id:
+            config_det = self.env['account.config.settings'].search(
+                [('company_id', '=', self.company_id.id)], order='id desc', limit=1)
+            if config_det.detraccion=='DO': #Una sola cuenta detraccion
+                diario_detraccion = config_det.diario_detraccion
+                self.cuenta_detraccion = diario_detraccion.bank_acc_number
+            else:
+                self.cuenta_detraccion = u'Múltiples cuentas'
     # @api.one
     # @api.depends('currency_id', 'invoice_line_ids.price_subtotal', 'move_id.line_ids.currency_id')
     # def _compute_residual_factura(self):
@@ -594,10 +620,8 @@ class AccountInvoice(models.Model):
                         date=line.date)) or line.company_id.currency_id.with_context(date=line.date)
                     residual += from_currency.compute(line.amount_residual, self.currency_id)
 
-        if self.amount_total == residual:
-            self.residual_detraccion_soles = self.monto_detraccion_soles
-        else:
-            self.residual_detraccion_soles = 0
+        self.control_pago_detraccion() #Es para tener un control de los pagos de la detraccion
+
         self.residual_company_signed = abs(residual_company_signed) * sign
         self.residual_signed = abs(residual) * sign
         self.residual = abs(residual)
@@ -607,6 +631,24 @@ class AccountInvoice(models.Model):
             self.reconciled = True
         else:
             self.reconciled = False
+
+    def control_pago_detraccion(self):
+        if self.payment_ids:
+            for payment in self.payment_ids:
+                if payment.id != False:
+                    if payment.pago_detraccion:
+                        self.residual_detraccion_soles = 0
+                    else:
+                        self.residual_detraccion_soles = self.monto_detraccion_soles
+                else:
+                    pass
+        else:
+            self.residual_detraccion_soles = self.monto_detraccion_soles
+        # if self.amount_total == abs(residual):
+        #     self.residual_detraccion_soles = self.monto_detraccion_soles
+        # else:
+        #     self.residual_detraccion_soles = 0
+
 
     @api.onchange('partner_id', 'company_id')
     def _onchange_partner_id(self):

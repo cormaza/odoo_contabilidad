@@ -117,6 +117,7 @@
             <field name="codigo_le">030100</field>
             <field name="nro_orden">3.1</field>
             <field name="state">enable</field>
+            <field name="account_report_id" ref="account_financial_report_balancecheck"/>
             <field name="grupo_libro_id" ref="gle_02"/>
         </record>
         <record id="lb_04" model="biosis_cont_report.libro.electronico">
@@ -462,7 +463,7 @@
             <field name="descripcion">8.3 REGISTRO DE COMPRAS SIMPLIFICADO</field>
             <field name="codigo_le">080300</field>
             <field name="nro_orden">8.3</field>
-            <field name="state">disable</field>
+            <field name="state">enable</field>
             <field name="grupo_libro_id" ref="gle_08"/>
         </record>
         <record id="lb_38" model="biosis_cont_report.libro.electronico">

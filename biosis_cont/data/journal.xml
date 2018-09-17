@@ -19,6 +19,49 @@
             <field name="default_debit_account_id" ref=""/>
             <field name="update_posted" eval="True"/>
             <field name="refund_sequence" eval="False"/>
+            <field name="show_on_dashboard" eval="False"/>
         </record>
+        <record id="apertura_journal" model="account.journal">
+            <field name="name">Diario de Apertura</field>
+            <field name="code">APERT</field>
+            <field name="type">apertura</field>
+            <field name="default_credit_account_id" ref=""/>
+            <field name="default_debit_account_id" ref=""/>
+            <field name="update_posted" eval="True"/>
+            <field name="refund_sequence" eval="False"/>
+            <field name="show_on_dashboard" eval="False"/>
+            <field name="account_control_ids"
+                   eval="[(6,0,[ref('l10n_pe.10'), ref('l10n_pe.142'), ref('l10n_pe.501') ])]"/>
+        </record>
+        <record id="cierre_journal" model="account.journal">
+            <field name="name">Diario de Cierre</field>
+            <field name="code">CIERR</field>
+            <field name="type">cierre</field>
+            <field name="default_credit_account_id" ref=""/>
+            <field name="default_debit_account_id" ref=""/>
+            <field name="update_posted" eval="True"/>
+            <field name="refund_sequence" eval="False"/>
+            <field name="show_on_dashboard" eval="False"/>
+
+        </record>
+        <record id="bn_detraccion_journal" model="account.journal">
+            <field name="name">BN Detracciones</field>
+            <field name="code">BNDE</field>
+            <field name="type">bank</field>
+            <field name="default_credit_account_id" ref="l10n_pe.1071"/>
+            <field name="default_debit_account_id" ref="l10n_pe.1071"/>
+            <field name="update_posted" eval="True"/>
+            <field name="refund_sequence" eval="False"/>
+            <field name="show_on_dashboard" eval="True"/>
+        </record>
+        <!--<record id="detraccion_journal" model="account.journal">-->
+            <!--<field name="name">BCP Detracciones</field>-->
+            <!--<field name="code">BCPDE</field>-->
+            <!--<field name="type">bank</field>-->
+            <!--<field name="default_credit_account_id" ref="l10n_pe.1071"/>-->
+            <!--<field name="default_debit_account_id" ref="l10n_pe.1071"/>-->
+            <!--<field name="update_posted" eval="True"/>-->
+            <!--<field name="refund_sequence" eval="False"/>-->
+        <!--</record>-->
     </data>
 </odoo>

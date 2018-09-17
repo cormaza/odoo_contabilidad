@@ -97,7 +97,7 @@ class Ple_8_2(models.Model):
 
         for invoice in invoices:
             # Buscar item ple previo
-            # ple_item_prev = self.env['account.ple.compras'].search([
+            # ple_item_prev = self.env['account.ple.8.1'].search([
             #    ('cuo_2', '=', invoice.cuo_invoice)
             # ], limit=1)
             # if ple_item_prev:
@@ -117,7 +117,7 @@ class Ple_8_2(models.Model):
             ple_item_vals = {
                 'periodo_1': fecha_reporte,
                 'cuo_2': invoice.cuo_invoice,
-                'move_cuo_3': 'M' + invoice.cuo_invoice,
+                'move_cuo_3':  invoice.move_id.line_ids.sorted(key=lambda line: line.id)[0].numero_asiento,
                 'fecha_e_4': datetime.datetime.strptime(invoice.date, '%Y-%m-%d').strftime('%d/%m/%Y'),
                 'fecha_v_5': datetime.datetime.strptime(invoice.date_due, '%Y-%m-%d').strftime(
                     '%d/%m/%Y') if invoice.date_due else '01/01/0001',
@@ -140,7 +140,7 @@ class Ple_8_2(models.Model):
                 # ple_item.otros_conceptos_22
                 'importe_total_23': str(invoice.amount_total_signed),
                 'codigo_moneda_24': invoice.currency_id.name,
-                'tipo_cambio_25': '1.000',  # agregar campo a invoice str(invoice.valor_tipo_cambio)
+                'tipo_cambio_25': str(format(invoice.currency_id.rate,'.3f')),  # agregar campo a invoice str(invoice.valor_tipo_cambio)
                 'fecha_emision_doc_mod_26': datetime.datetime.strptime(invoice.invoice_id.date_due,
                                                                        '%Y-%m-%d').strftime('%d/%m/%Y') if (
                     invoice.tipo_comprobante_id.code == '07' or invoice.tipo_comprobante_id.code == '08') else '01/01/0001',
@@ -211,7 +211,7 @@ class Ple_8_2(models.Model):
                     if ple_actual.serie_cpbt_mod_28 != invoice.invoice_id.numero_comprobante.split('-')[
                         0] and ple_actual.serie_cpbt_mod_28 != u'-':
                         flag_change_invoice = True
-                if ple_actual.numero_cdd_32 != invoice.numero_detraccion and ple_actual.numero_cdd_32 != u'0':
+                if ple_actual.numero_cdd_32 != invoice.numero_detraccion:
                     flag_change_invoice = True
 
                 if flag_change_invoice:
@@ -219,7 +219,7 @@ class Ple_8_2(models.Model):
                     ple_item_vals = {
                         'periodo_1': ple_actual.periodo_1,
                         'cuo_2': invoice.cuo_invoice,
-                        'move_cuo_3': 'M' + invoice.cuo_invoice,
+                        'move_cuo_3':  invoice.move_id.line_ids.sorted(key=lambda line: line.id)[0].numero_asiento,
                         'fecha_e_4': datetime.datetime.strptime(invoice.date, '%Y-%m-%d').strftime('%d/%m/%Y'),
                         'fecha_v_5': datetime.datetime.strptime(invoice.date_due, '%Y-%m-%d').strftime(
                             '%d/%m/%Y') if invoice.date_due else '01/01/0001',
@@ -242,7 +242,7 @@ class Ple_8_2(models.Model):
                         # ple_item.otros_conceptos_22
                         'importe_total_23': str(invoice.amount_total_signed),
                         'codigo_moneda_24': invoice.currency_id.name,
-                        'tipo_cambio_25': '1.000',  # agregar campo a invoice str(invoice.valor_tipo_cambio)
+                        'tipo_cambio_25': str(format(invoice.currency_id.rate,'.3f')), # agregar campo a invoice str(invoice.valor_tipo_cambio)
                         # 'fecha_emision_doc_mod_26': (invoice.tipo_documento.code == '07' or invoice.tipo_documento.code == '08') if invoice.invoice_id.date_due.strftime('%d/%m/%Y') else '01/01/0001',
                         'fecha_emision_doc_mod_26': datetime.datetime.strptime(invoice.invoice_id.date_due,
                                                                                '%Y-%m-%d').strftime('%d/%m/%Y') if (

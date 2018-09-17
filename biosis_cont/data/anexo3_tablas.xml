@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <data>
+    <data >
         <record id="anexo3_tabla1_001" model="biosis.report.ple.anexo3.tabla1">
             <field name="num_order">001</field>
             <field name="descripcion">DEPÓSITO EN CUENTA</field>

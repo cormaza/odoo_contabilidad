@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <data noupdate="0">
+    <data noupdate="1">
         <record id="sequence_reconcile_seq" model="ir.sequence">
             <field name="name">Código Único de Operación</field>
             <field name="code">biosis_cont.cuo</field>

@@ -93,8 +93,8 @@ class AccountingReportSunat(models.TransientModel):
         result = {}
         result['journal_ids'] = 'journal_ids' in data['form'] and data['form']['journal_ids'] or False
         result['state'] = 'posted'
-        result['date_from'] = data['form']['date_from'] or False
-        result['date_to'] = data['form']['date_to'] or False
+        result['date_from'] = data['form']['date_from'] if data['form']['date_from'] else str(data['form']['year'])+'-01-01'
+        result['date_to'] = data['form']['date_to'] if data['form']['date_to'] else str(data['form']['year'])+'-12-31'
         result['strict_range'] = True if result['date_from'] else False
         result['company'] = self.company_id.id
         return result

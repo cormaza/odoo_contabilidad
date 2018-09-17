@@ -18,28 +18,6 @@
                            required="1" string="Tipo de comprobante"/>
                     <field name="numero_comprobante" tring="Numero"/>
                 </field>
-                <!--<field name="date_due" position="after">-->
-                <!--<field name="cbo_tipo_cambio"/>-->
-                <!--</field>-->
-                <!--<field name="cbo_tipo_cambio" position="after">-->
-                <!--<field name="valor_tipo_cambio"-->
-                <!--attrs="{'invisible':['|',('cbo_tipo_cambio','=','N'),('cbo_tipo_cambio','=',False)]}"/>-->
-                <!--</field>-->
-                <!--<xpath expr="//field[@name='invoice_line_ids']/tree/field[@name='price_unit']" position="before">-->
-                <!--<field name="value_tipo_cambio" invisible="1"/>-->
-                <!--</xpath>-->
-                <!--<xpath expr="//field[@name='invoice_line_ids']/tree/field[@name='price_unit']" position="before">-->
-                <!--<field name="price_unit_dolars" attrs="{'invisible':[('value_tipo_cambio','=',1)]}"/>-->
-                <!--</xpath>-->
-                <!--<xpath expr="//field[@name='invoice_line_ids']/tree/field[@name='discount']" position="replace">-->
-                <!--<field name="discount" groups="sale.group_discount_per_so_line"-->
-                <!--attrs="{'readonly':[('operacion','=','adqNoGravadas')] }"/>-->
-                <!--</xpath>-->
-                <!--<xpath expr="//field[@name='invoice_line_ids']/tree/field[@name='quantity']" position="after">-->
-                <!--<field name="account_analytic_id" string="Liquidacion" groups="purchase.group_analytic_accounting"-->
-                <!--attrs="{'invisible':[('liquidacion','=',False)]}"-->
-                <!--domain="[('tipo', '=', 'l')]"/>-->
-                <!--</xpath>-->
                 <notebook position="inside">
 
                     <page string="Constancia Depósito Detracción"
@@ -49,17 +27,13 @@
                                 <field name="numero_detraccion"/>
                                 <field name="fecha_emision_detraccion"/>
                             </group>
-                            <group></group>
+                            <group>
+                                <field name="cuenta_detraccion"/>
+                            </group>
                         </group>
                     </page>
                 </notebook>
-                <!--<field name="residual" position="after">-->
-                <!--<field name="monto_detraccion" class="oe_subtotal_footer_separator"-->
-                <!--attrs="{'invisible': ['|','|',('pagina_detraccion', '=', False),('state', '=', 'draft'),('monto_detraccion','=',0.0)]}"/>-->
-                <!--</field>-->
                 <field name="amount_total" position="after">
-                    <!--<field name="monto_detraccion" class="oe_subtotal_footer_separator"-->
-                    <!--attrs="{'invisible': [('monto_detraccion','=',0.0)]}"/>-->
                     <field name="monto_detraccion" class="oe_subtotal_footer_separator"
                     />
                     <field name="currency_id_soles" invisible="1"/>
@@ -74,7 +48,6 @@
                            widget='monetary' options="{'currency_field': 'currency_id_soles'}"
                     />
                 </field>
-
 
             </field>
         </record>
@@ -93,18 +66,29 @@
             <field name="model">account.invoice</field>
             <field name="inherit_id" ref="account.invoice_supplier_tree"/>
             <field name="arch" type="xml">
-                <xpath expr="//field[@name='reference']" position="replace">
-                    <field name="reference" invisible="1"/>
+                <xpath expr="//field[@name='number']" position="replace">
+                    <field name="number" string="Correlativo"></field>
                 </xpath>
-                <!--<xpath expr="//field[@name='residual_signed']" position="before">-->
-                <!--<field name="residual_factura" sum="Total Monto Factura"/>-->
-                <!--<field name="residual_detraccion" sum="Total Monto Detraccion"/>-->
-                <!--</xpath>-->
+                <xpath expr="//field[@name='reference']" position="replace">
+                    <field name="numero_comprobante"/>
+                </xpath>
+                <xpath expr="//field[@name='amount_total_signed']" position="before">
+                    <field name="monto_factura" sum="Monto factura"/>
+                    <field name="monto_detraccion" sum="Monto detracción"/>
+                </xpath>
+                <xpath expr="//field[@name='residual_signed']" position="after">
+                    <field name="currency_id_soles" invisible="1"/>
+                    <field name="residual_detraccion_soles" string="A pagar det."
+                           widget='monetary' options="{'currency_field': 'currency_id_soles'}"
+                           sum="A pagar detracción"/>
+                    <field name="cuenta_detraccion"/>
+                </xpath>
             </field>
         </record>
 
         <record id="account.action_invoice_tree2" model="ir.actions.act_window">
-            <field name="domain">['&amp;',('type','in',('in_invoice', 'in_refund')),('is_recibo','!=',True)]
+            <field name="domain">['&amp;',('type','in',('in_invoice', 'in_refund')),
+                ('is_recibo','!=',True)]
             </field>
         </record>
 

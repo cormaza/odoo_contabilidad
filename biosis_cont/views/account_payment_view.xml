@@ -36,6 +36,9 @@
                     'invisible':['|',('impuesto','=',False),('type_journal','!=','bank')]}"/>
                 </field>
                 <xpath expr="//field[@name='journal_id']" position="before">
+                    <field name="control_detraccion" invisible="1"/>
+                    <field name="pago_detraccion"/>
+                    <field name="residual_detraccion" invisible="1"/>
                     <field name="trabajador"
                            attrs="{'invisible':[('payment_type','!=','transfer')]}"/>
                 </xpath>

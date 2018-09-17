@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo>
+    <data>
+        <record id="liquidacion_journal" model="account.journal">
+            <field name="name">Liquidacion Compra</field>
+            <field name="code">LIQ</field>
+            <field name="type">purchase</field>
+            <field name="default_credit_account_id" ref=""/>
+            <field name="default_debit_account_id" ref=""/>
+            <field name="update_posted" eval="True"/>
+            <field name="refund_sequence" eval="False"/>
+        </record>
+         <record id="sequence_liquidacion_seq" model="ir.sequence">
+            <field name="name">Liquidación Compra</field>
+            <field name="code">liquidacion.compra</field>
+            <field name="prefix">LIQ-%(range_year)s-%(month)s-</field>
+            <field eval="1" name="number_next"/>
+            <field eval="1" name="number_increment"/>
+            <field eval="4" name="padding"/>
+            <field eval="False" name="company_id"/>
+             <field name="ciclo">mes</field>
+        </record>
+    </data>
+</odoo>

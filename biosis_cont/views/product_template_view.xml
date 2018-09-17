@@ -9,18 +9,25 @@
             <field name="arch" type="xml">
                 <xpath expr="//field[@name='property_account_expense_id']" position="replace">
                     <field name="property_account_expense_id"
-                           domain="['&amp;','&amp;',('internal_type','=','other'),('deprecated','=',False),'|','|','|','|','|','|',('code','=like','62%'),('code','=like','63%'),('code','=like','64%'),('code','=like','65%'),('code','=like','66%'),('code','=like','67%'),('code','=like','68%')]" attrs="{'invisible':['|', ('asset_category_id', '!=' ,False)]}" groups="account.group_account_user"/>
+                           domain="['&amp;','&amp;',('internal_type','=','other'),('deprecated','=',False),'|','|','|','|','|','|',('code','=like','62%'),('code','=like','63%'),('code','=like','64%'),('code','=like','65%'),('code','=like','66%'),('code','=like','67%'),('code','=like','68%')]"
+                           attrs="{'invisible':['|', ('asset_category_id', '!=' ,False)]}"
+                           groups="account.group_account_user"/>
                 </xpath>
                 <!--<field name="property_account_expense_id" position="after">-->
-                    <!--<field name="centro_costos"/>-->
+                <!--<field name="centro_costos"/>-->
                 <!--</field>-->
                 <group name="accounting" position="before">
-                    <group name="cuentas_destino" string="Cuentas destinos para gastos" attrs="{'invisible':['&amp;', ('property_account_expense_id', '=' ,False),('asset_category_id', '=' ,False)]}">
+                    <group name="cuentas_destino" string="Cuentas destinos para gastos"
+                           attrs="{'invisible':['&amp;', ('property_account_expense_id', '=' ,False),('asset_category_id', '=' ,False)]}">
                         <group name="cuentas">
-                            <field name="account_92_id" groups="account.group_account_user" domain="[('code', '=like', '92%')]"/>
-                            <field name="account_94_id" groups="account.group_account_user" domain="[('code', '=like', '94%')]"/>
-                            <field name="account_95_id" groups="account.group_account_user" domain="[('code', '=like', '95%')]"/>
-                            <field name="account_97_id" groups="account.group_account_user" domain="[('code', '=like', '97%')]"/>
+                            <field name="account_92_id" groups="account.group_account_user"
+                                   domain="[('code', '=like', '92%')]"/>
+                            <field name="account_94_id" groups="account.group_account_user"
+                                   domain="[('code', '=like', '94%')]"/>
+                            <field name="account_95_id" groups="account.group_account_user"
+                                   domain="[('code', '=like', '95%')]"/>
+                            <field name="account_97_id" groups="account.group_account_user"
+                                   domain="[('code', '=like', '97%')]"/>
                         </group>
                         <group name="porcentajes">
                             <field name="porcentaje_92"/>
@@ -31,24 +38,27 @@
                     </group>
                 </group>
                 <xpath expr="//field[@name='taxes_id']" position="after">
-                    <field name="percepcion" />
+                    <field name="percepcion" invisible="1"/>
                     <field name="monto_minimo_percepcion" attrs="{'invisible':[('percepcion','=',False)]}"/>
-                  <!--  <field name="tipo_percepcion" attrs="{'invisible':[('percepcion','=',False)]}"
-                    domain="['&amp;',('type_tax_use', '=', 'purchase'),('tag_ids','=like','percepci%')]"/>-->
+                    <!--  <field name="tipo_percepcion" attrs="{'invisible':[('percepcion','=',False)]}"
+                      domain="['&amp;',('type_tax_use', '=', 'purchase'),('tag_ids','=like','percepci%')]"/>-->
                     <field name="tipo_percepcion" attrs="{'invisible':[('percepcion','=',False)]}"
-                    domain="[('tag_ids','=like','Percepci%')]"/>
+                           domain="[('tag_ids','=like','Percepci%')]"/>
 
                 </xpath>
-                <xpath expr="//field[@name='tipo_percepcion']" position="after">
-                    <field name="detraccion" />
-                    <field name="monto_minimo_detraccion"  attrs="{'invisible':[('detraccion','=',False)]}"/>
-                    <field name="porcentaje_detraccion"  attrs="{'invisible':[('detraccion','=',False)]}"/>
-                    <!--<field name="cuenta_detraccion " domain="[('code', '=like', '4212%')]"  attrs="{'invisible':[('detraccion','=',False)]}"/>-->
-                </xpath>
-                 <xpath expr="//field[@name='porcentaje_detraccion']" position="after">
-                    <field name="cuenta_detraccion_compra" attrs="{'invisible':[('detraccion','=',False)]}"  domain="[('code', '=like', '10%')]" />
-                    <field name="cuenta_detraccion_venta" attrs="{'invisible':[('sale_ok','=',False)]}"  domain="[('code', '=like', '10%')]" />
-                </xpath>
+                <group name="properties" position="after">
+                    <group name="detraccion">
+                        <field name="detraccion"/>
+                        <field name="bien_servicio" attrs="{'invisible':[('detraccion','=',False)]}"/>
+                        <field name="monto_minimo_detraccion" attrs="{'invisible':[('detraccion','=',False)]}"/>
+                        <field name="porcentaje_detraccion" attrs="{'invisible':[('detraccion','=',False)]}"/>
+                        <field name="cuenta_detraccion_compra" attrs="{'invisible':[('detraccion','=',False)]}"
+                               domain="[('code', '=like', '10%')]" invisible="1"/>
+                        <field name="cuenta_detraccion_venta" attrs="{'invisible':[('sale_ok','=',False)]}"
+                               domain="[('code', '=like', '10%')]" invisible="1"/>
+                    </group>
+                </group>
+
             </field>
         </record>
     </data>

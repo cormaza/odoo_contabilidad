@@ -216,12 +216,21 @@
             <field name="view_id" ref="account_otros_view_form"/>
             <field name="act_window_id" ref="account_invoice_otros_tree2"/>
         </record>
-        <menuitem
+        <!--<menuitem-->
+                <!--id="account_invoice_otros_menu"-->
+                <!--name="Recibos Honorarios"-->
+                <!--action="account_invoice_otros_tree2"-->
+                <!--parent="account.menu_finance"-->
+                <!--sequence="3"-->
+        <!--/>-->
+        <menuitem id="menu_otros" name="Doc.Adicionales"  sequence="3"
+                  parent="account.menu_finance"/>
+
+         <menuitem
                 id="account_invoice_otros_menu"
-                name="Recibos Honorarios"
+                name="Recibos honorarios"
                 action="account_invoice_otros_tree2"
-                parent="account.menu_finance"
-                sequence="3"
-        />
+                parent="menu_otros"/>
+
     </data>
 </odoo>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+        <!--IMPORTAR TXT PARA MORAS-->
+        <record id="biosis_import_txt_view" model="ir.ui.view">
+            <field name="name">Importar txt moras</field>
+            <field name="model">txt.import</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <field name="fichero" />
+                    </group>
+                    <footer>
+                        <button name="procesar_txt" string="Procesar txt" type="object" default_focus="1"
+                                class="oe_highlight"/>
+                        <button string="Cancelar" class="oe_link" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_import_txt" model="ir.actions.act_window">
+            <field name="name">Importar txt moras</field>
+            <field name="res_model">txt.import</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="biosis_import_txt_view"/>
+            <field name="target">new</field>
+        </record>
+        <!--FIN IMPORTAR TXT PARA MORAS-->
+
+        <menuitem id="menu_moras" name="Boletas Moras"
+                  parent="account.menu_finance_receivables"/>
+
+        <!--<menuitem-->
+                <!--id="menu_import_txt"-->
+                <!--name="Importar txt moras"-->
+                <!--action="action_import_txt"-->
+                <!--parent="menu_moras"/>-->
+
+
+
+</odoo>

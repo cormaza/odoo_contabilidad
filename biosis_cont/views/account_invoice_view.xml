@@ -17,34 +17,17 @@
             <field name="inherit_id" ref="account.invoice_form"/>
             <field name="arch" type="xml">
                 <xpath expr="//field[@name='partner_id']" position="before">
-                    <!--<field name="tipo_documento"/>-->
                     <field name="pagina_detraccion"
                            invisible="1"/> <!--Solo es para permitir visualizar la pagina de detracciones-->
                 </xpath>
                 <xpath expr="//field[@name='payment_term_id']" position="after">
-                    <field name="check_impuesto_renta"/>
+                    <field name="check_impuesto_renta" invisible="1"/>
                 </xpath>
                 <xpath expr="//field[@name='check_impuesto_renta']" position="after">
                     <field name="impuesto_renta" attrs="{'invisible':[('check_impuesto_renta','=',False)]}"/>
                 </xpath>
-                <!--<xpath expr="//field[@name='impuesto_renta']" position="after">-->
-                    <!--<field name="monto_impuesto_renta" attrs="{'invisible':[('check_impuesto_renta','=',False)]}"/>-->
-                <!--</xpath>-->
-                <!--<field name="date_invoice" position="after">-->
-                    <!--<field name="cbo_tipo_cambio"/>-->
-                <!--</field>-->
-                <!--<field name="cbo_tipo_cambio" position="after">-->
-                    <!--<field name="valor_tipo_cambio"-->
-                           <!--attrs="{'invisible':['|',('cbo_tipo_cambio','=','N'),('cbo_tipo_cambio','=',False)]}"/>-->
-                <!--</field>-->
-                <!--<xpath expr="//field[@name='invoice_line_ids']/tree/field[@name='price_unit']" position="before">-->
-                    <!--<field name="value_tipo_cambio" invisible="1"/>-->
-                <!--</xpath>-->
-                <!--<xpath expr="//field[@name='invoice_line_ids']/tree/field[@name='price_unit']" position="before">-->
-                    <!--<field name="price_unit_dolars" attrs="{'invisible':[('value_tipo_cambio','=',1)]}"/>-->
                 <!--</xpath>-->
                 <notebook position="inside">
-
                     <page string="Constancia Depósito Detracción"
                           attrs="{'invisible':[('pagina_detraccion','=',False)]}">
                         <group>
@@ -57,30 +40,18 @@
                     </page>
                 </notebook>
                 <field name="amount_total" position="after">
-                    <!--<field name="monto_detraccion" class="oe_subtotal_footer_separator"-->
-                    <!--attrs="{'invisible': [('monto_detraccion','=',0.0)]}"/>-->
-                    <field name="monto_detraccion" class="oe_subtotal_footer_separator"
-                    />
+                    <field name="monto_detraccion" class="oe_subtotal_footer_separator"/>
                     <field name="currency_id_soles" invisible="1"/>
-                     <field name="monto_detraccion_soles"
-                             widget='monetary' options="{'currency_field': 'currency_id_soles'}"
-                    />
-                    <field name="monto_factura" class="oe_subtotal_footer_separator"
-                    />
+                    <field name="moneda" invisible="1"/>
+                    <field name="monto_detraccion_soles"
+                           widget='monetary' options="{'currency_field': 'currency_id_soles'}"
+                           attrs="{'invisible':[('moneda','=','PEN')]}"/>
+                    <field name="monto_factura" class="oe_subtotal_footer_separator"/>
                 </field>
                 <field name="residual" position="after">
                     <field name="residual_detraccion_soles" class="oe_subtotal_footer_separator"
                            widget='monetary' options="{'currency_field': 'currency_id_soles'}"
-                    />
-                     <!--<field name="residual_detraccion_soles" class="oe_subtotal_footer_separator"-->
-                    <!--invisible="1"/>-->
-                    <!--<field name="residual_factura" class="oe_subtotal_footer_separator"-->
-                    <!--/>-->
-                    <!--<field name="residual_factura_soles" class="oe_subtotal_footer_separator"-->
-                    <!--invisible="1"/>-->
-                    <!--<field name="residual_factura" class="oe_subtotal_footer_separator"-->
-                    <!--attrs="{'invisible': ['|',('state', '=', 'draft'),('monto_factura','=',0.0)]}"/>-->
-
+                           attrs="{'invisible':[('moneda','=','PEN'),('state', '=', 'draft')]}"/>
                 </field>
             </field>
         </record>
@@ -88,13 +59,17 @@
             <field name="model">account.invoice</field>
             <field name="inherit_id" ref="account.invoice_tree"/>
             <field name="arch" type="xml">
-                <xpath expr="//field[@name='residual_signed']" position="after">
-                    <!--<field name="monto_impuesto_renta" sum="Total Imp.Renta"/>-->
+                <xpath expr="//field[@name='amount_total_signed']" position="before">
+                    <field name="monto_factura" sum="Monto factura"/>
+                    <field name="monto_detraccion" sum="Monto detracción"/>
                 </xpath>
-                <!--<xpath expr="//field[@name='monto_impuesto_renta']" position="before">-->
-                    <!--&lt;!&ndash;<field name="residual_factura" sum="Total Monto Factura"/>&ndash;&gt;-->
-                    <!--&lt;!&ndash;<field name="residual_detraccion" sum="Total Monto Detraccion"/>&ndash;&gt;-->
-                <!--</xpath>-->
+                <xpath expr="//field[@name='residual_signed']" position="after">
+                    <field name="currency_id_soles" invisible="1"/>
+                    <field name="residual_detraccion_soles" string="A pagar det."
+                           widget='monetary' options="{'currency_field': 'currency_id_soles'}"
+                           sum="A pagar detracción"/>
+                    <field name="cuenta_detraccion"/>
+                </xpath>
             </field>
         </record>
     </data>

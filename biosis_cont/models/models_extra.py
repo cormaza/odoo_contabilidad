@@ -210,15 +210,6 @@ class PleAnexo3Tabla35(models.Model):
     descripcion = fields.Char(string=u'Descripción', required=True)
 
 
-class PleCubso(models.Model):
-    _name = 'biosis.report.ple.cubso'
-    _description = u'CATÁLOGO ÚNICO DE BIENES, SERVICIOS Y OBRAS - CUBSO'
-    _rec_name = 'titulo'
-
-    codigo = fields.Char(string=u'Código')
-    titulo = fields.Char(string=u'Título')
-    tipo_item = fields.Char(string=u'Tipo item')
-
 class ResBank(models.Model):
     _inherit = 'res.bank'
 

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <!-- TABLA 34: CÓDIGO DE LOS RUBROS DE LOS ESTADOS FINANCIEROS -->
+        <record id="view_anexo3_ple_34_tree" model="ir.ui.view">
+            <field name="name">CÓDIGO DE LOS RUBROS DE LOS ESTADOS FINANCIEROS</field>
+            <field name="model">biosis.report.ple.anexo3.tabla34</field>
+            <field name="arch" type="xml">
+                <tree string="CÓDIGO DE LOS RUBROS DE LOS ESTADOS FINANCIEROS">
+                    <field name="codigo"/>
+                    <field name="descripcion"/>
+                    <field name="estado_financiero_id"/>
+                    <field name="cuentas"/>
+                    <field name="excepciones"/>
+                    <field name="tipo"/>
+                    <field name="padre"/>
+                </tree>
+            </field>
+	    </record>
+	    <record id="view_anexo3_ple_34_form" model="ir.ui.view">
+            <field name="name">CÓDIGO DE LOS RUBROS DE LOS ESTADOS FINANCIEROS</field>
+            <field name="model">biosis.report.ple.anexo3.tabla34</field>
+            <field name="arch" type="xml">
+                <form string="CÓDIGO DE LOS RUBROS DE LOS ESTADOS FINANCIEROS">
+                    <group>
+                        <group>
+                            <field name="codigo"/>
+                            <field name="descripcion"/>
+                            <field name="estado_financiero_id"/>
+                            <field name="cuentas"/>
+                            <field name="excepciones"/>
+                            <field name="tipo"/>
+                            <field name="padre"/>
+                        </group>
+                    </group>
+                </form>
+            </field>
+	    </record>
+	    <record model="ir.actions.act_window" id="anexo3_34_ple_action">
+		    <field name="name">CÓDIGO DE LOS RUBROS DE LOS ESTADOS FINANCIEROS</field>
+		    <field name="res_model">biosis.report.ple.anexo3.tabla34</field>
+		    <field name="view_type">form</field>
+		    <field name="view_mode">tree,form</field>
+	    </record>
+
+        <!-- Menus -->
+        <menuitem name="Tablas paramétricas PLE" id="anexo3_ple_menu" parent="account.menu_finance_configuration" sequence="25"/>
+        <menuitem name="Anexo-3-34 CÓDIGO DE LOS RUBROS DE LOS ESTADOS FINANCIEROS" id="anexo3_34_menu" parent="anexo3_ple_menu" action="anexo3_34_ple_action" sequence="1"/>
+    </data>
+</openerp>

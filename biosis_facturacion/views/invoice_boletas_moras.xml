@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="biosis_facturacion_boleta_mora_form">
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_form"/>
+            <field name="arch" type="xml">
+                <field name="partner_id" position="before">
+                    <field name="is_boleta_mora"/>
+                </field>
+            </field>
+        </record>
+
+        <!--<record id="biosis_facturacion_boleta_mora_tree" model="ir.ui.view">-->
+            <!--<field name="name">otros.tree</field>-->
+            <!--<field name="model">account.invoice</field>-->
+            <!--<field name="arch" type="xml">-->
+               <!--<tree decoration-info="state == 'draft'" decoration-muted="state == 'cancel'" string="Invoice">-->
+                    <!--<field name="partner_id" groups="base.group_user" string="Customer"/>-->
+                    <!--<field name="date_invoice"/>-->
+                    <!--<field name="number"/>-->
+                    <!--<field name="commercial_partner_id" invisible="1"/>-->
+                    <!--<field name="reference" invisible="1"/>-->
+                    <!--<field name="name" invisible="1"/>-->
+                    <!--<field name="journal_id" invisible="1"/>-->
+                    <!--<field name="company_id" groups="base.group_multi_company" options="{'no_create': True}"/>-->
+                    <!--<field name="user_id"/>-->
+                    <!--<field name="date_due"/>-->
+                    <!--<field name="origin"/>-->
+                    <!--<field name="amount_total_signed" string="Total" sum="Total"/>-->
+                    <!--<field name="residual_signed" string="Amount Due" sum="Amount Due"/>-->
+                    <!--<field name="currency_id" invisible="1"/>-->
+                    <!--<field name="company_currency_id" invisible="1"/>-->
+                    <!--<field name="state"/>-->
+                    <!--<field name="type" invisible="context.get('type',True)"/>-->
+                <!--</tree>-->
+            <!--</field>-->
+        <!--</record>-->
+
+        <!--&lt;!&ndash;SEGUNDO RECORD&ndash;&gt;-->
+        <!--<record id="biosis_import_txt_tree" model="ir.actions.act_window">-->
+            <!--<field name="name">Boletas moras</field>-->
+            <!--<field name="res_model">account.invoice</field>-->
+            <!--<field name="view_type">form</field>-->
+            <!--<field name="view_mode">tree,form</field>-->
+            <!--<field ref="biosis_facturacion_boleta_mora_tree" name="view_id"/>-->
+            <!--<field name="domain">[('is_boleta_mora','=',True)]</field>-->
+            <!--<field name="context">{'default_is_boleta_mora': True, 'type':'out_invoice'}</field>-->
+            <!--<field name="help" type="html">-->
+                <!--<p class="oe_view_nocontent_create">-->
+                    <!--Boletas afectas a moras de Inquilino-->
+                <!--</p>-->
+
+            <!--</field>-->
+        <!--</record>-->
+
+        <!--&lt;!&ndash;PRIMER RECORD&ndash;&gt;-->
+        <!--<record id="action_import_txt_tree" model="ir.actions.act_window.view">-->
+            <!--<field eval="1" name="sequence"/>-->
+            <!--<field name="view_mode">tree</field>-->
+            <!--<field name="view_id" ref="biosis_facturacion_boleta_mora_tree"/>-->
+            <!--<field name="act_window_id" ref="biosis_import_txt_tree"/>-->
+        <!--</record>-->
+
+        <!--<record id="action_import_txt_form" model="ir.actions.act_window.view">-->
+        <!--<field eval="2" name="sequence"/>-->
+        <!--<field name="view_mode">form</field>-->
+        <!--<field name="view_id" ref="account.invoice_form"/>-->
+        <!--<field name="act_window_id" ref="action_import_txt_tree"/>-->
+        <!--</record>-->
+
+
+        <!--ITEM PARA VISTA DE BOLETAS SUJETA A MORA-->
+        <!--<menuitem-->
+                <!--id="menu_boletas_moras"-->
+                <!--name="Boletas moras"-->
+                <!--action="biosis_import_txt_tree"-->
+                <!--parent="account.menu_finance_receivables"/>-->
+
+    </data>
+</odoo>

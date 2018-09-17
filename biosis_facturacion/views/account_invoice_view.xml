@@ -59,30 +59,7 @@
                             attrs="{'invisible':['|', ('state', '!=', 'open')]}"
                             class="oe_highlight" groups="base.group_user"/>
                 </xpath>
-                <!--
-                <xpath expr="//field[@name='user_id']" position="after">
-                    <field name="currency_id"/>
-                </xpath>
 
-                <xpath expr="//field[@name='currency_id']" position="replace">
-                </xpath>
-                <xpath expr="//field[@name='date_invoice']" position="after">
-                    <field name="total_peso_bruto"/>
-                    <field name="total_peso_neto"/>
-                </xpath>
-                <xpath expr="//group[1]/group[2]" position="after">
-                    <field name="certificado"/>
-                    <field name="first_sale"/>
-                </xpath>
-                <field name="date_invoice" position="after">
-                    <field name="puerto_embarque"/>
-                    <field name="puerto_destino"/>
-                    <field name="consignatario_id"/>
-                    <field name="forma_pago"/>
-                    <field name="medio_transporte"/>
-                    <field name="condicion_venta"/>
-                </field>
-                -->
                 <xpath expr="//field[@name='amount_untaxed']" position="before">
                     <field name="total_operaciones_exportacion" string="Total Op. Exportación" readonly="1"/>
                     <field name="total_operaciones_gratuitas" string="Total Op. Gratuitas" readonly="1"/>
