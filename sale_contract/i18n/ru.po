@@ -1,0 +1,1024 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * sale_contract
+# 
+# Translators:
+# Эдуард Манятовский <manyatovskiy@gmail.com>, 2016
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-09-29 14:58+0000\n"
+"PO-Revision-Date: 2016-09-29 14:58+0000\n"
+"Last-Translator: Эдуард Манятовский <manyatovskiy@gmail.com>, 2016\n"
+"Language-Team: Russian (https://www.transifex.com/odoo/teams/41243/ru/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: ru\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#. module: sale_contract
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_view_search
+msgid "Account Manager"
+msgstr "Управляющий счётом"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_template_journal_id
+msgid "Accounting Journal"
+msgstr "Журнал Учёта"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_active
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_template_active
+msgid "Active"
+msgstr "Активно"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_line_actual_quantity
+msgid "Actual quantity"
+msgstr "Реальное количество"
+
+#. module: sale_contract
+#: model:ir.model,name:sale_contract.model_account_analytic_account
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_analytic_account_id
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_name
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_report_analytic_account_id
+msgid "Analytic Account"
+msgstr "Аналитический счет"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_line_ids
+msgid "Analytic Lines"
+msgstr "Позиции аналитики"
+
+#. module: sale_contract
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_template_view_search
+msgid "Archived"
+msgstr "Архивировано"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_balance
+msgid "Balance"
+msgstr "Баланс"
+
+#. module: sale_contract
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_close_reason_view_form
+msgid "Cancel"
+msgstr "Отмена"
+
+#. module: sale_contract
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_view_form
+msgid "Cancel Subscription"
+msgstr "Отменить Подписку"
+
+#. module: sale_contract
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_view_search
+#: selection:sale.subscription,state:0
+#: selection:sale.subscription.report,state:0
+msgid "Cancelled"
+msgstr "Отменено"
+
+#. module: sale_contract
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_view_search
+msgid "Cancelled contracts"
+msgstr "Отмененные контракты"
+
+#. module: sale_contract
+#: model:ir.model.fields,help:sale_contract.field_sale_subscription_use_tasks
+msgid "Check this box to manage internal activities through this project"
+msgstr "Установите этот флажок, чтобы управлять мероприятием в этом проекте"
+
+#. module: sale_contract
+#: model:ir.actions.act_window,help:sale_contract.sale_subscription_template_action
+msgid "Click here to create a template of subscription."
+msgstr "Нажмите здесь, чтобы создать шаблон подписки."
+
+#. module: sale_contract
+#: model:ir.actions.act_window,help:sale_contract.sale_subscription_action
+msgid "Click to create a new contract."
+msgstr "Нажмите, чтобы создать новый договор."
+
+#. module: sale_contract
+#: model:ir.actions.act_window,help:sale_contract.sale_subscription_action_pending
+msgid "Click to define a new contract."
+msgstr "Нажмите, чтобы определить новый договор."
+
+#. module: sale_contract
+#: model:ir.actions.act_window,help:sale_contract.product_action_subscription
+msgid "Click to define a new product."
+msgstr "Нажмите, чтобы определить новый продукт."
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_close_reason_id
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_close_reason_wizard_close_reason_id
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_report_close_reason_id
+msgid "Close Reason"
+msgstr "Закрыть Причину"
+
+#. module: sale_contract
+#: model:ir.actions.act_window,name:sale_contract.sale_subscription_close_reason_action
+#: model:ir.ui.menu,name:sale_contract.menu_sale_subscription_lost_reason_action
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_close_reason_view_form
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_close_reason_view_tree
+msgid "Close Reasons"
+msgstr "Закрыть Причины"
+
+#. module: sale_contract
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_view_form
+msgid "Close Subscription"
+msgstr "Закрыть подписку"
+
+#. module: sale_contract
+#: model:ir.actions.act_window,name:sale_contract.sale_subscription_close_reason_wizard_action
+msgid "Close/Cancel Reason"
+msgstr "Закрыть/Отмена причины"
+
+#. module: sale_contract
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_view_search
+#: selection:sale.subscription,state:0
+#: selection:sale.subscription.report,state:0
+msgid "Closed"
+msgstr "Закрыт"
+
+#. module: sale_contract
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_view_search
+msgid "Closed contracts"
+msgstr "Закрытые контракты"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_template_code
+msgid "Code"
+msgstr "Код"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_report_commercial_partner_id
+msgid "Commercial Partner"
+msgstr "Коммерческий партнер"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_company_id
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_report_company_id
+msgid "Company"
+msgstr "Компания"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_company_uom_id
+msgid "Company UOM"
+msgstr "Единицы измерения компании"
+
+#. module: sale_contract
+#: model:ir.ui.menu,name:sale_contract.menu_sale_subscription_config
+msgid "Configuration"
+msgstr "Настройки"
+
+#. module: sale_contract
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_view_search
+msgid "Contract"
+msgstr "Договор"
+
+#. module: sale_contract
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_view_search
+msgid "Contracts in progress"
+msgstr "Договор в процессе выполнения"
+
+#. module: sale_contract
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_view_search
+msgid "Contracts not assigned"
+msgstr "Контракты не назначены"
+
+#. module: sale_contract
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_view_search
+msgid "Contracts that are not assigned to an account manager."
+msgstr "Контракты, которые не назначены бухгалтеру."
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_report_country_id
+msgid "Country"
+msgstr "Страна"
+
+#. module: sale_contract
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_view_form
+msgid ""
+"Create a sale order that will overwrite this contract when confirmed "
+"(renewal quotation)"
+msgstr ""
+"Создание заказа, который обновить этот договор после подтверждения "
+"(восстановление ценового предложения)"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_close_reason_create_uid
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_close_reason_wizard_create_uid
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_create_uid
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_line_create_uid
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_template_create_uid
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_template_line_create_uid
+msgid "Created by"
+msgstr "Создал"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_close_reason_create_date
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_close_reason_wizard_create_date
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_create_date
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_line_create_date
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_template_create_date
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_template_line_create_date
+msgid "Created on"
+msgstr "Создано"
+
+#. module: sale_contract
+#: selection:sale.order,subscription_management:0
+msgid "Creation"
+msgstr "Создание"
+
+#. module: sale_contract
+#: model:ir.model.fields,help:sale_contract.field_sale_order_subscription_management
+msgid ""
+"Creation: The Sales Order created the subscription\n"
+"Upselling: The Sales Order added lines to the subscription\n"
+"Renewal: The Sales Order replaced the subscription's content with its own"
+msgstr ""
+"Создание: заказ клиента создал подписку\n"
+"Апселинг: в заказе клиента добавлены строки для подписки\n"
+"Обновление: заказ клиента заменил содержимое подписки на собственный"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_credit
+msgid "Credit"
+msgstr "Кредит"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_currency_id
+msgid "Currency"
+msgstr "Валюта"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_partner_id
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_report_partner_id
+msgid "Customer"
+msgstr "Заказчик"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_report_date_end
+msgid "Date End"
+msgstr "Дата Окончания"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_report_date_start
+msgid "Date Start"
+msgstr "Дата Начала"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_recurring_next_date
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_view_form
+msgid "Date of Next Invoice"
+msgstr "Дата Следующего Счёта"
+
+#. module: sale_contract
+#: selection:sale.subscription.template,recurring_rule_type:0
+msgid "Day(s)"
+msgstr "День (дни)"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_debit
+msgid "Debit"
+msgstr "Дебет"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_description
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_line_name
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_template_description
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_template_line_name
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_template_option_name
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_wizard_option_name
+msgid "Description"
+msgstr "Описание"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_line_discount
+msgid "Discount (%)"
+msgstr "Скидка (%)"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_close_reason_display_name
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_close_reason_wizard_display_name
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_display_name
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_line_display_name
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_report_display_name
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_template_display_name
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_template_line_display_name
+msgid "Display Name"
+msgstr "Отображаемое имя"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_date
+msgid "End Date"
+msgstr "Дата окончания"
+
+#. module: sale_contract
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_view_search
+msgid "End Month"
+msgstr "Конец месяца"
+
+#. module: sale_contract
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_view_search
+msgid "End date is in the next month"
+msgstr "Дата окончания в следующем месяце"
+
+#. module: sale_contract
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_view_search
+msgid "End date passed"
+msgstr "Дата окончания пропущена"
+
+#. module: sale_contract
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_view_search
+msgid "Expired"
+msgstr "Истек"
+
+#. module: sale_contract
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_view_search
+msgid "Expiring soon"
+msgstr "Срок действия истекает в ближайшее время"
+
+#. module: sale_contract
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_view_search
+msgid "Group By"
+msgstr "Группировать"
+
+#. module: sale_contract
+#: model:ir.module.category,description:sale_contract.module_category_contract_management
+msgid "Helps you handle subscriptions and recurring invoicing."
+msgstr ""
+"Помогает вам обрабатывать подписки и повторяющиеся выставление счетов-"
+"фактур."
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_close_reason_id_9158
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_close_reason_wizard_id
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_id
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_line_id
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_report_id
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_template_id_9166
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_template_line_id
+msgid "ID"
+msgstr "ID"
+
+#. module: sale_contract
+#: model:ir.model.fields,help:sale_contract.field_sale_subscription_date
+msgid ""
+"If set in advance, the subscription will be set to pending 1 month before "
+"the date and will be closed on the date set in this field."
+msgstr ""
+"Если задать заранее, подписка будет присвоено до 1 месяц до даты и будет "
+"закрыт на дату в это поле."
+
+#. module: sale_contract
+#: model:ir.model.fields,help:sale_contract.field_product_template_recurring_invoice
+msgid ""
+"If set, confirming a sale order with this product will create a subscription"
+msgstr ""
+"Если установлено, что подтверждает заказ продажи с данным продуктом создать "
+"подписку"
+
+#. module: sale_contract
+#: model:ir.model.fields,help:sale_contract.field_sale_subscription_template_journal_id
+msgid ""
+"If set, subscriptions with this template will invoice in this journal; "
+"otherwise the sales journal with the lowest sequence is used."
+msgstr ""
+"Если задано, подписки с помощью этого шаблона будет счета в этом журнале; в "
+"противном случае используется продаж журнал с низким последовательностью."
+
+#. module: sale_contract
+#: model:ir.model.fields,help:sale_contract.field_sale_subscription_active
+msgid ""
+"If the active field is set to False, it will allow you to hide the account "
+"without removing it."
+msgstr ""
+"Если поле «Активно» имеет значение «Ложь», вы сможете скрыть счёт не удаляя."
+
+#. module: sale_contract
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_view_search
+#: selection:sale.subscription,state:0
+#: selection:sale.subscription.report,state:0
+msgid "In Progress"
+msgstr "Выполняется"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_recurring_invoice_line_ids
+msgid "Invoice Lines"
+msgstr "Позиции счета"
+
+#. module: sale_contract
+#: model:ir.model.fields,help:sale_contract.field_sale_subscription_recurring_rule_type
+#: model:ir.model.fields,help:sale_contract.field_sale_subscription_template_recurring_rule_type
+msgid "Invoice automatically repeat at specified interval"
+msgstr "Автоматически повторять счет через заданный интервал времени"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_invoice_count
+msgid "Invoice count"
+msgstr "Количество счетов"
+
+#. module: sale_contract
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_view_form
+msgid "Invoices"
+msgstr "Счета"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription___last_update
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_close_reason___last_update
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_close_reason_wizard___last_update
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_line___last_update
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_report___last_update
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_template___last_update
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_template_line___last_update
+msgid "Last Modified on"
+msgstr "Последний раз изменено"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_close_reason_wizard_write_uid
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_close_reason_write_uid
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_line_write_uid
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_template_line_write_uid
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_template_write_uid
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_write_uid
+msgid "Last Updated by"
+msgstr "Последний раз обновил"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_close_reason_wizard_write_date
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_close_reason_write_date
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_line_write_date
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_template_line_write_date
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_template_write_date
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_write_date
+msgid "Last Updated on"
+msgstr "Последний раз обновлено"
+
+#. module: sale_contract
+#: model:res.groups,name:sale_contract.group_sale_contract_manager
+msgid "Manage Subscriptions"
+msgstr "Управление подписками"
+
+#. module: sale_contract
+#: model:ir.model.fields,help:sale_contract.field_sale_subscription_line_quantity
+msgid "Max between actual and sold quantities; this quantity will be invoiced"
+msgstr ""
+"Максимум между фактическим и проданным количеством; это количество будет "
+"выставлено в счете-фактуре"
+
+#. module: sale_contract
+#: selection:sale.subscription.template,recurring_rule_type:0
+msgid "Month(s)"
+msgstr "Месяц(ы)"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_close_reason_name
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_template_name
+msgid "Name"
+msgstr "Имя"
+
+#. module: sale_contract
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_view_search
+#: selection:sale.subscription,state:0
+#: selection:sale.subscription.report,state:0
+msgid "New"
+msgstr "Создать"
+
+#. module: sale_contract
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_view_search
+msgid "New Contracts"
+msgstr "Новые Договора"
+
+#. module: sale_contract
+#: model:ir.actions.act_window,help:sale_contract.sale_subscription_action_pending
+msgid ""
+"Odoo automatically sets contracts to be renewed in a pending\n"
+"            state. After the negociation, the salesman should close or renew\n"
+"            pending contracts."
+msgstr ""
+"Odoo автоматически устанавливает договора, в состоянии ожидания\n"
+"обновляемыми. После проведения переговоров продавец должен закрыть\n"
+"или обновить ожидающие договора."
+
+#. module: sale_contract
+#: model:ir.model,name:sale_contract.model_res_partner
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_view_search
+msgid "Partner"
+msgstr "Партнёр"
+
+#. module: sale_contract
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_view_search
+msgid "Pending contracts"
+msgstr "Контракты в ожидании"
+
+#. module: sale_contract
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_view_form
+msgid "Plan Change Tags"
+msgstr "Теги изменения плана"
+
+#. module: sale_contract
+#: code:addons/sale_contract/models/sale_subscription.py:172
+#, python-format
+msgid "Please define a sale journal for the company \"%s\"."
+msgstr "Пожалуйста, определите журнал продаж для компании \"%s\"."
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_template_line_price
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_template_option_price
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_wizard_option_price
+msgid "Price"
+msgstr "Цена"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_pricelist_id
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_report_pricelist_id
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_view_search
+msgid "Pricelist"
+msgstr "Прайс-лист"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_line_product_id
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_report_product_id
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_template_line_product_id
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_template_option_product_id
+msgid "Product"
+msgstr "Продукт"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_report_categ_id
+msgid "Product Category"
+msgstr "Категория Продукта"
+
+#. module: sale_contract
+#: model:ir.model,name:sale_contract.model_product_template
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_report_product_tmpl_id
+msgid "Product Template"
+msgstr "Шаблон Продукта"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_project_count
+msgid "Project Count"
+msgstr "Количество проектов"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_project_ids
+msgid "Projects"
+msgstr "Проекты"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_line_quantity
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_template_line_quantity
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_template_option_quantity
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_wizard_option_quantity
+msgid "Quantity"
+msgstr "Количество"
+
+#. module: sale_contract
+#: model:ir.model.fields,help:sale_contract.field_sale_subscription_line_actual_quantity
+msgid "Quantity actually used by the customer"
+msgstr "Количество фактически используемое заказчиком"
+
+#. module: sale_contract
+#: model:ir.model.fields,help:sale_contract.field_sale_subscription_line_sold_quantity
+msgid "Quantity sold to the customer"
+msgstr "Проданное заказчику количество"
+
+#. module: sale_contract
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_close_reason_view_form
+msgid "Reason"
+msgstr "Причина"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_recurring_rule_type
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_template_recurring_rule_type
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_template_view_form
+msgid "Recurrency"
+msgstr "Повторение"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_recurring_total
+msgid "Recurring Price"
+msgstr "Периодическая Цена "
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_report_recurring_price
+msgid "Recurring price(per period)"
+msgstr "Периодическая цена (за период)"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_code
+msgid "Reference"
+msgstr "Ссылка"
+
+#. module: sale_contract
+#: selection:sale.order,subscription_management:0
+msgid "Renewal"
+msgstr "Продление"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_recurring_interval
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_template_recurring_interval
+msgid "Repeat Every"
+msgstr "Повторить каждое"
+
+#. module: sale_contract
+#: model:ir.model.fields,help:sale_contract.field_sale_subscription_recurring_interval
+#: model:ir.model.fields,help:sale_contract.field_sale_subscription_template_recurring_interval
+msgid "Repeat every (Days/Week/Month/Year)"
+msgstr "Повтор каждый (День/Неделю/Месяц/Год)"
+
+#. module: sale_contract
+#: model:ir.ui.menu,name:sale_contract.menu_report_product_all
+msgid "Report"
+msgstr "Отчёт"
+
+#. module: sale_contract
+#: model:ir.model,name:sale_contract.model_sale_subscription
+msgid "Sale Subscription"
+msgstr "Подписка на распродажи"
+
+#. module: sale_contract
+#: model:ir.model,name:sale_contract.model_sale_subscription_template
+msgid "Sale Subscription Template"
+msgstr "Шаблон продажи подписки"
+
+#. module: sale_contract
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_view_list
+msgid "Sale Subscriptions"
+msgstr "Продажа подписок"
+
+#. module: sale_contract
+#: model:ir.model,name:sale_contract.model_sale_order
+msgid "Sales Order"
+msgstr "Заказ продаж"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_report_user_id
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_user_id
+msgid "Sales Rep"
+msgstr "Торговый Представитель"
+
+#. module: sale_contract
+#: model:res.groups,name:sale_contract.group_sale_contract_view
+msgid "See Subscriptions"
+msgstr "Смотреть подписки"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_close_reason_sequence
+msgid "Sequence"
+msgstr "Последовательность"
+
+#. module: sale_contract
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_view_form
+msgid "Settings"
+msgstr "Настройки"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_line_sold_quantity
+msgid "Sold quantity"
+msgstr "Количество проданных"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_date_start
+msgid "Start Date"
+msgstr "Дата начала"
+
+#. module: sale_contract
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_view_search
+msgid "Start Month"
+msgstr "Месяц начала"
+
+#. module: sale_contract
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_view_form
+msgid "Start Subscription"
+msgstr "Начать подписку"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_report_state
+msgid "State"
+msgstr "Регион"
+
+#. module: sale_contract
+#: model:mail.message.subtype,name:sale_contract.subtype_state_change
+msgid "State Change"
+msgstr "Изменение состояния"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_state
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_view_search
+msgid "Status"
+msgstr "Статус"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_line_price_subtotal
+msgid "Sub Total"
+msgstr "Подытог"
+
+#. module: sale_contract
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_close_reason_view_form
+msgid "Submit"
+msgstr "Подтвердить"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_order_subscription_id
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_line_analytic_account_id
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_template_view_form
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_view_form
+msgid "Subscription"
+msgstr "Подписка"
+
+#. module: sale_contract
+#: model:ir.actions.act_window,name:sale_contract.action_subscription_report_all
+#: model:ir.ui.view,arch_db:sale_contract.view_subcription_report_graph
+#: model:ir.ui.view,arch_db:sale_contract.view_subcription_report_pivot
+msgid "Subscription Analysis"
+msgstr "Анализ подписки"
+
+#. module: sale_contract
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_template_view_form
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_view_form
+msgid "Subscription Lines"
+msgstr "Позиции подписки"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_order_subscription_management
+msgid "Subscription Management"
+msgstr "Управление подписками"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_product_template_recurring_invoice
+msgid "Subscription Product"
+msgstr "Подписка Продукта"
+
+#. module: sale_contract
+#: model:ir.actions.act_window,name:sale_contract.product_action_subscription
+#: model:ir.ui.menu,name:sale_contract.menu_sale_subscription_product
+msgid "Subscription Products"
+msgstr "Подписка Продуктов"
+
+#. module: sale_contract
+#: model:ir.model,name:sale_contract.model_sale_subscription_report
+msgid "Subscription Statistics"
+msgstr "Статистика подписки"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_report_template_id
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_template_id
+msgid "Subscription Template"
+msgstr "Подписка Шаблона"
+
+#. module: sale_contract
+#: model:ir.model,name:sale_contract.model_sale_subscription_template_line
+msgid "Subscription Template Line"
+msgstr "Линия шаблона подписки"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_template_subscription_template_line_ids
+msgid "Subscription Template Lines"
+msgstr "Шаблон линий подписки"
+
+#. module: sale_contract
+#: model:ir.actions.act_window,name:sale_contract.sale_subscription_template_action
+#: model:ir.ui.menu,name:sale_contract.menu_template_of_subscription
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_template_view_list
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_template_view_search
+msgid "Subscription Templates"
+msgstr "Подписка Шаблонов"
+
+#. module: sale_contract
+#: model:ir.ui.view,arch_db:sale_contract.product_template_search_view_inherit_sale_contract
+msgid "Subscription products"
+msgstr "Подписка продуктов"
+
+#. module: sale_contract
+#: model:mail.message.subtype,description:sale_contract.subtype_state_change
+msgid "Subscription state has changed"
+msgstr "Состояние подписки изменилось"
+
+#. module: sale_contract
+#: model:ir.actions.act_window,name:sale_contract.sale_subscription_action
+#: model:ir.actions.act_window,name:sale_contract.sale_subscription_action_res_partner
+#: model:ir.model.fields,field_description:sale_contract.field_account_analytic_account_subscription_ids
+#: model:ir.model.fields,field_description:sale_contract.field_res_partner_subscription_count
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_subscription_ids
+#: model:ir.module.category,name:sale_contract.module_category_contract_management
+#: model:ir.ui.menu,name:sale_contract.menu_sale_subscription
+#: model:ir.ui.menu,name:sale_contract.menu_sale_subscription_action
+#: model:ir.ui.menu,name:sale_contract.menu_sale_subscription_root
+#: model:ir.ui.view,arch_db:sale_contract.account_analytic_account_view_inherit_sale_contract
+#: model:ir.ui.view,arch_db:sale_contract.res_partner_view_inherit_sale_contract
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_template_view_form
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_view_graph
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_view_pivot
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_view_search
+msgid "Subscriptions"
+msgstr "Подписки"
+
+#. module: sale_contract
+#: model:ir.actions.act_window,name:sale_contract.sale_subscription_action_pending
+#: model:ir.ui.menu,name:sale_contract.menu_sale_subscription_pending
+msgid "Subscriptions to Renew"
+msgstr "Подписка на обновления"
+
+#. module: sale_contract
+#: model:ir.model,name:sale_contract.model_sale_subscription_close_reason
+msgid "Susbcription Close Reason"
+msgstr "Причина закрытия подписки"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_account_analytic_account_subscription_count
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_subscription_count
+msgid "Susbcription Count"
+msgstr "Кол-во подписок"
+
+#. module: sale_contract
+#: model:ir.model,name:sale_contract.model_sale_subscription_line
+msgid "Susbcription Line"
+msgstr "Линия подписки"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_tag_ids
+msgid "Tags"
+msgstr "Теги"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_template_line_subscription_template_id
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_template_option_subscription_template_id
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_template_view_search
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_view_search
+msgid "Template"
+msgstr "Шаблон"
+
+#. module: sale_contract
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_template_view_form
+msgid "Template Name"
+msgstr "Название шаблона"
+
+#. module: sale_contract
+#: model:ir.actions.act_window,help:sale_contract.sale_subscription_template_action
+msgid ""
+"Templates are used to prefigure subscription that\n"
+"                can be selected by the salespeople to quickly configure the\n"
+"                terms and conditions of the subscription."
+msgstr ""
+"Шаблоны используются для предварительной настройки подписки,\n"
+"                 могут быть выбраны продавцами для быстрой настройки\n"
+"                 условия подписки."
+
+#. module: sale_contract
+#: model:ir.model.fields,help:sale_contract.field_sale_subscription_recurring_next_date
+msgid ""
+"The next invoice will be created on this date then the period will be "
+"extended."
+msgstr ""
+"Следующий счет будет создан в эту дату, после чего период будет продлен."
+
+#. module: sale_contract
+#: model:ir.actions.act_window,help:sale_contract.product_action_subscription
+msgid ""
+"The product form contains information to simplify the sale\n"
+"            process: price, notes in the quotation, accounting data,\n"
+"            procurement methods, etc."
+msgstr ""
+"Форма продукта содержит информацию для упрощения\n"
+"процесса продаж: цена, замечания в ценовом предложении,\n"
+"бухгалтерские данные, методы снабжения, и т.д."
+
+#. module: sale_contract
+#: model:res.groups,comment:sale_contract.group_sale_contract_view
+msgid "The user will have read access to contracts."
+msgstr "Пользователь будет иметь доступ на чтение договоров."
+
+#. module: sale_contract
+#: model:res.groups,comment:sale_contract.group_sale_contract_manager
+msgid "The user will have write access to Subscriptions."
+msgstr "У пользователя будет доступ на запись к подпискам."
+
+#. module: sale_contract
+#: code:addons/sale_contract/models/sale_order.py:83
+#: code:addons/sale_contract/models/sale_subscription.py:189
+#, python-format
+msgid "This invoice covers the following period: %s - %s"
+msgstr "Эта счет-фактура охватывает следующий период: %s - %s"
+
+#. module: sale_contract
+#: model:ir.ui.view,arch_db:sale_contract.sale_order_view_form_subscription
+msgid "This order is linked to a subscription."
+msgstr "Этот заказ связан с подпиской."
+
+#. module: sale_contract
+#: model:ir.model.fields,help:sale_contract.field_sale_subscription_company_uom_id
+msgid ""
+"This will set the unit of measure used in projects and tasks.\n"
+"If you use the timesheet linked to projects, don't forget to setup the right unit of measure in your employees."
+msgstr ""
+"Это установит единицу измерения, используемую в проектах и задачах. \n"
+"Если вы используете табели, ссылающееся на проекты, не забудьте установить правильную единицу измерения для ваших сотрудников."
+
+#. module: sale_contract
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_view_form
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_view_search
+#: selection:sale.subscription,state:0
+#: selection:sale.subscription.report,state:0
+msgid "To Renew"
+msgstr "К продлению"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_line_price_unit
+msgid "Unit Price"
+msgstr "Цена за Единицу"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_line_uom_id
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_report_product_uom
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_template_line_uom_id
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_template_option_uom_id
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_wizard_option_uom_id
+msgid "Unit of Measure"
+msgstr "Единица Измерения"
+
+#. module: sale_contract
+#: selection:sale.order,subscription_management:0
+msgid "Upselling"
+msgstr "До продажи"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_use_tasks
+msgid "Use Tasks"
+msgstr "Использовать задачи"
+
+#. module: sale_contract
+#: model:ir.actions.act_window,help:sale_contract.sale_subscription_action
+msgid ""
+"Use contracts to follow tasks, issues, timesheets or invoicing based on\n"
+"                work done, expenses and/or sales orders. Odoo will automatically manage\n"
+"                the alerts for the renewal of the contracts to the right salesperson."
+msgstr ""
+"Используйте договоры для отслеживания задач, проблем, табелей\n"
+"или выставления счетов-фактур, основанных на проделанной работе,\n"
+"расходах и/или заказах. Odoo будет автоматически управлять оповещениями\n"
+"для обновления договоров соответствующему продавцу."
+
+#. module: sale_contract
+#: selection:sale.subscription.template,recurring_rule_type:0
+msgid "Week(s)"
+msgstr "Неделя(ь)"
+
+#. module: sale_contract
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_view_form
+msgid ""
+"When a customer wants to change his subscription plan, he has the choice "
+"between all the recurring contracts with the same tags."
+msgstr ""
+"Когда клиент хочет изменить свой тарифный план, у него есть выбор между "
+"всеми повторяющимися контрактами с одинаковыми тегами."
+
+#. module: sale_contract
+#: selection:sale.subscription.template,recurring_rule_type:0
+msgid "Year(s)"
+msgstr "Год (а)"
+
+#. module: sale_contract
+#: model:ir.actions.act_window,help:sale_contract.product_action_subscription
+msgid ""
+"You must define a product for everything you sell, whether it's\n"
+"            a physical product, a consumable or a service you offer to\n"
+"            customers."
+msgstr ""
+"Вы должны определить продукт для всего что вы продаете, \n"
+"будь то физический продукт, расходные материалы или сервисные\n"
+"услуги, предлагаемые заказчикам."
+
+#. module: sale_contract
+#: code:addons/sale_contract/models/sale_subscription.py:167
+#, python-format
+msgid "You must first select a Customer for Subscription %s!"
+msgstr "Вы должны сначала выбрать Клиента для Подписки %s!"
+
+#. module: sale_contract
+#: model:ir.actions.act_window,help:sale_contract.sale_subscription_action_pending
+msgid ""
+"You will find here the contracts to be renewed because the\n"
+"            end date is passed or the working effort is higher than the\n"
+"            maximum authorized one."
+msgstr ""
+"Вы найдете здесь договора для возобновления, потому что\n"
+"прошла дата окончания или отведенная для работы попытка\n"
+"больше чем одна максимально разрешенная. "
+
+#. module: sale_contract
+#: model:ir.model,name:sale_contract.model_sale_subscription_close_reason_wizard
+msgid "sale.subscription.close.reason.wizard"
+msgstr "sale.subscription.close.reason.wizard"
+
+#. module: sale_contract
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_view_form
+msgid "⇒ Generate Invoice"
+msgstr "⇒ Создания счета"
+
+#. module: sale_contract
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_view_form
+msgid "⇒ Renewal Quotation"
+msgstr "⇒ Продление коммерческое"

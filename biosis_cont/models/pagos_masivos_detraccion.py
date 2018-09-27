@@ -18,7 +18,7 @@ class AccountMasivosDetraccion(models.Model):
         self.monto_total = sum((line.sub_total) for line in self.facturas_lineas_ids)
 
     order_detraccion= fields.Char('Nombre', required=True, index=True, copy=False, default='Nuevo')
-    tipo_partner = fields.Selection([('customer', 'Cliente'), ('supplier', 'Proveedor')],required=True, default='c')
+    tipo_partner = fields.Selection([('customer', 'Cliente'), ('supplier', 'Proveedor')], required=True, default='c')
     partner_id = fields.Many2one('res.partner',string=u'Cliente/Proveedor', required=True)
     pago = fields.Many2one('account.payment', string='Pago', required=True)
     state = fields.Selection([('draft', 'Borrador'), ('open', 'Abierto'), ('reconcile', 'Conciliado')])

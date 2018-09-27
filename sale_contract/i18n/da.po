@@ -1,0 +1,1032 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * sale_contract
+# 
+# Translators:
+# Martin Trigaux <mat@odoo.com>, 2016
+# Morten Schou <ms@msteknik.dk>, 2016
+# peso <peer.sommerlund@gmail.com>, 2016
+# Sanne Kristensen <sanne@vkdata.dk>, 2016
+# Hans Henrik Gabelgaard <hhg@gabelgaard.org>, 2016
+# Jesper Carstensen <jc@danodoo.dk>, 2016
+# Kenneth Hansen <kenneth@vkdata.dk>, 2017
+# Pernille Kristensen <pernillekristensen1994@gmail.com>, 2017
+# Ejner Sønniksen <ejner@vkdata.dk>, 2017
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-09-29 14:58+0000\n"
+"PO-Revision-Date: 2016-09-29 14:58+0000\n"
+"Last-Translator: Ejner Sønniksen <ejner@vkdata.dk>, 2017\n"
+"Language-Team: Danish (https://www.transifex.com/odoo/teams/41243/da/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: da\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: sale_contract
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_view_search
+msgid "Account Manager"
+msgstr "Projektleder"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_template_journal_id
+msgid "Accounting Journal"
+msgstr "Regnskabsjournal"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_active
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_template_active
+msgid "Active"
+msgstr "Aktiv"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_line_actual_quantity
+msgid "Actual quantity"
+msgstr "Faktisk antal"
+
+#. module: sale_contract
+#: model:ir.model,name:sale_contract.model_account_analytic_account
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_analytic_account_id
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_name
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_report_analytic_account_id
+msgid "Analytic Account"
+msgstr "Analyse konto"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_line_ids
+msgid "Analytic Lines"
+msgstr "Analytiske linier"
+
+#. module: sale_contract
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_template_view_search
+msgid "Archived"
+msgstr "Arkiveret"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_balance
+msgid "Balance"
+msgstr "Balance"
+
+#. module: sale_contract
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_close_reason_view_form
+msgid "Cancel"
+msgstr "Annuller"
+
+#. module: sale_contract
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_view_form
+msgid "Cancel Subscription"
+msgstr "Slet abonnement"
+
+#. module: sale_contract
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_view_search
+#: selection:sale.subscription,state:0
+#: selection:sale.subscription.report,state:0
+msgid "Cancelled"
+msgstr "Annulleret"
+
+#. module: sale_contract
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_view_search
+msgid "Cancelled contracts"
+msgstr "Annullerede kontrakter"
+
+#. module: sale_contract
+#: model:ir.model.fields,help:sale_contract.field_sale_subscription_use_tasks
+msgid "Check this box to manage internal activities through this project"
+msgstr ""
+"Marker dette felt for at administrere interne aktiviteter gennem dette "
+"projekt"
+
+#. module: sale_contract
+#: model:ir.actions.act_window,help:sale_contract.sale_subscription_template_action
+msgid "Click here to create a template of subscription."
+msgstr "Klik her for at oprette en ny skabelon til abonnementer."
+
+#. module: sale_contract
+#: model:ir.actions.act_window,help:sale_contract.sale_subscription_action
+msgid "Click to create a new contract."
+msgstr "Klik her for at oprette en ny kontrakt."
+
+#. module: sale_contract
+#: model:ir.actions.act_window,help:sale_contract.sale_subscription_action_pending
+msgid "Click to define a new contract."
+msgstr "Klik for at definere en ny kontrakt."
+
+#. module: sale_contract
+#: model:ir.actions.act_window,help:sale_contract.product_action_subscription
+msgid "Click to define a new product."
+msgstr "Klik for at oprette et nyt produkt."
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_close_reason_id
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_close_reason_wizard_close_reason_id
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_report_close_reason_id
+msgid "Close Reason"
+msgstr "Luk årsag"
+
+#. module: sale_contract
+#: model:ir.actions.act_window,name:sale_contract.sale_subscription_close_reason_action
+#: model:ir.ui.menu,name:sale_contract.menu_sale_subscription_lost_reason_action
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_close_reason_view_form
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_close_reason_view_tree
+msgid "Close Reasons"
+msgstr "Luk årsager"
+
+#. module: sale_contract
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_view_form
+msgid "Close Subscription"
+msgstr "Luk abonnement"
+
+#. module: sale_contract
+#: model:ir.actions.act_window,name:sale_contract.sale_subscription_close_reason_wizard_action
+msgid "Close/Cancel Reason"
+msgstr "Luk/slet årsag"
+
+#. module: sale_contract
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_view_search
+#: selection:sale.subscription,state:0
+#: selection:sale.subscription.report,state:0
+msgid "Closed"
+msgstr "Lukket"
+
+#. module: sale_contract
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_view_search
+msgid "Closed contracts"
+msgstr "Lukkede kontrakter"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_template_code
+msgid "Code"
+msgstr "Kode"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_report_commercial_partner_id
+msgid "Commercial Partner"
+msgstr "Kommerciel Partner"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_company_id
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_report_company_id
+msgid "Company"
+msgstr "Virksomhed"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_company_uom_id
+msgid "Company UOM"
+msgstr "Virksomhed UOM"
+
+#. module: sale_contract
+#: model:ir.ui.menu,name:sale_contract.menu_sale_subscription_config
+msgid "Configuration"
+msgstr "Konfiguration"
+
+#. module: sale_contract
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_view_search
+msgid "Contract"
+msgstr "Kontrakt"
+
+#. module: sale_contract
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_view_search
+msgid "Contracts in progress"
+msgstr "Igangværende kontrakter"
+
+#. module: sale_contract
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_view_search
+msgid "Contracts not assigned"
+msgstr "Ikke tildelte-kontrakter"
+
+#. module: sale_contract
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_view_search
+msgid "Contracts that are not assigned to an account manager."
+msgstr "Kontrakter der ikke er tildelt en ansvarlig."
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_report_country_id
+msgid "Country"
+msgstr "Land"
+
+#. module: sale_contract
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_view_form
+msgid ""
+"Create a sale order that will overwrite this contract when confirmed "
+"(renewal quotation)"
+msgstr ""
+"Opret en salgsordre, der vil overskrive denne kontrakt, når den bliver "
+"bekræftet (gentegningstilbud)"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_close_reason_create_uid
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_close_reason_wizard_create_uid
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_create_uid
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_line_create_uid
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_template_create_uid
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_template_line_create_uid
+msgid "Created by"
+msgstr "Oprettet af"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_close_reason_create_date
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_close_reason_wizard_create_date
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_create_date
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_line_create_date
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_template_create_date
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_template_line_create_date
+msgid "Created on"
+msgstr "Oprettet den"
+
+#. module: sale_contract
+#: selection:sale.order,subscription_management:0
+msgid "Creation"
+msgstr "Oprettelse"
+
+#. module: sale_contract
+#: model:ir.model.fields,help:sale_contract.field_sale_order_subscription_management
+msgid ""
+"Creation: The Sales Order created the subscription\n"
+"Upselling: The Sales Order added lines to the subscription\n"
+"Renewal: The Sales Order replaced the subscription's content with its own"
+msgstr ""
+"Oprettelse: Salgsordren oprettede abonnementet\n"
+"Mersalg: salgsordren tilføjede linjer til abonnementet\n"
+"Fornyelse: Salgsordren erstattede abonnements indhold med sit eget"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_credit
+msgid "Credit"
+msgstr "Kredit"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_currency_id
+msgid "Currency"
+msgstr "Valuta"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_partner_id
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_report_partner_id
+msgid "Customer"
+msgstr "Kunde"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_report_date_end
+msgid "Date End"
+msgstr "Slutdato"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_report_date_start
+msgid "Date Start"
+msgstr "Startdato"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_recurring_next_date
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_view_form
+msgid "Date of Next Invoice"
+msgstr "Dato for næste faktura"
+
+#. module: sale_contract
+#: selection:sale.subscription.template,recurring_rule_type:0
+msgid "Day(s)"
+msgstr "Dag(e)"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_debit
+msgid "Debit"
+msgstr "Debet"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_description
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_line_name
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_template_description
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_template_line_name
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_template_option_name
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_wizard_option_name
+msgid "Description"
+msgstr "Beskrivelse"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_line_discount
+msgid "Discount (%)"
+msgstr "Rabat (%)"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_close_reason_display_name
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_close_reason_wizard_display_name
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_display_name
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_line_display_name
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_report_display_name
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_template_display_name
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_template_line_display_name
+msgid "Display Name"
+msgstr "Vis navn"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_date
+msgid "End Date"
+msgstr "Slut dato"
+
+#. module: sale_contract
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_view_search
+msgid "End Month"
+msgstr "Slut måned"
+
+#. module: sale_contract
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_view_search
+msgid "End date is in the next month"
+msgstr "Slut dato er i næste måned"
+
+#. module: sale_contract
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_view_search
+msgid "End date passed"
+msgstr "Slutdato passeret"
+
+#. module: sale_contract
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_view_search
+msgid "Expired"
+msgstr "Udløbet"
+
+#. module: sale_contract
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_view_search
+msgid "Expiring soon"
+msgstr "Udløber snart"
+
+#. module: sale_contract
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_view_search
+msgid "Group By"
+msgstr "Gruppér efter"
+
+#. module: sale_contract
+#: model:ir.module.category,description:sale_contract.module_category_contract_management
+msgid "Helps you handle subscriptions and recurring invoicing."
+msgstr ""
+"Hjælper dig med at håndtere abonnementer og tilbagevendende fakturering."
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_close_reason_id_9158
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_close_reason_wizard_id
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_id
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_line_id
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_report_id
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_template_id_9166
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_template_line_id
+msgid "ID"
+msgstr "ID"
+
+#. module: sale_contract
+#: model:ir.model.fields,help:sale_contract.field_sale_subscription_date
+msgid ""
+"If set in advance, the subscription will be set to pending 1 month before "
+"the date and will be closed on the date set in this field."
+msgstr ""
+"Hvis angivet, vil abonnementet være afventende indtil 1 måned før datoen og "
+"lukkes den dato, der er angivet i dette felt."
+
+#. module: sale_contract
+#: model:ir.model.fields,help:sale_contract.field_product_template_recurring_invoice
+msgid ""
+"If set, confirming a sale order with this product will create a subscription"
+msgstr ""
+"Hvis angivet, bekræftes en salgsordre med dette produkt og du opretter et "
+"abonnement"
+
+#. module: sale_contract
+#: model:ir.model.fields,help:sale_contract.field_sale_subscription_template_journal_id
+msgid ""
+"If set, subscriptions with this template will invoice in this journal; "
+"otherwise the sales journal with the lowest sequence is used."
+msgstr ""
+"Hvis angivet, faktureres abonnementer med denne skabelon i denne journal; "
+"ellers anvendes salgsjournalen med den laveste sekvens."
+
+#. module: sale_contract
+#: model:ir.model.fields,help:sale_contract.field_sale_subscription_active
+msgid ""
+"If the active field is set to False, it will allow you to hide the account "
+"without removing it."
+msgstr ""
+"Hvis det aktive felt er indstillet til falsk, vil det give dig mulighed for "
+"at skjule kontoen, uden at slette den."
+
+#. module: sale_contract
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_view_search
+#: selection:sale.subscription,state:0
+#: selection:sale.subscription.report,state:0
+msgid "In Progress"
+msgstr "I gang"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_recurring_invoice_line_ids
+msgid "Invoice Lines"
+msgstr "Fakturalinjer"
+
+#. module: sale_contract
+#: model:ir.model.fields,help:sale_contract.field_sale_subscription_recurring_rule_type
+#: model:ir.model.fields,help:sale_contract.field_sale_subscription_template_recurring_rule_type
+msgid "Invoice automatically repeat at specified interval"
+msgstr "Interval for automatisk genfakturering"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_invoice_count
+msgid "Invoice count"
+msgstr "Fakturatælling"
+
+#. module: sale_contract
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_view_form
+msgid "Invoices"
+msgstr "Fakturaer"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription___last_update
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_close_reason___last_update
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_close_reason_wizard___last_update
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_line___last_update
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_report___last_update
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_template___last_update
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_template_line___last_update
+msgid "Last Modified on"
+msgstr "Sidst ændret den"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_close_reason_wizard_write_uid
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_close_reason_write_uid
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_line_write_uid
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_template_line_write_uid
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_template_write_uid
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_write_uid
+msgid "Last Updated by"
+msgstr "Sidst opdateret af"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_close_reason_wizard_write_date
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_close_reason_write_date
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_line_write_date
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_template_line_write_date
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_template_write_date
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_write_date
+msgid "Last Updated on"
+msgstr "Sidst opdateret den"
+
+#. module: sale_contract
+#: model:res.groups,name:sale_contract.group_sale_contract_manager
+msgid "Manage Subscriptions"
+msgstr "Håndtering af abonnementer"
+
+#. module: sale_contract
+#: model:ir.model.fields,help:sale_contract.field_sale_subscription_line_quantity
+msgid "Max between actual and sold quantities; this quantity will be invoiced"
+msgstr ""
+"Max. mellem faktiske og solgte antal; dette antal vil blive faktureret"
+
+#. module: sale_contract
+#: selection:sale.subscription.template,recurring_rule_type:0
+msgid "Month(s)"
+msgstr "Måned(er)"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_close_reason_name
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_template_name
+msgid "Name"
+msgstr "Navn"
+
+#. module: sale_contract
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_view_search
+#: selection:sale.subscription,state:0
+#: selection:sale.subscription.report,state:0
+msgid "New"
+msgstr "Opret"
+
+#. module: sale_contract
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_view_search
+msgid "New Contracts"
+msgstr "Nye kontrakter"
+
+#. module: sale_contract
+#: model:ir.actions.act_window,help:sale_contract.sale_subscription_action_pending
+msgid ""
+"Odoo automatically sets contracts to be renewed in a pending\n"
+"            state. After the negociation, the salesman should close or renew\n"
+"            pending contracts."
+msgstr ""
+"Odoo indstiller automatisk kontrakter, der skal fornyes til afventer\n"
+"            stadie. Efter forhandlingen skal sælgeren lukke eller forny\n"
+"            afventende kontrakter."
+
+#. module: sale_contract
+#: model:ir.model,name:sale_contract.model_res_partner
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_view_search
+msgid "Partner"
+msgstr "Kontakt"
+
+#. module: sale_contract
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_view_search
+msgid "Pending contracts"
+msgstr "Afventende kontrakter"
+
+#. module: sale_contract
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_view_form
+msgid "Plan Change Tags"
+msgstr "Planlæg ændring med tags"
+
+#. module: sale_contract
+#: code:addons/sale_contract/models/sale_subscription.py:172
+#, python-format
+msgid "Please define a sale journal for the company \"%s\"."
+msgstr "Angiv salgsjournal for virksomheden \"%s\"."
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_template_line_price
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_template_option_price
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_wizard_option_price
+msgid "Price"
+msgstr "Pris"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_pricelist_id
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_report_pricelist_id
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_view_search
+msgid "Pricelist"
+msgstr "Prisliste"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_line_product_id
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_report_product_id
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_template_line_product_id
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_template_option_product_id
+msgid "Product"
+msgstr "Vare"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_report_categ_id
+msgid "Product Category"
+msgstr "Produkt katagori"
+
+#. module: sale_contract
+#: model:ir.model,name:sale_contract.model_product_template
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_report_product_tmpl_id
+msgid "Product Template"
+msgstr "Produktskabelon"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_project_count
+msgid "Project Count"
+msgstr "Projekttælling"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_project_ids
+msgid "Projects"
+msgstr "Projekter"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_line_quantity
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_template_line_quantity
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_template_option_quantity
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_wizard_option_quantity
+msgid "Quantity"
+msgstr "Antal"
+
+#. module: sale_contract
+#: model:ir.model.fields,help:sale_contract.field_sale_subscription_line_actual_quantity
+msgid "Quantity actually used by the customer"
+msgstr "Faktiske antal brugt af kunden"
+
+#. module: sale_contract
+#: model:ir.model.fields,help:sale_contract.field_sale_subscription_line_sold_quantity
+msgid "Quantity sold to the customer"
+msgstr "Anatl solgt til kunden"
+
+#. module: sale_contract
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_close_reason_view_form
+msgid "Reason"
+msgstr "Årsag"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_recurring_rule_type
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_template_recurring_rule_type
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_template_view_form
+msgid "Recurrency"
+msgstr "Gentagelse"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_recurring_total
+msgid "Recurring Price"
+msgstr "Gentagne pris"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_report_recurring_price
+msgid "Recurring price(per period)"
+msgstr "Gentagne pris (pr. periode)"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_code
+msgid "Reference"
+msgstr "Reference"
+
+#. module: sale_contract
+#: selection:sale.order,subscription_management:0
+msgid "Renewal"
+msgstr "Fornyelse"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_recurring_interval
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_template_recurring_interval
+msgid "Repeat Every"
+msgstr "Gentag hver"
+
+#. module: sale_contract
+#: model:ir.model.fields,help:sale_contract.field_sale_subscription_recurring_interval
+#: model:ir.model.fields,help:sale_contract.field_sale_subscription_template_recurring_interval
+msgid "Repeat every (Days/Week/Month/Year)"
+msgstr "Gentag hver (dage / uge / måned / år)"
+
+#. module: sale_contract
+#: model:ir.ui.menu,name:sale_contract.menu_report_product_all
+msgid "Report"
+msgstr "Rapport"
+
+#. module: sale_contract
+#: model:ir.model,name:sale_contract.model_sale_subscription
+msgid "Sale Subscription"
+msgstr "Abonnement"
+
+#. module: sale_contract
+#: model:ir.model,name:sale_contract.model_sale_subscription_template
+msgid "Sale Subscription Template"
+msgstr "Salgsabonnements skabelon"
+
+#. module: sale_contract
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_view_list
+msgid "Sale Subscriptions"
+msgstr "Salgsabonnement"
+
+#. module: sale_contract
+#: model:ir.model,name:sale_contract.model_sale_order
+msgid "Sales Order"
+msgstr "Salgsordre"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_report_user_id
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_user_id
+msgid "Sales Rep"
+msgstr "Sælger"
+
+#. module: sale_contract
+#: model:res.groups,name:sale_contract.group_sale_contract_view
+msgid "See Subscriptions"
+msgstr "Se abonnement"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_close_reason_sequence
+msgid "Sequence"
+msgstr "Rækkefølge"
+
+#. module: sale_contract
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_view_form
+msgid "Settings"
+msgstr "Opsætning"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_line_sold_quantity
+msgid "Sold quantity"
+msgstr "Antal solgte"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_date_start
+msgid "Start Date"
+msgstr "Start dato"
+
+#. module: sale_contract
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_view_search
+msgid "Start Month"
+msgstr "Start måned"
+
+#. module: sale_contract
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_view_form
+msgid "Start Subscription"
+msgstr "Start abonnement"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_report_state
+msgid "State"
+msgstr "Status"
+
+#. module: sale_contract
+#: model:mail.message.subtype,name:sale_contract.subtype_state_change
+msgid "State Change"
+msgstr "Ændring af status"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_state
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_view_search
+msgid "Status"
+msgstr "Status"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_line_price_subtotal
+msgid "Sub Total"
+msgstr "Sub total"
+
+#. module: sale_contract
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_close_reason_view_form
+msgid "Submit"
+msgstr "Indsend"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_order_subscription_id
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_line_analytic_account_id
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_template_view_form
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_view_form
+msgid "Subscription"
+msgstr "Abonnement"
+
+#. module: sale_contract
+#: model:ir.actions.act_window,name:sale_contract.action_subscription_report_all
+#: model:ir.ui.view,arch_db:sale_contract.view_subcription_report_graph
+#: model:ir.ui.view,arch_db:sale_contract.view_subcription_report_pivot
+msgid "Subscription Analysis"
+msgstr "Abonnementsanalyse"
+
+#. module: sale_contract
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_template_view_form
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_view_form
+msgid "Subscription Lines"
+msgstr "Abonnementslinjer"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_order_subscription_management
+msgid "Subscription Management"
+msgstr "Administrer abonnementer"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_product_template_recurring_invoice
+msgid "Subscription Product"
+msgstr "Abonnement produkt"
+
+#. module: sale_contract
+#: model:ir.actions.act_window,name:sale_contract.product_action_subscription
+#: model:ir.ui.menu,name:sale_contract.menu_sale_subscription_product
+msgid "Subscription Products"
+msgstr "Abonnements produkter"
+
+#. module: sale_contract
+#: model:ir.model,name:sale_contract.model_sale_subscription_report
+msgid "Subscription Statistics"
+msgstr "Abonnement statistik"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_report_template_id
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_template_id
+msgid "Subscription Template"
+msgstr "Abonnementsskabelon"
+
+#. module: sale_contract
+#: model:ir.model,name:sale_contract.model_sale_subscription_template_line
+msgid "Subscription Template Line"
+msgstr "Linje på abonnementsskabelon"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_template_subscription_template_line_ids
+msgid "Subscription Template Lines"
+msgstr "Linjer på abonnementsskabelon"
+
+#. module: sale_contract
+#: model:ir.actions.act_window,name:sale_contract.sale_subscription_template_action
+#: model:ir.ui.menu,name:sale_contract.menu_template_of_subscription
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_template_view_list
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_template_view_search
+msgid "Subscription Templates"
+msgstr "Abonnementsskabelon"
+
+#. module: sale_contract
+#: model:ir.ui.view,arch_db:sale_contract.product_template_search_view_inherit_sale_contract
+msgid "Subscription products"
+msgstr "Abonnements produkter"
+
+#. module: sale_contract
+#: model:mail.message.subtype,description:sale_contract.subtype_state_change
+msgid "Subscription state has changed"
+msgstr "Abonnementsfasen er ændret"
+
+#. module: sale_contract
+#: model:ir.actions.act_window,name:sale_contract.sale_subscription_action
+#: model:ir.actions.act_window,name:sale_contract.sale_subscription_action_res_partner
+#: model:ir.model.fields,field_description:sale_contract.field_account_analytic_account_subscription_ids
+#: model:ir.model.fields,field_description:sale_contract.field_res_partner_subscription_count
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_subscription_ids
+#: model:ir.module.category,name:sale_contract.module_category_contract_management
+#: model:ir.ui.menu,name:sale_contract.menu_sale_subscription
+#: model:ir.ui.menu,name:sale_contract.menu_sale_subscription_action
+#: model:ir.ui.menu,name:sale_contract.menu_sale_subscription_root
+#: model:ir.ui.view,arch_db:sale_contract.account_analytic_account_view_inherit_sale_contract
+#: model:ir.ui.view,arch_db:sale_contract.res_partner_view_inherit_sale_contract
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_template_view_form
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_view_graph
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_view_pivot
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_view_search
+msgid "Subscriptions"
+msgstr "Abonnementer"
+
+#. module: sale_contract
+#: model:ir.actions.act_window,name:sale_contract.sale_subscription_action_pending
+#: model:ir.ui.menu,name:sale_contract.menu_sale_subscription_pending
+msgid "Subscriptions to Renew"
+msgstr "Gentegning af abonnementer"
+
+#. module: sale_contract
+#: model:ir.model,name:sale_contract.model_sale_subscription_close_reason
+msgid "Susbcription Close Reason"
+msgstr "Årsag til lukning af abonnement"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_account_analytic_account_subscription_count
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_subscription_count
+msgid "Susbcription Count"
+msgstr "Abonnementstælling"
+
+#. module: sale_contract
+#: model:ir.model,name:sale_contract.model_sale_subscription_line
+msgid "Susbcription Line"
+msgstr "Abonnementslinje"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_tag_ids
+msgid "Tags"
+msgstr "Tags"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_template_line_subscription_template_id
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_template_option_subscription_template_id
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_template_view_search
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_view_search
+msgid "Template"
+msgstr "Skabelon"
+
+#. module: sale_contract
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_template_view_form
+msgid "Template Name"
+msgstr "Skabelonnavn"
+
+#. module: sale_contract
+#: model:ir.actions.act_window,help:sale_contract.sale_subscription_template_action
+msgid ""
+"Templates are used to prefigure subscription that\n"
+"                can be selected by the salespeople to quickly configure the\n"
+"                terms and conditions of the subscription."
+msgstr ""
+"Skabeloner bruges til at præfigurere abonnementet som\n"
+"                kan vælges af sælgere til hurtigt at konfigurere\n"
+"                vilkår og betingelser for abonnementet."
+
+#. module: sale_contract
+#: model:ir.model.fields,help:sale_contract.field_sale_subscription_recurring_next_date
+msgid ""
+"The next invoice will be created on this date then the period will be "
+"extended."
+msgstr ""
+"Den næste faktura vil blive oprettet på denne dato, så perioden forlænges."
+
+#. module: sale_contract
+#: model:ir.actions.act_window,help:sale_contract.product_action_subscription
+msgid ""
+"The product form contains information to simplify the sale\n"
+"            process: price, notes in the quotation, accounting data,\n"
+"            procurement methods, etc."
+msgstr ""
+"Produktformularen indeholder oplysninger for at forenkle salgsprocessen\n"
+"            pris, noter i tilbuddet, regnskabsdata,\n"
+"            indkøbsmetoder mv."
+
+#. module: sale_contract
+#: model:res.groups,comment:sale_contract.group_sale_contract_view
+msgid "The user will have read access to contracts."
+msgstr "Brugeren vil have læseadgang til kontrakter."
+
+#. module: sale_contract
+#: model:res.groups,comment:sale_contract.group_sale_contract_manager
+msgid "The user will have write access to Subscriptions."
+msgstr "Brugeren vil have skriveadgang til abonnementer."
+
+#. module: sale_contract
+#: code:addons/sale_contract/models/sale_order.py:83
+#: code:addons/sale_contract/models/sale_subscription.py:189
+#, python-format
+msgid "This invoice covers the following period: %s - %s"
+msgstr "Denne faktura omfatter den følgende periode: %s - %s"
+
+#. module: sale_contract
+#: model:ir.ui.view,arch_db:sale_contract.sale_order_view_form_subscription
+msgid "This order is linked to a subscription."
+msgstr "Denne ordre er knyttet til et abonnement."
+
+#. module: sale_contract
+#: model:ir.model.fields,help:sale_contract.field_sale_subscription_company_uom_id
+msgid ""
+"This will set the unit of measure used in projects and tasks.\n"
+"If you use the timesheet linked to projects, don't forget to setup the right unit of measure in your employees."
+msgstr ""
+"Dettesætter måleenheden, der anvendes i projekter og opgaver.\n"
+"Hvis du bruger timeskemaet knyttet til projekter, skal du huske at angive den rigtige måleenhed på dine medarbejdere."
+
+#. module: sale_contract
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_view_form
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_view_search
+#: selection:sale.subscription,state:0
+#: selection:sale.subscription.report,state:0
+msgid "To Renew"
+msgstr "Til fornyelse"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_line_price_unit
+msgid "Unit Price"
+msgstr "Enhedspris"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_line_uom_id
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_report_product_uom
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_template_line_uom_id
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_template_option_uom_id
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_wizard_option_uom_id
+msgid "Unit of Measure"
+msgstr "Enhed"
+
+#. module: sale_contract
+#: selection:sale.order,subscription_management:0
+msgid "Upselling"
+msgstr "Mersalg"
+
+#. module: sale_contract
+#: model:ir.model.fields,field_description:sale_contract.field_sale_subscription_use_tasks
+msgid "Use Tasks"
+msgstr "Anvend opgaver"
+
+#. module: sale_contract
+#: model:ir.actions.act_window,help:sale_contract.sale_subscription_action
+msgid ""
+"Use contracts to follow tasks, issues, timesheets or invoicing based on\n"
+"                work done, expenses and/or sales orders. Odoo will automatically manage\n"
+"                the alerts for the renewal of the contracts to the right salesperson."
+msgstr ""
+"Brug kontrakter til at følge opgaver, problemer, tidsplaner eller fakturering baseret på\n"
+"                udført arbejde, udgifter og / eller salgsordrer. Odoo administrerer automatisk\n"
+"                advarsler om fornyelse af kontrakterne til den rigtige sælger.."
+
+#. module: sale_contract
+#: selection:sale.subscription.template,recurring_rule_type:0
+msgid "Week(s)"
+msgstr "Uge(r)"
+
+#. module: sale_contract
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_view_form
+msgid ""
+"When a customer wants to change his subscription plan, he has the choice "
+"between all the recurring contracts with the same tags."
+msgstr ""
+"Når en kunde ønsker at ændre sin abonnementsplan, har han valget mellem alle"
+" de tilbagevendende kontrakter med de samme tags."
+
+#. module: sale_contract
+#: selection:sale.subscription.template,recurring_rule_type:0
+msgid "Year(s)"
+msgstr "År"
+
+#. module: sale_contract
+#: model:ir.actions.act_window,help:sale_contract.product_action_subscription
+msgid ""
+"You must define a product for everything you sell, whether it's\n"
+"            a physical product, a consumable or a service you offer to\n"
+"            customers."
+msgstr ""
+"Du skal definere et produkt for alt, hvad du sælger, uanset om det er\n"
+"            et fysisk produkt, et forbrugsstof eller en tjenesteydelse, du tilbyder\n"
+"            kunderne."
+
+#. module: sale_contract
+#: code:addons/sale_contract/models/sale_subscription.py:167
+#, python-format
+msgid "You must first select a Customer for Subscription %s!"
+msgstr "Du skal først vælge en kunde til et abonnement%s!"
+
+#. module: sale_contract
+#: model:ir.actions.act_window,help:sale_contract.sale_subscription_action_pending
+msgid ""
+"You will find here the contracts to be renewed because the\n"
+"            end date is passed or the working effort is higher than the\n"
+"            maximum authorized one."
+msgstr ""
+"Her finder du de kontrakter, der skal fornys, fordi\n"
+"            slutdatoen er overskredet, eller arbejdsindsatsen er højere end\n"
+"            maksimalt tilladt."
+
+#. module: sale_contract
+#: model:ir.model,name:sale_contract.model_sale_subscription_close_reason_wizard
+msgid "sale.subscription.close.reason.wizard"
+msgstr "sale.subscription.close.reason.wizard"
+
+#. module: sale_contract
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_view_form
+msgid "⇒ Generate Invoice"
+msgstr "⇒ Generer faktura"
+
+#. module: sale_contract
+#: model:ir.ui.view,arch_db:sale_contract.sale_subscription_view_form
+msgid "⇒ Renewal Quotation"
+msgstr "⇒ Gentegningstilbud"

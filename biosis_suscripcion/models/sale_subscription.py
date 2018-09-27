@@ -24,12 +24,17 @@ class SaleSubscription(models.Model):
         for item in all_subscriptions:
             if item.state == 'open':
                 code = item.code
-                facturas = self.env['account.invoice'].search([('origin', 'ilike', code), ('state', '=', 'open')])
+                facturas = self.env['account.invoice'].search([
+                    ('origin', 'ilike', code),
+                    ('state', '=', 'open'),
+                    ('date_invoice', '>', '2018-09-01')])
+
                 cron = self.env['ir.cron'].search([
                     ('model', 'ilike', 'sale.subscription'),
                     ('function', 'ilike', 'cron_mora')]).nextcall
 
-                fecha_cron = (datetime.strptime(cron, '%Y-%m-%d %H:%M:%S')).date() - timedelta(days=1)
+                #fecha_cron = (datetime.strptime(cron, '%Y-%m-%d %H:%M:%S')).date() - timedelta(days=1)
+                fecha_cron = (datetime.strptime(cron, '%Y-%m-%d %H:%M:%S')).date()
 
 
                 monto = 0

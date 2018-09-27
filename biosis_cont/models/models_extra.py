@@ -94,13 +94,6 @@ class PleAnexo3Tabla13(models.Model):
     num_order = fields.Char(string=u'N°', required=True)
     descripcion = fields.Char(string=u'Descripción', required=True)
 
-class PleAnexo3Tabla14(models.Model):
-    _name = 'biosis.report.ple.anexo3.tabla14'
-    _description = u'TABLA 14: MÉTODO DE VALUACIÓN'
-    _rec_name = 'descripcion'
-
-    num_order = fields.Char(string=u'N°', required=True)
-    descripcion = fields.Char(string=u'Descripción', required=True)
 
 class PleAnexo3Tabla15(models.Model):
     _name = 'biosis.report.ple.anexo3.tabla15'
@@ -224,12 +217,6 @@ class ProductCategory(models.Model):
     _inherit = 'product.category'
 
     tipo_existencia = fields.Many2one('biosis.report.ple.anexo3.tabla5', string=u'Tipo de existencia')
-
-class ProductTemplate(models.Model):
-    _inherit = 'product.template'
-
-    codigo_cubso = fields.Many2one('biosis.report.ple.cubso', string=u'CUBSO', required=True)
-    codigo_valuacion = fields.Many2one('biosis.report.ple.anexo3.tabla14', string=u'Valuación', required=True)
 
 class ProductUOM(models.Model):
     _inherit = 'product.uom'

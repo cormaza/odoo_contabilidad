@@ -50,14 +50,15 @@ class TxtImport(models.TransientModel):
                 monto_total = 0.0
                 for factura in facturas:
                     monto_total = monto_total + factura.amount_total
-                self.generar_boleta(factura, data['monto'], monto_total)
+                #self.generar_boleta(factura, data['monto'], monto_total)
 
     @api.multi
     def generar_boleta(self, invoice, monto_txt, monto_total):
         conteo = 0
         boleta_id = self.env['einvoice.catalog.01'].search([('code', '=', '01')]).id
-        serie_id = self.env['biosis.facturacion.einvoice.serie'].search([('alfanumerico', '=', 'F002'),
-                                                                         ('company_id', '=', invoice.company_id.id)]).id
+        serie_id = self.env['biosis.facturacion.einvoice.serie'].search([('alfanumerico', '=', 'F002')]).id
+        # serie_id = self.env['biosis.facturacion.einvoice.serie'].search([('alfanumerico', '=', 'F002'),
+        #                                                                  ('company_id', '=', invoice.company_id.id)]).id
         boleta_vals = {
             'date_invoice': datetime.now().strftime('%Y-%m-%d'),
             'account_id': invoice.account_id.id,

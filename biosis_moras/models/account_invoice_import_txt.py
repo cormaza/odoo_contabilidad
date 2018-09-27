@@ -9,7 +9,10 @@ class TxtImport(models.TransientModel):
     _name = 'account.invoice.import.txt'
     _description = u"Upload mora Txt "
 
+    #txt = fields.Many2many('ir.attachment', string=u'Cargar .txt', )
     fichero = fields.Binary(u'Archivo CREP')
+
+
 
     @api.multi
     def procesar_txt(self):
@@ -50,21 +53,18 @@ class TxtImport(models.TransientModel):
                 monto_total = 0.0
                 for factura in facturas:
                     monto_total = monto_total + factura.amount_total
-                self.generar_boleta(factura, data['monto'], monto_total)
+                #self.generar_boleta(factura, data['monto'], monto_total)
 
     @api.multi
     def generar_boleta(self, invoice, monto_txt, monto_total):
         conteo = 0
-        boleta_id = self.env['einvoice.catalog.01'].search([('code', '=', '01')]).id
-        serie_id = self.env['biosis.facturacion.einvoice.serie'].search([('alfanumerico', '=', 'F002'),
-                                                                         ('company_id', '=', invoice.company_id.id)]).id
+        boleta_id = self.env['einvoice.catalog.01'].search([('code', '=', '03')]).id
         boleta_vals = {
             'date_invoice': datetime.now().strftime('%Y-%m-%d'),
             'account_id': invoice.account_id.id,
             'tipo_operacion': invoice.tipo_operacion,
             'partner_id': invoice.partner_id.id,
             'tipo_comprobante_id': boleta_id,
-            'serie_id': serie_id,
             'state': 'draft',
             'currency_id': invoice.currency_id.id,
             'is_boleta_mora': True
@@ -73,14 +73,11 @@ class TxtImport(models.TransientModel):
         line2 = {}
         for line in invoice.invoice_line_ids:
             line2 = line.copy()
-            monto = monto_txt.replace(',', '')
+            monto = monto_txt.replace(',','')
             line2.price_unit = float(monto) - monto_total
             descripcion = line2.name
             line2.name= u'Interés moratorio ' + descripcion
             line2.invoice_line_tax_ids = {}
             line2.write({'invoice_id': fact.id})
         return fact
-
-
-
 

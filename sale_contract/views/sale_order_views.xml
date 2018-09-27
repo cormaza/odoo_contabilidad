@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="sale_order_view_form_subscription" model="ir.ui.view">
+        <field name="name">sale.order.form.inherit</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@class='oe_title']" position="after">
+                <div class="alert alert-info" attrs="{'invisible': [('subscription_id', '=', False)]}">
+                    This order is linked to a subscription.
+                </div>
+            </xpath>
+            <xpath expr="//field[@name='partner_shipping_id']" position="after">
+                <field name="subscription_id" attrs="{'invisible': [('subscription_id', '=', False)]}"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

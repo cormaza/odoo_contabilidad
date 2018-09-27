@@ -47,7 +47,10 @@ class PaymentInvoice(models.TransientModel):
     def pago_masivo(self, data):
         if data:
             referencia = data['referencia']
-            facturas = self.env['account.invoice'].search([('origin', 'ilike', referencia), ('state', '=','open')])
+            facturas = self.env['account.invoice'].search([
+                ('origin', 'ilike', referencia),
+                ('state', '=','open'),
+                ('date_invoice', '>', '2018-09-01')])
             if facturas:
                 monto_total = 0.0
                 for factura in facturas:
@@ -57,25 +60,35 @@ class PaymentInvoice(models.TransientModel):
 
                 amount = float(monto)
                 payment_difference = float(monto) - monto_total
+
+                fecha_factura = factura.date_invoice
+                mes = fecha_factura[5:7]
+                anho = fecha_factura[0:4]
+                fecha_vencimiento = anho + '-' + mes + '-10'
+                monto = 0
+                fecha_pago = datetime.strptime(data['fecha_pago'], '%d/%m/%Y')
+                fecha_paqo_comparar = fecha_pago.date()
+                if str(fecha_paqo_comparar) > fecha_vencimiento:
+                    fecha_venc = datetime.strptime(fecha_vencimiento, '%Y-%m-%d')
+                    result = fecha_pago.date() - fecha_venc.date()
+                    dias = result.days
+                    monto = dias * 5
+
                 if payment_difference > 0:
                     suscripcion = self.env['sale.subscription'].search([('code', 'ilike', referencia)])
                     monto_suscripcion = suscripcion.amount_mora
-                    suscripcion.amount_mora = monto_suscripcion - payment_difference
-                    self.generar_boleta(factura, suscripcion.amount_mora)
-
-                date = datetime.now().date()
-
-                fecha = datetime.strptime(data['fecha_pago'], '%d/%m/%Y')
-
+                    suscripcion.amount_mora = monto
+                    self.generar_boleta(factura, monto)
+                #date = datetime.now().date()
                 data ={
                  'payment_type': 'inbound',
                  'payment_method_id': self.env.ref('account.account_payment_method_manual_in').id,
                  'partner_type': 'customer',
                  'partner_id': factura.partner_id.id,
                  'amount': amount,
-                 'payment_difference' : payment_difference,
+                 'payment_difference': payment_difference,
                  'currency_id': self.env['res.currency'].search([('name', '=', 'PEN')]).id,
-                 'payment_date': fecha,
+                 'payment_date': fecha_pago,
                  'journal_id': self.env['account.journal'].search([('code', '=', 'BNK1')], limit=1).id,
                  'state': 'draft',
                  'name': u'Efecto de Pago por importación de TXT '
@@ -90,8 +103,7 @@ class PaymentInvoice(models.TransientModel):
     def generar_boleta(self, invoice, line_monto_mora):
         conteo = 0
         boleta_id = self.env['einvoice.catalog.01'].search([('code', '=', '01')]).id
-        serie_id = self.env['biosis.facturacion.einvoice.serie'].search([('alfanumerico', '=', 'F002'),
-                                                                         ('company_id', '=', invoice.company_id.id)]).id
+        serie_id = self.env['biosis.facturacion.einvoice.serie'].search([('alfanumerico', '=', 'F002')], limit=1).id
         boleta_vals = {
             'date_invoice': datetime.now().strftime('%Y-%m-%d'),
             'account_id': invoice.account_id.id,
@@ -113,6 +125,7 @@ class PaymentInvoice(models.TransientModel):
             line2.invoice_line_tax_ids = {}
             line2.write({'invoice_id': fact.id})
         return fact
+
 
 
 

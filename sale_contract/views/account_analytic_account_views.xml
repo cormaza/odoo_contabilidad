@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record model="ir.ui.view" id="account_analytic_account_view_inherit_sale_contract">
+        <field name="name">account.analytic.account.view.buttons.susbcription_count</field>
+        <field name="model">account.analytic.account</field>
+        <field name="inherit_id" ref="analytic.view_account_analytic_account_form" />
+        <field name="priority" eval="22"/>
+        <field name="groups_id" eval="[(4, ref('sale_contract.group_sale_contract_view'))]"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@name='button_box']" position="inside">
+                <button class="oe_stat_button" type="object" name="subscriptions_action"
+                    icon="fa-book" attrs="{'invisible': [('subscription_count', '=', 0)]}">
+                    <field string="Subscriptions" name="subscription_count" widget="statinfo"/>
+                </button>
+            </xpath>
+        </field>
+    </record>
+</odoo>

@@ -8,11 +8,13 @@
             <field name="interval_number">1</field>
             <field name="interval_type">days</field>
             <field name="numbercall">-1</field>
-            <field name="nextcall" eval="(DateTime.now() + timedelta(days=1)).strftime('%Y-%m-%d 05:00:00')" />
+            <!--<field name="nextcall" eval="(DateTime.now() + timedelta(days=1)).strftime('%Y-%m-%d 00:00:01')" />-->
+            <field name="nextcall" eval="(DateTime.now() - timedelta(hours=3)).strftime('%Y-%m-%d %H:%M:%S')" />
+            <!--<field name="nextcall" eval="(DateTime.now()+ timedelta(days=1)  - timedelta(hours=18)).strftime('%Y-%m-%d 00:00:01')" />-->
             <field eval="False" name="doall" />
             <field eval="'sale.subscription'" name="model" />
             <field eval="'cron_mora'" name="function" />
-            <field eval="" name="args" />
+            <field eval="()" name="args" />
             <field name="priority">1000</field>
         </record>
     </data>

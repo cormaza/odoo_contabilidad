@@ -30,7 +30,6 @@
         'views/templates.xml',
         'views/invoice_boletas_moras_import.xml',
         'views/invoice_boletas_moras.xml',
-        'views/invoice_payment_all.xml',
     ],
     # only loaded in demonstration mode
     'demo': [
