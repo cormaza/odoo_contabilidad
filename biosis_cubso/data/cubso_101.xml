@@ -1,0 +1,335 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo>
+  <data noupdate="1">
+    <record id="cubso_9315160300362071" model="ple.cubso">
+      <field name="codigo">9315160300362071</field>
+      <field name="titulo">CONSULTORIA PARA ELABORACION DE DIAGNOSTICO DE LA ESTRUCTURA PRODUCTIVA</field>
+      <field name="tipo_item">2-SERVICIOS</field>
+    </record>
+    <record id="cubso_9315160300371324" model="ple.cubso">
+      <field name="codigo">9315160300371324</field>
+      <field name="titulo">CONSULTORIA EN DESARROLLO CRONOGRAMA DE DESEMBOLSOS Y AMORTIZACIONES DE INVERSION EDUCACION</field>
+      <field name="tipo_item">2-SERVICIOS</field>
+    </record>
+    <record id="cubso_9315160300371322" model="ple.cubso">
+      <field name="codigo">9315160300371322</field>
+      <field name="titulo">CONSULTORIA EN DESARROLLO CRONOGRAMA DE DESEMBOLSOS Y AMORTIZACIONES DE INVERSION SALUD</field>
+      <field name="tipo_item">2-SERVICIOS</field>
+    </record>
+    <record id="cubso_9315160300371323" model="ple.cubso">
+      <field name="codigo">9315160300371323</field>
+      <field name="titulo">CONSULTORIA EN DESARROLLO CRONOGRAMA DE DESEMBOLSOS Y AMORTIZACIONES DE INVERSION TRANSPORTE</field>
+      <field name="tipo_item">2-SERVICIOS</field>
+    </record>
+    <record id="cubso_9315160300371325" model="ple.cubso">
+      <field name="codigo">9315160300371325</field>
+      <field name="titulo">CONSULTORIA EN DESARROLLO CRONOGRAMA DE DESEMBOLSOS Y AMORTIZACIONES DE INVERSION VIVIENDA</field>
+      <field name="tipo_item">2-SERVICIOS</field>
+    </record>
+    <record id="cubso_9315160300371326" model="ple.cubso">
+      <field name="codigo">9315160300371326</field>
+      <field name="titulo">CONSULTORIA PARA DETERMINACION DE RANGOS VARIACION DE INVERSION AGRICOLA</field>
+      <field name="tipo_item">2-SERVICIOS</field>
+    </record>
+    <record id="cubso_9315160300371327" model="ple.cubso">
+      <field name="codigo">9315160300371327</field>
+      <field name="titulo">CONSULTORIA PARA DETERMINACION DE RANGOS VARIACION DE INVERSION ENERGIA</field>
+      <field name="tipo_item">2-SERVICIOS</field>
+    </record>
+    <record id="cubso_9315160300371328" model="ple.cubso">
+      <field name="codigo">9315160300371328</field>
+      <field name="titulo">CONSULTORIA PARA DETERMINACION DE RANGOS VARIACION DE INVERSION SALUD</field>
+      <field name="tipo_item">2-SERVICIOS</field>
+    </record>
+    <record id="cubso_9315160300371329" model="ple.cubso">
+      <field name="codigo">9315160300371329</field>
+      <field name="titulo">CONSULTORIA PARA DETERMINACION DE RANGOS VARIACION DE INVERSION TRANSPORTE</field>
+      <field name="tipo_item">2-SERVICIOS</field>
+    </record>
+    <record id="cubso_9315160300371330" model="ple.cubso">
+      <field name="codigo">9315160300371330</field>
+      <field name="titulo">CONSULTORIA PARA DETERMINACION DE RANGOS VARIACION DE INVERSION EDUCACION</field>
+      <field name="tipo_item">2-SERVICIOS</field>
+    </record>
+    <record id="cubso_9315160300371331" model="ple.cubso">
+      <field name="codigo">9315160300371331</field>
+      <field name="titulo">CONSULTORIA PARA DETERMINACION DE RANGOS VARIACION DE INVERSION VIVIENDA</field>
+      <field name="tipo_item">2-SERVICIOS</field>
+    </record>
+    <record id="cubso_9315160300371338" model="ple.cubso">
+      <field name="codigo">9315160300371338</field>
+      <field name="titulo">CONSULTORIA PARA EVALUACION DE PROPUESTAS DE INVERSION EN SANEAMIENTO</field>
+      <field name="tipo_item">2-SERVICIOS</field>
+    </record>
+    <record id="cubso_9315160300371339" model="ple.cubso">
+      <field name="codigo">9315160300371339</field>
+      <field name="titulo">CONSULTORIA PARA GUIA METODOLOGICA PARA FORMULACION Y EVALUACION DE VIAS LOCALES</field>
+      <field name="tipo_item">2-SERVICIOS</field>
+    </record>
+    <record id="cubso_9315160300371340" model="ple.cubso">
+      <field name="codigo">9315160300371340</field>
+      <field name="titulo">CONSULTORIA EN DESARROLLO CRONOGRAMA DE DESEMBOLSOS Y AMORTIZACIONES DE INVERSION AGRICOLA</field>
+      <field name="tipo_item">2-SERVICIOS</field>
+    </record>
+    <record id="cubso_9315160300371341" model="ple.cubso">
+      <field name="codigo">9315160300371341</field>
+      <field name="titulo">CONSULTORIA EN DESARROLLO CRONOGRAMA DE DESEMBOLSOS Y AMORTIZACIONES DE INVERSION ENERGIA</field>
+      <field name="tipo_item">2-SERVICIOS</field>
+    </record>
+    <record id="cubso_9315160500226032" model="ple.cubso">
+      <field name="codigo">9315160500226032</field>
+      <field name="titulo">CONSULTORIA PARA ESTUDIO SOBRE REPOSICION DE ACTIVOS FIJOS</field>
+      <field name="tipo_item">2-SERVICIOS</field>
+    </record>
+    <record id="cubso_9315160700225676" model="ple.cubso">
+      <field name="codigo">9315160700225676</field>
+      <field name="titulo">CONSULTORIA PARA  AUDITORIA DE PROCESOS ELECTORALES</field>
+      <field name="tipo_item">2-SERVICIOS</field>
+    </record>
+    <record id="cubso_9315160700226843" model="ple.cubso">
+      <field name="codigo">9315160700226843</field>
+      <field name="titulo">CONSULTORIA PARA  AUDITORIA DE OBRAS</field>
+      <field name="tipo_item">2-SERVICIOS</field>
+    </record>
+    <record id="cubso_9315160700232479" model="ple.cubso">
+      <field name="codigo">9315160700232479</field>
+      <field name="titulo">SERVICIO DE DESIGNACION DE AUDITORIA EXTERNA</field>
+      <field name="tipo_item">2-SERVICIOS</field>
+    </record>
+    <record id="cubso_9315160700312755" model="ple.cubso">
+      <field name="codigo">9315160700312755</field>
+      <field name="titulo">SERVICIO DE AUDITORIA GUBERNAMENTAL</field>
+      <field name="tipo_item">2-SERVICIOS</field>
+    </record>
+    <record id="cubso_9315160700365528" model="ple.cubso">
+      <field name="codigo">9315160700365528</field>
+      <field name="titulo">CONSULTORIA PARA ELABORACION DE PLAN DE TRABAJO PARA PROCESO DE AUDITORIA</field>
+      <field name="tipo_item">2-SERVICIOS</field>
+    </record>
+    <record id="cubso_9315161000371619" model="ple.cubso">
+      <field name="codigo">9315161000371619</field>
+      <field name="titulo">SERVICIO DE RECAUDACION DE IMPUESTO O TARIFA AEROPORTUARIA</field>
+      <field name="tipo_item">2-SERVICIOS</field>
+    </record>
+    <record id="cubso_9316160100263449" model="ple.cubso">
+      <field name="codigo">9316160100263449</field>
+      <field name="titulo">SERVICIO DE TRAMITE DE GRAVAMEN VEHICULAR</field>
+      <field name="tipo_item">2-SERVICIOS</field>
+    </record>
+    <record id="cubso_9316160900232474" model="ple.cubso">
+      <field name="codigo">9316160900232474</field>
+      <field name="titulo">SERVICIO DE ARRIBO Y ZARPE EN EL PUERTO</field>
+      <field name="tipo_item">2-SERVICIOS</field>
+    </record>
+    <record id="cubso_9316170200310201" model="ple.cubso">
+      <field name="codigo">9316170200310201</field>
+      <field name="titulo">CONSULTORIA PARA  ANALISIS DE LAS EXONERACIONES E INCENTIVOS TRIBUTARIOS</field>
+      <field name="tipo_item">2-SERVICIOS</field>
+    </record>
+    <record id="cubso_9316170300226411" model="ple.cubso">
+      <field name="codigo">9316170300226411</field>
+      <field name="titulo">CONSULTORIA RELACIONADA AL SISTEMA TRIBUTARIO</field>
+      <field name="tipo_item">2-SERVICIOS</field>
+    </record>
+    <record id="cubso_9316170300262172" model="ple.cubso">
+      <field name="codigo">9316170300262172</field>
+      <field name="titulo">CONSULTORIA PARA  ANALISIS TRIBUTARIO</field>
+      <field name="tipo_item">2-SERVICIOS</field>
+    </record>
+    <record id="cubso_9316170300287216" model="ple.cubso">
+      <field name="codigo">9316170300287216</field>
+      <field name="titulo">CONSULTORIA PARA MEJORAMIENTO DE CONTROLES TRIBUTARIOS EN ACCESO A LA CIUDAD</field>
+      <field name="tipo_item">2-SERVICIOS</field>
+    </record>
+    <record id="cubso_9316170300310820" model="ple.cubso">
+      <field name="codigo">9316170300310820</field>
+      <field name="titulo">CONSULTORIA SOBRE TRATAMIENTO TRIBUTARIO DE ESTABLECIMIENTOS QUE PRESTAN SERVICIOS</field>
+      <field name="tipo_item">2-SERVICIOS</field>
+    </record>
+    <record id="cubso_9316180500262596" model="ple.cubso">
+      <field name="codigo">9316180500262596</field>
+      <field name="titulo">CONSULTORIA PARA TRATAMIENTO DE INDEMNIZACIONES LUCRO CESANTE IMPUESTO A LA RENTA</field>
+      <field name="tipo_item">2-SERVICIOS</field>
+    </record>
+    <record id="cubso_9316180500292921" model="ple.cubso">
+      <field name="codigo">9316180500292921</field>
+      <field name="titulo">SERVICIO DE DETERMINACION DE DEDUCCIONES DE RETENCIONES Y DETRACCIONES DE COMPRAS</field>
+      <field name="tipo_item">2-SERVICIOS</field>
+    </record>
+    <record id="cubso_9317150200287748" model="ple.cubso">
+      <field name="codigo">9317150200287748</field>
+      <field name="titulo">CONSULTORIA PARA  ANALISIS DE RENEGOCIACIONES DE CONTRATOS DE CONCESION</field>
+      <field name="tipo_item">2-SERVICIOS</field>
+    </record>
+    <record id="cubso_9317150200313382" model="ple.cubso">
+      <field name="codigo">9317150200313382</field>
+      <field name="titulo">SERVICIO DE MODELO DE NEGOCIO PARA EXTENSION DE LA LINEA DE TRANSPORTE</field>
+      <field name="tipo_item">2-SERVICIOS</field>
+    </record>
+    <record id="cubso_9317160200225853" model="ple.cubso">
+      <field name="codigo">9317160200225853</field>
+      <field name="titulo">CONSULTORIA RELACIONADOS A LAS EXPORTACIONES</field>
+      <field name="tipo_item">2-SERVICIOS</field>
+    </record>
+    <record id="cubso_9317160300225819" model="ple.cubso">
+      <field name="codigo">9317160300225819</field>
+      <field name="titulo">CONSULTORIA PARA ELABORACION DE DOCUMENTACION PARA EL PROCESO DE CERTIFICACION ISO</field>
+      <field name="tipo_item">2-SERVICIOS</field>
+    </record>
+    <record id="cubso_9317160300227238" model="ple.cubso">
+      <field name="codigo">9317160300227238</field>
+      <field name="titulo">SERVICIO DE EVALUACION DE CUMPLIMIENTO DE PROCESOS DE CERTIFICACION ISO</field>
+      <field name="tipo_item">2-SERVICIOS</field>
+    </record>
+    <record id="cubso_9317160300228689" model="ple.cubso">
+      <field name="codigo">9317160300228689</field>
+      <field name="titulo">CONSULTORIA PARA IMPLEMENTACION DE PROCESO DE CERTIFICACION ISO</field>
+      <field name="tipo_item">2-SERVICIOS</field>
+    </record>
+    <record id="cubso_9317160300228945" model="ple.cubso">
+      <field name="codigo">9317160300228945</field>
+      <field name="titulo">SERVICIO DE AUDITORIA A PROCESOS DE CERTIFICACION ISO</field>
+      <field name="tipo_item">2-SERVICIOS</field>
+    </record>
+    <record id="cubso_9317160300254718" model="ple.cubso">
+      <field name="codigo">9317160300254718</field>
+      <field name="titulo">CONSULTORIA PARA REALIZAR SEGUIMIENTO AL PROCESO DE IMPLEMENTACION DE CERTIFICACION ISO</field>
+      <field name="tipo_item">2-SERVICIOS</field>
+    </record>
+    <record id="cubso_9317160300254857" model="ple.cubso">
+      <field name="codigo">9317160300254857</field>
+      <field name="titulo">CONSULTORIA PARA DETERMINAR LA OFERTA DE CERTIFICACIONES (LABORATORIOS)</field>
+      <field name="tipo_item">2-SERVICIOS</field>
+    </record>
+    <record id="cubso_9317160300255255" model="ple.cubso">
+      <field name="codigo">9317160300255255</field>
+      <field name="titulo">PAGO DE DERECHO DE EMISION DE CIRA (CERTIFICADO INEXISTENCIA DE RESTOS ARQUEOLOGICOS)</field>
+      <field name="tipo_item">2-SERVICIOS</field>
+    </record>
+    <record id="cubso_9317160300278881" model="ple.cubso">
+      <field name="codigo">9317160300278881</field>
+      <field name="titulo">CONSULTORIA PARA IMPLEMENTACION Y CERTIFICACION DE PRODUCCION DE MICROFORMAS DIGITALES</field>
+      <field name="tipo_item">2-SERVICIOS</field>
+    </record>
+    <record id="cubso_9317160300307032" model="ple.cubso">
+      <field name="codigo">9317160300307032</field>
+      <field name="titulo">SERVICIO DE VALIDACION DE VOLUMEN DE MICROPIPETA SEGUN ISO 4787</field>
+      <field name="tipo_item">2-SERVICIOS</field>
+    </record>
+    <record id="cubso_9317160300313383" model="ple.cubso">
+      <field name="codigo">9317160300313383</field>
+      <field name="titulo">SERVICIO DE IMPLEMENTACION DE INSTRUMENTOS INTERNACIONALES SOBRE COMERCIALIZACION DE ARMAS</field>
+      <field name="tipo_item">2-SERVICIOS</field>
+    </record>
+    <record id="cubso_9317160300316318" model="ple.cubso">
+      <field name="codigo">9317160300316318</field>
+      <field name="titulo">SERVICIO SOBRE TENDENCIAS DE POLITICA EXTERIOR Y RELACIONES INTERNACIONALES QUE AFECTAN AL PAIS</field>
+      <field name="tipo_item">2-SERVICIOS</field>
+    </record>
+    <record id="cubso_9317160300329660" model="ple.cubso">
+      <field name="codigo">9317160300329660</field>
+      <field name="titulo">SERVICIO DE MANTENIMIENTO A PROCESOS DE CERTIFICACION ISO</field>
+      <field name="tipo_item">2-SERVICIOS</field>
+    </record>
+    <record id="cubso_9317170200232450" model="ple.cubso">
+      <field name="codigo">9317170200232450</field>
+      <field name="titulo">SERVICIO DE GESTIONES ADMINISTRATIVAS POR DESADUANAJE</field>
+      <field name="tipo_item">2-SERVICIOS</field>
+    </record>
+    <record id="cubso_9317170200232458" model="ple.cubso">
+      <field name="codigo">9317170200232458</field>
+      <field name="titulo">SERVICIO POR DERECHO DE VISTO BUENO DE DESADUANAJE</field>
+      <field name="tipo_item">2-SERVICIOS</field>
+    </record>
+    <record id="cubso_9317170200232461" model="ple.cubso">
+      <field name="codigo">9317170200232461</field>
+      <field name="titulo">SERVICIO DE DEVOLUCION DE CONTENEDOR</field>
+      <field name="tipo_item">2-SERVICIOS</field>
+    </record>
+    <record id="cubso_9317170200232460" model="ple.cubso">
+      <field name="codigo">9317170200232460</field>
+      <field name="titulo">SERVICIO DE GARANTIA DE CONTENEDOR EN ADUANAS</field>
+      <field name="tipo_item">2-SERVICIOS</field>
+    </record>
+    <record id="cubso_9317170200359577" model="ple.cubso">
+      <field name="codigo">9317170200359577</field>
+      <field name="titulo">SERVICIO DE IMPORTACION DEFINITIVA Y/O NACIONALIZACION DE BIENES</field>
+      <field name="tipo_item">2-SERVICIOS</field>
+    </record>
+    <record id="cubso_9317180300336061" model="ple.cubso">
+      <field name="codigo">9317180300336061</field>
+      <field name="titulo">SERVICIO DE ANALISIS DE REPORTES ESTADISTICOS</field>
+      <field name="tipo_item">2-SERVICIOS</field>
+    </record>
+    <record id="cubso_9410160600300417" model="ple.cubso">
+      <field name="codigo">9410160600300417</field>
+      <field name="titulo">CONSULTORIA SOBRE EJECUCION DE GARANTIAS DE CODIGO PROCESAL CIVIL</field>
+      <field name="tipo_item">2-SERVICIOS</field>
+    </record>
+    <record id="cubso_9411190100227272" model="ple.cubso">
+      <field name="codigo">9411190100227272</field>
+      <field name="titulo">SERVICIO DE CEREMONIAS RELIGIOSAS</field>
+      <field name="tipo_item">2-SERVICIOS</field>
+    </record>
+    <record id="cubso_9411190100255078" model="ple.cubso">
+      <field name="codigo">9411190100255078</field>
+      <field name="titulo">SERVICIO DE ASESORIA ESPIRITUAL</field>
+      <field name="tipo_item">2-SERVICIOS</field>
+    </record>
+    <record id="cubso_9412150300284442" model="ple.cubso">
+      <field name="codigo">9412150300284442</field>
+      <field name="titulo">SERVICIO DE CETRERIA</field>
+      <field name="tipo_item">2-SERVICIOS</field>
+    </record>
+    <record id="cubso_9412151400356824" model="ple.cubso">
+      <field name="codigo">9412151400356824</field>
+      <field name="titulo">SERVICIO DE ADMINISTRACION DE GIMNASIO</field>
+      <field name="tipo_item">2-SERVICIOS</field>
+    </record>
+    <record id="cubso_9413160300226241" model="ple.cubso">
+      <field name="codigo">9413160300226241</field>
+      <field name="titulo">SERVICIO DE ELABORACION DE PROPUESTA LEGAL</field>
+      <field name="tipo_item">2-SERVICIOS</field>
+    </record>
+    <record id="cubso_9413160300226433" model="ple.cubso">
+      <field name="codigo">9413160300226433</field>
+      <field name="titulo">SERVICIO DE ASISTENCIA TECNICA LEGAL</field>
+      <field name="tipo_item">2-SERVICIOS</field>
+    </record>
+    <record id="cubso_9413160300232307" model="ple.cubso">
+      <field name="codigo">9413160300232307</field>
+      <field name="titulo">SERVICIO DE ASISTENCIA JUDICIAL</field>
+      <field name="tipo_item">2-SERVICIOS</field>
+    </record>
+    <record id="cubso_9413160300286738" model="ple.cubso">
+      <field name="codigo">9413160300286738</field>
+      <field name="titulo">SERVICIO DE ASESORIA DE REPRESENTACION LEGAL AL GOBIERNO DEL PERU ANTE EL CIADI</field>
+      <field name="tipo_item">2-SERVICIOS</field>
+    </record>
+    <record id="cubso_9413160300286741" model="ple.cubso">
+      <field name="codigo">9413160300286741</field>
+      <field name="titulo">SERVICIO DE ASESORIA EN PREPARACION DE CARPETA DOCUMENTARIA DESCRIPCION COMUNIDAD NATIVA</field>
+      <field name="tipo_item">2-SERVICIOS</field>
+    </record>
+    <record id="cubso_9510150500086739" model="ple.cubso">
+      <field name="codigo">9510150500086739</field>
+      <field name="titulo">TERRENO URBANO</field>
+      <field name="tipo_item">1-BIENES</field>
+    </record>
+    <record id="cubso_9510190100086740" model="ple.cubso">
+      <field name="codigo">9510190100086740</field>
+      <field name="titulo">TERRENO RURAL</field>
+      <field name="tipo_item">1-BIENES</field>
+    </record>
+    <record id="cubso_9512161300312293" model="ple.cubso">
+      <field name="codigo">9512161300312293</field>
+      <field name="titulo">HANGAR FLOTANTE DE METAL</field>
+      <field name="tipo_item">1-BIENES</field>
+    </record>
+    <record id="cubso_9512190700346027" model="ple.cubso">
+      <field name="codigo">9512190700346027</field>
+      <field name="titulo">ESTACION HIDROMETEOROLOGICA AUTOMATICA</field>
+      <field name="tipo_item">1-BIENES</field>
+    </record>
+  </data>
+</odoo>

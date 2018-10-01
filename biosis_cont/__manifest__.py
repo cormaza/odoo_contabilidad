@@ -3,10 +3,10 @@
     'name': "Biosis Contable",
 
     'summary': """
-        Permitirá realizar transacciones contables de compras, ventas, cajas.""",
+        Permite manejar la contabilidad de tu empresa o de varias empresas  """,
 
     'description': """
-        Long description of module's purpose
+        Contabilidad para Perú
     """,
 
     'author': "Biosis",
@@ -27,8 +27,6 @@
         'data/account_data.xml',
         'data/anexo3_tablas.xml',
         'data/anexo4_detraccion.xml',
-        'views/biosis_cont.xml',
-        'views/views.xml',
         'views/templates.xml',
         'views/account_payment_view.xml',
         'views/product_template_view.xml',

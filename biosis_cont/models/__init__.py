@@ -17,7 +17,6 @@ from . import account_purchase
 from . import account_analytic_account
 from . import account_anexo4_detraccion
 from . import account_recibo
-#from . import account_payment_detraccion
 from . import res_currency
 
 

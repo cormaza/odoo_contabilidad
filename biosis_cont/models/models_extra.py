@@ -231,3 +231,5 @@ class AccountMove(models.Model):
     cod_titulo = fields.Many2one('biosis.report.ple.anexo3.tabla15', string=u'Código del Título')
     val_nom_titulo = fields.Float(string=u'Valor nominal unitario del Título')
     cant_titulos = fields.Integer(string=u'Cantidad de Títulos')
+
+

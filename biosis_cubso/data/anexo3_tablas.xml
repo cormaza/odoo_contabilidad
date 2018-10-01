@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo>
+    <data noupdate="1">
+
+        <record id="anexo3_tabla14_01" model="ple.anexo3.tabla14">
+            <field name="num_order">1</field>
+            <field name="descripcion">PROMEDIO PONDERADO</field>
+        </record>
+        <record id="anexo3_tabla14_02" model="ple.anexo3.tabla14">
+            <field name="num_order">2</field>
+            <field name="descripcion">PRIMERAS ENTRADAS, PRIMERAS SALIDAS</field>
+        </record>
+        <record id="anexo3_tabla14_03" model="ple.anexo3.tabla14">
+            <field name="num_order">3</field>
+            <field name="descripcion">EXISTENCIAS BÁSICAS</field>
+        </record>
+        <record id="anexo3_tabla14_04" model="ple.anexo3.tabla14">
+            <field name="num_order">4</field>
+            <field name="descripcion">DETALLISTA</field>
+        </record>
+        <record id="anexo3_tabla14_05" model="ple.anexo3.tabla14">
+            <field name="num_order">5</field>
+            <field name="descripcion">IDENTIFICACIÓN ESPECÍFICA</field>
+        </record>
+        <record id="anexo3_tabla14_09" model="ple.anexo3.tabla14">
+            <field name="num_order">9</field>
+            <field name="descripcion">OTROS</field>
+        </record>
+
+    </data>
+</odoo>
+
