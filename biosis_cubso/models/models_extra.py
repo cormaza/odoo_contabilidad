@@ -26,8 +26,8 @@ class PleAnexo3Tabla14(models.Model):
 class ProductTemplate(models.Model):
     _inherit = 'product.template'
 
-    codigo_cubso = fields.Many2one('ple.cubso', string=u'CUBSO', required=True)
-    codigo_valuacion = fields.Many2one('ple.anexo3.tabla14', string=u'Valuación', required=True)
+    codigo_cubso = fields.Many2one('ple.cubso', string=u'CUBSO')
+    codigo_valuacion = fields.Many2one('ple.anexo3.tabla14', string=u'Valuación')
 
 
 
