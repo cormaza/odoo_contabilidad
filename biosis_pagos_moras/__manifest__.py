@@ -21,14 +21,13 @@
 
     # any module necessary for this one to work correctly
     'depends': ['base', 'account', 'contacts', 'odoope_ruc_validation', 'odoope_einvoice_base',
-                'odoope_toponyms', 'product', 'sale'],
+                'odoope_toponyms', 'product', 'sale', 'biosis_facturacion'],
 
     # always loaded
     'data': [
         # 'security/ir.model.access.csv',
         #'views/views.xml',
         #'views/templates.xml',
-        #'views/invoice_boletas_moras_import.xml',
         'views/invoice_boletas_moras.xml',
         'views/invoice_payment_all.xml',
     ],

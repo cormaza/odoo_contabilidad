@@ -41,7 +41,6 @@ class Ple_1_1(models.Model):
     @api.multi
     def get_ple(self, company_id, fecha_reporte, fecha_inicio, fecha_fin):
         ple_mf_res = ''
-        ple_util = self.env['account.ple.util']
         mf_ple_list = []
         move_line_new = []
         move_line_update = []
@@ -78,17 +77,17 @@ class Ple_1_1(models.Model):
             return ' '
         else:
             if len(move_line_new) > 0:
-                ple_nuevos = self.create_ple_items(company_id, move_line_new, fecha_reporte, fecha_inicio, fecha_fin, ple_util)
+                ple_nuevos = self.create_ple_items(company_id, move_line_new, fecha_reporte, fecha_inicio, fecha_fin)
                 ple_mf_res = ple_mf_res + ple_nuevos
 
             if len(move_line_update) > 0:
-                ple_modificados = self.update_ple_items(company_id, move_line_update, fecha_reporte, fecha_inicio, fecha_fin, ple_util)
+                ple_modificados = self.update_ple_items(company_id, move_line_update, fecha_reporte, fecha_inicio, fecha_fin)
                 ple_mf_res = ple_mf_res + ple_modificados
 
             return ple_mf_res
 
     @api.multi
-    def create_ple_items(self, company_id, move_line_new, fecha_reporte, fecha_inicio, fecha_fin,ple_util):
+    def create_ple_items(self, company_id, move_line_new, fecha_reporte, fecha_inicio, fecha_fin):
         ple_items = ''
         ple_mf = self.env['account.ple.1.1']
         i = 1
@@ -112,7 +111,7 @@ class Ple_1_1(models.Model):
                 'fecha_c_11': datetime.datetime.strptime(line.date_maturity, '%Y-%m-%d').strftime('%d/%m/%Y'),
                 'fecha_v_12': datetime.datetime.strptime(line.date, '%Y-%m-%d').strftime('%d/%m/%Y'),
                 'fecha_e_13': '01/01/0001',
-                'glosa_14': ple_util.filterPhrase(line.name),  # move_line.invoice_id.name if move_line.invoice_id.name else '',
+                'glosa_14': line.name,  # move_line.invoice_id.name if move_line.invoice_id.name else '',
                 'glosa_referencial_15': '',
                 'mov_debe_16': str(line.credit) if line.debit == 0 else '0.00',
                 'mov_haber_17': str(line.debit) if line.credit == 0 else '0.00',
@@ -127,7 +126,7 @@ class Ple_1_1(models.Model):
         return ple_items
 
     @api.multi
-    def update_ple_items(self, company_id, move_line_update, fecha_reporte, fecha_inicio, fecha_fin,ple_util):
+    def update_ple_items(self, company_id, move_line_update, fecha_reporte, fecha_inicio, fecha_fin):
         ple_items = ''
         for line in move_line_update:
             ple_actual = self.env['account.ple.1.1'].search([
@@ -173,7 +172,7 @@ class Ple_1_1(models.Model):
                         'fecha_c_11': datetime.datetime.strptime(line.date_maturity, '%Y-%m-%d').strftime('%d/%m/%Y'),
                         'fecha_v_12': datetime.datetime.strptime(line.date, '%Y-%m-%d').strftime('%d/%m/%Y'),
                         'fecha_e_13': '01/01/0001',
-                        'glosa_14': ple_util.filterPhrase(line.name),  # move_line.invoice_id.name if move_line.invoice_id.name else '',
+                        'glosa_14': line.name,  # move_line.invoice_id.name if move_line.invoice_id.name else '',
                         'glosa_referencial_15': '',
                         'mov_debe_16': str(line.credit) if line.debit == 0 else '0.00',
                         'mov_haber_17': str(line.debit) if line.credit == 0 else '0.00',

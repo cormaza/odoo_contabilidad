@@ -17,24 +17,15 @@ class Ple_3_2(models.Model):
     mov_haber_7 = fields.Char(string=u'Movimiento del Haber', required=True)
     estado_8 = fields.Char(string=u'Estado', required=True)
     company_id = fields.Many2one('res.company', required=True, string=u"Compañia")
-    campos_libres = fields.Char(string=u'Campos Libres')
-
-    @api.multi
-    def get_campos_libres(self):
-        if self.campos_libres:
-            return self.campos_libres + '\n'
-        else:
-            return '\n'
 
     @api.multi
     def get_ple_line(self):
         return self.periodo_1 + '|' + self.codigo_cuenta_2 + '|' + self.codigo_ef_3 + '|' + self.numero_doc_ef_4 + '|' + self.codigo_moneda_5 + '|' \
-               + self.mov_debe_6 + '|' + self.mov_haber_7 + '|' + self.estado_8 + '|' + self.get_campos_libres()
+               + self.mov_debe_6 + '|' + self.mov_haber_7 + '|' + self.estado_8 + '|' + '\n'
 
     @api.multi
     def get_ple(self, company_id, fecha_reporte, fecha_inicio, fecha_fin):
         ple_32_res = ''
-        ple_util = self.env['account.ple.util']
         fecha_reporte_anio = str(fecha_fin.year) + '12' + '31'
         ple_32_list = []
         ple_32_update = []
@@ -79,20 +70,20 @@ class Ple_3_2(models.Model):
                 """
                    Pasos para agregar lineas BC al res
                 """
-                ple_nuevos = self.create_ple_items(company_id, ple_32_new, fecha_reporte, fecha_inicio, fecha_fin,ple_util)
+                ple_nuevos = self.create_ple_items(company_id, ple_32_new, fecha_reporte, fecha_inicio, fecha_fin)
                 ple_32_res = ple_32_res + ple_nuevos
 
             if len(ple_32_list) > 0:
                 """
                     Pasos para crear lineas Diario Detalle con cuentas_list_new
                  """
-                ple_old = self.update_ple_items(company_id, ple_32_old, ple_32_update, fecha_reporte, fecha_inicio, fecha_fin,ple_util)
+                ple_old = self.update_ple_items(company_id, ple_32_old, ple_32_update, fecha_reporte, fecha_inicio, fecha_fin)
                 ple_32_res = ple_32_res + ple_old
 
             return ple_32_res
 
     @api.multi
-    def create_ple_items(self, company_id, ple_32_new, fecha_reporte, fecha_inicio, fecha_fin,ple_util):
+    def create_ple_items(self, company_id, ple_32_new, fecha_reporte, fecha_inicio, fecha_fin):
         ple_items = ''
         ple_ef = self.env['account.ple.3.2']
         periodo = str(fecha_fin.year) + '12' + '31'
@@ -109,13 +100,12 @@ class Ple_3_2(models.Model):
             ple_item_vals = {
                 'periodo_1': periodo,
                 'codigo_cuenta_2': line['codigo'],
-                'codigo_ef_3': diario.bank_account_id.bank_id.entidad_financiera_id.num_order if diario.bank_account_id.bank_id else '99',  # implementar
+                'codigo_ef_3': diario.bank_account_id.bank_id.entidad_financiera_id.num_order if diario.bank_account_id else '99',  # implementar
                 'numero_doc_ef_4': diario.bank_account_id.acc_number if diario.bank_account_id else '-',
                 'codigo_moneda_5': 'PEN',
                 'mov_debe_6': line['debit'] if line['debit'] else '0.00',
                 'mov_haber_7':line['credit'] if line['credit'] else '0.00',
                 'estado_8': ple_item_estado_8,
-                'campos_libres': ple_util.filterPhrase(line['name'] + '|'),
                 'company_id': company_id.id
             }
             ple_item = ple_ef.create(ple_item_vals)
@@ -124,7 +114,7 @@ class Ple_3_2(models.Model):
         return ple_items
 
     @api.multi
-    def update_ple_items(self, company_id, ple_32_old,ple_32_update, fecha_reporte, fecha_inicio, fecha_fin,ple_util):
+    def update_ple_items(self, company_id, ple_32_old,ple_32_update, fecha_reporte, fecha_inicio, fecha_fin):
         ple_items = ''
         for line in ple_32_old:
             ple_item = self.env['account.ple.3.2'].search([

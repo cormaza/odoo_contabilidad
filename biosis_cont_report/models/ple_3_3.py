@@ -30,7 +30,6 @@ class Ple_3_3(models.Model):
     @api.multi
     def get_ple(self, company_id, fecha_reporte, fecha_inicio, fecha_fin):
         ple_res = ''
-        ple_util = self.env['account.ple.util']
         fecha_reporte_anio = str(fecha_fin.year) + '12' + '31'
         ple_list = []
         ple_update = []
@@ -69,17 +68,17 @@ class Ple_3_3(models.Model):
             return ' '
         else:
             if len(ple_new) > 0:
-                ple_nuevos = self.create_ple_items(company_id, ple_new, fecha_reporte, fecha_inicio, fecha_fin,ple_util)
+                ple_nuevos = self.create_ple_items(company_id, ple_new, fecha_reporte, fecha_inicio, fecha_fin)
                 ple_res = ple_res + ple_nuevos
 
             if len(ple_update) > 0:
-                ple_modificados = self.update_ple_items(company_id, ple_update, fecha_reporte, fecha_inicio, fecha_fin,ple_util)
+                ple_modificados = self.update_ple_items(company_id, ple_update, fecha_reporte, fecha_inicio, fecha_fin)
                 ple_res = ple_res + ple_modificados
 
             return ple_res
 
     @api.multi
-    def create_ple_items(self, company_id, ple_new, fecha_reporte, fecha_inicio, fecha_fin,ple_util):
+    def create_ple_items(self, company_id, ple_new, fecha_reporte, fecha_inicio, fecha_fin):
         ple_items = ''
         ple_model = self.env['account.ple.3.3']
         periodo = str(fecha_fin.year) + '12' + '31'
@@ -95,8 +94,8 @@ class Ple_3_3(models.Model):
                 'move_cuo_3': line.numero_asiento if line.numero_asiento else 'M' + str(i),
                 'tipo_doc_cli_4': line.partner_id.catalog_06_id.code if line.partner_id else '-',
                 'numero_doc_cli_5': line.partner_id.vat if line.partner_id else '-',
-                'razon_social_cli_6': ple_util.filterPhrase(line.partner_id.registration_name) if line.partner_id.registration_name
-                else (ple_util.filterPhrase(line.partner_id.name) if line.partner_id else '-'),  # SE APLICARA CUANDO ESTE COMPLETADO CENTRO DE COSTOS
+                'razon_social_cli_6': line.partner_id.registration_name if line.partner_id.registration_name
+                else (line.partner_id.name if line.partner_id else '-'),  # SE APLICARA CUANDO ESTE COMPLETADO CENTRO DE COSTOS
                 'fecha_e_7': datetime.datetime.strptime(line.invoice_id.date_invoice, '%Y-%m-%d').strftime('%d/%m/%Y'),
                 'mont_cobrar_8': str(line.invoice_id.residual_signed), #str(line.balance) if str(line.balance) else '0.00',
                 'estado_9': ple_item_estado,
@@ -111,7 +110,7 @@ class Ple_3_3(models.Model):
         return ple_items
 
     @api.multi
-    def update_ple_items(self, company_id, ple_update, fecha_reporte, fecha_inicio, fecha_fin,ple_util):
+    def update_ple_items(self, company_id, ple_update, fecha_reporte, fecha_inicio, fecha_fin):
         ple_items = ''
         for line in ple_update:
             ple_actual = self.env['account.ple.3.3'].search([

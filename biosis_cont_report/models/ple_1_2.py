@@ -38,7 +38,6 @@ class Ple_1_2(models.Model):
     @api.multi
     def get_ple(self, company_id, fecha_reporte, fecha_inicio, fecha_fin):
         ple_mc_res = ''
-        ple_util = self.env['account.ple.util']
         mc_ple_list = []
         move_line_new = []
         move_new = []
@@ -113,17 +112,17 @@ class Ple_1_2(models.Model):
             return ' '
         else:
             if len(move_line_new) > 0:
-                ple_nuevos = self.create_ple_items(company_id, move_line_new, fecha_reporte, fecha_inicio, fecha_fin,ple_util)
+                ple_nuevos = self.create_ple_items(company_id, move_line_new, fecha_reporte, fecha_inicio, fecha_fin)
                 ple_mc_res = ple_mc_res + ple_nuevos
 
             if len(move_line_update) > 0:
-                ple_modificados = self.update_ple_items(company_id, move_line_update, fecha_reporte, fecha_inicio, fecha_fin,ple_util)
+                ple_modificados = self.update_ple_items(company_id, move_line_update, fecha_reporte, fecha_inicio, fecha_fin)
                 ple_mc_res = ple_mc_res + ple_modificados
 
             return ple_mc_res
 
     @api.multi
-    def create_ple_items(self, company_id, move_line_new, fecha_reporte, fecha_inicio, fecha_fin,ple_util):
+    def create_ple_items(self, company_id, move_line_new, fecha_reporte, fecha_inicio, fecha_fin):
         ple_items = ''
         ple_mc = self.env['account.ple.1.2']
         i = 1
@@ -145,10 +144,10 @@ class Ple_1_2(models.Model):
                 'codigo_cb_contri_5': nro_cuenta.acc_number if nro_cuenta else '',
                 'fecha_o_6': datetime.datetime.strptime(line.date_maturity, '%Y-%m-%d').strftime('%d/%m/%Y'),  # SE APLICARA CUANDO ESTE COMPLETADO CENTRO DE COSTOS
                 'medio_pago_7': line.payment_id.tipo_documento_pago_id.num_order if line.payment_id.tipo_documento_pago_id else '',
-                'descripcion_o_b_8': ple_util.filterPhrase(line.payment_id.tipo_documento_pago_id.descripcion) if line.payment_id.tipo_documento_pago_id else '',
+                'descripcion_o_b_8': line.payment_id.tipo_documento_pago_id.descripcion if line.payment_id.tipo_documento_pago_id else '',
                 'tipo_doc_gb_9': line.payment_id.partner_id.catalog_06_id.code if line.payment_id.partner_id else '-',
                 'numero_doc_gb_10': line.payment_id.partner_id.vat if line.payment_id.partner_id else '-',
-                'ap_d_rz_gb_11': ple_util.filterPhrase(line.payment_id.partner_id.name) if line.payment_id.partner_id else 'varios',
+                'ap_d_rz_gb_11': line.payment_id.partner_id.name if line.payment_id.partner_id else 'varios',
                 'nro_transc_bancaria_12': line.payment_id.codigo_referencia_doc if line.payment_id.codigo_referencia_doc else '',
                 'mov_debe_13': str(line.credit) if line.debit == 0 else '0.00',
                 'mov_haber_14': str(line.debit) if line.credit == 0 else '0.00',
@@ -164,7 +163,7 @@ class Ple_1_2(models.Model):
         return ple_items
 
     @api.multi
-    def update_ple_items(self, company_id, move_line_update, fecha_reporte, fecha_inicio, fecha_fin,ple_util):
+    def update_ple_items(self, company_id, move_line_update, fecha_reporte, fecha_inicio, fecha_fin):
         ple_items = ''
         for line in move_line_update:
             ple_actual = self.env['account.ple.1.2'].search([
@@ -204,10 +203,10 @@ class Ple_1_2(models.Model):
                         'codigo_cb_contri_5': nro_cuenta.acc_number if nro_cuenta else '',
                         'fecha_o_6': datetime.datetime.strptime(line.date_maturity, '%Y-%m-%d').strftime('%d/%m/%Y'),  # SE APLICARA CUANDO ESTE COMPLETADO CENTRO DE COSTOS
                         'medio_pago_7': line.payment_id.tipo_documento_pago_id.num_order if line.payment_id.tipo_documento_pago_id else '',
-                        'descripcion_o_b_8': ple_util.filterPhrase(line.payment_id.tipo_documento_pago_id.descripcion) if line.payment_id.tipo_documento_pago_id else '',
+                        'descripcion_o_b_8': line.payment_id.tipo_documento_pago_id.descripcion if line.payment_id.tipo_documento_pago_id else '',
                         'tipo_doc_gb_9': line.payment_id.partner_id.catalog_06_id.code if line.payment_id.partner_id else '-',
                         'numero_doc_gb_10': line.payment_id.partner_id.vat if line.payment_id.partner_id else '-',
-                        'ap_d_rz_gb_11': ple_util.filterPhrase(line.payment_id.partner_id.name) if line.payment_id.partner_id else 'varios',
+                        'ap_d_rz_gb_11': line.payment_id.partner_id.name if line.payment_id.partner_id else 'varios',
                         'nro_transc_bancaria_12': line.payment_id.codigo_referencia_doc if line.payment_id.codigo_referencia_doc else '',
                         'mov_debe_13': str(line.credit) if line.debit == 0 else '0.00',
                         'mov_haber_14': str(line.debit) if line.credit == 0 else '0.00',

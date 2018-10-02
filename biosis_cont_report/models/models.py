@@ -68,10 +68,3 @@ class GrupoLibroElectronico(models.Model):
     code = fields.Char(string=u'Código', required=True)
     type_time = fields.Selection([('MES','MES'),('DIA','DIA')],string=u'Tipo de tiempo', required=True)
     quantity = fields.Integer(string=u'Cantidad', required=True)
-
-class CamposLibres(models.Model):
-    _name = 'biosis_cont_report.camposlibres'
-    _description = 'Campos de libre utilizacion para cada registro'
-
-    campos = fields.Char(string=u"Campos")
-

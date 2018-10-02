@@ -15,25 +15,16 @@ class Ple_3_1(models.Model):
     saldo_rubro_4 = fields.Char(string=u'Saldo del Rubro Contable', required=True)
     estado_5 = fields.Char(string=u'Estado', required=True)
     company_id = fields.Many2one('res.company', required=True, string=u"Compañia")
-    campos_libres = fields.Char(string=u'Campos Libres')
 
     @api.multi
     def get_ple_line(self):
         return self.periodo_1 + '|' + self.cod_catalogo_2 + '|' + self.cod_rubro_3 + '|' + self.saldo_rubro_4 + '|' \
-               + self.estado_5 + '|' + self.get_campos_libres()
+               + self.estado_5 + '|' + '\n'
 
-
-    @api.multi
-    def get_campos_libres(self):
-        if self.campos_libres:
-            return self.campos_libres + '\n'
-        else:
-            return '\n'
 
     @api.multi
     def get_ple(self, company_id, fecha_reporte, fecha_inicio, fecha_fin):
         ple_ef_res = ''
-        ple_util = self.env['account.ple.util']
         fecha_reporte_anio = str(fecha_fin.year) + '12' + '31'
         ef_ple_list = []
         ef_ple_update = []
@@ -77,23 +68,22 @@ class Ple_3_1(models.Model):
                 """
                    Pasos para agregar lineas BC al res
                 """
-                ple_nuevos = self.create_ple_items(company_id, ef_ple_new, fecha_reporte, fecha_inicio, fecha_fin, ple_util)
+                ple_nuevos = self.create_ple_items(company_id, ef_ple_new, fecha_reporte, fecha_inicio, fecha_fin)
                 ple_ef_res = ple_ef_res + ple_nuevos
 
             if len(ef_ple_list) > 0:
                 """
                     Pasos para crear lineas Diario Detalle con cuentas_list_new
                  """
-                ple_old = self.update_ple_items(company_id, ef_ple_old, ef_ple_update, fecha_reporte, fecha_inicio, fecha_fin, ple_util)
+                ple_old = self.update_ple_items(company_id, ef_ple_old, ef_ple_update, fecha_reporte, fecha_inicio, fecha_fin)
                 ple_ef_res = ple_ef_res + ple_old
 
             return ple_ef_res
 
     @api.multi
-    def create_ple_items(self, company_id, ef_ple_new, fecha_reporte,fecha_inicio,fecha_fin, ple_util):
+    def create_ple_items(self, company_id, ef_ple_new, fecha_reporte,fecha_inicio,fecha_fin):
         ple_items = ''
         ple_ef = self.env['account.ple.3.1']
-
         periodo = str(fecha_fin.year) + '12' + '31'
         for line in ef_ple_new:
             if datetime.date.today() <= self.get_fecha_atraso(fecha_fin):
@@ -106,9 +96,7 @@ class Ple_3_1(models.Model):
                 'cod_rubro_3': line['codigo_s_f'],  # implementar
                 'saldo_rubro_4': str(line['saldo_rubro']) if line['saldo_rubro'] > 0 else '0.00',
                 'estado_5': ple_item_estado_5,
-                'company_id': company_id.id,
-                #'campos_libres': " ".join((line['nombre']+'|').split()),
-                'campos_libres': ple_util.filterPhrase(line['nombre'] + '|'),
+                'company_id': company_id.id
             }
             ple_item = ple_ef.create(ple_item_vals)
             # despues de proceso
@@ -116,7 +104,7 @@ class Ple_3_1(models.Model):
         return ple_items
 
     @api.multi
-    def update_ple_items(self, company_id, ef_ple_old, ef_ple_update, fecha_reporte, fecha_inicio, fecha_fin,ple_util):
+    def update_ple_items(self, company_id, ef_ple_old, ef_ple_update, fecha_reporte, fecha_inicio, fecha_fin):
         ple_items = ''
         for line in ef_ple_old:
             ple_item = self.env['account.ple.3.1'].search([
@@ -194,7 +182,6 @@ class Ple_3_1(models.Model):
             ef_line['codigo_s_f'] = line.codigo
             ef_line['tipo'] = line.tipo
             ef_line['padre'] = line.padre
-            ef_line['nombre'] = line.descripcion
             if line.tipo == 'cuenta':
                 total_ef = 0
                 if line.cuentas:

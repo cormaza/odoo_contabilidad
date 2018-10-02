@@ -67,7 +67,6 @@ class Ple_8_1(models.Model):
     @api.multi
     def get_ple(self, company_id, fecha_reporte, fecha_inicio, fecha_fin):
         ple_compras_res = ''
-        ple_util = self.env['account.ple.util']
         # ED sin ple
         invoices_nuevos = self.env['account.invoice'].search([
             ('date', '>=', fecha_inicio),
@@ -97,17 +96,17 @@ class Ple_8_1(models.Model):
             return ' '
         else:
             if len(invoices_nuevos) > 0:
-                ple_nuevos = self.create_ple_items(company_id, invoices_nuevos, fecha_reporte, fecha_inicio, fecha_fin, ple_util)
+                ple_nuevos = self.create_ple_items(company_id, invoices_nuevos, fecha_reporte, fecha_inicio, fecha_fin)
                 ple_compras_res = ple_compras_res + ple_nuevos
 
             if len(invoices_old) > 0:
-                ple_modificados = self.update_ple_items(company_id, invoices_old, fecha_fin, ple_util)
+                ple_modificados = self.update_ple_items(company_id, invoices_old, fecha_fin)
                 ple_compras_res = ple_compras_res + ple_modificados
 
         return ple_compras_res
 
     @api.multi
-    def create_ple_items(self, company_id, invoices, fecha_reporte, fecha_inicio, fecha_fin, ple_util):
+    def create_ple_items(self, company_id, invoices, fecha_reporte, fecha_inicio, fecha_fin):
         ple_items = ''
         ple_compras = self.env['account.ple.8.1']
         #Obtener fecha limite de entrega de libro contable en caso de compras y ventas
@@ -144,7 +143,7 @@ class Ple_8_1(models.Model):
                 # ple_item.importe_total_diario_10 - no implementado
                 'tipo_doc_pro_11': invoice.partner_id.catalog_06_id.code,
                 'numero_doc_pro_12': invoice.partner_id.vat,
-                'razon_social_pro_13': ple_util.filterPhrase(invoice.partner_id.registration_name) if invoice.partner_id.registration_name else ple_util.filterPhrase(invoice.partner_id.name),
+                'razon_social_pro_13': invoice.partner_id.registration_name if invoice.partner_id.registration_name else invoice.partner_id.name,
                 'base_adq_gravadas_14': str(invoice.amount_untaxed),
                 'monto_igv_1_15': str(invoice.amount_tax),
                 # ple_item.base_adq_no_gravadas_16 - por consultar
@@ -190,7 +189,7 @@ class Ple_8_1(models.Model):
         return ple_items
 
     @api.multi
-    def update_ple_items(self, company_id, invoices, fecha_fin, ple_util):
+    def update_ple_items(self, company_id, invoices, fecha_fin):
         ple_items = ''
         for invoice in invoices:
             ple_actual = self.env['account.ple.8.1'].search([
@@ -244,7 +243,7 @@ class Ple_8_1(models.Model):
                         # ple_item.importe_total_diario_10 - no implementado
                         'tipo_doc_pro_11': invoice.partner_id.catalog_06_id.code,
                         'numero_doc_pro_12': invoice.partner_id.vat,
-                        'razon_social_pro_13': ple_util.filterPhrase(invoice.partner_id.registration_name),
+                        'razon_social_pro_13': invoice.partner_id.registration_name,
                         'base_adq_gravadas_14': str(invoice.amount_untaxed),
                         'monto_igv_1_15': str(invoice.amount_tax),
                         # ple_item.base_adq_no_gravadas_16 - por consultar
