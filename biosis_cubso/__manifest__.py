@@ -9,7 +9,7 @@
         Data agregada por Biosis
     """,
 
-    'author': "Biosis",
+    'author': "BIOSIS",
     'website': "http://www.yourcompany.com",
 
     # Categories can be used to filter modules in modules listing

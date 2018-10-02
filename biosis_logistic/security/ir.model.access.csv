@@ -1,5 +1,0 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_tipo_contenedor,sale.contenedor.tipo.user,model_sale_contenedor_tipo,sales_team.group_sale_salesman,1,1,0,0
-access_linea_naviera,sale.linea.user,model_sale_linea,sales_team.group_sale_salesman,1,1,0,0
-access_modalidad_pago,sale.pago.modalidad,model_sale_pago_modalidad,sales_team.group_sale_salesman,1,1,0,0
-access_sale_order_quest,sale.order.quest.user,model_sale_order_quest,sales_team.group_sale_salesman,1,1,0,0
