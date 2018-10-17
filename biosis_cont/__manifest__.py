@@ -46,6 +46,7 @@
         'views/res_currency_rate_view.xml',
         'views/account_move_view.xml',
         'views/account_anexo4_detraccion.xml',
+        #'views/res_partner.xml',
         #'views/account_payment_detraccion.xml',
 
         #'views/account_invoice_import_txt.xml',

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<odoo>
+    <data>
+        <record id="trazabilidad_views" model="ir.ui.view">
+            <field name="name">crm.trazabilidad.from.view</field>
+            <field name="model">crm.trazabilidad</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="partner_id"/>
+                            <field name="partner_ruc" readonly="1"/>
+                            <field name="sale_order_id" domain="[('partner_id','=',partner_id)]"/>
+                            <field name="sale_order_referencia" readonly="1"/>
+                            <field name="etd"/>
+                            <field name="eta"/>
+                            <field name="cita_planta"/>
+                            <field name="mes"/>
+                            <field name="fecha_retiro_contenedor"/>
+                            <field name="referencia_cliente"/>
+                            <field name="puerto_embarque"/>
+                            <field name="puerto_destino"/>
+                            <field name="numero_dam"/>
+                            <field name="canal"/>
+                            <field name="sale_order_id"/>
+                            <field name="sale_order_referencia"/>
+                            <field name="po_"/>
+                            <field name="booking"/>
+                            <field name="n_bl"/>
+                            <field name="n_contenedor"/>
+                            <field name="sale_order_id_tipo_contenedor_id"/>
+                            <field name="consignatorio"/>
+                            <field name="factura_consignatario"/>
+                            <field name="fob"/>
+                            <field name="cif"/>
+                            <field name="nave"/>
+                            <field name="fecha_vencimiento"/>
+                            <field name="incoterm"/>
+                            <field name="observacion"/>
+                            <field name="vencimiento_estadia"/>
+                            <field name="vencimiento_almacenaje"/>
+                            <field name="estado_regularizacion_id"/>
+
+
+                        </group>
+
+
+                    </sheet>
+
+                </form>
+            </field>
+        </record>
+
+        <record id="action_trazabilidad" model="ir.actions.act_window">
+            <field name="name">Trazabilidad</field>
+            <field name="res_model">crm.trazabilidad</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Configure una Trazabilidad
+                </p>
+                <p>
+                    Esta vista le permitirá configurar una trazabilidad
+                </p>
+            </field>
+        </record>
+
+        <menuitem name="Trazabilidad"
+                  id="menu_trazabilidad"
+                  parent="biosis_logistic.root_logistica"
+                  action="action_trazabilidad"
+                  sequence="70"/>
+
+
+    </data>
+</odoo>

@@ -1,8 +1,9 @@
 # -*- coding: utf-8 -*-
-from datetime import datetime, date
+from datetime import datetime, date, timedelta
 import calendar
 from odoo import api, fields, models, _
 from odoo.exceptions import UserError, RedirectWarning, ValidationError
+
 
 
 class AccountLiquidacion(models.Model):
@@ -27,6 +28,30 @@ class AccountLiquidacion(models.Model):
             self.journal_id = diario
             self.name_liquidacion = self.servicio_id.name
 
+    @api.onchange('date_due')
+    def _onchange_date_due_invoice(self):
+        if self.type == 'in_invoice':
+            relacion = [{'dia': 0, 'sumar': 9},
+                        {'dia': 1, 'sumar': 8},
+                        {'dia': 2, 'sumar': 7},
+                        {'dia': 3, 'sumar': 6},
+                        {'dia': 4, 'sumar': 5},
+                        {'dia': 5, 'sumar': 4},
+                        {'dia': 6, 'sumar': 10}]
+            if self.date_due != False:
+                fecha_v = datetime.strptime(self.date_due, '%Y-%m-%d')
+                dia_semana_fecha_v = fecha_v.weekday()
+                for rel in relacion:
+                    if rel['dia'] == dia_semana_fecha_v:
+                        dias = rel['sumar']
+                        break
+                fecha_corte = fecha_v + timedelta(days=dias)
+                fecha_programada = fecha_corte + timedelta(days=5)
+                self.fecha_corte = fecha_corte
+                self.fecha_pago = fecha_programada
+                a=1
+
+
     @api.multi
     def action_invoice_proveedor(self):
         #self.ensure_one()
@@ -36,6 +61,7 @@ class AccountLiquidacion(models.Model):
         for linea in self.invoice_line_ids:
             if linea:
                 cont += 1
+
         if cont != self.numero_facturas:
             raise UserError(_("El número de facturas en linea difiere del campo Num.Fact.Relacionadas !"))
 
@@ -44,6 +70,13 @@ class AccountLiquidacion(models.Model):
 
         self.order_liquidacion = secuencia
         self.write({'state': 'open'})
+        self.number = secuencia
+        self.residual = self.saldo
+        for linea in self.invoice_line_ids:
+            if linea:
+                linea.factura_relacionada.reference = self.order_liquidacion
+
+
 
     @api.multi
     def action_invoice_paid(self):

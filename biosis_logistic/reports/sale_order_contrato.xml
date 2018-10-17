@@ -1,0 +1,299 @@
+<odoo>
+    <data>
+        <template id="sale_contrato_document">
+            <t t-set="company" t-value="doc.company_id"/>
+            <t t-call="biosis_logistic.sbc_doc_header"/>
+            <div class="page" style="color:#1f497d;font-size:12pt;">
+                <div class="row">
+                    <div class="col-xs-9">
+                        <strong>
+                            <span t-esc="u'COTIZACIÓN - LOG. {}/{} {} C-{}-{}'.format(doc['actividad'] == 'E' and 'EXPO' or 'IMPO',doc['modalidad'],doc['name'],doc['partner_id'].name,time.strftime('%Y',time.strptime(doc.date_order,'%Y-%m-%d %H:%M:%S')))">
+                                Encabezado
+                            </span>
+                        </strong>
+
+                    </div>
+                    <div class="col-xs-3 text-right">
+                        Miraflores,
+                        <span t-esc="time.strftime('%d %B %Y',time.strptime(doc.date_order,'%Y-%m-%d %H:%M:%S'))"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        Señores
+                        <br/>
+                        <strong>
+                            <span t-field="doc.partner_id.name"></span>
+                        </strong>
+                        <br/>
+                        Presente .-
+                        <br/>
+                        <t t-if="doc.partner_atencion_id">
+                            <strong>Atención</strong>
+                            <span t-esc="u'{} {}'.format(doc['partner_atencion_id'].title.name,doc['partner_atencion_id'].name)">
+                                Atención
+                            </span>
+                        </t>
+                    </div>
+
+                </div>
+
+                <br/>
+
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div style="border: 1px solid black;"></div>
+                    </div>
+                </div>
+
+                <br/>
+
+                <div class="row">
+                    <div class="col-xs-12">
+                        <p>Estimados Sres.:</p>
+                        <p>
+                            Nos es grato saludarlos y presentar nuestra propuesta para un Servicio Logístico Integral de
+                            calidad para atender sus contenedores de Importación, la cual incluye los siguientes
+                            servicios:
+                        </p>
+                        <div class="col-xs-12">
+                            <div class="col-xs-2">
+                                &amp;nbsp;
+                            </div>
+                            <div class="col-xs-8">
+                                <table class="table" style="color:#1f497d">
+                                    <tr>
+                                        <td rowspan="2" style="background: #fff200;">
+                                            <strong>NAVIERAS</strong>
+                                        </td>
+                                        <td t-if="doc.tipo_contenedor_energia" rowspan="2" style="background: #fff200;">
+                                            <strong>DÍAS DE ENERGÍA</strong>
+                                        </td>
+                                        <td rowspan="2" style="background: #fff200;">
+                                            <strong>DÍAS DE ALMACENAJE</strong>
+                                        </td>
+                                        <td style="background: #fff200;">
+                                            <strong>TIPO DE DESPACHO</strong>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="background: #fff200;">
+                                            <strong>SADA PUNTO DE LLEGADA</strong>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span t-field="doc.linea_id.name">línea naviera</span>
+                                        </td>
+                                        <td t-if="doc.tipo_contenedor_energia">
+                                            <span t-field="doc.dias_energia">días de energia</span>
+                                        </td>
+                                        <td>
+                                            <span t-field="doc.dias_almacenaje">días de almacenaje</span>
+                                        </td>
+                                        <td>
+                                            <span t-esc="'{} {}'.format(doc['currency_id'].name,doc['currency_id'].symbol)">
+                                                -
+                                            </span>
+                                            <span t-field="doc.amount_total">total</span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+
+                        <p>
+                            Trámite Aduanero: Importación <strong>(AGENCIAMIENTO DE ADUANA)</strong>:
+                            <ul>
+                                <li>Comisión de agencia:
+                                    <strong>
+                                        <span>0.5%</span>
+                                    </strong>
+                                    del valor CIF (*)
+                                </li>
+                                <li>Comisión Mínima:
+                                    <strong>USD $ 150.00</strong>
+                                </li>
+                                <li>Gastos Operativos:
+                                    <strong>USD $ 50.00</strong>
+                                </li>
+                            </ul>
+
+                        </p>
+
+                        <p>
+                            <strong>
+                                <span style="color: red">OBJETIVOS DEL SERVICIO:</span>
+                            </strong>
+                            <ul>
+                                <li>
+                                    <span>Atención personalizada de asesoría las 24 horas del día de lunes a domingo.
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>Atención operativa las 24 horas del día de lunes a domingo, sujeto a
+                                        condiciones
+                                        adicionales.
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>Monitoreo constante del estatus de su carga.</span>
+                                </li>
+                                <li>
+                                    <span>Trazabilidad en toda la cadena logística (seguimiento por GPS y envío de este
+                                        a
+                                        solicitud).
+                                    </span>
+                                </li>
+                            </ul>
+                        </p>
+
+                        <p>
+                            <strong><span style="color:red;">NOTAS:</span>&amp;nbsp;INCLUYE:
+                            </strong>&amp;nbsp;En todos los escenarios:
+                            <ul>
+                                <li>Servicio Integrado de depósito con terminal de elección de Smart Business
+                                    Corporation
+                                    S.A.C.
+                                </li>
+                                <li>Retiro y devolución de contenedor al almacén de la línea.</li>
+                                <li>Agenciamiento de Aduana para importación de mercadería.</li>
+                                <li>Visto Bueno y gastos portuarios (gestión y costos).</li>
+                                <li>Costos por congestión portuaria operativa.</li>
+                                <li>Transporte a planta e ingreso a terminal seleccionado.</li>
+                                <li>Gastos operativos.</li>
+                                <li t-if="doc.senasa">Trámite, gestión y recursos para inspección SENASA.</li>
+                            </ul>
+
+                        </p>
+
+                        <p>
+                            <span style="color:red;">
+                                <strong>NO INCLUYE</strong>
+                            </span>
+                            <ul>
+                                <t t-foreach="doc.order_quest_ids" t-as="quest">
+                                    <li t-if="doc.senasa">
+                                        Pagos de derecho de inspección SENASA, impuestos y/o multas, ni financiamiento de estos para a SUNAT.
+                                    </li>
+                                    <li>
+                                        <t t-raw="quest.render()">render</t>
+                                    </li>
+                                </t>
+                            </ul>
+                        </p>
+
+                        <p>
+                            <span style="color:red;">
+                                <strong>OBSERVACIONES:</strong>
+                            </span>
+                            <ul>
+                                <li>
+                                    <span style="color:red;">TÉRMINO DE PAGO:</span>&amp;nbsp;
+                                    <span t-field="doc.payment_term_id">términos de pago</span>
+                                </li>
+                                <li>
+                                    <span style="color:red;">MÉTODO DE PAGO:</span>&amp;nbsp;
+                                    <span></span>
+                                </li>
+                                <li>
+                                    El servicio logístico solo aplica para los gastos regulares del despacho señalados
+                                    al inicio
+                                    de esta cotización. Los gastos como flete marítimos / Handling / THC / Avisos de
+                                    llegada de
+                                    Agentes de Carga, por ser cobros realizado por las Navieras ligados al flete
+                                    marítimo y del
+                                    mismo modo los SOBRECOSTOS como Sobrestadía y/o Almacenaje, <strong>NO SERÁN
+                                    FINANCIADOS
+                                </strong> y por demás deberán ser prepagados para continuar con la operación.
+                                </li>
+                                <li>
+                                    Smart Business Corporation S.A.C. tiene la capacidad de poder atender operaciones
+                                    las 24
+                                    horas del día, los 365 días del año, previa coordinación operativa, pues estamos
+                                    comprometido con el logística de nuestros clientes. Notar que todos los servicios
+                                    solicitados a iniciarse sobre las 5 pm o antes de las 5 am, así como las operaciones
+                                    en días
+                                    domingos, feriados y festivos, tendrán un recargo del 50% + un gasto operativo
+                                    adicional de
+                                    USD $ 30.00 + IGV.
+                                </li>
+                                <li>
+                                    Tener en cuenta que las programaciones de retiro son como mínimo 24 horas antes de
+                                    lo
+                                    requerido y estarán sujetas a disponibilidad de citas de retiro, unidades de
+                                    transporte
+                                    disponibles y/o congestión del depósito temporal y no será responsabilidad de Smart
+                                    Business
+                                    Corporation S.A.C. los sobrecostos que estos generen.
+                                </li>
+                            </ul>
+                        </p>
+                        <p>
+                            <strong>
+                                <span style="color:red;">IMPORTANTE:</span>
+                            </strong>
+                        </p>
+                        <p>
+                            El costo de nuestra Operación Logística está sujeto a variación por incrementos que realicen
+                            las
+                            agencias marítimas, Terminales de Almacenamiento, transporte terrestre (combustible, peajes)
+                            con y
+                            sin previo aviso, los mismos que por nuestra parte serán informados y aplicados contra
+                            comunicado de
+                            estos, AL PRIMER DÍA ÚTIL DEL MES SIGUIENTE DE ENVIADA LA COMUNICACIÓN.
+                        </p>
+                        <p>
+                            La presente proforma deberá ser devuelta en original debidamente firmada por su
+                            representante legal
+                            en señal de conformidad.
+                        </p>
+                        <p>
+                            Atentamente,
+                        </p>
+                        <p>
+                            División Comercial
+                            <strong>Smart Business Corporation S.A.C.</strong>
+                            <br/>
+                            Central: (01) 497-4498
+                        </p>
+                        <p>
+                            La empresa
+                            <strong>
+                                <span t-field="doc.partner_id.name"></span>
+                            </strong>
+                            acepta los términos y condiciones de la presente proforma y se
+                            responsabiliza del pago íntegro y puntual de las operaciones.
+                        </p>
+                        <p>
+                            Lima,
+                            <span t-field="doc.date_order"></span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </template>
+
+        <template id="report_sale_contrato">
+            <t t-call="report.html_container">
+                <t t-foreach="docs" t-as="doc">
+                    <t t-call="biosis_logistic.sale_contrato_document"/>
+                </t>
+            </t>
+        </template>
+
+        <report
+                id="sale_contrato_action"
+                model="sale.order"
+                string="Cotizacion"
+                report_type="qweb-pdf"
+                name="biosis_logistic.report_sale_contrato"
+                file="biosis_logistic.report_sale_contrato"
+        />
+
+        <record id="sale_contrato_action" model="ir.actions.report.xml">
+            <field name="paperformat_id" ref="report.paperformat_euro"/>
+        </record>
+
+    </data>
+</odoo>

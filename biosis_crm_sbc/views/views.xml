@@ -1,0 +1,59 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+    <!--
+    <record model="ir.ui.view" id="crm_sbc.list">
+      <field name="name">crm_sbc list</field>
+      <field name="model">crm_sbc.crm_sbc</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+    -->
+
+    <!-- actions opening views on models -->
+    <!--
+    <record model="ir.actions.act_window" id="crm_sbc.action_window">
+      <field name="name">crm_sbc window</field>
+      <field name="res_model">crm_sbc.crm_sbc</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+    -->
+
+    <!-- server action to the one above -->
+    <!--
+    <record model="ir.actions.server" id="crm_sbc.action_server">
+      <field name="name">crm_sbc server</field>
+      <field name="model_id" ref="model_crm_sbc_crm_sbc"/>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": self._name,
+        }
+      </field>
+    </record>
+    -->
+
+    <!-- Top menu item -->
+    <!--
+    <menuitem name="crm_sbc" id="crm_sbc.menu_root"/>
+    -->
+    <!-- menu categories -->
+    <!--
+    <menuitem name="Menu 1" id="crm_sbc.menu_1" parent="crm_sbc.menu_root"/>
+    <menuitem name="Menu 2" id="crm_sbc.menu_2" parent="crm_sbc.menu_root"/>
+    -->
+    <!-- actions -->
+    <!--
+    <menuitem name="List" id="crm_sbc.menu_1_list" parent="crm_sbc.menu_1"
+              action="crm_sbc.action_window"/>
+    <menuitem name="Server to list" id="crm_sbc" parent="crm_sbc.menu_2"
+              action="crm_sbc.action_server"/>
+    -->
+  </data>
+</odoo>

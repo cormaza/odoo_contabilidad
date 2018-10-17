@@ -99,6 +99,8 @@ class AccountPayment(models.Model):
             self.post_pagos()
 
         liquidacion.state = 'paid'
+        self.invoice_ids.state = 'paid'
+        liquidacion.residual = 0
 
 
     def post_pagos(self):

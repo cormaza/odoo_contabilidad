@@ -1,0 +1,47 @@
+<odoo>
+    <data>
+        <record id="report_facturascliente_wizard" model="ir.ui.view">
+            <field name="name">report.ventas.wizard</field>
+            <field name="model">report.ventas.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Opciones de reporte">
+                    <group col="4">
+                        <field name="company_id" options="{'no_create': True}" groups="base.group_multi_company"
+                               colspan="4"/>
+                        <field name="date_from" colspan="2"/>
+                        <field name="date_to" colspan="2"/>
+                    </group>
+                    <footer>
+                        <button name="print_reportfacturascliente_xls" string="Imprimir Excel" type="object"
+                                default_focus="1"
+                                class="oe_highlight"/>
+                        <button string="Cancelar" class="oe_link" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_report_facturascliente_wizard" model="ir.actions.act_window">
+            <field name="name">Reporte de Facturas de Cliente</field>
+            <field name="res_model">report.ventas.wizard</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="report_facturascliente_wizard"/>
+            <field name="target">new</field>
+        </record>
+
+        <!--<menuitem id="menu_rpt_liquidacion"-->
+        <!--name="Reporte de facturacion"-->
+        <!--string="Reporte de facturación"-->
+        <!--sequence="100"-->
+        <!--parent="menu_reports_liquidacioncompra"-->
+        <!--action="action_report_liquidacion_wizard"-->
+        <!--/>-->
+        <menuitem id="report_facturascliente" name="Facturas de Cliente"
+                  action="action_report_facturascliente_wizard"
+                  parent="menu_reports_sbc" sequence="4"/>
+
+
+    </data>
+</odoo>

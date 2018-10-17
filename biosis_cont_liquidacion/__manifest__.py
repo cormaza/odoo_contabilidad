@@ -26,6 +26,12 @@
 
         'data/journal.xml',
         'views/account_liquidacion_view.xml',
+        'views/account_invoice_supplier_form.xml',
+        'views/account_invoice_view.xml',
+        'views/payment_purchase_liquidacion.xml',
+        'views/payments_all.xml',
+        #'wizard/payment_purchase_liquidacion.xml',
+        #'views/payment_purchase_liquidacion.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

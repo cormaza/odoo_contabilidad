@@ -10,7 +10,7 @@
             <field name="update_posted" eval="True"/>
             <field name="refund_sequence" eval="False"/>
         </record>
-         <record id="sequence_liquidacion_seq" model="ir.sequence">
+          <record id="sequence_liquidacion_seq" model="ir.sequence">
             <field name="name">Liquidación Compra</field>
             <field name="code">liquidacion.compra</field>
             <field name="prefix">LIQ-%(range_year)s-%(month)s-</field>

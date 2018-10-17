@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_biosis_report_sbc_liquidacion_biosis_report_sbc_liquidacion,biosis_report_sbc_liquidacion.biosis_report_sbc_liquidacion,model_biosis_report_sbc_liquidacion_biosis_report_sbc_liquidacion,,1,0,0,0

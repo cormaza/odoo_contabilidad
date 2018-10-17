@@ -1,0 +1,14 @@
+<odoo>
+    <data>
+        <template id="sbc_doc_header">
+            <div class="header">
+                <div class="row">
+                    <div class="col-xs-3">
+                        <img t-if="company.logo" t-att-src="'data:image/png;base64,%s' % company.logo"
+                             style="max-height: 30mm;"/>
+                    </div>
+                </div>
+            </div>
+        </template>
+    </data>
+</odoo>

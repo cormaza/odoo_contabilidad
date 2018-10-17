@@ -44,8 +44,8 @@
             <field name="act_window_id" ref="biosis_cont_res_currency_rate"/>
         </record>
 
-        <menuitem id="menu_action_base_view_currency_rate_tree" name="Tipo Cambio"
-                  parent="menu_banco_caja" action="biosis_cont_res_currency_rate"/>
+        <!--<menuitem id="menu_action_base_view_currency_rate_tree" name="Tipo Cambio"-->
+                  <!--parent="menu_banco_caja" action="biosis_cont_res_currency_rate"/>-->
 
     </data>
 </odoo>
