@@ -1,0 +1,21 @@
+<odoo>
+    <data>
+
+
+        <record id="action_report_gestion" model="ir.actions.act_url">
+                <field name="name">Reporte de Facturacion</field>
+                <field name="type">ir.actions.act_url</field>
+                <field name="target">new</field>
+                <field name="url">reports/report_factura</field>
+        </record>
+
+        <menuitem id="menu_rpt_facturacion"
+                  name="Reporte de facturacion"
+                  string="Reporte de facturacion"
+                  sequence="100"
+                  action="action_report_facturacion"
+                  parent="sale_contract.menu_sale_subscription_root">
+        </menuitem>
+
+    </data>
+</odoo>

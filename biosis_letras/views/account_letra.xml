@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!--formulario registrar banco-->
+        <record id="letrasbancos_form" model="ir.ui.view">
+            <field name="name">letrasbancos</field>
+            <field name="model">letra.bank</field>
+            <field name="arch" type="xml">
+                <form name="Banco"  edit="false" create="false">
+                   <sheet string="Banco" >
+                            <group name="group top" >
+                            <group  name="group_left">
+                                <field name="letra" invisible="1" />
+                                <field name="bank_id" />
+                                <field name="tipo_cuenta"/>
+                                <field name="nrocuenta"/>
+                             </group>
+                            <group name="group_rigth">
+                                <field name="fechavencimiento"/>
+                            </group>
+                        </group>
+                    </sheet>
+                     <footer>
+                        <button string='Enviar' name="post" type="object" class="btn-primary" />
+                        <button string="Cancel" class="btn-default" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="view_banco">
+            <field name="name">Enviar al banco</field>
+            <field name="res_model">letra.bank</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="context">{'active_id': active_id}</field>
+            <field name="view_id" ref="letrasbancos_form"/>
+            <field name="target">new</field>
+        </record>
+
+        <!--Formulario de letras-->
+        <record id="registrarletra_view_form" model="ir.ui.view">
+            <field name="name">registrarletra</field>
+            <field name="model">account.letra</field>
+            <field name="arch" type="xml">
+                <form string="Registrar Letra" >
+
+                    <header>
+                         <button name="%(account.action_account_invoice_payment)d" type="action" string="Registar Pago"
+                                 groups="account.group_account_invoice" class="oe_highlight"
+                                 attrs ="{'invisible': ['|','|',('state','=','draft'), ('state','=','open'),('state','=','charged')]}"/>
+                        <button name="state_open"   string="Validar" type="object"
+                                class="oe_higthlight" attrs ="{'invisible': ['|','|',('state','=','open'),('state','=','charged'),('state','=','reconcile')]}"/>
+                        <button name="" string="Protesta" type="object" class="oe_higthlight" attrs ="{'invisible': [('state','=','draft')]}"/>
+                        <button name="" string="Renovada" type="object" class="oe_higthlight" attrs ="{'invisible': [('state','=','draft')]}"/>
+                       <button name="%(view_banco)d"  string="Enviar a Banco" type="action" class="oe_highlight" status="open"  attrs ="{'invisible': [('state','=','reconcile')]}" />
+                        <field name="state" widget="statusbar" nolabel="1" statusbar_visible="draft,open,reconcile"  />
+
+                    </header>
+                    <sheet string="Letras por Cobrar">
+                        <group>
+                            <div>
+                                <h1 class="mt0">
+                                    <field name="num_letra" class="oe_inline" attrs="{'invisible': [('state', '=', 'draft')]}"/>
+                                </h1>
+                            </div>
+                        </group>
+                        <group>
+                            <group>
+                                <field name="partner_id" context="{'default_is_company': True}"/>
+                            </group>
+                            <group>
+                                <field name="numerocorrelativo"/>
+                                <field name="fechagiro"/>
+                                <field name="fechavencimiento"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page  name="Facturas" string="Facturas">
+                            <group>
+                            <field context="{'partner_id': partner_id}" domain="['res_partner'='customer']"
+                                   name="facturas_lineas_ids">
+                                <tree string="Líneas" editable="bottom">
+                                    <field name="sequence" widget="handle"/>
+                                    <field name="factura_relacionada" string="Factura Relacionadas"
+                                           domain="[('partner_id','=',parent.partner_id), ('state', 'in', ['open'])]"/>
+                                    <field name="monto"/>
+                                    <field name="sub_total"/>
+
+                                </tree>
+                            </field>
+                            <group class="oe_subtotal_footer oe_right">
+                                <field name="monto_total" class="oe_subtotal_footer_separator"
+                                       string="Total Neto"/>
+                            </group>
+                            </group>
+                            </page>
+                            <page  name="Otra Información" string="Otra Información">
+                                <group>
+                                    <group>
+                                        <field name="fiscal_position_id"/>
+                                        <field name="journal_id"  />
+                                    </group>
+                                    <group>
+                                        <field name="account_id"/>
+                                        <field name="move_id" groups="account.group_account_manager"
+                                               attrs="{'invisible': [('move_id', '=', False)]}"/>
+                                        <field name="company_id" options="{'no_create': True}" groups="base.group_multi_company"/>
+
+                                    </group>
+                                </group>
+                            </page>
+                        </notebook>
+
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="registrarletra_form_tree" model="ir.ui.view">
+            <field name="name">registrarletra.tree</field>
+            <field name="model">account.letra</field>
+            <field name="arch" type="xml">
+                <tree string="Registrar letras">
+                    <field name="partner_id" groups="base.group_user" string="Persona"/>
+                    <!--<field name="descripcion"/>-->
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="biosis_letras.action_window">
+            <field name="name">Registrar letras por cobrar</field>
+            <field name="res_model">account.letra</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="letras_otros_tree2" model="ir.actions.act_window">
+            <field name="name">Registrar Letra</field>
+            <field name="res_model">account.letra</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field eval="False" name="view_id"/>
+            <field name="help" type="html">
+                <p class="Letra por Cobrar">
+                    Click para registrar letra por cobrar.
+                </p>
+            </field>
+        </record>
+
+        <record id="letras_otros_tree" model="ir.actions.act_window.view">
+            <field eval="1" name="sequence"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="registrarletra_form_tree"/>
+            <field name="act_window_id" ref="letras_otros_tree2"/>
+        </record>
+
+        <record id="letras_otros_form" model="ir.actions.act_window.view">
+            <field eval="3" name="sequence"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="registrarletra_view_form"/>
+            <field name="act_window_id" ref="letras_otros_tree2"/>
+        </record>
+
+        <menuitem id="letras_otros_menu" name="Letras por Cobrar" action="letras_otros_tree2"
+                  parent="biosis_cont.menu_otros"/>
+    </data>
+</odoo>

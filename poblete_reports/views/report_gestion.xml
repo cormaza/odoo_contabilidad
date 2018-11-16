@@ -1,0 +1,19 @@
+<odoo>
+    <data>
+
+
+        <record id="action_report_gestion" model="ir.actions.act_url">
+                <field name="name">Reprote de gestion</field>
+                <field name="type">ir.actions.act_url</field>
+                <field name="target">new</field>
+                <field name="url">/reports/gestion</field>
+        </record>
+
+        <menuitem id="menu_rpt_gestion"
+                  name="Reporte de gestion"
+                  string="Reporte de gestion"
+                  sequence="100"
+                  action="action_report_gestion"
+                  parent="sale_contract.menu_sale_subscription_root"/>
+    </data>
+</odoo>
