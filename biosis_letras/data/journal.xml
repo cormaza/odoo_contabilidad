@@ -1,6 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <odoo>
     <data noupdate="1">
+        //Diario para la validación de la letra
         <record id="sequence_letra_seq" model="ir.sequence">
             <field name="name">letras cobrar</field>
             <field name="code">sequence.letra</field>
@@ -17,9 +18,35 @@
             <field name="type">sale</field>
             <field name="default_credit_account_id" ref="l10n_pe.123"/>
             <field name="default_debit_account_id" ref="l10n_pe.123"/>
+            <field name="account_cobranza_dudosa_debit" ref="l10n_pe.6841"/>
+            <field name="account_cobranza_dudosa_credit" ref="l10n_pe.1913"/>
             <field name="sequence_id" ref="sequence_letra_seq"/>
             <field name="update_posted" eval="True"/>
             <field name="refund_sequence" eval="False"/>
+        </record>
+
+         //Diario para letra protestada
+        <record id="sequence_letra_protestada_seq" model="ir.sequence">
+            <field name="name">letras cobrar protestada</field>
+            <field name="code">sequence.letra.protestada</field>
+            <field name="prefix">PROT-%(range_year)s-%(month)s-</field>
+            <field eval="1" name="number_next"/>
+            <field eval="1" name="number_increment"/>
+            <field eval="4" name="padding"/>
+            <field eval="False" name="company_id"/>
+            <field name="ciclo">mes</field>
+        </record>
+
+         //Diario para letra castigada
+        <record id="sequence_letra_castigada_seq" model="ir.sequence">
+            <field name="name">letras cobrar castigada</field>
+            <field name="code">sequence.letra.castigada</field>
+            <field name="prefix">CAST-%(range_year)s-%(month)s-</field>
+            <field eval="1" name="number_next"/>
+            <field eval="1" name="number_increment"/>
+            <field eval="4" name="padding"/>
+            <field eval="False" name="company_id"/>
+            <field name="ciclo">mes</field>
         </record>
     </data>
 </odoo>

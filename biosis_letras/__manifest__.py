@@ -3,14 +3,13 @@
     'name': "biosis_letras",
 
     'summary': """
-        Short (1 phrase/line) summary of the module's purpose, used as
-        subtitle on modules listing or apps.openerp.com""",
+       Módulo de Letras a cobrar""",
 
     'description': """
-        Long description of module's purpose
+        Nota: Las facturas ligadas a una letra seran procesadas a pago único.
     """,
 
-    'author': "My Company",
+    'author': "BIOSIS",
     'website': "http://www.yourcompany.com",
 
     # Categories can be used to filter modules in modules listing
@@ -26,6 +25,7 @@
     'data': [
         # 'security/ir.model.access.csv',
         'data/journal.xml',
+        'views/account_journal_view.xml',
         'views/account_letra.xml',
         'views/account_letra_pago.xml',
         # 'views/warning_banco.xml',

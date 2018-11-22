@@ -6,22 +6,22 @@
             <field name="name">letrasbancos</field>
             <field name="model">letra.bank</field>
             <field name="arch" type="xml">
-                <form name="Banco"  edit="false" create="false">
-                   <sheet string="Banco" >
-                            <group name="group top" >
-                            <group  name="group_left">
-                                <field name="letra" invisible="1" />
-                                <field name="bank_id" />
+                <form name="Banco" edit="false" create="false">
+                    <sheet string="Banco">
+                        <group name="group top">
+                            <group name="group_left">
+                                <field name="letra" invisible="1"/>
+                                <field name="bank_id"/>
                                 <field name="tipo_cuenta"/>
                                 <field name="nrocuenta"/>
-                             </group>
+                            </group>
                             <group name="group_rigth">
                                 <field name="fechavencimiento"/>
                             </group>
                         </group>
                     </sheet>
-                     <footer>
-                        <button string='Enviar' name="post" type="object" class="btn-primary" />
+                    <footer>
+                        <button string='Enviar' name="post" type="object" class="btn-primary"/>
                         <button string="Cancel" class="btn-default" special="cancel"/>
                     </footer>
                 </form>
@@ -38,74 +38,150 @@
             <field name="target">new</field>
         </record>
 
+        <record id="view_account_payment_form_letras" model="ir.ui.view">
+            <field name="name">account.payment.letras.form</field>
+            <field name="model">account.payment</field>
+            <field name="arch" type="xml">
+                <form string="Register Payment" version="7">
+                    <sheet>
+                        <group>
+                            <field name="payment_type" invisible="1"/>
+                            <field name="partner_type" invisible="1"/>
+                            <field name="invoice_ids" invisible="1"/>
+                            <field name="partner_id" invisible="1"/>
+                            <field name="state" invisible="1"/>
+                            <group>
+                                <field name="num_letra" readonly="1"/>
+                                <field name="journal_id" widget="selection"/>
+                                <field name="hide_payment_method" invisible="1"/>
+                                <field name="payment_method_id" widget="radio"
+                                       attrs="{'invisible': [('hide_payment_method', '=', True)]}"/>
+                                <field name="payment_method_code" invisible="1"/>
+                                <label for="amount"/>
+                                <div name="amount_div" class="o_row">
+                                    <field name="amount"/>
+                                    <field name="currency_id" options="{'no_create': True, 'no_open': True}"
+                                           groups="base.group_multi_currency"/>
+                                </div>
+                            </group>
+                            <group>
+                                <field name="payment_date"/>
+                                <field name="communication"/>
+                            </group>
+                            <group attrs="{'invisible': [('payment_difference', '=', 0.0)]}">
+                                <label for="payment_difference"/>
+                                <div>
+                                    <field name="payment_difference"/>
+                                    <field name="payment_difference_handling" widget="radio" nolabel="1"/>
+                                </div>
+                                <field name="writeoff_account_id" string="Post Difference In"
+                                       attrs="{'invisible': [('payment_difference_handling','=','open')], 'required': [('payment_difference_handling', '=', 'reconcile')]}"/>
+                            </group>
+                        </group>
+                    </sheet>
+                    <footer>
+                        <button string='Validar' name="post_pago" type="object" class="btn-primary"/>
+                        <button string="Cancelar" class="btn-default" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="view_payment_letra">
+            <field name="name">Registrar Pago</field>
+            <field name="res_model">account.payment</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="context">{'active_id': active_id}</field>
+            <field name="view_id" ref="view_account_payment_form_letras"/>
+            <field name="target">new</field>
+        </record>
+
         <!--Formulario de letras-->
         <record id="registrarletra_view_form" model="ir.ui.view">
             <field name="name">registrarletra</field>
             <field name="model">account.letra</field>
             <field name="arch" type="xml">
-                <form string="Registrar Letra" >
+                <form string="Letra por Cobrar" >
 
                     <header>
-                         <button name="%(account.action_account_invoice_payment)d" type="action" string="Registar Pago"
-                                 groups="account.group_account_invoice" class="oe_highlight"
-                                 attrs ="{'invisible': ['|','|',('state','=','draft'), ('state','=','open'),('state','=','charged')]}"/>
-                        <button name="state_open"   string="Validar" type="object"
-                                class="oe_higthlight" attrs ="{'invisible': ['|','|',('state','=','open'),('state','=','charged'),('state','=','reconcile')]}"/>
-                        <button name="" string="Protesta" type="object" class="oe_higthlight" attrs ="{'invisible': [('state','=','draft')]}"/>
-                        <button name="" string="Renovada" type="object" class="oe_higthlight" attrs ="{'invisible': [('state','=','draft')]}"/>
-                       <button name="%(view_banco)d"  string="Enviar a Banco" type="action" class="oe_highlight" status="open"  attrs ="{'invisible': [('state','=','reconcile')]}" />
-                        <field name="state" widget="statusbar" nolabel="1" statusbar_visible="draft,open,reconcile"  />
+                        <button name="%(view_payment_letra)d" type="action" string="Registar Pago"
+                                groups="account.group_account_invoice" class="oe_highlight"
+                                attrs="{'invisible': ['|','|','|','|','|',('state','=','draft'), ('state','=','open'),('state','=','charged'),
+                                ('state','=','Protested'),('state','=','Renovated'),('state','=','Penalize')]}"/>
+                        <button name="state_open" string="Validar" type="object"
+                                class="oe_higthlight"
+                                attrs="{'invisible': ['|','|','|','|','|',('state','=','open'),('state','=','charged'),('state','=','reconcile'),
+                                ('state','=','Protested'),('state','=','Renovated'),('state','=','Penalize')]}"/>
+                        <button name="%(view_banco)d" string="Enviar a Banco" type="action" class="oe_highlight"
+                                status="open"
+                                attrs="{'invisible': ['|','|','|','|','|',('state','=','reconcile'),('state','=','charged'),
+                                ('state','=','draft'),('state','=','Protested'),('state','=','Renovated'),('state','=','Penalize')]}"/>
+                        <button name="state_renovated" string="Renovada" type="object" class="oe_higthlight"
+                                attrs="{'invisible': ['|','|','|','|','|',('state','=','draft'),('state','=','open'),('state','=','charged'),
+                               ('state','=','Protested'),('state','=','Penalize'),('state','=','Renovated') ]}"/>
+                        <button name="state_protested" string="Protestada" type="object" class="oe_higthlight"
+                                attrs="{'invisible': ['|','|','|','|','|',('state','=','draft'),('state','=','open'),('state','=','charged'),
+                               ('state','=','Protested'),('state','=','Penalize'),('state','=','Renovated') ]}"/>
+                         <button name="state_penalize" string="Castigada" type="object" class="oe_higthlight"
+                               attrs="{'invisible': ['|','|','|','|','|',('state','=','draft'),('state','=','open'),('state','=','charged'),
+                                ('state','=','reconcile'),('state','=','Renovated'),('state','=','Penalize') ]}"/>
+                        <field name="state" widget="statusbar" nolabel="1" statusbar_visible="draft,open,reconcile,charged,Renovated,Protested,Penalize"/>
 
                     </header>
                     <sheet string="Letras por Cobrar">
                         <group>
                             <div>
                                 <h1 class="mt0">
-                                    <field name="num_letra" class="oe_inline" attrs="{'invisible': [('state', '=', 'draft')]}"/>
+                                    <field name="num_letra" class="oe_inline"
+                                           attrs="{'invisible': [('state', '=', 'draft')]}"/>
                                 </h1>
                             </div>
                         </group>
                         <group>
                             <group>
                                 <field name="partner_id" context="{'default_is_company': True}"/>
+                                <field name="currency_id" string="Moneda"/>
                             </group>
                             <group>
                                 <field name="numerocorrelativo"/>
+                                <field name="numero_referencia" readonly="1"  attrs="{'invisible': [('numero_referencia', '=', False)]}"/>
                                 <field name="fechagiro"/>
                                 <field name="fechavencimiento"/>
                             </group>
                         </group>
                         <notebook>
-                            <page  name="Facturas" string="Facturas">
-                            <group>
-                            <field context="{'partner_id': partner_id}" domain="['res_partner'='customer']"
-                                   name="facturas_lineas_ids">
-                                <tree string="Líneas" editable="bottom">
-                                    <field name="sequence" widget="handle"/>
-                                    <field name="factura_relacionada" string="Factura Relacionadas"
-                                           domain="[('partner_id','=',parent.partner_id), ('state', 'in', ['open'])]"/>
-                                    <field name="monto"/>
-                                    <field name="sub_total"/>
+                            <page name="Facturas" string="Facturas">
+                                <group>
+                                    <field context="{'partner_id': partner_id}" domain="['res_partner'='customer']"
+                                           name="facturas_lineas_ids">
+                                        <tree string="Líneas" editable="bottom">
+                                            <field name="sequence" widget="handle"/>
+                                            <field name="factura_relacionada" string="Factura Relacionadas"
+                                                   domain="[('partner_id','=',parent.partner_id), ('state', 'in', ['open'])]"/>
+                                            <field name="monto"/>
+                                            <field name="sub_total"/>
 
-                                </tree>
-                            </field>
-                            <group class="oe_subtotal_footer oe_right">
-                                <field name="monto_total" class="oe_subtotal_footer_separator"
-                                       string="Total Neto"/>
-                            </group>
-                            </group>
+                                        </tree>
+                                    </field>
+                                    <group class="oe_subtotal_footer oe_right">
+                                        <field name="monto_total" class="oe_subtotal_footer_separator"
+                                               string="Total Neto"/>
+                                    </group>
+                                </group>
                             </page>
-                            <page  name="Otra Información" string="Otra Información">
+                            <page name="Otra Información" string="Otra Información">
                                 <group>
                                     <group>
                                         <field name="fiscal_position_id"/>
-                                        <field name="journal_id"  />
+                                        <field name="journal_id"/>
                                     </group>
                                     <group>
                                         <field name="account_id"/>
                                         <field name="move_id" groups="account.group_account_manager"
                                                attrs="{'invisible': [('move_id', '=', False)]}"/>
-                                        <field name="company_id" options="{'no_create': True}" groups="base.group_multi_company"/>
+                                        <field name="company_id" options="{'no_create': True}"
+                                               groups="base.group_multi_company"/>
 
                                     </group>
                                 </group>
@@ -121,9 +197,15 @@
             <field name="name">registrarletra.tree</field>
             <field name="model">account.letra</field>
             <field name="arch" type="xml">
-                <tree string="Registrar letras">
+                <tree string="Letras por Cobrar">
+                    <field name="num_letra"/>
                     <field name="partner_id" groups="base.group_user" string="Persona"/>
-                    <!--<field name="descripcion"/>-->
+                    <field name="numerocorrelativo"/>
+                    <field name="state"/>
+                    <field name="fechagiro"/>
+                    <field name="fechavencimiento"/>
+                    <field name="currency_id"/>
+                    <field name="monto_total"/>
                 </tree>
             </field>
         </record>
@@ -136,7 +218,7 @@
         </record>
 
         <record id="letras_otros_tree2" model="ir.actions.act_window">
-            <field name="name">Registrar Letra</field>
+            <field name="name">Letras por Cobrar</field>
             <field name="res_model">account.letra</field>
             <field name="view_type">form</field>
             <field name="view_mode">tree,form</field>

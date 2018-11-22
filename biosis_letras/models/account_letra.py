@@ -2,9 +2,11 @@
 
 from odoo import api, fields, models, _
 from odoo.exceptions import UserError
+from datetime import datetime
 
 
 class AccountLetra(models.Model):
+    inherit = 'account.invoice'
     _name = 'account.letra'
     _rec_name = 'num_letra'
     _order = "id desc"
@@ -20,10 +22,11 @@ class AccountLetra(models.Model):
         self.monto_total = sum((line.sub_total) for line in self.facturas_lineas_ids)
 
     num_letra = fields.Char(u'Número', required=True, index=True, copy=False, default='Nuevo')
-    numerocorrelativo = fields.Char(string=u'Nro correlativo de letra')
+    numerocorrelativo = fields.Char(string=u'Nro correlativo de letra',required=True)
+    numero_referencia = fields.Char(string=u'Nro Referencia')
     partner_id = fields.Many2one('res.partner', string=u'Cliente', required=True)
-    state = fields.Selection( [('draft', 'Borrador'), ('open', 'Abierto'), ('reconcile', 'Enviado a banco'), ('Cancel', 'Cancelado'),
-         ('Renovated', 'Renovado'), ('Protested', 'Protestado'), ('charged', 'Cobrado')], default='draft')
+    state = fields.Selection([('draft', 'Borrador'), ('open', 'Abierto'), ('reconcile', 'Enviado a banco'), ('Cancel', 'Cancelado'),
+         ('Renovated', 'Renovado'), ('Protested', 'Protestado'), ('charged', 'Cobrado'), ('Penalize', 'Castigado')], default='draft')
     company_id = fields.Many2one('res.company', string='Company', change_default=True,
                                  required=True, readonly=True, states={'draft': [('readonly', False)]},
                                  default=lambda self: self.env['res.company']._company_default_get('account.letra'))
@@ -33,8 +36,8 @@ class AccountLetra(models.Model):
                                   default=_default_currency, track_visibility='always')
     monto_total = fields.Monetary(string='Total', store=True, readonly=True, compute='_compute_monto_total')
     facturas_lineas_ids = fields.One2many('account.lines.letras', 'fact_id', copy=True)
-    fechagiro = fields.Date(string=u'Fecha Giro')
-    fechavencimiento = fields.Date(string=u'Fecha vencimiento')
+    fechagiro = fields.Date(string=u'Fecha Giro',required=True)
+    fechavencimiento = fields.Date(string=u'Fecha vencimiento',required=True)
     # campos de otra informacion
     fiscal_position_id = fields.Many2one('account.fiscal.position', string='Situación fiscal', oldname='fiscal_position',
                                          readonly=True, states={'draft': [('readonly', False)]})
@@ -71,17 +74,66 @@ class AccountLetra(models.Model):
     # mostrar por defecto estado open
     @api.multi
     def state_open(self):
-
-        secuencia = self.env['ir.sequence'].next_by_code('sequence.letra') or '/'
-
-        if secuencia != '/':
-            self.num_letra = secuencia
+        # if self.num_letra =='Nuevo':
+        #     secuencia = self.env['ir.sequence'].next_by_code('sequence.letra') or '/'
+        #     self.num_letra = secuencia
         self.write({'state': 'open'})
         self.type = 'out_refund'
-        self.create_move()
+        if self.numero_referencia == False:
+            self.create_move(None)
+
+    @api.multi
+    def state_protested(self):
+        self.write({'state': 'Protested'})
+        self.type = 'out_refund'
+        self.create_move(self.state)
+
+    @api.multi
+    def state_penalize(self):
+        self.write({'state': 'Penalize'})
+        self.type = 'out_refund'
+        self.create_move(self.state)
 
 
-    def create_move(self):
+    @api.multi
+    def state_renovated(self):
+        boleta_vals = {
+            'numero_referencia': self.numerocorrelativo,
+            'partner_id': self.partner_id.id,
+            'state': 'draft',
+            'company_id': self.company_id.id,
+            'currency_id': self.currency_id.id,
+            'journal_id': self.journal_id.id,
+            'account_id': self.account_id.id,
+            'fechagiro': datetime.now().strftime('%Y-%m-%d'),
+            'fechavencimiento': datetime.now().strftime('%Y-%m-%d'),
+            'numerocorrelativo': ''
+        }
+        new_letra = self.env['account.letra'].create(boleta_vals)
+        for line in self.facturas_lineas_ids:
+            line2 = line.copy()
+            line2.write({'fact_id': new_letra.id})
+
+        if new_letra:
+            if new_letra.num_letra == 'Nuevo':
+                 secuencia = self.env['ir.sequence'].next_by_code('sequence.letra') or '/'
+                 new_letra.num_letra = secuencia
+            self.state = 'Renovated'
+            view_id = self.env.ref('biosis_letras.registrarletra_view_form').id
+            return {
+                'name': u'Letra Renovada',
+                'type': 'ir.actions.act_window',
+                'view_type': 'form',
+                'view_mode': 'form',
+                'target': 'current',
+                'res_model': 'account.letra',
+                'res_id': new_letra.id,
+                'view_id': view_id,
+
+            }
+        #return nw_letra
+
+    def create_move(self,type):
         """ Creates invoice related analytics and financial move lines """
         account_move = self.env['account.move']
 
@@ -99,7 +151,7 @@ class AccountLetra(models.Model):
                 inv.with_context(ctx).write({'fechagiro': fields.Date.context_today(self)})
             fecha_giro = inv.fechagiro
             company_currency = inv.company_id.currency_id
-            iml = inv.letra_line_move_line()
+            iml = inv.letra_line_move_line(type)
 
             total, total_currency, iml = inv.with_context(ctx).compute_letras_totals(company_currency,iml)
             # añadir datos de payment
@@ -110,6 +162,15 @@ class AccountLetra(models.Model):
 
             journal = inv.journal_id.with_context(ctx)
             date = fecha_giro
+            #
+            # if type == 'Protested':
+            #     ref =
+            # else:
+            #     if type == 'Penalize':
+            #         ref =
+            #     else:
+            #         ref =
+
             move_vals = {
                 'ref': inv.num_letra,
                 'line_ids': line,
@@ -126,34 +187,93 @@ class AccountLetra(models.Model):
             move = account_move.with_context(ctx_nolang).create(move_vals)
             # Pass invoice in context in method post: used if you want to get the same
             # account move reference when creating the same invoice after a cancelled one:
-            move.post()
+            self.create_movimiento(move)
         return True
 
-    def letra_line_move_line(self):
+    def create_movimiento(self, moves):
+        invoice = moves._context.get('invoice', False)
+        moves._post_validate()
+        for move in moves:
+            move.line_ids.create_analytic_lines()
+            if move.name == '/':
+                new_name = False
+                journal = move.journal_id
+
+                if invoice and invoice.move_name and invoice.move_name != '/':
+                    new_name = invoice.move_name
+                else:
+                    if invoice.state == 'Protested':
+                        secuencia = self.env['ir.sequence'].next_by_code('sequence.letra.protestada') or '/'
+                        new_name = secuencia
+                    else:
+                        if invoice.state == 'Penalize':
+                            secuencia = self.env['ir.sequence'].next_by_code('sequence.letra.castigada') or '/'
+                            new_name = secuencia
+                        else:
+                            if journal.sequence_id:
+                                sequence = journal.sequence_id
+                                if invoice and invoice.type in ['out_refund', 'in_refund'] and journal.refund_sequence:
+                                    if not journal.refund_sequence_id:
+                                        raise UserError(_('Please define a sequence for the refunds'))
+                                    sequence = journal.refund_sequence_id
+
+                                new_name = sequence.with_context(ir_sequence_date=move.date).next_by_id()
+                                invoice.num_letra = new_name
+                            else:
+                                raise UserError(_('Please define a sequence on the journal.'))
+
+                if new_name:
+                    move.name = new_name
+                    #invoice.num_letra = new_name
+
+                secuencia = self.env['ir.sequence'].search([('code', '=', 'biosis_cont.cuo')], limit=1)
+                if not move.cuo:
+                    move.write({'cuo': secuencia.next_by_id()})
+
+        return moves.write({'state': 'posted'})
+
+    def letra_line_move_line(self,type):
+        if type == 'Protested':
+            credit = self.journal_id.account_cobranza_dudosa_debit.id
+            credit_name = self.journal_id.account_cobranza_dudosa_debit.name
+            debit = self.journal_id.account_cobranza_dudosa_credit.id
+            debit_name = self.journal_id.account_cobranza_dudosa_credit.name
+        else:
+            if type == 'Penalize':
+                credit = self.journal_id.account_cobranza_dudosa_credit.id
+                credit_name = self.journal_id.account_cobranza_dudosa_credit.name
+                debit = self.journal_id.default_debit_account_id.id
+                debit_name = self.journal_id.default_debit_account_id.name
+            else:
+                debit = self.journal_id.default_debit_account_id.id
+                debit_name = self.journal_id.default_debit_account_id.name
+                credit = self.account_id.id
+                credit_name = self.account_id.name
+
         res = []
-        account123_line = {
+        account_debit = {
             'type': 'src',
-            'name': self.journal_id.default_debit_account_id.name,
+            'name': debit_name,
             'price_unit': self.monto_total,
             'price': self.monto_total,
             'quantity': 1,
-            'account_id': self.journal_id.default_debit_account_id.id,
+            'account_id': debit,
             'letra_id': self.id,
         }
 
-        res.append(account123_line)
+        res.append(account_debit)
 
-        account121_line = {
+        account_credit = {
             'type': 'src',
-            'name': self.account_id.name,
+            'name': credit_name,
             'price_unit': self.monto_total * (-1),
             'price': self.monto_total * (-1),
             'quantity': 1,
-            'account_id': self.account_id.id,
+            'account_id': credit,
             'letra_id': self.id,
         }
 
-        res.append(account121_line)
+        res.append(account_credit)
 
         return res
 
@@ -178,6 +298,9 @@ class AccountLetra(models.Model):
             'analytic_account_id': line.get('account_analytic_id', False),
             'analytic_tag_ids': line.get('analytic_tag_ids', False),
         }
+
+    def _get_currency_rate_date(self):
+        return self.fechagiro or self.fechavencimiento
 
     @api.multi
     def compute_letras_totals(self, company_currency, invoice_move_lines):
@@ -228,8 +351,15 @@ class AccountLineLetra(models.Model):
     @api.multi
     @api.onchange('factura_relacionada')
     def onchange_factura_relacionada(self):
-        self.descripcion = self.factura_relacionada.partner_id.name
-        self.monto = self.factura_relacionada.amount_total
+        moneda_letra = self.fact_id.currency_id
+        moneda_factura = self.factura_relacionada.currency_id
+        if moneda_factura.id:
+            if moneda_letra != moneda_factura:
+                raise UserError(_('La moneda de la factura no coincide con la moneda de la letra'))
+                self.factura_relacionada = {}
+            else:
+                self.descripcion = self.factura_relacionada.partner_id.name
+                self.monto = self.factura_relacionada.residual
 
 
     # Clase para para registrar banco

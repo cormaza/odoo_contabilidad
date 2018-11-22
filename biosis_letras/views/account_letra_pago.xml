@@ -6,10 +6,11 @@
             <field name="model">account.payment</field>
             <field name="arch" type="xml">
                 <field name="communication" position="after">
-                    <field name="num_letra"/>
-                    <field name="nrocorrelativo"/>
+                    <!--<field name="num_letra"/>-->
                 </field>
             </field>
         </record>
+
+
     </data>
 </odoo>
