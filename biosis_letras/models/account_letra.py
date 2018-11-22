@@ -219,6 +219,7 @@ class AccountLetra(models.Model):
 
                                 new_name = sequence.with_context(ir_sequence_date=move.date).next_by_id()
                                 invoice.num_letra = new_name
+                                moves.write({'ref': invoice.numerocorrelativo})
                             else:
                                 raise UserError(_('Please define a sequence on the journal.'))
 
@@ -245,10 +246,10 @@ class AccountLetra(models.Model):
                 debit = self.journal_id.default_debit_account_id.id
                 debit_name = self.journal_id.default_debit_account_id.name
             else:
-                debit = self.journal_id.default_debit_account_id.id
-                debit_name = self.journal_id.default_debit_account_id.name
-                credit = self.account_id.id
-                credit_name = self.account_id.name
+                credit = self.journal_id.default_debit_account_id.id
+                credit_name = self.journal_id.default_debit_account_id.name
+                debit = self.account_id.id
+                debit_name = self.account_id.name
 
         res = []
         account_debit = {
