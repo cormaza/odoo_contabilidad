@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+       	<record id="add_to_res_users_form" model="ir.ui.view">
+            <field name="name">Add Timezone Button to User Form</field>
+            <field name="model">res.users</field>
+            <field name="inherit_id" ref="base.view_users_form"/>
+            <field name="arch" type="xml">
+            	 <group name="preferences" position="inside">
+                    <separator cols="2"/>
+                    <button name="set_default_tz"
+                        icon="fa-clock-o"
+                        string="Set default timezone to this timezone"
+                        type="object"
+                        class="oe_button oe_highlight"
+                        style="background-color: #d9534f;border-color: #d43f3a;"
+                        confirm="Are you sure you want to set this user's timezone as the default timezone?"
+                        colspan="4"
+                        attrs="{'invisible':['|',('id','=',False),('tz','=',False)]}"/>
+            	 </group>
+           	</field>
+       </record>
+    </data>
+</odoo>

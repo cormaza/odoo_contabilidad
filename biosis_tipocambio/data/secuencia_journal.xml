@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo>
+    <data noupdate="1">
+        <record id="sequence_tipocambio_seq" model="ir.sequence">
+            <field name="name">Corrida tipo de cambio</field>
+            <field name="code">sequence.tipocambio</field>
+            <field name="prefix">TC-%(range_year)s-%(month)s-</field>
+            <field eval="1" name="number_next"/>
+            <field eval="1" name="number_increment"/>
+            <field eval="5" name="padding"/>
+            <field eval="False" name="company_id"/>
+            <field name="ciclo">mes</field>
+        </record>
+        <record id="corridatipocambio_journal" model="account.journal">
+            <field name="name">Corrida tipo de Cambio</field>
+            <field name="code">CTC</field>
+            <field name="type">general</field>
+            <field name="default_credit_account_id" ref="l10n_pe.676"/>
+            <field name="default_debit_account_id" ref="l10n_pe.776"/>
+            <field name="account_destino_debit_id" ref="l10n_pe.96"/>
+            <field name="account_destino_credit_id" ref="l10n_pe.79"/>
+            <field name="sequence_id" ref="sequence_tipocambio_seq"/>
+            <field name="update_posted" eval="True"/>
+            <field name="refund_sequence" eval="False"/>
+        </record>
+    </data>
+</odoo>

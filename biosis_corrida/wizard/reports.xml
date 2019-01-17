@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!--<record id="tipo_cambio_corrida_tree" model="ir.ui.view">-->
+            <!--<field name="name">tipo_cambio_corrida_lines</field>-->
+            <!--<field name="model">tipo.cambio.corrida.lines</field>-->
+            <!--<field name="arch" type="xml">-->
+                <!--<tree string="Resultado" create="false" import="false">-->
+                    <!--<field name="name"/>-->
+                    <!--<field name="numero_cuenta"/>-->
+                    <!--<field name="ajuste"/>-->
+                    <!--<field name="total_soles"/>-->
+                    <!--<field name="tc_cierre"/>-->
+                    <!--<field name="soles"/>-->
+                    <!--<field name="usd"/>-->
+                    <!--<field name="tipo_cambio"/>-->
+
+                <!--</tree>-->
+            <!--</field>-->
+        <!--</record>-->
+
+        <record model="ir.ui.view" id="corrida_tipo_wizard">
+            <field name="name">tipo_cambio_corrida</field>
+            <field name="model">tipo.cambio.corrida</field>
+            <field name="arch" type="xml">
+                <form string="Corrida Tipo de Cambio">
+                    <group>
+                        <group>
+                            <field name="mes"/>
+                            <field name="years"/>
+                            <field name="company_id"/>
+                        </group>
+                        <group>
+                            <button name="busqueda" string="Buscar" type="object"
+                                    confirm="Are you sure to execute the automatic merge of your contacts ?"
+                                    class="btn-primary"/>
+                        </group>
+                    </group>
+                    <!--<group>-->
+                        <!--<field name="tipo_cambio_lines">-->
+                            <!--<tree string="Datos">-->
+                                <!--&lt;!&ndash;<field name="sequence" widget="handle"/>&ndash;&gt;-->
+                                <!--<field name="tcc_id"/>-->
+                                <!--<field name="tipo_cambio"/>-->
+                                <!--<field name="usd"/>-->
+                                <!--<field name="soles"/>-->
+                                <!--<field name="tc_cierre"/>-->
+                                <!--<field name="total_soles"/>-->
+                                <!--<field name="ajuste"/>-->
+                                <!--<field name="numero_cuenta"/>-->
+                            <!--</tree>-->
+                        <!--</field>-->
+                    <!--</group>-->
+                    <footer>
+                        <button name="generar_asientos" string="Generar Asiento" type="object" default_focus="1"
+
+                                class="oe_highlight"/>
+                        <button string="Cerrar" class="oe_link" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_corrida" model="ir.actions.act_window">
+            <field name="name">Corrida tipo de Cambio</field>
+            <field name="res_model">tipo.cambio.corrida</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="corrida_tipo_wizard"/>
+            <field name="target">new</field>
+        </record>
+
+
+        <menuitem id="corrida_tipocambio_men" name="Corrida Tipo de Cambio" action="action_corrida"
+                  parent="account.menu_finance_entries" sequence="11"/>
+    </data>
+</odoo>

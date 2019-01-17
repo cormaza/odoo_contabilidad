@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <data>
+         <record model="ir.ui.view" id="corrida_view_tree">
+            <field name="name">reportecorrida.tree</field>
+            <field name="model">currency.rate.run</field>
+            <field name="arch" type="xml">
+                <tree string="Corrida">
+                    <field name="fecha"/>
+                    <field name="comprobante"/>
+                    <field name="precio"/>
+                    <field name="importe" string="Importe USD" sum="Importe USD"/>
+                    <field name="montofactura" string="Total Soles" sum="Total Soles"/>
+                    <field name="cierre"/>
+                    <field name="total"  string="Total fin de mes" sum="Total fin de mes"/>
+                    <field name="ajuste" string="Ajuste Tipo Cambio" sum="Ajuste Tipo Cambio"/>
+                </tree>
+
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="corrida_cambio_action2">
+            <!--<field eval="1" name="sequence"/>-->
+            <field name="name">corrida</field>
+            <field name="res_model">currency.rate.run</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree</field>
+        </record>
+
+
+        <menuitem id="corrida_tipocambio_menu" name="Corrida Tipo de Cambio" action="corrida_cambio_action2"
+                  parent="biosis_cont.menu_banco_caja"/>
+    </data>
+</odoo>

@@ -43,7 +43,7 @@
         'views/account_analytic.account.xml',
         'views/recibos_honorarios.xml',
         'views/account_bank_statement.xml',
-        'views/res_currency_rate_view.xml',
+        #'views/res_currency_rate_view.xml',
         'views/account_move_view.xml',
         'views/account_anexo4_detraccion.xml',
         #'views/res_partner.xml',

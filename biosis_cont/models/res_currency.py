@@ -23,6 +23,33 @@ class CurrencyRate(models.Model):
     venta = fields.Float(string=u'Valor Venta', digits=(4, 3),store=True)
     compra = fields.Float(string=u'Valor Compra', digits=(4, 3),store=True)
 
+    @api.model
+    def create(self,vals):
+        a=1
+        res = super(CurrencyRate, self).create(vals)
+
+        b=1
+
+    @api.multi
+    def post(self, vals):
+        a = 1
+
+
+    @api.multi
+    def write(self):
+        vals = {}
+
+        date_tmp = "Indefinido"
+        if 'name' in vals:
+            date_tmp = str(vals['name'])[:7].replace("-", "/")
+
+        if self.name:
+            date_tmp = str(self.name)[:7].replace("-", "/")
+        vals['period_name'] = date_tmp
+        t = super(CurrencyRate, self).write(vals)
+
+        return t
+
     def _get_timestamp(self):
         dt = datetime.now()
         lima = timezone('America/Lima')

@@ -158,8 +158,7 @@ class AccountInvoice(models.Model):
             company_currency = inv.company_id.currency_id
             iml = inv.invoice_line_move_line_get_gasto(invoice_line_gastos_ids)
 
-            total, total_currency, iml = inv.with_context(ctx).compute_invoice_totals_two(company_currency,
-                                                                                      iml)
+            total, total_currency, iml = inv.with_context(ctx).compute_invoice_totals_two(company_currency, iml)
             # añadir datos de payment
             # recuperar con el inv ingresado
             ###

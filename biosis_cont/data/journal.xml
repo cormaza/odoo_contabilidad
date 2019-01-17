@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <odoo>
-    <data>
+    <data noupdate="1">
         <record id="recibo_journal" model="account.journal">
             <field name="name">Recibos por Honorarios</field>
             <field name="code">RXH</field>

@@ -5,9 +5,15 @@
             <field name="inherit_id" ref="base.view_currency_rate_form"/>
             <field name="model">res.currency.rate</field>
             <field name="arch" type="xml">
-                <field name="rate" position="before">
+                <field name="name" position="before">
+                    <field name="nombre"/>
+                </field>
+                <field name="nombre" position="after">
                     <field name="venta"/>
                     <field name="compra"/>
+                </field>
+                <field name="rate" position="before">
+                    <field name="name" invisible="1"/>
                 </field>
             </field>
         </record>
@@ -15,14 +21,15 @@
             <field name="inherit_id" ref="base.view_currency_rate_tree"/>
             <field name="model">res.currency.rate</field>
             <field name="arch" type="xml">
-                <field name="rate" position="before">
+                <field name="name" position="before">
+                    <field name="nombre"/>
                     <field name="venta"/>
                     <field name="compra"/>
                 </field>
             </field>
         </record>
         <!--ITEM VISTA PARA TIPO DE CAMBIO-->
-        <record id="biosis_cont_res_currency_rate" model="ir.actions.act_window">
+        <record id="biosis_tipocambio_res_currency_rate" model="ir.actions.act_window">
             <field name="name">Tipo de Cambio</field>
             <field name="res_model">res.currency.rate</field>
             <field name="view_type">form</field>
@@ -41,11 +48,12 @@
             <field eval="1" name="sequence"/>
             <field name="view_mode">tree</field>
             <field name="view_id" ref="base.view_currency_rate_tree"/>
-            <field name="act_window_id" ref="biosis_cont_res_currency_rate"/>
+            <field name="act_window_id" ref="biosis_tipocambio_res_currency_rate"/>
         </record>
 
         <menuitem id="menu_action_base_view_currency_rate_tree" name="Tipo Cambio"
-                  parent="menu_banco_caja" action="biosis_cont_res_currency_rate"/>
+                  parent="account.menu_finance_entries" action="biosis_tipocambio_res_currency_rate"
+        sequence="10"/>
 
     </data>
 </odoo>

@@ -1,0 +1,22 @@
+<odoo>
+    <data>
+        <record id="" model="ir.ui.view">
+            <field name="name">project.cargar_materiales.form</field>
+            <field name="model">project.cargar_materiales</field>
+            <field name="arch" type="xml">
+                <form string="Cargar materiales">
+                    <group string="Datos" name="datos">
+                        <field name="fichero"/>
+                        <field name="sufijo"/>
+                    </group>
+                    <footer>
+                        <button name="importar" string="Importar materiales" type="object" default_focus="1"
+                                class="oe_highlight"/>
+                        <button string="Cancelar" class="oe_link" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+    </data>
+</odoo>

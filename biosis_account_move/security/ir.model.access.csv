@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_biosis_account_move_biosis_account_move,biosis_account_move.biosis_account_move,model_biosis_account_move_biosis_account_move,,1,0,0,0
