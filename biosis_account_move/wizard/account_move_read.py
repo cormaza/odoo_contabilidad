@@ -6,8 +6,6 @@ import base64
 from odoo import models, fields, api, _
 from odoo.exceptions import UserError
 
-_logger = logging.getLogger(__name__)
-
 
 class AccountMoveRead(models.Model):
     _name = 'account.move.read'
