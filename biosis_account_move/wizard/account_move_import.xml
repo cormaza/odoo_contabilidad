@@ -1,7 +1,7 @@
 <odoo>
     <data>
-        <record id="account_move_wizard" model="ir.ui.view">
-            <field name="name">account_move_wizard.form</field>
+        <record id="account_move_read_wizard" model="ir.ui.view">
+            <field name="name">account_move_read_wizard.form</field>
             <field name="model">account.move.read</field>
             <field name="arch" type="xml">
                 <form string="Cargar Movimientos">
@@ -20,19 +20,19 @@
             </field>
         </record>
 
-        <record id="action_account_move_wizard" model="ir.actions.act_window">
+        <record id="action_account_move_read_wizard" model="ir.actions.act_window">
             <field name="name">Carga masiva de Asientos Contables</field>
             <field name="res_model">account.move.read</field>
             <field name="type">ir.actions.act_window</field>
             <field name="view_type">form</field>
             <field name="view_mode">form</field>
-            <field name="view_id" ref="account_move_wizard"/>
+            <field name="view_id" ref="account_move_read_wizard"/>
             <field name="target">new</field>
         </record>
 
-        <menuitem id="menu_account_move_wizard"
+        <menuitem id="menu_account_move_read_wizard"
                   name="Cargar Asientos Contables"
-                  action="action_account_move_wizard"
+                  action="action_account_move_read_wizard"
                   parent="account.menu_finance_entries" sequence="3"/>
     </data>
 </odoo>
